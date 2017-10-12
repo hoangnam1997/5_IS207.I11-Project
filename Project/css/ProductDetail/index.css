@@ -132,20 +132,92 @@ input#txtNumberProduct{
 }
 div.product-involve{
 	margin-top: 10px;
-	padding: 5px;
-	background: #fff;
+	padding: 0;
+	background: transparent;
 	border-radius: 5px;
 }
-.product-involve h4{
+.product-involve h4,.cmt-title h4{
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
 	border-radius: 15px 15px 0px 0px; 
-	background: #EEE6E6;
-	border-bottom: 1px solid #fff;
+	background: #fff;
+	border-bottom: 2px dashed #f4f4f4;
 }
-div.involve-content{
-	background: #EEE6E6;
-	height: 30px;
+div.involve-content,div.cmt-container{
+	border-radius: 0 5px 5px 5px;
+	display: inline-block;
+	background: #fff;
 	width: 100%;
 }
+.swiper-container {
+	display: inline-block;
+	background: transparent;
+	width: 100%;
+	padding: 5px;
+}
+.swiper-slide {
+	display: inline-block;
+	background: transparent;
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+}
+.product-star{
+	cursor: pointer;
+}
+.product-comment{
+	margin-top: 10px;
+	padding: 0;
+	background: transparent;
+	border-radius: 5px;
+	height: 200px;
+}
+.account-cmt{
+	border-bottom: 2px solid #D9D7D7;
+}
+.all-cmt{
+	margin-left: 40px;
+}
+.item-name{
+	display: inline-block;
+	color: #365899;
+	font-weight: bold;
+	cursor: pointer;
+}
+.img-account{
+	display: inline-block;
+	font-weight: bold;
+}
+.img-account{
+	cursor: pointer;
+	margin: 15px 0 15px 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+textarea.txtComment{
+	display: inline-block;
+	resize: none;
+	vertical-align: middle;
+	width: 50%;
+}
+.btn-PostComment{
+	font-weight: bold;
+	display: inline-block;
+	padding: 13px;
+	background: #00afef;
+	vertical-align: middle;
+	border-radius: 7px;
+	cursor: pointer;
+	color: #fff;
+}
+.btn-PostComment:hover{
+	background: #097197;
+}
+/* background cc0033
+	background fff;
+	body f4f4f4
+	boder D9D7D7
+	color 365899
+ */

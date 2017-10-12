@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="../../css/bootstrap.min.css" >
 		<!-- FontAwsome -->
 		<link rel="stylesheet" href="../../css/font-awesome.min.css">
+		<!-- Swiper css -->
+		<link rel="stylesheet" type="text/css" href="../../css/ProductDetail/swiper.min.css">
 		<!-- custom file css -->
 		<link rel="stylesheet" href="../../css/ProductDetail/index.css">
 	</head>
@@ -48,6 +50,14 @@
 					<!-- start infomation and select count - color -->
 					<div class="product-infomation col-md-8">
 						<span class="head-product">Đây là tên Sản phẩm</span>
+						<!-- star of product -->
+						<div class="product-star">
+							<img src="../../images/star-on.png" alt="1">
+							<img src="../../images/star-on.png" alt="2">
+							<img src="../../images/star-on.png" alt="3">
+							<img src="../../images/star-on.png" alt="4">
+							<img src="../../images/star-off.png" alt="5">
+						</div>
 						<!-- giá -->
 						<div class="field-col">
 							<span class="product-field">Giá: </span>
@@ -135,41 +145,96 @@
 							<span class="product-field">Số lượng: </span>
 							<span class="btn-number">-</span>
 							<input  type="number" name="txtNumberProduct" id="txtNumberProduct" value="1">
-							<span class="btn-number">+</a>
+							<span class="btn-number">+</span>
 
-							</div>
-							<!-- end số lượng -->
-							<div class="add-cart">
-								<div class="btn-addToCart">
-									<div class="default-state">
-										<span class="fa fa-cart-plus fa-2x"></span>
-										<span>Thêm vào giỏ hàng</span>
-									</div>
-									<div class="active-state">
-										<span class="fa fa-cart-plus fa-2x"></span>
-										<span>Thêm vào giỏ hàng</span>
-									</div>
+						</div>
+						<!-- end số lượng -->
+						<div class="add-cart">
+							<div class="btn-addToCart">
+								<div class="default-state">
+									<span class="fa fa-cart-plus fa-2x"></span>
+									<span>Thêm vào giỏ hàng</span>
+								</div>
+								<div class="active-state">
+									<span class="fa fa-cart-plus fa-2x"></span>
+									<span>Thêm vào giỏ hàng</span>
 								</div>
 							</div>
 						</div>
-						<!-- end infomation and select count - color -->
 					</div>
-					<!-- end infomation product -->
-					<!-- start involve product -->
-					<div class="product-involve col-xs-12">
-						<h4>SẢN PHẨM THƯỜNG ĐƯỢC XEM CÙNG</h4>
-						<div class="involve-content">
-							
+					<!-- end infomation and select count - color -->
+				</div>
+				<!-- end infomation product -->
+				<!-- start involve product -->
+				<div class="product-involve col-xs-12">
+					<h4>SẢN PHẨM THƯỜNG ĐƯỢC XEM CÙNG</h4>
+					<!-- start slider involve product -->
+					<div class="involve-content">
+						<div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
+							<div class="swiper-wrapper">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_1.jpg">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_2.jpg">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_3.jpg">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_4.jpg">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_5.jpg">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_6.jpg">
+								<img class="swiper-slide swiper-slide-active" src="../../images/product_7.jpg">
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev swiper-button-disabled"></div>
 						</div>
 					</div>
-					<!-- end involve product -->
+					<!-- end imvolve -->
 				</div>
+				<!-- end involve product -->
+				<!-- start comment -->
+				<div class="product-comment col-xs-12">
+					<div class="cmt-title">
+						<h4>BÌNH LUẬN VỀ SẢN PHẨM</h4>
+					</div>
+					<div class="cmt-container">
+						<div class="account-cmt">
+							<img class="img-account" src="../../images/account_1.png">
+							<textarea class="txtComment" placeholder="Bạn đang nghĩ gì, Boy?"></textarea>
+							<span class="btn-PostComment">Đăng</span>
+						</div>
+						<div class="all-cmt">
+							<div class="item-cmt">
+								<img class="img-account" src="../../images/account_1.png">
+								<span class="item-name">Tên của tôi 1</span>
+								<span class="item-cmt">Sản phẩm này thật tuyệt vời 1!</span>
+							</div>
+							<div class="item-cmt">
+								<img class="img-account" src="../../images/account_1.png">
+								<span class="item-name">Tên của tôi 2</span>
+								<span class="item-cmt">Sản phẩm này thật tuyệt vời 2!</span>
+							</div>
+							<div class="item-cmt">
+								<img class="img-account" src="../../images/account_1.png">
+								<span class="item-name">Tên của tôi 3</span>
+								<span class="item-cmt">Sản phẩm này thật tuyệt vời 3!</span>
+							</div>
+							<div class="item-cmt">
+								<img class="img-account" src="../../images/account_1.png">
+								<span class="item-name">Tên của tôi 4</span>
+								<span class="item-cmt">Sản phẩm này thật tuyệt vời 4!</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!-- end comment -->
 			</div>
-			<!-- jquery -->
-			<script type="text/javascript" src="../../js/jquery.min.js"></script>
-			<!-- custom javascript -->
-			<script type="text/javascript" src="../../js/ProductDetail/index.js"></script>
-			<!-- js bootstrap -->
-			<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-		</body>
-		</html>
+		</div>
+		<!-- end row -->
+		<!-- end container -->
+		<!-- jquery -->
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<!-- swiper js -->
+		<script type="text/javascript" src="../../js/ProductDetail/swiper.min.js"></script>
+		<!-- js bootstrap -->
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+		<!-- custom javascript -->
+		<script type="text/javascript" src="../../js/ProductDetail/index.js"></script>
+	</body>
+	</html>
