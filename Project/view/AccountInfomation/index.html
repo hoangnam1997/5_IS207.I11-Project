@@ -2,19 +2,49 @@
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Đây là tên Sản phẩm</title>
+		<title>Đây là thông tin tài khoản</title>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="../../css/bootstrap.min.css" >
 		<!-- FontAwsome -->
 		<link rel="stylesheet" href="../../css/font-awesome.min.css">
 		<!-- custom file css -->
 		<link rel="stylesheet" href="../../css/AccountInfomation/Index.css">
-
 	</head>
 	<body>
 		<div class="container">
 			<div class="row">
-				
+				<div class="col-xs-12 infomation-account">
+					<h4>THÔNG TIN TAI KHOẢN</h4>
+					<!-- start content -->
+					<div class="infomation-content">
+						<div class="group-content">
+							<span  class="field-lable">Tên đăng nhập: </span>
+							<input id="txtUserName" disabled class="field-input" type="text" name="userName" value="namnh">
+						</div>
+						<div class="group-content">
+							<span  class="field-lable">Họ tên: </span>
+							<input id="txtName" class="field-input" type="text" name="txtName" value="Nguyễn Hoàng Nam">
+						</div>
+						<div class="group-content">
+							<span class="field-lable">Email </span>
+							<input class="field-input" type="text" name="txtEmail" id="txtEmail" value="15520515@gm.uit.edu.vn">
+						</div>
+						<div class="group-content">
+							<span class="field-lable">Mô tả về bản thân:  </span>
+							<textarea class="field-input" type="text" name="txtDescription" id="txtDescription">Đây là mô tả cá nhân.</textarea>
+						</div>
+						<div class="group-content">
+							<label class="ckb-ChangePass">
+								<input type="checkbox" name="ckbChangePass" id="ckbChangePass">
+								Thay đổi mật khẩu
+							</label>
+						</div>
+						<div class="group-content">
+							<input class="btn-update" type="button" name="btnUpdate" id="btnUpdate" value="Cập nhật">
+						</div>
+					</div>
+					<!-- end content -->
+				</div>
 			</div>
 			<!-- end row -->
 		</div>
