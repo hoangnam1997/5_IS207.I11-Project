@@ -37,7 +37,7 @@ body{
 	transform: rotateX(-90deg) translateZ(-32px);
 }
 div.product-image{
-	margin: 0;
+	margin: 0 10px 0 10px;
 	padding: 0;
 	background: transparent;
 	height: 350px;
@@ -62,6 +62,8 @@ span.product-field{
 }
 .product-imgItem{
 	min-height: 350px;
+	max-height: 350px;
+	width: 100%;
 }
 .radio-field{
 	display: inline-block;
@@ -70,6 +72,7 @@ span.product-field{
 	color: red;
 }
 span.radio-inline{
+	margin-left: -4px!important;
 	padding: 0px;
 }
 .radio-inline input[type="radio"]{
@@ -105,11 +108,15 @@ span.product-price{
 	font-size: 20px;
 	color: #cc0033;
 }
-span.product-priceOld{
+span.price-invole{
+	font-weight: bold;
+}
+span.product-priceOld,span.priceOld-invole{
+	font-size: 12px;
 	text-decoration: line-through;
 	color: 	#a2a2a2;
 }
-span.product-discount{
+span.product-discount,span.discount-invole{
 	font-weight: bold;
 	color: #FF3B26;
 }
@@ -120,32 +127,183 @@ span.btn-number{
 	min-height: 30px;
 	cursor: pointer;
 	color: #ffffff;
-	background: #A0A0A0;
+	background: #BEBEBE;
 	text-align: center;
 	vertical-align: middle;
+	margin-left: -4px!important;
 }
 input#txtNumberProduct{
 	border: 2px solid #D9D7D7;
 	max-width:30px;
 	min-height: 30px;
 	font-size: 13px;
+	margin-left: -4px;
 }
 div.product-involve{
 	margin-top: 10px;
-	padding: 5px;
-	background: #fff;
+	padding: 0;
+	background: transparent;
 	border-radius: 5px;
 }
-.product-involve h4{
+.product-involve h4,.cmt-title h4{
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
 	border-radius: 15px 15px 0px 0px; 
-	background: #EEE6E6;
-	border-bottom: 1px solid #fff;
+	background: #fff;
+	border-bottom: 2px dashed #f4f4f4;
 }
-div.involve-content{
-	background: #EEE6E6;
-	height: 30px;
+div.involve-content,div.cmt-container{
+	border-radius: 0 5px 5px 5px;
+	display: inline-block;
+	background: #fff;
 	width: 100%;
 }
+.swiper-container {
+	background: transparent;
+	width: 100%;
+	padding: 5px;
+}
+.swiper-slide {
+	cursor: pointer;
+	opacity: 0.8;
+	display: inline-block;
+	background: transparent;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid transparent;
+}
+.swiper-slide:hover {
+	opacity: 1;
+	border: 1px solid #D9D7D7;
+}
+[class*=swiper-button-]{
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+	background-position: center;
+
+}
+.image-invole{
+	display: inline-block;
+	background: red;
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	width: 100%;
+}
+.product-star{
+	cursor: pointer;
+}
+.product-comment{
+	margin-top: 10px;
+	padding: 0;
+	background: transparent;
+	border-radius: 5px;
+	height: 200px;
+}
+.account-cmt{
+	border-bottom: 2px solid #D9D7D7;
+}
+.all-cmt{
+	margin-left: 40px;
+}
+.item-name{
+	display: inline-block;
+	color: #365899;
+	font-weight: bold;
+	cursor: pointer;
+}
+.img-account{
+	display: inline-block;
+	font-weight: bold;
+}
+.img-account{
+	cursor: pointer;
+	margin: 15px 0 15px 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+textarea.txtComment{
+	display: inline-block;
+	resize: none;
+	vertical-align: middle;
+	width: 50%;
+}
+.btn-PostComment{
+	font-weight: bold;
+	display: inline-block;
+	padding: 13px;
+	background: #00afef;
+	vertical-align: middle;
+	border-radius: 7px;
+	cursor: pointer;
+	color: #fff;
+}
+.btn-PostComment:hover{
+	background: #097197;
+}
+.body-cmt{
+	display: inline-block;
+	vertical-align: middle;
+}
+.item-detail{
+	display: block;
+	color: #90949c;
+	cursor: pointer;
+}
+.item-detail:hover{
+	text-decoration: underline;
+}
+.zoomContainer{
+	z-index: 2;
+}
+.title-invole{
+	font-size: 15px;
+	display: block;
+}
+.listImgPrduct{
+	display: inline-block;
+	border-right: 1px solid #D9D7D7;
+	min-height: 350px;
+	max-height: 350px;
+	padding: 0 10px 0 10px;
+	text-align: center;
+	overflow-y: scroll;
+
+}
+.img-loader{
+	cursor: pointer;
+	vertical-align: middle;
+	width: 45px;
+	margin: 5px;
+	border: 1px solid transparent;
+}
+.img-loader:hover{
+	border: 1px solid #7F7B7B;
+}
+.listImgPrduct::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.listImgPrduct::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: #F5F5F5;
+}
+
+.listImgPrduct::-webkit-scrollbar-thumb
+{
+	background-color: #7F7B7B;
+}
+
+/* background cc0033
+	background fff;
+	body f4f4f4
+	boder D9D7D7
+	color 365899
+	detail 90949c
+ */
