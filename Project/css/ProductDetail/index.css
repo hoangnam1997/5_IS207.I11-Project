@@ -27,7 +27,7 @@ body{
 	transition: background 0.255s ease;
 	border: 4px solid #cc0033;
 }
-.default-state{
+.active-state,.default-state{
 	margin-left: -4px;
 }
 .btn-addToCart .active-state {
