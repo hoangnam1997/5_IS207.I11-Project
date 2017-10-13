@@ -18,7 +18,8 @@ body,html{
 	vertical-align: top;
 	display: inline-block;
 	cursor: default;
-	min-width: 120px;
+	min-width: 150px;
+	font-weight: bold;
 }
 .field-input{
 	vertical-align: middle;
@@ -27,10 +28,18 @@ body,html{
 	resize: none;
 }
 .btn-update{
-	margin-left: 120px;
+	margin-top: 15px;
+	margin-left: 150px;
+	background: #00afef;
+	color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+.btn-update:hover{
+	background: #097197;
 }
 .ckb-ChangePass{
-	margin-left: 120px;
+	margin-left: 150px;
 	font-weight: normal;
 }
 .infomation-account h4{
@@ -48,10 +57,31 @@ body,html{
 textarea.field-input{
 	min-height: 100px;
 }
+.password-content{
+	display: inline-block;
+	width: 100%;
+}
+#txtUserName{
+	cursor: not-allowed;
+}
+.check-done{
+	color: #3DF812;
+	margin-left: -4px;
+}.check-false {
+	color: #B40A0A;
+}
+.check-done,.check-false{
+	vertical-align: middle;
+}
+.input-false{
+	border: 2px solid #B40A0A;
+}
 /* background cc0033
 	background fff;
 	body f4f4f4
 	boder D9D7D7
 	color 365899
 	detail 90949c
+	00afef
+	3DF812
  */
