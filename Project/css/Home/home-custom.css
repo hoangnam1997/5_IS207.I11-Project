@@ -1,6 +1,9 @@
 body{
 /*	padding-top: 64px;
 */}
+.header{
+	z-index: 999
+}
 .header .container{
 	width:1264px;
 	height: 64px;
