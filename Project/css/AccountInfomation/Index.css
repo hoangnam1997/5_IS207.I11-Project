@@ -1,0 +1,87 @@
+/* creat by namnh-UIT */
+body,html{
+	background: #f4f4f4;
+}
+.infomation-content{
+	display: inline-block;
+	width: 100%;
+	background: #fff;
+	border-radius: 0 5px;
+	padding: 15px 10px 15px 25px;
+}
+.group-content{
+	display: inline-block;
+	width: 100%;
+	margin-top: 15px;
+}
+.field-lable{
+	vertical-align: top;
+	display: inline-block;
+	cursor: default;
+	min-width: 150px;
+	font-weight: bold;
+}
+.field-input{
+	vertical-align: middle;
+	width: 30%;
+	border-radius: 5px;
+	resize: none;
+}
+.btn-update{
+	margin-top: 15px;
+	margin-left: 150px;
+	background: #00afef;
+	color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+.btn-update:hover{
+	background: #097197;
+}
+.ckb-ChangePass{
+	margin-left: 150px;
+	font-weight: normal;
+}
+.infomation-account h4{
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+	border-radius: 15px 15px 0 0;
+	border-bottom: 2px dashed #f4f4f4;
+}
+.infomation-account{
+	padding-top: 10px;
+	background: transparent;
+}
+textarea.field-input{
+	min-height: 100px;
+}
+.password-content{
+	display: inline-block;
+	width: 100%;
+}
+#txtUserName{
+	cursor: not-allowed;
+}
+.check-done{
+	color: #3DF812;
+	margin-left: -4px;
+}.check-false {
+	color: #B40A0A;
+}
+.check-done,.check-false{
+	vertical-align: middle;
+}
+.input-false{
+	border: 2px solid #B40A0A;
+}
+/* background cc0033
+	background fff;
+	body f4f4f4
+	boder D9D7D7
+	color 365899
+	detail 90949c
+	00afef
+	3DF812
+ */
