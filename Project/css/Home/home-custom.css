@@ -1,0 +1,34 @@
+body{
+/*	padding-top: 64px;
+*/}
+.header{
+	z-index: 999
+}
+.header .container{
+	width:1264px;
+	height: 64px;
+	background-color: #26D8D7FF!important;
+}
+.owl-stage{
+	position: relative;
+	display: block;
+}
+#slider .owl-carousel .owl-stage-outer .owl-stage .owl-item{
+	padding-left: 24px;
+}
+
+.content{
+	background-color: black;
+}
+
+h3 a{
+/*	display: block;
+*/	color:#ccc;
+}
+.main-content{
+/*margin-top: 64px;
+*/padding-top: 64px;
+}
+/*.owl-carousel .owl-stage-outer{
+	padding-top: 64px;
+}*/
