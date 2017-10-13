@@ -1,0 +1,13 @@
+.header .container{
+	width:1264px;
+	height: 64px;
+	background-color: #26D8D7FF!important;
+}
+.owl-stage{
+	position: relative;
+	display: block;
+}
+#slider .owl-carousel .owl-stage-outer .owl-stage .owl-item{
+	padding-left: 24px;
+}
+
