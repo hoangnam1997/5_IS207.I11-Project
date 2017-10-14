@@ -42,7 +42,7 @@ body,html{
 	margin-left: 150px;
 	font-weight: normal;
 }
-.infomation-account h4{
+.infomation-account h4,.message-content h4{
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
@@ -50,7 +50,7 @@ body,html{
 	border-radius: 15px 15px 0 0;
 	border-bottom: 2px dashed #f4f4f4;
 }
-.infomation-account{
+.infomation-account,.message-content{
 	padding-top: 10px;
 	background: transparent;
 }
@@ -67,7 +67,8 @@ textarea.field-input{
 .check-done{
 	color: #3DF812;
 	margin-left: -4px;
-}.check-false {
+}
+.check-false {
 	color: #B40A0A;
 }
 .check-done,.check-false{
@@ -75,6 +76,40 @@ textarea.field-input{
 }
 .input-false{
 	border: 2px solid #B40A0A;
+}
+.groupMessage-read,.groupMessage-unread{
+	border-bottom: 1px solid #f4f4f4;
+	padding: 15px;
+}
+.groupMessage-read{
+	background: #fff;
+}
+.groupMessage-unread{
+	background:#f6fcff;
+}
+.mesage-date{
+	display: inline-block;
+	min-width: 100px;
+	max-width: 100px;
+	font-weight: bold;
+	font-size: 17px;
+}
+.message-notify{
+	display: block;
+}
+.message-delete{
+	color: #B40A0A;
+}
+.message-checkRead{
+	color: #3AC41A;
+}
+.message-delete,.message-checkRead{
+	font-size: 20px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.message-content .infomation-content{
+	padding: 0;
 }
 /* background cc0033
 	background fff;
@@ -84,4 +119,6 @@ textarea.field-input{
 	detail 90949c
 	00afef
 	3DF812
+	B40A0A
+	f6fcff
  */
