@@ -1,0 +1,38 @@
+body{
+/*	padding-top: 64px;
+*/}
+.header{
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	border-bottom: 2px solid red;
+	border-color: red;
+}
+.navbar{
+	width:100%;
+	border-radius: 0!important;
+	margin: 0!important;
+}
+.owl-stage{
+	position: relative;
+	display: block;
+}
+#slider .owl-carousel .owl-stage-outer .owl-stage .owl-item{
+	padding-left: 24px;
+}
+
+.content{
+	background-color: black;
+}
+
+h3 a{
+/*	display: block;
+*/	color:#ccc;
+}
+.main-content{
+/*margin-top: 64px;
+*/padding-top: 64px;
+}
+/*.owl-carousel .owl-stage-outer{
+	padding-top: 64px;
+}*/
