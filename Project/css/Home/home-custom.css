@@ -4,6 +4,10 @@ body{
 .header{
 	z-index: 999
 }
+
+.navbar{
+	width:100% !important;
+}
 .header .container{
 	width:1264px;
 	height: 64px;
