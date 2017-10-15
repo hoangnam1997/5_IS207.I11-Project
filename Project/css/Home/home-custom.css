@@ -2,16 +2,16 @@ body{
 /*	padding-top: 64px;
 */}
 .header{
-	z-index: 999
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	border-bottom: 2px solid red;
+	border-color: red;
 }
-
 .navbar{
-	width:100% !important;
-}
-.header .container{
-	width:1264px;
-	height: 64px;
-	background-color: #26D8D7FF!important;
+	width:100%;
+	border-radius: 0!important;
+	margin: 0!important;
 }
 .owl-stage{
 	position: relative;
