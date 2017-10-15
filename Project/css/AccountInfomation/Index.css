@@ -50,6 +50,9 @@ body,html{
 	border-radius: 15px 15px 0 0;
 	border-bottom: 2px dashed #f4f4f4;
 }
+.message-content h4 span{
+	color: #B40A0A;
+}
 .infomation-account,.message-content{
 	padding-top: 10px;
 	background: transparent;
