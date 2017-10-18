@@ -5,5 +5,7 @@ $(document).ready(function($) {
 	margin: 10,
 	loop: true,
 	items:4,
+	autoplay:true,
+    autoplayTimeout:3000
 });
 });
