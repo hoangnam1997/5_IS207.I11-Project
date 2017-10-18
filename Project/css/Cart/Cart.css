@@ -196,13 +196,6 @@ button.col-md-4.col-md-push-7.btn.btn-danger {
 			vertical-align: middle;
 		}
 		
-		.radio-inline input[type="radio"]:checked + label span {
-			border: 1px solid black;
-			-webkit-transition:border 0.5s linear;
-			-o-transition:border 0.5s linear;
-			-moz-transition:border 0.5s linear;
-			transition:border 0.5s linear;
-		}
 		.invoice .produc-price-list .span .b{
 			vertical-align: middle;
 		}

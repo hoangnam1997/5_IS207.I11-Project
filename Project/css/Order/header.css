@@ -2,15 +2,6 @@
 	margin:0;
 	padding:0;
 }
-
-.col-md-6 {
-    margin-top: 10px;
-    background-color: rgba(134, 152, 151, 0.25);
-    border-radius: 10px;
-    border-color: gey;
-    border-color: 2px solid grey;
-}
-
 .col-md-3.col-md-push-1.nav.nav-tabs {
     background-color: rgba(249, 249, 249, 0.45);
     width: 273px;

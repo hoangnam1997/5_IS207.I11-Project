@@ -38,12 +38,10 @@ button.btn.btn-default.pull-right {
 }
 
 button.btn.btn-danger {
+    float: right;
     width: 142px;
-    height: 41px;
-    margin-top: 38px;
-    margin-right: 23px;
-    margin-left: 19px;
-    margin-bottom: 21px;
+    height: 40px;
+    margin: 20px;
 }
 
 html {}
