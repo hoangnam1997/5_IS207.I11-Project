@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quản lý màu sắt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<!-- fa -->
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+	<!-- table-sort -->
+	<link rel="stylesheet" type="text/css" href="../../css/table-sort/PagingTable.css">
+	<!-- my custom -->
+	<link rel="stylesheet" type="text/css" href="../../css/ManageColor/index.css">
+</head>
+<body>
+	<!-- Modal -->
+	<div class="modal fade" id="colorModal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Thông tin màu sắt</h4>
+				</div>
+				<div class="modal-body">
+					<p>Thông tin màu sắt nè</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-dismiss="modal">Chấp nhận</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- end modals -->
+	<!-- start container -->
+	<div class="container">
+
+		<!-- start row -->
+		<div class="row">
+			<div class="col-xs-12 header-content">
+				<div class="col-md-4">
+					<div class="form-inline">
+						<div class="form-group pull-left">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Mô tả màu sắt...">
+								<div class="btn btn-default input-group-addon">
+									<i class="glyphicon glyphicon-search"></i>
+								</div>
+							</div>
+						</div>
+						<!-- add buttom -->
+						<button id="btnAdd" class="btn btn-info" data-toggle="modal" data-target="#colorModal">+</button>
+					</div>
+					<input type="checkbox" id="checkIsDelete">
+					<label id="lblCheckIsDelete"for="checkIsDelete" title="Hiển thị danh sách đã xóa">Hiển thị tất cả</label>
+				</div>
+			</div>
+			<!-- start table -->
+			<div id='table-content' class="table-content col-xs-12">
+				<!-- count entries -->
+				<label class="pull-left">Show
+					<select  class="input-sm Pagin-ShowEntries">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+					entries
+				</label>
+				<!--end count entries -->
+				<!-- start search -->
+				<div class="pull-right">
+					<div class="form-inline">
+						<div class="form-group pull-right">
+							<div class="input-group">
+								<input type="text" class="form-control Pagin-inputSearch" placeholder="Tìm kiếm...">
+								<div class="btn btn-default input-group-addon Pagin-btnSearch">
+									<i class="glyphicon glyphicon-search"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end search -->
+				<!-- start table -->
+				<table class="Table-Pagin table table-hover table-striped table-bordered">
+					<thead>
+						<tr>
+							<th class="table-Sort" data-sort="STT" style="width: 25%;">STT</th>
+							<th style="width: 25%;">Màu sắt</th>
+							<th class="table-Sort" data-sort="Description" style="width: 25%;">Mô tả</th>
+							<th style="width: 25%;"></th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<!-- end table -->
+				<!-- start footer table -->
+				<div class="Table-Pagination pull-right">
+				</div>
+				<!-- end footer table -->
+			</div>
+			<!-- end table -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+	<script type="text/javascript">
+	// set attr of col in table
+	
+    // set data of table
+    var listDataTable = [{
+    	"data":{
+    		"STT":"1",
+    		"Color":"#513192",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"2",
+    		"Color":"#391111",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-reply fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"3",
+    		"Color":"#F76767",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-reply fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"4",
+    		"Color":"#ffff22",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-reply fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"5",
+    		"Color":"#1C0303",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"6",
+    		"Color":"#7DB828",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"7",
+    		"Color":"#5B5E12",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"8",
+    		"Color":"#58FA00",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"9",
+    		"Color":"#2511BA",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"10",
+    		"Color":"#C721B9",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"11",
+    		"Color":"#10D8D6",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    },{
+    	"data":{
+    		"STT":"12",
+    		"Color":"#ffffff",
+    		"Description":"Mô tả",
+    		"Action":"<i class='editColor fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i class='fa fa-trash-o fa-2x' aria-hidden='true'></i>"
+    	},
+    	"flag":0
+    }];
+    
+</script>
+<!-- script jquery -->
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<!-- table sort -->
+<script type="text/javascript" src="../../js/table-sort/PagingTable.js"></script>
+<!-- script custom js -->
+<script type="text/javascript" src="../../js/ManageColor/index.js"></script>
+<!-- data table -->
+
+</body>
+</html>
