@@ -1,13 +1,15 @@
 /* creat by namnh-UIT */
 body,html{
 	background: #f4f4f4;
+	width: 100%;
+	height: 100%;
 }
 .infomation-content{
 	display: inline-block;
 	width: 100%;
 	background: #fff;
 	border-radius: 0 5px;
-	padding: 15px 10px 15px 25px;
+	padding: 0;
 }
 .group-content{
 	display: inline-block;
@@ -20,6 +22,7 @@ body,html{
 	cursor: default;
 	min-width: 150px;
 	font-weight: bold;
+	margin-left: 20px;
 }
 .field-input{
 	vertical-align: middle;
@@ -30,6 +33,7 @@ body,html{
 .btn-update{
 	margin-top: 15px;
 	margin-left: 150px;
+	margin-bottom: 15px;
 	background: #00afef;
 	color: #fff;
 	border-radius: 4px;
@@ -42,15 +46,16 @@ body,html{
 	margin-left: 150px;
 	font-weight: normal;
 }
-.infomation-account h4,.message-content h4{
+.infomation-account h4{
+	cursor: pointer;
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
 	background: #fff;
 	border-radius: 15px 15px 0 0;
-	border-bottom: 2px dashed #f4f4f4;
+	border-bottom: 3px dashed #f4f4f4;
 }
-.message-content h4 span{
+.infomation-account h4 span{
 	color: #B40A0A;
 }
 .footerBtn{
@@ -66,11 +71,12 @@ body,html{
 	border: 1px solid #989898;
 	max-width: 500px;
 	border-radius: 5px;
+	margin: auto;
 }
 .find-content{
 	padding: 10px;
 }
-.infomation-account,.message-content,.rememver-content{
+.infomation-account,.message-content{
 	padding-top: 10px;
 	background: transparent;
 }
@@ -78,6 +84,7 @@ body,html{
 	border-bottom: 1px solid #f4f4f4;
 	font-weight: bold;
 	padding-left: 5px;
+	height: 100%;
 }
 .Remember-email{
 	display: block;
@@ -160,8 +167,8 @@ textarea.field-input{
 	cursor: pointer;
 	margin-left: 10px;
 }
-.message-content .infomation-content,.rememver-content .infomation-content,.rememver-content{
-	padding: 0!important;
+.content-remember{
+	margin-top: 30px;
 }
 /* background cc0033
 	background fff;

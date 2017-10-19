@@ -7,7 +7,7 @@ function LoadHeader(){
 }
 // include content login
 function LoadLoginContent(){
-	$.get('../../view/AccountInfomation/Login.html',function(data){
+	$.get('../../view/Account/Login.html',function(data){
 		$('#content').html(data);
 		// Login click function
 		$('#btnLogin').on('click',function(){
