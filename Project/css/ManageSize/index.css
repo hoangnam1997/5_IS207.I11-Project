@@ -31,9 +31,6 @@
 .fa.fa-trash-o,.fa.fa-reply{
 	color: #B83A3A;
 }
-input[type='color']{
-	width: 40%;
-}
 #checkIsDelete,#lblCheckIsDelete{
 	cursor: pointer;
 	display: inline-block;
@@ -42,6 +39,19 @@ input[type='color']{
 	min-height: 100px;
 	resize: none;
 }
+.inputSize{
+	text-align: center;
+	max-width: 30%;
+	color: #0F0BC4;
+	font-weight: bold;
+}
 .form-group.pull-left,.form-inline.col-md-12{
 	padding: 0;
+}
+#inputSizeSearch{
+	border-radius: 4px 0 0 0;
+}
+#inputDescriptionSearch{
+	border-radius: 0 0 0 4px;
+
 }
