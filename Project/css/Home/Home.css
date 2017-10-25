@@ -2,6 +2,25 @@
  margin:0;
  padding:0;}
 
+.content-product {
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+footer.container.footer {
+    margin-bottom: 3px;
+    /* display: inline-block; */
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+a.navbar-brand {
+    font-family: 'Merienda', cursive;
+    font-size: 36px;
+}
+
 figure.product {
     color: rgb(255, 255, 255);
 }
@@ -13,7 +32,7 @@ figure.product {
 }
 
 .col-md-8.text-center {
-    color: Æ°hwite;
+    color: Ã†Â°hwite;
     color: white;
     padding-top: 41px;
     padding-bottom: 41px;
@@ -31,7 +50,7 @@ h3.padding20 {
 }
 
 figure.product {
-    background-color: black;
+    background-color: rgb(23, 42, 58);
 }
 
 img.img.img-responsive {
@@ -54,13 +73,13 @@ span.name {
 
 
 .content.text-center {
-    color: white;
+    color: #172a3a;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .content-product {
-    background-color: #2d2d2d;
+    background-color: rgb(255, 255, 255);
 }
 
 .Name-product {
@@ -101,7 +120,7 @@ span.name {
     background-color: #f8f8f8;
     border-color: #e7e7e7;  }
     background-color: #f8f8f8;
-    background-color: #111;
+    background-color: #172a3a;
     border-bottom: #111 1px solid;
     box-shadow: #111 0 0 8px;
 }
@@ -275,16 +294,24 @@ a.KhoiVuongNho:hover .layer3{
 }
 /* Demo purposes only */
 body {
-  background-color: #2d2d2d;
+  background-color: #172a3a;
+}
+#carousel-id .img-responsive{
+  max-height: 365px;
+  min-height: 365px;
 }
 .footer{
-    background-color: #6b6b6b;
+    background-color: #172a3a;
     border-radius: 5px 5px 0 0;
     padding:20px;
-    color:#fff;
+    color: #fbfbfb;
     opacity: 0.8;
 }
 .address span{
     padding-bottom: 10px;
     display: inline-block;  
+}
+body{
+  font-family: 'Marcellus', serif;
+  font-size: 16px;
 }
