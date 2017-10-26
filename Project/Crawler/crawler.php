@@ -1,5 +1,7 @@
 <?php
 require "simple_html_dom.php";
+require "connect.php";
+require "DBConnect.php"
 
 class DataClothe{
 	public $price;
@@ -12,10 +14,14 @@ class DataClothe{
 	}
 
 	function INSERTDB(){
-		$qr="INSERT INTO CLOTHES VALUES($price,$name;$pictureurl)";
+		$qr="INSERT INTO quanao VALUES($price,$name;$pictureurl)";
 		// Nên kiểm tra $this->url đã có trong db chưa
 	}
 }
+
+
+$connecttodatabase=new Connect();
+
 
 for($t=1;$t<=1;$t++){
 	getDatabase($t);
@@ -37,6 +43,8 @@ for($t=1;$t<=1;$t++){
 	$pictureurl=$sp->find("img",0)->src;
 	echo $pictureurl;
 	echo "<br>";
+
+	DataClothe.INSERTDB();
 	}	
 }
 
