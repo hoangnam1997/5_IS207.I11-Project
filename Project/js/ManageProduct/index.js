@@ -28,8 +28,103 @@ var columnFormat = {
 		}
 		]
 	};
-function pageLoaded(){
-	$('.editProductCategory').attr('data-toggle','modal');
-	$('.editProductCategory').attr('data-target','#ProductCategoryModal');
-}
-var inat = $("#table-content").PagingTable(columnFormat,listDataTable,pageLoaded);
+// list dataTalePrice
+var listDataTablePrice = [{
+	"data":{
+		"STT":"1",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+},{
+	"data":{
+		"STT":"2",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+},{
+	"data":{
+		"STT":"3",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+},{
+	"data":{
+		"STT":"4",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+},{
+	"data":{
+		"STT":"5",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+},{
+	"data":{
+		"STT":"6",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+},{
+	"data":{
+		"STT":"7",
+		"StartDay":'01/01/0001',
+		"EndDay":"01/01/0001",
+		"Price":"20.000đ",
+		"Discount":"5%",
+	},
+	"flag":0
+}];
+// columnFormat for price
+var columnFormatPrice = {
+	"tr": {
+			// "class": "col"
+		},
+		"td": [{
+			// "class": "",
+			"text": "#STT#"
+		},{
+			"text": "#StartDay#"
+		},{
+			// "class": "",
+			"text": "#EndDay#"
+		},{
+			// "class": "",
+			"text": "#Price#"
+		},{
+			// "class": "",
+			"text": "#Discount#"
+		}
+		]
+	};
+	function onClickDetail(){
+		$("#tablePrice").PagingTable(columnFormatPrice,listDataTablePrice);
+	}
+	function pageLoaded(){
+		$('.editProductCategory').attr('data-toggle','modal');
+		$('.editProductCategory').attr('data-target','#ProductModal');
+		$('.lable-detail').attr('data-toggle','modal');
+		$('.lable-detail').attr('data-target','#PriceDetailModal');
+		$('.lable-detail').on('click',function(){
+			onClickDetail();
+		});
+	}
+	var inat = $("#table-content").PagingTable(columnFormat,listDataTable,pageLoaded);

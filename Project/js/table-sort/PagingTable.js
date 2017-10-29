@@ -294,6 +294,7 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
     }
     //set sort on table
     function SortTable() {
+        var iElement = $(divElement).find('.table-Sort').find('i').remove();
         $(divElement).find('.table-Sort').append("<i class='" + itemSort.UNSORT + "'></i>");
         $(divElement).find('.table-Sort i').on('click', SortOnClickElemnt);
     }
