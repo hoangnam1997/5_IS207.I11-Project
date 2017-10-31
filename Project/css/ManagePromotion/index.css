@@ -17,19 +17,18 @@
 	padding-bottom: 10px;
 	border-bottom: 1px solid #A0A0A0;
 }
-.inputPictureGroup{
-	min-height: 150px;
-	border: 1px solid #A0A0A0;
-	border-radius: 5px;
-	padding: 0;
-}
-.inputPicture{
+.input-Img{
+	min-height: 110px;
+	max-height: 110px;
 	width: 100%;
-	border-radius: 5px 5px 0 0;
-	border-bottom: 1px solid #A0A0A0;
+	display: inline-block;
+	cursor: pointer;
 }
 .positionLeft{
 	text-align: left;
+}
+.positionCenter{
+	text-align: center;
 }
 .img-product{
 	padding: 5px;
