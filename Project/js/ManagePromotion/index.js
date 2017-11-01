@@ -41,7 +41,7 @@ var columnFormat = {
 		$(this).parent().find('input[type=file]').click();
 	});
 	// function when input file changes
-	$('input[type=file]').on('change',function(){
+	$('input[type=file]').on('change',function(e){
 		imgElement = $(this).parent().find('.input-Img');
 		if (this.files && this.files[0]) {
 			var reader = new FileReader();
@@ -49,7 +49,8 @@ var columnFormat = {
 			reader.onload = function (e) {
 				$(imgElement).attr('src', e.target.result);
 			}
-
-			reader.readAsDataURL(this.files[0]);
+			if(e.target.files[0]['type'].split('/')[0]=='image'){
+				reader.readAsDataURL(this.files[0]);
+			}
 		}
 	});

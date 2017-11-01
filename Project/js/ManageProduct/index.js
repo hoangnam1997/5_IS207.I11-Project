@@ -150,7 +150,9 @@ $('input[type=file]').on('change',function(e){
 			groupPicture.append('<div class="item-picture"><img class="img-product-edit" src="' + pic.result + '"/><span title="Bỏ hình ảnh" class="removeImg"><i class="fa fa-window-close-o" aria-hidden="true"></i></span></div>');
 			RemovePictureEvent(groupPicture);
 		});
-		pReader.readAsDataURL(file);
+		if(file['type'].split('/')[0]=='image'){
+			pReader.readAsDataURL(file);
+		}
 	});
 	$(this).val('');
 });
