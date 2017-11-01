@@ -1,0 +1,5 @@
+.navbar-custom-menu>.navbar-nav>li>.dropdown-menu{
+	border-left: 1px solid #605ca8;
+	border-right: 1px solid #605ca8;
+	border-bottom: 1px solid #605ca8;
+}
