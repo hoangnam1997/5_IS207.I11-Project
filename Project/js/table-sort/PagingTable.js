@@ -52,22 +52,22 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
                         }
                     }
                 } else { //replace name by value in data
+                    var value = new Object(attrs[keys[k]]);
                     for (var i = 0; i < nameList.length; i++) {
-                        if (keys[k] === "text") { //innerText
-                            tag.innerHTML = attrs[keys[k]].replace(nameList[i],
-                                listRowTable[rowIndex].data[nameList[i].replace(/#/g, "")]);
+                        value=value.replace(nameList[i],
+                            listRowTable[rowIndex].data[nameList[i].replace(/#/g, "")])
+                    }
+                    if (keys[k] === "text") { //innerText
+                        tag.innerHTML = value;
                         } else { //attribute
                             if (Object.hasOwnProperty.call(keys, k)) {
-                                tag.setAttribute(keys[k],
-                                    attrs[keys[k]].replace(nameList[i],
-                                        listRowTable[rowIndex].data[nameList[i].replace(/#/g, "")]));
+                                tag.setAttribute(keys[k],value);
                             }
                         }
                     }
                 }
             }
         }
-    }
     //get all properties from list
     function GetProperties(listRow) {
         countRecord = 0;
@@ -294,6 +294,7 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
     }
     //set sort on table
     function SortTable() {
+        var iElement = $(divElement).find('.table-Sort').find('i').remove();
         $(divElement).find('.table-Sort').append("<i class='" + itemSort.UNSORT + "'></i>");
         $(divElement).find('.table-Sort i').on('click', SortOnClickElemnt);
     }
@@ -337,9 +338,9 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
             var code = event.keyCode || event.which;
             if (code === 13)
             {
-             $(divElement).find('.Pagin-btnSearch').click();
-         }
-     });
+               $(divElement).find('.Pagin-btnSearch').click();
+           }
+       });
         var elementShowEntries = $(divElement).find('.Pagin-ShowEntries');
         if($(elementShowEntries).length){
             $(elementShowEntries).on('change',function(){

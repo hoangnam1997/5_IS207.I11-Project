@@ -17,7 +17,7 @@
 </head>
 <body>
 	<!-- top-header -->			
-	<nav class="navbar navbar-default" role="navigation">
+	<nav id="header-nav" class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -36,7 +36,7 @@
 					<li><a href="#">Best seller</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
-						<ul class="dropdown-menu">
+						<ul id="dropdownMenu" class="dropdown-menu">
 							<li><a href="#">T-shirt</a></li>
 							<li><a href="#">Shirt</a></li>
 							<li><a href="#">coat</a></li>
@@ -54,138 +54,145 @@
 	</nav>
 
 	<!-- end top-header	 -->
-	<!-- discount -->
-	<div id="carousel-id" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-id" data-slide-to="0" class=""></li>
-			<li data-target="#carousel-id" data-slide-to="1" class=""></li>
-			<li data-target="#carousel-id" data-slide-to="2" class="active"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="item">
-				<img  src="../../images/carouse_3.jpg" class="img-responsive">
+	<!-- content-body -->
+	<div class="content-body">
+		<!-- discount -->
+		<div id="carousel-id" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-id" data-slide-to="0" class=""></li>
+				<li data-target="#carousel-id" data-slide-to="1" class=""></li>
+				<li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img  src="../../images/carouse_3.jpg" class="img-responsive">
+				</div>
+				<div class="item">
+					<img  src="../../images/carousel_3.jpg" class="img-responsive">
+				</div>
+				<div class="item">
+					<img  src="../../images/carouse_2.jpg" class="img-responsive">
+				</div>
 			</div>
-			<div class="item">
-				<img  src="../../images/carousel_3.jpg" class="img-responsive">
+			<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>	
+		<!-- 	end discount -->
+		<!--  product -->
+		<div class="content-product">
+			<div class="content text-center">
+				<h1><b>Welcome</b> to Nasaxo Shop</h1>
+				<p>BEST PRODUCTS YOU EVER SEEN!</p>
 			</div>
-			<div class="item active">
-				<img  src="../../images/carouse_2.jpg" class="img-responsive">
-			</div>
-		</div>
-		<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-		<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-	</div>	
-	<!-- 	end discount -->
-	<!--  product -->
-	<div class="content-product">
-		<div class="content text-center">
-			<h1><b>Welcome</b> to Nasaxo Shop</h1>
-			<p>BEST PRODUCTS YOU EVER SEEN!</p>
-		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3">
-					<figure class="product">
-						<div class="image">
-							<img src="../..//images/Aokhoac_1D.png">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 item-product">
+						<figure class="product">
+							<div class="image">
+								<img src="../..//images/Aokhoac_1D.png">
+								<a href="#" class="add-to-cart">Add to Cart</a>
+							</div>
+							<figcaption>
+								<h2>Denim Shirt</h2>
+								<div class="price">$65.00 </div>
+							</figcaption>
+						</figure>
+					</div>
 
-			</div>
-		</div>   	
+				</div>
+			</div>   	
+		</div>
+		<!-- end product -->
 	</div>
-	<!-- end product -->
+	<!-- end content body -->
+	<!-- btn back to top -->
+	<a href="#" id="scroll" title="Scroll to top"><span></span></a>
+	<!-- end back to top -->
 	<!-- Email -->
 	<footer class="container footer">
 		<div class="row">
@@ -216,6 +223,8 @@
 	<script type="text/javascript" src="../../js/jquery.min.js"></script>
 	<!-- bút tráp  -->
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<!-- easing -->
+	<script type="text/javascript" src="../../js/Home/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="../../js/Home/index.js"></script>
 
 </body>
