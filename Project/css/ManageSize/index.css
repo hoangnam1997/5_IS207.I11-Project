@@ -24,6 +24,8 @@
 .fa.fa-pencil-square-o,.fa.fa-trash-o,.fa.fa-reply{
 	margin-left: 10px;
 	cursor: pointer;
+	width: 30px;
+	height: 30px;
 }
 .fa.fa-pencil-square-o{
 	color: #2FB42F;
