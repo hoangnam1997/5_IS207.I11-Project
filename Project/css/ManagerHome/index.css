@@ -1,5 +1,8 @@
 .navbar-custom-menu>.navbar-nav>li>.dropdown-menu{
-	border-left: 1px solid #605ca8;
-	border-right: 1px solid #605ca8;
-	border-bottom: 1px solid #605ca8;
+	border-left: 1px solid #172a3a;
+	border-right: 1px solid #172a3a;
+	border-bottom: 1px solid #172a3a;
+}
+.main-header .logo{
+	font-family: 'Merienda', cursive;
 }
