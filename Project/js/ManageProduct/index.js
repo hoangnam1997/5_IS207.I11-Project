@@ -115,16 +115,42 @@ var columnFormatPrice = {
 		}
 		]
 	};
-	function onClickDetail(){
-		$("#tablePrice").PagingTable(columnFormatPrice,listDataTablePrice);
-	}
-	function pageLoaded(){
-		$('.editProductCategory').attr('data-toggle','modal');
-		$('.editProductCategory').attr('data-target','#ProductModal');
-		$('.lable-detail').attr('data-toggle','modal');
-		$('.lable-detail').attr('data-target','#PriceDetailModal');
-		$('.lable-detail').on('click',function(){
-			onClickDetail();
+//function onclick detail 
+function onClickDetail(){
+	$("#tablePrice").PagingTable(columnFormatPrice,listDataTablePrice);
+}
+function pageLoaded(){
+	$('.editProductCategory').attr('data-toggle','modal');
+	$('.editProductCategory').attr('data-target','#ProductModal');
+	$('.lable-detail').attr('data-toggle','modal');
+	$('.lable-detail').attr('data-target','#PriceDetailModal');
+	$('.lable-detail').on('click',function(){
+		onClickDetail();
+	});
+}
+// remove picture
+function RemovePictureEvent(elemtne){
+	$(elemtne).find('.removeImg').on('click',function(){
+		$(this).parent().remove();
+	});
+}
+var inat = $("#table-content").PagingTable(columnFormat,listDataTable,pageLoaded);
+// function onclick change image
+$('.input-Img').on('click',function(){
+	$(this).parent().find('input[type=file]').click();
+});
+// function when input file changes
+$('input[type=file]').on('change',function(e){
+	groupPicture = $(this).parent().find('.groupPicture');
+	var files = e.target.files; //FileList object
+	$.each(files, function(i, file) {
+		var pReader = new FileReader(); 
+		pReader.addEventListener("load", function(ePicture){
+			var pic = ePicture.target;  // 1 file              
+			groupPicture.append('<div class="item-picture"><img class="img-product-edit" src="' + pic.result + '"/><span title="Bỏ hình ảnh" class="removeImg"><i class="fa fa-window-close-o" aria-hidden="true"></i></span></div>');
+			RemovePictureEvent(groupPicture);
 		});
-	}
-	var inat = $("#table-content").PagingTable(columnFormat,listDataTable,pageLoaded);
+		pReader.readAsDataURL(file);
+	});
+	$(this).val('');
+});

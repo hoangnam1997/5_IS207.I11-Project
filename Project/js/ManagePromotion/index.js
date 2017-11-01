@@ -40,6 +40,7 @@ var columnFormat = {
 	$('.input-Img').on('click',function(){
 		$(this).parent().find('input[type=file]').click();
 	});
+	// function when input file changes
 	$('input[type=file]').on('change',function(){
 		imgElement = $(this).parent().find('.input-Img');
 		if (this.files && this.files[0]) {
