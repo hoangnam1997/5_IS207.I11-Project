@@ -1,13 +1,27 @@
 // create by namnh
 // function load infomation to div content
 function LoadInfomationAccount(){
-	$.get("../../view/Account/InfomationAccount.html",function($data){
-		$('#infomation-content').html($data);
+	var _token = $('meta[name="_token"]').attr('content');
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url +'/account/infomation',
+		 data: { '_token': _token},
+		success: function($data){
+			$('#infomation-content').html($data);
+		}
 	});
 }
 function LoadMessageAccount(){
-	$.get("../../view/Account/MessageAccount.html",function($data){
-		$('#infomation-content').html($data);
+	var _token = $('meta[name="_token"]').attr('content');
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url +'/account/mess',
+		 data: { '_token': _token},
+		success: function($data){
+			$('#infomation-content').html($data);
+		}
 	});
 }
 function onClick($element){

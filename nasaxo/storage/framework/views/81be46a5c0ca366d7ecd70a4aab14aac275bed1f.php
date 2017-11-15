@@ -38,10 +38,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -50,10 +50,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -62,10 +62,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -74,10 +74,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -86,52 +86,15 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
 					</figure>
 				</div>
-				<div class="col-md-3 item-product">
-					<figure class="product">
-						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3 item-product">
-					<figure class="product">
-						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3 item-product">
-					<figure class="product">
-						<div class="image">
-							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-
 			</div>
 		</div>
 		<?php echo $__env->yieldSection(); ?>
@@ -142,6 +105,7 @@
 	<!-- Email -->
 	<?php $__env->startSection('script'); ?>
 	##parent-placeholder-cb5346a081dcf654061b7f897ea14d9b43140712##
+	<script type="text/javascript" src="<?php echo url('public/js/Home/product.js'); ?>"></script>
 	<?php echo $__env->yieldSection(); ?>
 </body>
 </html>

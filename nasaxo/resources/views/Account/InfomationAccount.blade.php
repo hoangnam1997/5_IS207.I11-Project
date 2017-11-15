@@ -1,4 +1,3 @@
-
 <!-- tên đăng nhập -->
 <div class="group-content">
 	<span  class="field-lable">Tên đăng nhập: </span>
@@ -54,4 +53,4 @@
 <!-- end content -->
 <!-- end container -->
 <!-- custom js -->
-<script type="text/javascript" src="../../js/Account/InfomationAccount.js"></script>
+<script type="text/javascript" src="{!! url('public/js/Account/InfomationAccount.js') !!}"></script>

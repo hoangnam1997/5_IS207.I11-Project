@@ -39,10 +39,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="{!! url('public/images/Aokhoac_1D.png') !!}" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -51,10 +51,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="{!! url('public/images/Aokhoac_1D.png') !!}" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -63,10 +63,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="{!! url('public/images/Aokhoac_1D.png') !!}" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -75,10 +75,10 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="{!! url('public/images/Aokhoac_1D.png') !!}" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
@@ -87,52 +87,15 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="{!! url('public/images/Aokhoac_1D.png') !!}" class="clickDetail">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
-						<figcaption>
+						<figcaption class="clickDetail">
 							<h2>Denim Shirt</h2>
 							<div class="price">$65.00 </div>
 						</figcaption>
 					</figure>
 				</div>
-				<div class="col-md-3 item-product">
-					<figure class="product">
-						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3 item-product">
-					<figure class="product">
-						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-3 item-product">
-					<figure class="product">
-						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
-							<a href="#" class="add-to-cart">Add to Cart</a>
-						</div>
-						<figcaption>
-							<h2>Denim Shirt</h2>
-							<div class="price">$65.00 </div>
-						</figcaption>
-					</figure>
-				</div>
-
 			</div>
 		</div>
 		@show
@@ -143,6 +106,7 @@
 	<!-- Email -->
 	@section('script')
 	@parent
+	<script type="text/javascript" src="{!! url('public/js/Home/product.js') !!}"></script>
 	@show
 </body>
 </html>

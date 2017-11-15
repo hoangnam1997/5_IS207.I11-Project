@@ -1,7 +1,4 @@
 /* crete by Namnh */
-body{
-	background: #f4f4f4;
-}
 .add-cart{
 	position: absolute;
 	bottom: 4px;
@@ -46,6 +43,12 @@ div.product-image{
 	height: 350px;
 	border-right: 2px solid #D9D7D7;
 }
+.row{
+	margin: 0;
+}
+.product.col-xs-12{
+	margin: 0;
+}
 div#Product-carousel{
 	width: 100%;
 	height: 100%;
@@ -57,6 +60,7 @@ span.head-product{
 .product-infomation{
 	font-size: 15px;
 	min-height: 350px;
+	text-align: left;
 }
 span.product-field{
 	display: inline-block;
@@ -101,11 +105,13 @@ span.radio-inline{
 }
 div.field-col{
 	margin-top: 8px;
+	text-align: left;
 }
 div.product{
 	background: #fff;
 	border-radius: 5px;
 	padding: 5px;
+	cursor: default;
 }
 span.product-price{
 	font-size: 20px;
@@ -196,6 +202,7 @@ div.involve-content,div.cmt-container{
 	width: 100%;
 }
 .product-star{
+	text-align: left;
 	cursor: pointer;
 }
 .product-comment{
@@ -203,7 +210,7 @@ div.involve-content,div.cmt-container{
 	padding: 0;
 	background: transparent;
 	border-radius: 5px;
-	height: 200px;
+	min-height: 200px;
 }
 .account-cmt{
 	border-bottom: 2px solid #D9D7D7;

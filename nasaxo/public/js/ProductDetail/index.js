@@ -12,6 +12,7 @@ $('.listImgPrduct .img-loader').on('mouseover',function(){
 	$('.listImgPrduct .img-loader').css('border', 'none');
 	$(this).css('border', '1px solid #7F7B7B');
 	onSwapImg($(this),$('#productImgItem'));
+	$('.zoomContainer').remove();
 	zoomImage('.zoom-img');
 });
 // involve product
@@ -27,10 +28,9 @@ var swiper = new Swiper('.swiper-container', {
 // zoom picture
 function zoomImage($selecter){
 	$($selecter).elevateZoom({
-		cursor: "zoom-in",
-		zoomType: "inner",
-		zoomWindowFadeIn: 500,
-		zoomWindowFadeOut: 750
+		zoomWindowWidth: 350,
+		zoomWindowHeight: 350,
+		scrollZoom: true
 	}); 
 }
 zoomImage('.zoom-img');
