@@ -5,9 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php $__env->startSection('title'); ?> Nasaxo Shop <?php echo $__env->yieldSection(); ?></title>
   <?php $__env->startSection('link'); ?>
+  <meta name="_token" content="<?php echo e(csrf_token()); ?>">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="<?php echo url('public/css/bootstrap.min.css'); ?>">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo url('public/css/font-awesome.min.css'); ?>">
@@ -25,7 +26,7 @@
   <div class="wrapper">
     <header class="main-header" style="">
       <!-- Logo -->
-      <a href="#" class="logo">
+      <a class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>NSX</b></span>
         <!-- logo for regular state and mobile devices -->
@@ -34,12 +35,12 @@
       <!-- Right header user -->
       <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
+        <a class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- Notifications: style can be found in dropdown.less -->
             <li class="dropdown notifications-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-bell-o"></i>
                 <span class="label label-warning">10</span>
               </a>
@@ -49,39 +50,39 @@
                   <!-- inner menu: contains the actual data -->
                   <ul class="menu">
                     <li>
-                      <a href="#">
+                      <a>
                         <i class="fa fa-users text-aqua"></i> 5 new members joined today
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a>
                         <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
                         page and may cause design problems
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a>
                         <i class="fa fa-users text-red"></i> 5 new members joined
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a>
                         <i class="fa fa-shopping-cart text-green"></i> 25 sales made
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a>
                         <i class="fa fa-user text-red"></i> You changed your username
                       </a>
                     </li>
                   </ul>
                 </li>
-                <li class="footer"><a href="#">View all</a></li>
+                <li class="footer"><a>View all</a></li>
               </ul>
             </li>
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">
                 <img src="<?php echo url('public/images/admin.jpg'); ?>" class="user-image" alt="User Image">
                 <span class="hidden-xs">Nguyễn Hoàng Nam</span>
               </a>
@@ -96,10 +97,10 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    <a class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -116,7 +117,7 @@
           <li class="header">DANH MỤC QUẢN LÝ</li>
           <!-- địa chỉ -->
           <li class="treeview">
-            <a href="#">
+            <a>
               <i class="fa fa-files-o"></i>
               <span>Địa chỉ</span>
               <span class="pull-right-container">
@@ -124,37 +125,37 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Thành phố</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Quận huyện</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Phường xã</a></li>
+              <li class="getView" data-view="address/city"><a><i class="fa fa-circle-o"></i>Thành phố</a></li>
+              <li class="getView" data-view="address/district"><a><i class="fa fa-circle-o"></i>Quận huyện</a></li>
+              <li class="getView" data-view="address/ward"><a><i class="fa fa-circle-o"></i>Phường xã</a></li>
             </ul>
           </li>
           <!-- ./ địa chỉ -->
           <!-- khuyến mãi -->
-          <li class="treeview">
-            <a href="#">
+          <li class="treeview getView" data-view="promotion">
+            <a>
               <i class="fa fa-bomb"></i>
               <span>Khuyến mãi</span>
             </a>
           </li>
           <!-- end khuyến mãi -->
           <!-- Màu sắc -->
-          <li class="treeview">
-            <a href="#">
+          <li class="treeview getView">
+            <a>
               <i class="fa fa-dashboard"></i> <span>Màu sắc</span>
             </a>
           </li>
           <!-- end màu sắc -->
           <!-- size -->
-          <li>
-            <a href="#">
+          <li  class="getView">
+            <a>
               <i class="fa fa-th"></i> <span>Kích cở</span>
             </a>
           </li>
           <!-- end size -->
           <!-- thống kê -->
           <li class="treeview">
-            <a href="#">
+            <a>
               <i class="fa fa-pie-chart"></i>
               <span>Thống kê</span>
               <span class="pull-right-container">
@@ -162,16 +163,16 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Doanh thu</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Sản phẩm bán chạy</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Sản phẩm Không bán chạy</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Khách hàng mua nhiều</a></li>
+              <li class="getView"><a><i class="fa fa-circle-o"></i>Doanh thu</a></li>
+              <li class="getView"><a><i class="fa fa-circle-o"></i>Sản phẩm bán chạy</a></li>
+              <li class="getView"><a><i class="fa fa-circle-o"></i>Sản phẩm Không bán chạy</a></li>
+              <li class="getView"><a><i class="fa fa-circle-o"></i>Khách hàng mua nhiều</a></li>
             </ul>
           </li>
           <!-- end thống kê -->
           <!-- Khách hàng -->
-          <li class="treeview">
-            <a href="#">
+          <li class="treeview getView">
+            <a>
               <i class="fa fa-users"></i>
               <span>Khách hàng</span>
             </a>
@@ -179,7 +180,7 @@
           <!-- end khách hàng -->
           <!-- Hóa đơn -->
           <li class="treeview">
-            <a href="#">
+            <a>
               <i class="fa fa-calendar"></i>
               <span>Đơn đặt hàng</span>
               <span class="pull-right-container">
@@ -187,22 +188,22 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Đơn đặt hàng chưa xác nhận</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Đơn đặt hàng đã xác nhận</a></li>
+              <li class="getView"><a><i class="fa fa-circle-o"></i>Đơn đặt hàng chưa xác nhận</a></li>
+              <li class="getView"><a><i class="fa fa-circle-o"></i>Đơn đặt hàng đã xác nhận</a></li>
             </ul>
           </li>
           <!-- end hóa đơn -->
           <!-- nhóm sản phẩm -->
-          <li class="treeview">
-            <a href="#">
+          <li class="treeview getView">
+            <a>
               <i class="fa fa-bookmark"></i>
               <span>Nhóm sản phẩm</span>
             </a>
           </li>
           <!-- end nhóm sản phẩm -->
           <!-- sản phẩm -->
-          <li class="treeview">
-            <a href="#">
+          <li class="treeview getView">
+            <a>
               <i class="fa fa-rocket"></i>
               <span>Sản phẩm</span>
             </a>
@@ -213,7 +214,7 @@
       <!-- /.sidebar -->
     </aside>
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div id="contentBody" class="content-wrapper">
       <?php echo $__env->yieldContent('content'); ?>
     </div>
     <!-- /.content-wrapper -->
@@ -227,8 +228,13 @@
   <script src="<?php echo url('public/js/bootstrap.min.js'); ?>"></script>
   <!-- AdminLTE App -->
   <script src="<?php echo url('public/js/ManageHome/adminlte.min.js'); ?>"></script>
+  <!-- get url -->
+  <script type="text/javascript">
+    var url = '<?php echo url(''); ?>';
+  </script>
   <!-- index js -->
   <script type="text/javascript" src="<?php echo url('public/js/ManageHome/index.js'); ?>"></script>
+
   <?php echo $__env->yieldSection(); ?>
 </body>
 </html>

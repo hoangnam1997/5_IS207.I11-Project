@@ -6,3 +6,12 @@
 .main-header .logo{
 	font-family: 'Merienda', cursive;
 }
+a{
+	cursor: pointer;
+}
+.row{
+	margin: 0;
+}
+.content-wrapper{
+	padding: 15px;
+}

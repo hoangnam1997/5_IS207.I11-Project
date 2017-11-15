@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Quản lý Khuyến mãi</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-	<!-- fa -->
-	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
-	<!-- table-sort -->
-	<link rel="stylesheet" type="text/css" href="../../css/table-sort/PagingTable.css">
-	<!-- my custom -->
-	<link rel="stylesheet" type="text/css" href="../../css/ManagePromotion/index.css">
-</head>
+
+<!-- table-sort -->
+<link rel="stylesheet" type="text/css" href="{!! url('public/css/table-sort/PagingTable.css') !!}">
+<!-- my custom -->
+<link rel="stylesheet" type="text/css" href="{!! url('public/css/ManagePromotion/index.css') !!}">
 <body>
 	<!-- Modal -->
 	<div class="modal fade" id="ProductModal" role="dialog">
@@ -27,7 +17,7 @@
 					<form class="form-horizontal" action="">
 						<div class="form-group">
 							<div class="col-xs-12">
-								<img class="input-Img" src="../../images/carouse_2.jpg">
+								<img class="input-Img" src="{!! url('public/images/carouse_2.jpg') !!}">
 								<input type="file" class="form-control" id="productPicture" name="productPicture" style="display: none;">
 							</div>
 						</div>
@@ -97,7 +87,7 @@
 	</div>
 	<!-- end modals -->
 	<!-- start container -->
-	<div class="container">
+	<div class="container-fluit">
 		<!-- start row -->
 		<div class="row">
 			<div class="col-xs-12 header-content">
@@ -253,13 +243,7 @@
     }];
     
 </script>
-<!-- script jquery -->
-<script type="text/javascript" src="../../js/jquery.min.js"></script>
-<!-- bootstrap js -->
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 <!-- table sort -->
-<script type="text/javascript" src="../../js/table-sort/PagingTable.js"></script>
+<script type="text/javascript" src="{!! url('public/js/table-sort/PagingTable.js') !!}"></script>
 <!-- script custom js -->
-<script type="text/javascript" src="../../js/ManagePromotion/index.js"></script>
-</body>
-</html>
+<script type="text/javascript" src="{!! url('public/js/ManagePromotion/index.js') !!}"></script>
