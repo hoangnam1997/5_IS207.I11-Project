@@ -59,7 +59,7 @@
 
 	h3 {}
 
-	button.btn.btn-default {
+	button.btn.btn-default.btnCart {
 		height: 38px;
 		/* padding-top: 13px; */
 		margin-top: 18px;

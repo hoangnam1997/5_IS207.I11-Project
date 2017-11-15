@@ -6,7 +6,18 @@
   margin-bottom: 20px;
   padding-bottom: 30px;
 }
-
+#btnSendMail{
+  cursor: pointer;
+}
+a:focus{
+  outline: none;
+}
+.content-body{
+  min-width: 100%;
+}
+a{
+  cursor: pointer;
+}
 footer.container.footer {
   margin-bottom: 3px;
   /* display: inline-block; */
@@ -15,7 +26,9 @@ footer.container.footer {
 .navbar-default .navbar-brand {
   color: white;
 }
-
+#homeModal .modal-dialog{
+  margin-top: 100px;
+}
 a.navbar-brand {
   font-family: 'Merienda', cursive;
   font-size: 36px;
@@ -99,6 +112,7 @@ span.name {
 
 .content-product {
   background-color: rgb(255, 255, 255);
+  min-width: 100%;
 }
 
 .Name-product {
@@ -142,7 +156,7 @@ span.name {
   box-shadow: #111 0 0 8px;
   position: sticky;
   top: 0;
-  width: 100%;
+  min-width: 100%;
   z-index: 9999;
   border: none;
   border-radius: 0;
@@ -205,7 +219,7 @@ a.KhoiVuongNho:hover .layer3{
   margin: 10px 1%;
   min-width: 220px;
   max-width: 310px;
-  width: 100%;
+  min-width: 100%;
   color: #333333;
   text-align: center;
   background-color: #ffffff;
@@ -401,9 +415,9 @@ body{
     min-height: 150px;
   }
   a.navbar-brand {
-  font-family: 'Merienda', cursive;
-  font-size: 30px;
-}
+    font-family: 'Merienda', cursive;
+    font-size: 30px;
+  }
   .dropdown #dropdownMenu{
     width: 500px;
   }

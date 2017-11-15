@@ -1,9 +1,8 @@
-@extends('_layout')
 <body>
 	<!-- content-body -->
-	@section('content')
+	<?php $__env->startSection('content'); ?>
 	<div class="content-body">
-		@section('discount')
+		<?php $__env->startSection('discount'); ?>
 		<!-- discount -->
 		<div id="carousel-id" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -13,22 +12,22 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img  src="{!! url('public/images/carouse_3.jpg') !!}" class="img-responsive">
+					<img  src="<?php echo url('public/images/carouse_3.jpg'); ?>" class="img-responsive">
 				</div>
 				<div class="item">
-					<img  src="{!! url('public/images/carousel_3.jpg') !!}" class="img-responsive">
+					<img  src="<?php echo url('public/images/carousel_3.jpg'); ?>" class="img-responsive">
 				</div>
 				<div class="item">
-					<img  src="{!! url('public/images/carouse_2.jpg') !!}" class="img-responsive">
+					<img  src="<?php echo url('public/images/carouse_2.jpg'); ?>" class="img-responsive">
 				</div>
 			</div>
 			<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 			<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 		</div>	
 		<!-- 	end discount -->
-		@show
+		<?php echo $__env->yieldSection(); ?>
 		<!--  product -->
-		@section('product')
+		<?php $__env->startSection('product'); ?>
 		<div class="content text-center">
 			<h1><b>Welcome</b> to Nasaxo Shop</h1>
 			<p>BEST PRODUCTS YOU EVER SEEN!</p>
@@ -39,7 +38,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -51,7 +50,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -63,7 +62,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -75,7 +74,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -87,7 +86,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -99,7 +98,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -111,7 +110,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -123,7 +122,7 @@
 				<div class="col-md-3 item-product">
 					<figure class="product">
 						<div class="image">
-							<img src="{!! url('public/images/Aokhoac_1D.png') !!}">
+							<img src="<?php echo url('public/images/Aokhoac_1D.png'); ?>">
 							<a href="#" class="add-to-cart">Add to Cart</a>
 						</div>
 						<figcaption>
@@ -135,14 +134,15 @@
 
 			</div>
 		</div>
-		@show
+		<?php echo $__env->yieldSection(); ?>
 		<!-- end product -->
 	</div>
-	@stop
+	<?php $__env->stopSection(); ?>
 	<!-- end content body -->
 	<!-- Email -->
-	@section('script')
-	@parent
-	@show
+	<?php $__env->startSection('script'); ?>
+	##parent-placeholder-cb5346a081dcf654061b7f897ea14d9b43140712##
+	<?php echo $__env->yieldSection(); ?>
 </body>
 </html>
+<?php echo $__env->make('_layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

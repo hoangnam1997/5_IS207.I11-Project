@@ -1,10 +1,10 @@
-﻿@extends('_layout')
-@section('title') Quản lý giỏ hàng @stop
-@section('link')
-@parent
-<link rel="stylesheet" type="text/css" href="{!! url('public/css/Cart/Cart.css') !!}">
-@stop
-@section('content')
+﻿
+<?php $__env->startSection('title'); ?> Quản lý giỏ hàng <?php $__env->stopSection(); ?>
+<?php $__env->startSection('link'); ?>
+##parent-placeholder-4f0aa52d656a3d75867f784b7e9c5d23bf1321c0##
+<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/Cart/Cart.css'); ?>">
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -18,7 +18,7 @@
 		<div class="cart-product">
 			<div class="row">										
 				<div class="col-md-3 product_image">
-					<img class="img-responsive thumbnail" src="{!! url('public/images/1.jpeg') !!}"></img>
+					<img class="img-responsive thumbnail" src="<?php echo url('public/images/1.jpeg'); ?>"></img>
 				</div>
 
 				<div class="col-md-4 name">
@@ -66,7 +66,7 @@
 		<div class="cart-product">
 			<div class="row">										
 				<div class="col-md-3 product_image">
-					<img class="img-responsive thumbnail" src="{!! url('public/images/1.jpeg') !!}"></img>
+					<img class="img-responsive thumbnail" src="<?php echo url('public/images/1.jpeg'); ?>"></img>
 				</div>
 
 				<div class="col-md-4 name">
@@ -115,7 +115,7 @@
 		<div class="cart-product">
 			<div class="row">										
 				<div class="col-md-3 product_image">
-					<img class="img-responsive thumbnail" src="{!! url('public/images/1.jpeg') !!}"></img>
+					<img class="img-responsive thumbnail" src="<?php echo url('public/images/1.jpeg'); ?>"></img>
 				</div>
 
 
@@ -164,7 +164,7 @@
 		<div class="cart-product">
 			<div class="row">										
 				<div class="col-md-3 product_image">
-					<img class="img-responsive thumbnail" src="{!! url('public/images/1.jpeg') !!}"></img>
+					<img class="img-responsive thumbnail" src="<?php echo url('public/images/1.jpeg'); ?>"></img>
 				</div>
 
 				<div class="col-md-4 name">
@@ -226,10 +226,12 @@
 	</div>
 
 </div>
-@stop
+<?php $__env->stopSection(); ?>
 <!-- my js -->
-@section('script')
-@parent
-<script type="text/javascript" src="{!! url('public/js/Cart/index.js') !!}"></script>
-@stop
+<?php $__env->startSection('script'); ?>
+##parent-placeholder-cb5346a081dcf654061b7f897ea14d9b43140712##
+<script type="text/javascript" src="<?php echo url('public/js/Cart/index.js'); ?>"></script>
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('_layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -17,6 +17,7 @@ php artisan make:model abs
 php artisan make:request abs
 --thêm file vào database
 enctype='multipart/form-data' --thêm vào forrm
+	{{csrf_field()}}	
 --macro
 php artisan make:provider macroProvider : khai báo trong app.php 
  Response::macro('cap',function($str){
