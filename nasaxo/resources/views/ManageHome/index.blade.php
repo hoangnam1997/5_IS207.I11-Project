@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Nasaxo Shop</title>
+  <title>@section('title') Nasaxo Shop @show</title>
+  @section('link')
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="{!! url('public/css/bootstrap.min.css') !!}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="{!! url('public/css/font-awesome.min.css') !!}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../css/ManageHome/AdminLTE.min.css">
+  <link rel="stylesheet" href="{!! url('public/css/ManageHome/AdminLTE.min.css') !!}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../css/ManageHome/_all-skins.min.css">
-  <link rel="stylesheet" type="text/css" href="../../css/ManageHome/index.css">
+  <link rel="stylesheet" href="{!! url('public/css/ManageHome/_all-skins.min.css') !!}">
+  <link rel="stylesheet" type="text/css" href="{!! url('public/css/ManageHome/index.css') !!}">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  @show
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
   <div class="wrapper">
@@ -80,13 +82,13 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="../../images/admin.jpg" class="user-image" alt="User Image">
+                <img src="{!! url('public/images/admin.jpg') !!}" class="user-image" alt="User Image">
                 <span class="hidden-xs">Nguyễn Hoàng Nam</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="../../images/admin.jpg" class="img-circle" alt="User Image">
+                  <img src="{!! url('public/images/admin.jpg') !!}" class="img-circle" alt="User Image">
                   <p>
                     Nguyễn Hoàng Nam - Web Developer
                   </p>
@@ -212,19 +214,21 @@
     </aside>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
+      @yield('content')
     </div>
     <!-- /.content-wrapper -->
   </div>
   <!-- ./wrapper -->
+  @section('script')
   <!-- jQuery 3 -->
-  <script src="../../js/jquery.min.js"></script>
+  <script src="{!! url('public/js/jquery.min.js') !!}"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <!-- Bootstrap 3.3.7 -->
-  <script src="../../js/bootstrap.min.js"></script>
+  <script src="{!! url('public/js/bootstrap.min.js') !!}"></script>
   <!-- AdminLTE App -->
-  <script src="../../js/ManageHome/adminlte.min.js"></script>
+  <script src="{!! url('public/js/ManageHome/adminlte.min.js') !!}"></script>
   <!-- index js -->
-  <script type="text/javascript" src="../../js/ManageHome/index.js"></script>
+  <script type="text/javascript" src="{!! url('public/js/ManageHome/index.js') !!}"></script>
+  @show
 </body>
 </html>

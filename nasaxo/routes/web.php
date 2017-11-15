@@ -22,6 +22,12 @@ Route::group(['prefix'=>'account'],function(){
 	Route::post('infomation','AccountController@Info');
 	Route::post('mess','AccountController@Mess');
 });
-
+// admin route
+Route::group(['prefix'=>'admin'],function(){
+	// trang đầu
+	Route::get('/','ManageHomeController@Index');
+	// 
+	Route::post('/login','ManageHomeController@Login');
+});
 
 
