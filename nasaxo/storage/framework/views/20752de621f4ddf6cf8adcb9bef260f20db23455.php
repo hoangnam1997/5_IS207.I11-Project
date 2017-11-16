@@ -1,4 +1,8 @@
-<link rel="stylesheet" type="text/css" href="../../css/Order/invoice.css">
+<?php $__env->startSection('link'); ?>
+##parent-placeholder-4f0aa52d656a3d75867f784b7e9c5d23bf1321c0##
+<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/Order/invoice.css'); ?>">
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content-order'); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
@@ -26,15 +30,15 @@
 </div> <!-- end container -->
 <div class="container">
 	<div class="row">
-
 		<div class="col-md-6">
 			<div class="DonHang">
-				<div class=" col-md-12 header">
-					<h3 class="donhang">Đơn hàng</h3> 
-					<button class= "btn btn-default pull-right">Sửa </button>
+				<form class=" col-md-12 header" action="<?php echo url('cart'); ?>" method="post">
+					<?php echo e(csrf_field()); ?>
 
+					<h3 class="donhang">Đơn hàng</h3> 
+					<button type="submit" class= "btn btn-default pull-right">Sửa </button>
 					<hr class="hr">
-				</div>
+				</form>
 				<div class="col-md-12 content">						
 					<div class="col-md-12 product">
 						<p class= "col-md-6">1 * áo Sida</p>
@@ -71,25 +75,34 @@
 
 
 		<div class="col-md-6">
-			<div class="address">
+			<form class="address-invoice" action="<?php echo url('cart/order'); ?>" method="post">
+				<?php echo e(csrf_field()); ?>
 
 				<h3>Địa chỉ giao hàng</h3>
-				<button class= "btn btn-default pull-right">Sửa </button>
+				<button type="submit" class= "btn btn-default pull-right">Sửa </button>
 				<hr>
 				<div class=content>
-
-
 					<b>Đại ca hống hách là tên ta</b>	<br>
 					<p>
 						Xóm nhà lá, huyện nhà bè, tỉnh nhà chuột <br>	
 						SĐT:6677 3508
 					</p>	
 				</div>						
-			</div>
+			</form>
 		</div>
-		<button id="btnBuy" class = "btn btn-danger"> Đặt mua</button>
+		<form action="<?php echo url('/'); ?>" method="post" enctype="multipart/form-data">
+			<?php echo e(csrf_field()); ?>
+
+			<button id="btnBuy" class = "btn btn-danger"> Đặt mua</button>
+		</form>
 
 	</div>
 
 </div><!--  end container -->
-<script type="text/javascript" src="../../js/Order/invoice.js"></script>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+##parent-placeholder-cb5346a081dcf654061b7f897ea14d9b43140712##
+<script type="text/javascript" src="<?php echo url('public/js/Order/invoice.js'); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Order.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

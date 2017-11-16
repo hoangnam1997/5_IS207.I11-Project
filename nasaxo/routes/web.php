@@ -2,7 +2,15 @@
 // home
 Route::get('/', 'HomeController@Index');
 // Cart
-Route::get('cart','CartController@Index');
+Route::group(['prefix'=>'cart'],function(){
+	// home cart
+	Route::post('/','CartController@Index');
+	// address
+	Route::post('order','CartController@Order');
+	// thanh toán
+	Route::post('invoice','CartController@Invoice');
+});
+
 // Login
 Route::get('login','LoginController@Index');
 // product

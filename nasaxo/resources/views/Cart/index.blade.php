@@ -220,9 +220,12 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="button-Order">
-			<button id="btnBuyProduct" class="col-md-4 col-md-push-7 btn btn-danger">Đặt hàng</button>
-		</div>
+		<form enctype="multipart/form-data" action="{!! url('/cart/order') !!}" method="POST" name="frmBuy">
+			{{csrf_field()}}	
+			<div class="button-Order">
+				<button type="submit" id="btnBuyProduct" class="col-md-4 col-md-push-7 btn btn-danger">Đặt hàng</button>
+			</div>
+		</form>
 	</div>
 
 </div>
