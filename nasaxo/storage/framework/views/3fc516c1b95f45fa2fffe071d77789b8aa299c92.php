@@ -140,14 +140,14 @@
           </li>
           <!-- end khuyến mãi -->
           <!-- Màu sắc -->
-          <li class="treeview getView">
+          <li class="treeview getView" data-view="color">
             <a>
               <i class="fa fa-dashboard"></i> <span>Màu sắc</span>
             </a>
           </li>
           <!-- end màu sắc -->
           <!-- size -->
-          <li  class="getView">
+          <li  class="getView" data-view="size">
             <a>
               <i class="fa fa-th"></i> <span>Kích cở</span>
             </a>
@@ -171,7 +171,7 @@
           </li>
           <!-- end thống kê -->
           <!-- Khách hàng -->
-          <li class="treeview getView">
+          <li class="treeview getView" data-view="customer">
             <a>
               <i class="fa fa-users"></i>
               <span>Khách hàng</span>
@@ -194,7 +194,7 @@
           </li>
           <!-- end hóa đơn -->
           <!-- nhóm sản phẩm -->
-          <li class="treeview getView">
+          <li class="treeview getView" data-view="productcategory">
             <a>
               <i class="fa fa-bookmark"></i>
               <span>Nhóm sản phẩm</span>
@@ -202,7 +202,7 @@
           </li>
           <!-- end nhóm sản phẩm -->
           <!-- sản phẩm -->
-          <li class="treeview getView">
+          <li class="treeview getView" data-view="product">
             <a>
               <i class="fa fa-rocket"></i>
               <span>Sản phẩm</span>

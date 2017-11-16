@@ -35,7 +35,7 @@ Route::group(['prefix'=>'admin'],function(){
 	// trang đầu
 	Route::get('/','ManageHomeController@Index');
 	// login
-	Route::post('/login','ManageHomeController@Login');
+	Route::post('manage','ManageHomeController@Login');
 	// group for address
 	Route::group(['prefix'=>'address'],function(){
 		// lấy ra view quận hyện
@@ -49,6 +49,31 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'promotion'],function(){
 		// lấy view khuyến mãi
 		Route::post('/','ManagePromotionController@GetPromotion');
+	});
+	// group color
+	Route::group(['prefix'=>'color'],function(){
+		// lấy view màu sắt
+		Route::post('/','ManageColorController@GetColors');
+	});
+	// group size
+	Route::group(['prefix'=>'size'],function(){
+		// lấy view màu sắt
+		Route::post('/','ManageSizeController@GetSizes');
+	});
+	// group customer
+	Route::group(['prefix'=>'customer'],function(){
+		// lấy view màu sắt
+		Route::post('/','ManageCustomerController@GetCustomers');
+	});
+	// group productcategory
+	Route::group(['prefix'=>'productcategory'],function(){
+		// lấy view màu sắt
+		Route::post('/','ManageProductCategoryController@GetProductCategorys');
+	});
+	// group product
+	Route::group(['prefix'=>'product'],function(){
+		// lấy view màu sắt
+		Route::post('/','ManageProductController@GetProducts');
 	});
 });
 
