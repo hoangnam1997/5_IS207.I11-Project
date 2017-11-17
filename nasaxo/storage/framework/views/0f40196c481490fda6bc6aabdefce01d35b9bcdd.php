@@ -66,7 +66,7 @@
 
 <body>
 	<div class="login">
-		<form enctype='multipart/form-data' method="POST" action="<?php echo url('/admin/login'); ?>" name="frmLogin">
+		<form enctype='multipart/form-data' method="POST" action="<?php echo url('/admin/manage'); ?>" name="frmLogin">
 			<?php echo e(csrf_field()); ?>	
 			<input type="text" name="u" placeholder="Username" required="required" />
 			<input type="password" name="p" placeholder="Password" required="required" />
