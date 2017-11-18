@@ -15,6 +15,10 @@ class CreateProductCategoryTable extends Migration
     {
         Schema::create('ProductCategory', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
+            $table->string('Name');
+            $table->string('Description');
+            $table->boolean('IsDelete');
             $table->timestamps();
         });
     }
