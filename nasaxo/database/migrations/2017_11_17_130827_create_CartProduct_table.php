@@ -15,6 +15,12 @@ class CreateCartProductTable extends Migration
     {
         Schema::create('CartProduct', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
+            $table->integer('ID_Product');
+            $table->foreign('ID_Product')->references('id')->on('Product');
+            $table->date('CreateDate');
+            $table->integer('Count');
+            $table->boolean('IsDelete');
             $table->timestamps();
         });
     }
