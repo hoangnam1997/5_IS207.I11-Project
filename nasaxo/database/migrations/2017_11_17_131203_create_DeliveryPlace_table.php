@@ -15,6 +15,15 @@ class CreateDeliveryPlaceTable extends Migration
     {
         Schema::create('DeliveryPlace', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
+            $table->integer('ID_Order');
+            $table->foreign('ID_Order')->references('id')->on('Order');
+            $table->integer('ID_Ward');
+            $table->foreign('ID_Ward')->references('id')->on('Ward');
+            $table->string('ReceiveName');
+            $table->string('NumberPhone');
+            $table->string('DeliveryPlaces');//Khac voi ten bang
+            $table->boolean('IsDelete');
             $table->timestamps();
         });
     }
