@@ -15,6 +15,12 @@ class CreateProductPictureTable extends Migration
     {
         Schema::create('ProductPicture', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
+            $table->boolean('IsDelete');
+            $table->integer('ID_Picture');
+            $table->foreign('ID_Picture')->references('id')->on('Picture');
+            $table->integer('ID_Product');
+            $table->foreign('ID_Product')->references('id')->on('Product');
             $table->timestamps();
         });
     }
