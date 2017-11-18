@@ -15,6 +15,12 @@ class CreateDistrictTable extends Migration
     {
         Schema::create('District', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
+            $table->string('Name');
+            $table->string('Description');
+            $table->integer('ID_City');
+            $table->foreign('ID_City')->references('id')->on('City');
+            $table->boolean('IsDelete');
             $table->timestamps();
         });
     }
