@@ -16,6 +16,11 @@ class CreateUsersPictureTable extends Migration
         Schema::create('UsersPicture', function (Blueprint $table) {
             $table->increments('id');
             $table->primary('id');
+            $table->integer('ID_Users');
+            $table->foreign('ID_Users')->references('id')->on('Users');
+            $table->integer('ID_Picture');
+            $table->foreign('ID_Picture')->references('id')->on('Picture');
+            $table->boolean('IsDelete');
             $table->timestamps();
         });
     }
