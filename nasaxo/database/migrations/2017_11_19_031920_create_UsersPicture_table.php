@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserPictureTable extends Migration
+class CreateUsersPictureTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,7 @@ class CreateUserPictureTable extends Migration
     {
         Schema::create('UsersPicture', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
             $table->timestamps();
         });
     }
