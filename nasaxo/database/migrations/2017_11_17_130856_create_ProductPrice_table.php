@@ -15,6 +15,14 @@ class CreateProductPriceTable extends Migration
     {
         Schema::create('ProductPrice', function (Blueprint $table) {
             $table->increments('id');
+            $table->primary('id');
+            $table->string('Price');
+            $table->date('StartDate');
+            $table->date('EndDate');
+            $table->boolean('IsDelete');
+            $table->integer('ID_Product');
+            $table->foreign('ID_Product')->references('id')->on('Product');
+            $table->string('Discount');
             $table->timestamps();
         });
     }
