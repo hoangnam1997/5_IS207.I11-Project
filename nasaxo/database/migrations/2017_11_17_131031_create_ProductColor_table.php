@@ -15,11 +15,10 @@ class CreateProductColorTable extends Migration
     {
         Schema::create('ProductColor', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
-            $table->integer('ID_Product');
-            $table->foreign('ID_Product')->references('id')->on('Product');
-            $table->integer('ID_Color');
-            $table->foreign('ID_Color')->references('id')->on('Color');
+            $table->integer('ID_Product')->unsigned();
+            $table->foreign('ID_Product')->references('id')->on('Product')->onDelete('cascade');
+            $table->integer('ID_Color')->unsigned();
+            $table->foreign('ID_Color')->references('id')->on('Color')->onDelete('cascade');
             $table->boolean('IsDelete');
             $table->timestamps();
         });

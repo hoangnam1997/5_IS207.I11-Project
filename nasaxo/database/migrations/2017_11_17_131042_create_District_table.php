@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductPictureTable extends Migration
+class CreateDistrictTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateProductPictureTable extends Migration
      */
     public function up()
     {
-        Schema::create('ProductPicture', function (Blueprint $table) {
+        Schema::create('District', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            $table->string('Name');
+            $table->string('Description');
+            $table->integer('ID_City')->unsigned();
+            $table->foreign('ID_City')->references('id')->on('City')->ondelete('cascade');
             $table->boolean('IsDelete');
-            $table->integer('ID_Picture');
-            $table->foreign('ID_Picture')->references('id')->on('Picture');
-            $table->integer('ID_Product');
-            $table->foreign('ID_Product')->references('id')->on('Product');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateProductPictureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ProductPicture');
+        Schema::dropIfExists('District');
     }
 }

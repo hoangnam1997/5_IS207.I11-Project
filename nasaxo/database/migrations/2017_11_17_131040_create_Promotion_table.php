@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateColorTable extends Migration
+class CreatePromotionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateColorTable extends Migration
      */
     public function up()
     {
-        Schema::create('Color', function (Blueprint $table) {
+        Schema::create('Promotion', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            $table->string('Picture');
             $table->string('Description');
-            $table->string('Color');
+            $table->string('Name');
+            $table->string('Discount');
+            $table->string('BasePurchase');
+            $table->date('StartDate');
+            $table->date('EndDate');
             $table->boolean('IsDelete');
             $table->timestamps();
         });
@@ -30,6 +34,6 @@ class CreateColorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Color');
+        Schema::dropIfExists('Promotion');
     }
 }

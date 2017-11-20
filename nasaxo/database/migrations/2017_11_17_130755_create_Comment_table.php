@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePromotionTable extends Migration
+class CreateCommentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreatePromotionTable extends Migration
      */
     public function up()
     {
-        Schema::create('Promotion', function (Blueprint $table) {
+        Schema::create('Comment', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
-            $table->string('Picture');
+            $table->integer('ID_Users')->unsigned();
+            $table->foreign('ID_Users')->references('id')->on('Users')->onDelete('cascade');
+            $table->integer('ID_Product')->unsigned();
+            $table->foreign('ID_Product')->references('id')->on('Product')->onDelete('cascade');
             $table->string('Description');
-            $table->string('Name');
-            $table->string('Discount');
-            $table->string('BasePurchase');
-            $table->date('StartDate');
-            $table->date('EndDate');
             $table->boolean('IsDelete');
             $table->timestamps();
         });
@@ -35,6 +32,6 @@ class CreatePromotionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Promotion');
+        Schema::dropIfExists('Comment');
     }
 }

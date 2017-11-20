@@ -15,11 +15,10 @@ class CreateProductSizeTable extends Migration
     {
         Schema::create('ProductSize', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
-            $table->integer('ID_Size');
-            $table->foreign('ID_Size')->references('id')->on('Size');
-            $table->integer('ID_Product');
-            $table->foreign('ID_Product')->references('id')->on('Product');
+            $table->integer('ID_Size')->unsigned();
+            $table->foreign('ID_Size')->references('id')->on('Size')->onDelete('cascade');
+            $table->integer('ID_Product')->unsigned();
+            $table->foreign('ID_Product')->references('id')->on('Product')->onDelete('cascade');
             $table->boolean('IsDelete');
             $table->timestamps();
         });

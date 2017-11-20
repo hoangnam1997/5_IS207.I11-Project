@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserRoleTable extends Migration
+class CreateRatingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateUserRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('User_Role', function (Blueprint $table) {
+        Schema::create('Rating', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
-            $table->integer('ID_Role');
-            $table->foreign('ID_Role')->references('id')->on('Role');
-            $table->integer('ID_Users');
-            $table->foreign('ID_Users')->references('id')->on('Users');
+            $table->string('Point');
+            $table->integer('ID_Product')->unsigned();
+            $table->foreign('ID_Product')->references('id')->on('Product')->onDelete('cascade');
+            $table->integer('ID_Users')->unsigned();
+            $table->foreign('ID_Users')->references('id')->on('Users')->onDelete('cascade');
             $table->boolean('IsDelete');
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreateUserRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('User_Role');
+        Schema::dropIfExists('Rating');
     }
 }

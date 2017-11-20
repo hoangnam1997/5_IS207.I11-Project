@@ -15,11 +15,10 @@ class CreateUsersPictureTable extends Migration
     {
         Schema::create('UsersPicture', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
-            $table->integer('ID_Users');
-            $table->foreign('ID_Users')->references('id')->on('Users');
-            $table->integer('ID_Picture');
-            $table->foreign('ID_Picture')->references('id')->on('Picture');
+            $table->integer('ID_Users')->unsigned();
+            $table->foreign('ID_Users')->references('id')->on('Users')->ondelete('cascade');
+            $table->integer('ID_Picture')->unsigned();
+            $table->foreign('ID_Picture')->references('id')->on('Picture')->ondelete('cascade');
             $table->boolean('IsDelete');
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCityTable extends Migration
+class CreateWardTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateCityTable extends Migration
      */
     public function up()
     {
-        Schema::create('City', function (Blueprint $table) {
+        Schema::create('Ward', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
             $table->string('Name');
             $table->string('Description');
+            $table->integer('ID_District')->unsigned();
+            $table->foreign('ID_District')->references('id')->on('District')->ondelete('cascade');
             $table->boolean('IsDelete');
             $table->timestamps();
         });
@@ -30,6 +31,6 @@ class CreateCityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('City');
+        Schema::dropIfExists('Ward');
     }
 }

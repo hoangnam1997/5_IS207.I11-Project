@@ -15,11 +15,10 @@ class CreatePromotionPictureTable extends Migration
     {
         Schema::create('PromotionPicture', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
-            $table->integer('ID_Picture');
-            $table->foreign('ID_Picture')->references('id')->on('Picture');
-            $table->integer('ID_Promotion');
-            $table->foreign('ID_Promotion')->references('id')->on('Promotion');
+            $table->integer('ID_Picture')->unsigned();
+            $table->foreign('ID_Picture')->references('id')->on('Picture')->ondelete('cascade');
+            $table->integer('ID_Promotion')->unsigned();
+            $table->foreign('ID_Promotion')->references('id')->on('Promotion')->ondelete('cascade');
             $table->boolean('IsDelete');
             $table->timestamps();
         });

@@ -15,12 +15,11 @@ class CreateOrderTable extends Migration
     {
         Schema::create('Order', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
             $table->string('Description');
-            $table->integer('ID_Promotion');
-            $table->foreign('ID_Promotion')->references('id')->on('Promotion');
-            $table->integer('ID_DeliveryPlace');
-            $table->foreign('ID_DeliveryPlace')->references('id')->on('DeliveryPlace');
+            $table->integer('ID_Promotion')->unsigned();
+            $table->foreign('ID_Promotion')->references('id')->on('Promotion')->ondelete('cascade');
+            $table->integer('ID_DeliveryPlace')->unsigned();
+            $table->foreign('ID_DeliveryPlace')->references('id')->on('DeliveryPlace')->ondelete('cascade');
             $table->date('CreateDate');
             $table->date('ConfirmDate');
             $table->boolean('IsPaied');
