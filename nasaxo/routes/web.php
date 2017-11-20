@@ -1,6 +1,8 @@
 <?php
 // home
 Route::get('/', 'HomeController@Index');
+// lay them danh sach products
+Route::post('SeeMoreProducts', 'HomeController@SeeMoreProducts');
 // Cart
 Route::group(['prefix'=>'cart'],function(){
 	// home cart

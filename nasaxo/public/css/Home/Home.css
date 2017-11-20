@@ -6,14 +6,18 @@
   margin-bottom: 20px;
   padding-bottom: 30px;
 }
+.seeMoreProduct{
+  background: rgba(157, 152, 152, 0.3);
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
 #btnSendMail{
   cursor: pointer;
 }
 a:focus{
   outline: none;
-}
-.content-body{
-  min-width: 100%;
 }
 a{
   cursor: pointer;
@@ -236,7 +240,8 @@ a.KhoiVuongNho:hover .layer3{
   position: relative;
 }
 .product img {
-  max-width: 100%;
+  height: 350px;
+  width: 100%;
   vertical-align: top;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
@@ -299,6 +304,7 @@ a.KhoiVuongNho:hover .layer3{
 }
 .product h2,
 .product p {
+  height: 66px;
   margin: 0;
   text-align: left;
 }

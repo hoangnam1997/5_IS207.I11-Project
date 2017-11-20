@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title><?php $__env->startSection('title'); ?> Nasaxo  Shop <?php echo $__env->yieldSection(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="_token" content="<?php echo e(csrf_token()); ?>">
 	<!-- font fa -->
 	<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/font-awesome.min.css'); ?>">
 	<?php $__env->startSection('link'); ?> 

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>@section('title') Nasaxo  Shop @show</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="_token" content="{{ csrf_token() }}">
 	<!-- font fa -->
 	<link rel="stylesheet" type="text/css" href="{!! url('public/css/font-awesome.min.css') !!}">
 	@section('link') 
