@@ -17,7 +17,7 @@ class CreateProductPriceTable extends Migration
             $table->increments('id');
             $table->string('Price');
             $table->date('StartDate');
-            $table->date('EndDate');
+            $table->date('EndDate')->nullable();
             $table->boolean('IsDelete');
             $table->integer('ID_Product')->unsigned();
             $table->foreign('ID_Product')->references('id')->on('Product')->onDelete('cascade');

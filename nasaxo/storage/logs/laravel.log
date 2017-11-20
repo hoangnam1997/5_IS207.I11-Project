@@ -27199,3 +27199,487 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.
 asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
 "} 
+[2017-11-20 07:46:37] local.ERROR: Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' at C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php:43)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('DatabaseSeeder')
+#2 [internal function]: spl_autoload_call('DatabaseSeeder')
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(752): ReflectionClass->__construct('DatabaseSeeder')
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(631): Illuminate\\Container\\Container->build('DatabaseSeeder')
+#5 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(586): Illuminate\\Container\\Container->resolve('DatabaseSeeder', Array)
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(721): Illuminate\\Container\\Container->make('DatabaseSeeder', Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(74): Illuminate\\Foundation\\Application->make('DatabaseSeeder')
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Console\\Seeds\\SeedCommand->getSeeder()
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#11 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2017-11-20 07:47:50] local.ERROR: Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' at C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php:43)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('DatabaseSeeder')
+#2 [internal function]: spl_autoload_call('DatabaseSeeder')
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(752): ReflectionClass->__construct('DatabaseSeeder')
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(631): Illuminate\\Container\\Container->build('DatabaseSeeder')
+#5 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(586): Illuminate\\Container\\Container->resolve('DatabaseSeeder', Array)
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(721): Illuminate\\Container\\Container->make('DatabaseSeeder', Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(74): Illuminate\\Foundation\\Application->make('DatabaseSeeder')
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Console\\Seeds\\SeedCommand->getSeeder()
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#11 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2017-11-20 07:50:25] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_ProductCategory' in 'field list' (SQL: insert into `productcategory` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values (Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam., 1, 0, Sơ mi Tay Dài Đen Slim Fit Japanese), (Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm., 1, 0, Áo sơ mi tay dài 2 lớp trắng), (Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế., 1, 0, Áo sơ mi tay ngắn cổ lông vũ), (Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi tay ngắn xếp ly xám), (Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean., 1, 0, Áo sơ mi Katto trắng), (Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,.., 1, 0, Áo sơ mi họa tiết 1B trắng mũi tên), (Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi 1B trắng), (Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường., 1, 0, Áo sơ mi tay ngắn form rộng trắng sọc viền đen), (Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. , 1, 0, Áo sơ mi tay ngắn form rộng xanh navy viền trắng), (Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean., 1, 0, Áo sơ mi tay dài cổ trụ xanh navy chấm bi)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_ProductCategory' in 'field list' (SQL: insert into `productcategory` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values (Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam., 1, 0, Sơ mi Tay Dài Đen Slim Fit Japanese), (Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm., 1, 0, Áo sơ mi tay dài 2 lớp trắng), (Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế., 1, 0, Áo sơ mi tay ngắn cổ lông vũ), (Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi tay ngắn xếp ly xám), (Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean., 1, 0, Áo sơ mi Katto trắng), (Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,.., 1, 0, Áo sơ mi họa tiết 1B trắng mũi tên), (Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi 1B trắng), (Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường., 1, 0, Áo sơ mi tay ngắn form rộng trắng sọc viền đen), (Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. , 1, 0, Áo sơ mi tay ngắn form rộng xanh navy viền trắng), (Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean., 1, 0, Áo sơ mi tay dài cổ trụ xanh navy chấm bi)) at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_ProductCategory' in 'field list' at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:79, PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_ProductCategory' in 'field list' at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:77)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(40): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: product->run()
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#11 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('product')
+#13 [internal function]: DatabaseSeeder->run()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#28 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2017-11-20 07:53:37] local.ERROR: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 (SQL: insert into `product` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values (Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam., 1, 0, Sơ mi Tay Dài Đen Slim Fit Japanese), (Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm., 1, 0, Áo sơ mi tay dài 2 lớp trắng), (Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế., 1, 0, Áo sơ mi tay ngắn cổ lông vũ), (Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi tay ngắn xếp ly xám), (Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean., 1, 0, Áo sơ mi Katto trắng), (Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,.., 1, 0, Áo sơ mi họa tiết 1B trắng mũi tên), (Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi 1B trắng), (Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường., 1, 0, Áo sơ mi tay ngắn form rộng trắng sọc viền đen), (Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. , 1, 0, Áo sơ mi tay ngắn form rộng xanh navy viền trắng), (Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean., 1, 0, Áo sơ mi tay dài cổ trụ xanh navy chấm bi)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 (SQL: insert into `product` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values (Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam., 1, 0, Sơ mi Tay Dài Đen Slim Fit Japanese), (Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm., 1, 0, Áo sơ mi tay dài 2 lớp trắng), (Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế., 1, 0, Áo sơ mi tay ngắn cổ lông vũ), (Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi tay ngắn xếp ly xám), (Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean., 1, 0, Áo sơ mi Katto trắng), (Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,.., 1, 0, Áo sơ mi họa tiết 1B trắng mũi tên), (Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi 1B trắng), (Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường., 1, 0, Áo sơ mi tay ngắn form rộng trắng sọc viền đen), (Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. , 1, 0, Áo sơ mi tay ngắn form rộng xanh navy viền trắng), (Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean., 1, 0, Áo sơ mi tay dài cổ trụ xanh navy chấm bi)) at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(40): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: product->run()
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#11 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('product')
+#13 [internal function]: DatabaseSeeder->run()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#28 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2017-11-20 07:56:10] local.ERROR: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 (SQL: insert into `product` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values (Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam., 1, 0, Sơ mi Tay Dài Đen Slim Fit Japanese), (Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm., 1, 0, Áo sơ mi tay dài 2 lớp trắng), (Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế., 1, 0, Áo sơ mi tay ngắn cổ lông vũ), (Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi tay ngắn xếp ly xám), (Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean., 1, 0, Áo sơ mi Katto trắng), (Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,.., 1, 0, Áo sơ mi họa tiết 1B trắng mũi tên), (Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi 1B trắng), (Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường., 1, 0, Áo sơ mi tay ngắn form rộng trắng sọc viền đen), (Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. , 1, 0, Áo sơ mi tay ngắn form rộng xanh navy viền trắng), (Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean., 1, 0, Áo sơ mi tay dài cổ trụ xanh navy chấm bi)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 (SQL: insert into `product` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values (Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam., 1, 0, Sơ mi Tay Dài Đen Slim Fit Japanese), (Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm., 1, 0, Áo sơ mi tay dài 2 lớp trắng), (Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế., 1, 0, Áo sơ mi tay ngắn cổ lông vũ), (Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi tay ngắn xếp ly xám), (Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean., 1, 0, Áo sơ mi Katto trắng), (Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,.., 1, 0, Áo sơ mi họa tiết 1B trắng mũi tên), (Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,..., 1, 0, Áo sơ mi 1B trắng), (Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường., 1, 0, Áo sơ mi tay ngắn form rộng trắng sọc viền đen), (Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. , 1, 0, Áo sơ mi tay ngắn form rộng xanh navy viền trắng), (Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean., 1, 0, Áo sơ mi tay dài cổ trụ xanh navy chấm bi)) at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(40): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: product->run()
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#11 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('product')
+#13 [internal function]: DatabaseSeeder->run()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#28 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2017-11-20 07:59:33] local.ERROR: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 (SQL: insert into `product` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values ('Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam.', 1, 0, 'Sơ mi Tay Dài Đen Slim Fit Japanese'), ('Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm.', 1, 0, 'Áo sơ mi tay dài 2 lớp trắng'), ('Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế.', 1, 0, 'Áo sơ mi tay ngắn cổ lông vũ'), ('Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,...', 1, 0, 'Áo sơ mi tay ngắn xếp ly xám'), ('Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean.', 1, 0, 'Áo sơ mi Katto trắng'), ('Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,..', 1, 0, 'Áo sơ mi họa tiết 1B trắng mũi tên'), ('Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,...', 1, 0, 'Áo sơ mi 1B trắng'), ('Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường.', 1, 0, 'Áo sơ mi tay ngắn form rộng trắng sọc viền đen'), ('Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. ', 1, 0, 'Áo sơ mi tay ngắn form rộng xanh navy viền trắng'), ('Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean.', 1, 0, 'Áo sơ mi tay dài cổ trụ xanh navy chấm bi')) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 (SQL: insert into `product` (`Description`, `ID_ProductCategory`, `IsDelete`, `Name`) values ('Sơ mi tay dài đen slimfit Japaness với chất sơ mi Nhật, vải mềm, mịn tạo cảm giác thoải mái cho người mặc. Áo có ưu điểm nổi bật là vải không nhăn, giúp tiết kiệm được thời gian ủi áo. Phù hợp khi được mix với quần tây làm nên set đồ lịch lãm dành cho các bạn nam.', 1, 0, 'Sơ mi Tay Dài Đen Slim Fit Japanese'), ('Áo sơ mi tay dài 2 lớp trắng ver.2 với chất liệu lụa, vải mỏng, mềm mịn, giúp người mặc cảm thấy thoáng mát, thoải mái. Sơ mi khi kết hợp với quần tây, skinny jean, quần short,....sẽ làm cho người mặc thêm phần lịch lãm.', 1, 0, 'Áo sơ mi tay dài 2 lớp trắng'), ('Áo sơ mi tay ngắn cổ lông vũ với fom châu Á, chất liệu vải voan cao cấp giúp người mặc cảm thấy thoáng mát, thoải mái. Với hình ảnh những chiếc lông vũ được in trên cổ áo sẽ tạo điểm nhấn, làm áo thêm phần tinh tế.', 1, 0, 'Áo sơ mi tay ngắn cổ lông vũ'), ('Áo sơ mi tay ngắn xếp ly với fom châu Á, chất liệu voan cao cấp, vải mỏng, mềm, mịn giúp người mặc cảm thấy thoải mái, thoáng mát. Sơ mi xếp ly sẽ tạo cảm giác bồng bềnh, phần xếp ly làm nổi bật thêm chiếc áo. Phù hợp khi mix với quần tây, quần short,...', 1, 0, 'Áo sơ mi tay ngắn xếp ly xám'), ('Áo sơ mi katto trắng với chất liệu cotton, mềm mịn, thấm hút mồ hôi tốt.  Sơ mi với phần tà được xẻ tạo nên sự khác biệt và phá cách khác với những loại áo sơ mi thông thường trước đây, phù hợp khi mix với skinny jean.', 1, 0, 'Áo sơ mi Katto trắng'), ('Áo sơ mi họa tiết 1B trắng mũi tên với fom châu Á, chất liệu voan cát cao cấp giúp người mặc cảm thấy thoải mái. thoáng mát. Sơ mi phá cách chỉ có 1 nút cài và họa tiết hình mũi tên làm sản phẩm thêm phần tinh tế nhưng cũng không kém phần phá cách. Phù hợp khi mix với quần tây, quần short,..', 1, 0, 'Áo sơ mi họa tiết 1B trắng mũi tên'), ('Áo sơ mi 1B trắng với fom châu Á, được may với 2 loại chất liệu: voan cát và lụa. Cả 2 chất liệu đều rất mỏng và mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi phá cách chỉ với 1 nút cài áo làm nên sự khác biệt, vừa tinh tế nhưng cũng không kém phần cá tính. Phù hợp khi mix với quần tây, quần short,...', 1, 0, 'Áo sơ mi 1B trắng'), ('Áo sơ mi tay ngắn fom rộng trắng sọc viền đen với chất liệu lụa Nhật cao cấp. Chất vải mỏng, mềm mịn, thấm hút mồ hôi tốt tạo cảm giác thoải mái, thoáng mát cho người mặc. Sơ mi tay ngắn khi được phối với quần tây hoặc skinny jean vẫn rất lịch lãm không kém gì những chiếc áo sơ mi tay dài bình thường.', 1, 0, 'Áo sơ mi tay ngắn form rộng trắng sọc viền đen'), ('Áo sơ mi tay ngắn fom rộng xanh navy viền trắng với fom châu Á, chất vải kate Nhật cao cấp. Vải mỏng, mềm mịn , độ thấm hút mồ hôi tốt mang ại cảm giác thoái mái thoáng mát cho người mặc. Sẽ là sự lựa chọn hoàn hảo dành cho các bạn nam khi sơ mi được kết hợp với quần short hoặc quần tây. ', 1, 0, 'Áo sơ mi tay ngắn form rộng xanh navy viền trắng'), ('Áo sơ mi tay dài cổ trụ xanh navy chấm bi với fom châu Á, chất vải bố, dày giúp làm đứng fom áo hơn. Sẽ là sự lựa chọn hoàn hảo khi kết hợp sơ mi với quần tây hoặc skinny jean.', 1, 0, 'Áo sơ mi tay dài cổ trụ xanh navy chấm bi')) at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 22001): SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Description' at row 1 at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(40): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: product->run()
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#11 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('product')
+#13 [internal function]: DatabaseSeeder->run()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#28 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2017-11-20 08:07:49] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'EndDate' cannot be null (SQL: insert into `productprice` (`Discount`, `EndDate`, `ID_Product`, `IsDelete`, `Price`, `StartDate`) values (10, , 1, 0, 450000, 2017-11-01), (10, , 2, 0, 440000, 2017-11-01), (10, , 3, 0, 320000, 2017-11-01), (10, , 4, 0, 320000, 2017-11-01), (10, , 5, 0, 430000, 2017-11-01), (10, , 6, 0, 440000, 2017-11-01), (10, , 7, 0, 460000, 2017-11-01), (10, , 8, 0, 440000, 2017-11-01), (10, , 9, 0, 440000, 2017-11-01), (10, , 10, 0, 400000, 2017-11-01)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'EndDate' cannot be null (SQL: insert into `productprice` (`Discount`, `EndDate`, `ID_Product`, `IsDelete`, `Price`, `StartDate`) values (10, , 1, 0, 450000, 2017-11-01), (10, , 2, 0, 440000, 2017-11-01), (10, , 3, 0, 320000, 2017-11-01), (10, , 4, 0, 320000, 2017-11-01), (10, , 5, 0, 430000, 2017-11-01), (10, , 6, 0, 440000, 2017-11-01), (10, , 7, 0, 460000, 2017-11-01), (10, , 8, 0, 440000, 2017-11-01), (10, , 9, 0, 440000, 2017-11-01), (10, , 10, 0, 400000, 2017-11-01)) at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'EndDate' cannot be null at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'EndDate' cannot be null at C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(60): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: productprice->run()
+#6 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#11 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 C:\\xampp\\htdocs\\project_web\
+asaxo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('productprice')
+#13 [internal function]: DatabaseSeeder->run()
+#14 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(120): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#28 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\project_web\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\project_web\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 

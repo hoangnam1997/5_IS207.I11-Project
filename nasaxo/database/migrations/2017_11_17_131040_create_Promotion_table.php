@@ -21,7 +21,7 @@ class CreatePromotionTable extends Migration
             $table->string('Discount');
             $table->string('BasePurchase');
             $table->date('StartDate');
-            $table->date('EndDate');
+            $table->date('EndDate')->nullable();
             $table->boolean('IsDelete');
             $table->timestamps();
         });
