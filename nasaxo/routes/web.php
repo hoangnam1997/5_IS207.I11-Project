@@ -4,7 +4,7 @@ Route::get('/', 'HomeController@Index');
 // Cart
 Route::group(['prefix'=>'cart'],function(){
 	// home cart
-	Route::post('/','CartController@Index');
+	Route::get('/','CartController@Index');
 	// address
 	Route::post('order','CartController@Order');
 	// thanh toán

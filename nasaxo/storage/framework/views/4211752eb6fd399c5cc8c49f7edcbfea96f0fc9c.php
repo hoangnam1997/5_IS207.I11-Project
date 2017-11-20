@@ -34,7 +34,7 @@
 </div>
 <!-- end modals -->
 <!-- start container -->
-<div class="container-fluit">
+<div class="container-fluid">
 	<!-- start row -->
 	<div class="row">
 		<div class="col-xs-12 header-content">

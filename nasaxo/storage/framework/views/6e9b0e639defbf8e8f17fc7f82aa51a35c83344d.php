@@ -40,7 +40,7 @@
 </div>
 <!-- end modals -->
 <!-- start container -->
-<div class="container-fluit">
+<div class="container-fluid">
 
 	<!-- start row -->
 	<div class="row">

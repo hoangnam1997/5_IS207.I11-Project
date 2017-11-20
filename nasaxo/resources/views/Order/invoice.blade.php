@@ -33,8 +33,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="DonHang">
-				<form class=" col-md-12 header" action="{!! url('cart') !!}" method="post">
-					{{ csrf_field() }}
+				<form class=" col-md-12 header" action="{!! url('cart') !!}" method="get">
 					<h3 class="donhang">Đơn hàng</h3> 
 					<button type="submit" class= "btn btn-default pull-right">Sửa </button>
 					<hr class="hr">
