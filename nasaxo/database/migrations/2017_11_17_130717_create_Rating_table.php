@@ -15,7 +15,7 @@ class CreateRatingTable extends Migration
     {
         Schema::create('Rating', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Point');
             $table->integer('ID_Product');
             $table->foreign('ID_Product')->references('id')->on('Product');

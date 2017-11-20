@@ -15,7 +15,7 @@ class CreateOrderProductTable extends Migration
     {
         Schema::create('OrderProduct', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->integer('ID_Order');
             $table->foreign('ID_Order')->references('id')->on('Order');
             $table->integer('ID_Product');

@@ -15,7 +15,7 @@ class CreateSizeTable extends Migration
     {
         Schema::create('Size', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Sizes');
             $table->string('Description');
             $table->boolean('IsDelete');

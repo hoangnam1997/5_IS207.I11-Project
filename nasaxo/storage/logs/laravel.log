@@ -25830,3 +25830,237 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 >>>>>>> c88d1d10ce22e3c4ccff2ceb7216c96b229e4293
 "} 
+[2017-11-20 05:33:56] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'nasaxo' {"exception":"[object] (Doctrine\\DBAL\\Driver\\PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:47, PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:43)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(64): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(42): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(183): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(915): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(940): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(399): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(325): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(657): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(156): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2017-11-20 05:33:56] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'nasaxo' (SQL: select * from information_schema.tables where table_schema = nasaxo and table_name = migrations) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' (SQL: select * from information_schema.tables where table_schema = nasaxo and table_name = migrations) at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:47, PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:43)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(156): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#13 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
+[2017-11-20 05:34:34] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Users` add primary key `users_id_primary`(`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Users` add primary key `users_id_primary`(`id`)) at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Us...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `Us...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `Us...')
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Users', Object(Closure))
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\database\\migrations\\2017_11_17_122656_create_Users_table.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateUsersTable->up()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2017-11-20 05:38:19] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `ProductPicture` add constraint `productpicture_id_picture_foreign` foreign key (`ID_Picture`) references `Picture` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `ProductPicture` add constraint `productpicture_id_picture_foreign` foreign key (`ID_Picture`) references `Picture` (`id`)) at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `Pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `Pr...')
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('ProductPicture', Object(Closure))
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\database\\migrations\\2017_11_17_130427_create_ProductPicture_table.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateProductPictureTable->up()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateProductPictureTable), 'up')
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 

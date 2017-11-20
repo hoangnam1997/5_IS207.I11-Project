@@ -15,7 +15,7 @@ class CreateProductPriceTable extends Migration
     {
         Schema::create('ProductPrice', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Price');
             $table->date('StartDate');
             $table->date('EndDate');

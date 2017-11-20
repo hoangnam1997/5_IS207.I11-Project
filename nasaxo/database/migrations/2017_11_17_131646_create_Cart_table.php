@@ -15,7 +15,7 @@ class CreateCartTable extends Migration
     {
         Schema::create('Cart', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Description');
             $table->boolean('IsDelete');
             $table->timestamps();

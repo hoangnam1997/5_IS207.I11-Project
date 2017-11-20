@@ -15,7 +15,7 @@ class CreateCommentTable extends Migration
     {
         Schema::create('Comment', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->integer('ID_Users');
             $table->foreign('ID_Users')->references('id')->on('Users');
             $table->integer('ID_Product');

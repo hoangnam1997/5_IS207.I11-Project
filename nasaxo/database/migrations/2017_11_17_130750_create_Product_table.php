@@ -15,7 +15,7 @@ class CreateProductTable extends Migration
     {
         Schema::create('Product', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->integer('ID_ProductCategory');
             $table->foreign('ID_ProductCategory')->references('id')->on('ProductCategory');
             $table->string('Name');

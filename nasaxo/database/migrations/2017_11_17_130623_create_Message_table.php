@@ -15,7 +15,7 @@ class CreateMessageTable extends Migration
     {
         Schema::create('Message', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Description');
             $table->integer('ID_Users');
             $table->foreign('ID_Users')->references('id')->on('Users');

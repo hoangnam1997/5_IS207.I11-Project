@@ -15,7 +15,7 @@ class CreateDeliveryPlaceTable extends Migration
     {
         Schema::create('DeliveryPlace', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->integer('ID_Order');
             $table->foreign('ID_Order')->references('id')->on('Order');
             $table->integer('ID_Ward');

@@ -15,7 +15,7 @@ class CreatePictureTable extends Migration
     {
         Schema::create('Picture', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Url');
             $table->boolean('IsDelete');
             $table->timestamps();

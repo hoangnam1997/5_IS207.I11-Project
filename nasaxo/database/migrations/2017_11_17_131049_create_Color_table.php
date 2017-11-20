@@ -15,7 +15,7 @@ class CreateColorTable extends Migration
     {
         Schema::create('Color', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Description');
             $table->string('Color');
             $table->boolean('IsDelete');

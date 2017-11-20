@@ -15,7 +15,7 @@ class CreatePromotionPictureTable extends Migration
     {
         Schema::create('PromotionPicture', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->integer('ID_Picture');
             $table->foreign('ID_Picture')->references('id')->on('Picture');
             $table->integer('ID_Promotion');

@@ -15,7 +15,7 @@ class CreateCityTable extends Migration
     {
         Schema::create('City', function (Blueprint $table) {
             $table->increments('id');
-            $table->primary('id');
+            // $table->primary('id');
             $table->string('Name');
             $table->string('Description');
             $table->boolean('IsDelete');
