@@ -1421,8 +1421,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-02 08:37:55] local.ERROR: Parse error: syntax error, unexpected '.', expecting ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '.', expecting ';' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:20)
+asaxo\outes\\web.php:20)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -1478,8 +1477,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #27 {main}
 "} 
 [2017-11-02 08:38:22] local.ERROR: Parse error: syntax error, unexpected '.', expecting ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '.', expecting ';' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:20)
+asaxo\outes\\web.php:20)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -1742,12 +1740,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #48 {main}
 "} 
 [2017-11-06 16:18:43] local.ERROR: Undefined variable: hoten {"exception":"[object] (ErrorException(code: 0): Undefined variable: hoten at C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\test.php:2)
+asaxo\esources\\views\\test.php:2)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\test.php(2): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\xampp\\\\htdocs...', 2, Array)
+asaxo\esources\\views\\test.php(2): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\xampp\\\\htdocs...', 2, Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(43): include('C:\\\\xampp\\\\htdocs...')
 #2 C:\\xampp\\htdocs\
@@ -1861,8 +1857,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #56 {main}
 "} 
 [2017-11-06 16:26:38] local.ERROR: Parse error: syntax error, unexpected end of file {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected end of file at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:46)
+asaxo\outes\\web.php:46)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -1918,8 +1913,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #27 {main}
 "} 
 [2017-11-06 16:26:41] local.ERROR: Parse error: syntax error, unexpected end of file {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected end of file at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:46)
+asaxo\outes\\web.php:46)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -1975,8 +1969,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #27 {main}
 "} 
 [2017-11-06 17:02:35] local.ERROR: Parse error: syntax error, unexpected '}', expecting ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '}', expecting ';' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:61)
+asaxo\outes\\web.php:61)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -2032,8 +2025,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #27 {main}
 "} 
 [2017-11-06 17:02:41] local.ERROR: Call to undefined function composer() {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to undefined function composer() at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:59)
+asaxo\outes\\web.php:59)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(380): require()
@@ -2091,8 +2083,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #28 {main}
 "} 
 [2017-11-07 10:15:59] local.ERROR: Parse error: syntax error, unexpected 'extends' (T_EXTENDS) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) at C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.php:2)
+asaxo\esources\\views\\extents.php:2)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(21): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
@@ -2205,8 +2196,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #54 {main}
 "} 
 [2017-11-07 10:16:30] local.ERROR: Parse error: syntax error, unexpected 'extends' (T_EXTENDS) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) at C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.php:2)
+asaxo\esources\\views\\extents.php:2)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(21): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
@@ -2319,8 +2309,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #54 {main}
 "} 
 [2017-11-07 10:17:57] local.ERROR: Parse error: syntax error, unexpected 'extends' (T_EXTENDS) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) at C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.php:2)
+asaxo\esources\\views\\extents.php:2)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(21): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
@@ -2433,8 +2422,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #54 {main}
 "} 
 [2017-11-07 10:18:42] local.ERROR: Parse error: syntax error, unexpected 'extends' (T_EXTENDS) (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2)
 [stacktrace]
@@ -2551,8 +2539,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:18:44] local.ERROR: Parse error: syntax error, unexpected 'extends' (T_EXTENDS) (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'extends' (T_EXTENDS) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2)
 [stacktrace]
@@ -2669,8 +2656,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:18:54] local.ERROR: Parse error: syntax error, unexpected '@' (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '@' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '@' at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3)
 [stacktrace]
@@ -2787,8 +2773,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:19:04] local.ERROR: Parse error: syntax error, unexpected 'section' (T_STRING) (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'section' (T_STRING) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'section' (T_STRING) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3)
 [stacktrace]
@@ -2905,8 +2890,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:19:09] local.ERROR: Parse error: syntax error, unexpected '@' (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '@' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '@' at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3)
 [stacktrace]
@@ -3023,8 +3007,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:19:11] local.ERROR: Parse error: syntax error, unexpected '@' (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '@' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '@' at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:3)
 [stacktrace]
@@ -3141,8 +3124,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:19:34] local.ERROR: Parse error: syntax error, unexpected 'nội' (T_STRING) (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'nội' (T_STRING) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:4, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'nội' (T_STRING) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:4)
 [stacktrace]
@@ -3259,8 +3241,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:19:44] local.ERROR: Parse error: syntax error, unexpected 'EXTENDS' (T_EXTENDS) (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'EXTENDS' (T_EXTENDS) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'EXTENDS' (T_EXTENDS) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2)
 [stacktrace]
@@ -3377,8 +3358,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:19:50] local.ERROR: Parse error: syntax error, unexpected 'dung' (T_STRING) (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'dung' (T_STRING) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:4, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'dung' (T_STRING) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:4)
 [stacktrace]
@@ -3495,8 +3475,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:20:03] local.ERROR: Parse error: syntax error, unexpected end of file (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected end of file (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:5, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected end of file at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:5)
 [stacktrace]
@@ -3613,8 +3592,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:20:12] local.ERROR: Call to undefined function T_EXTENDS() (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Call to undefined function T_EXTENDS() (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to undefined function T_EXTENDS() at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2)
 [stacktrace]
@@ -3731,8 +3709,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 10:20:14] local.ERROR: Call to undefined function T_EXTENDS() (View: C:\xampp\htdocs\nasaxo\resources\views\extents.blade.php) {"exception":"[object] (ErrorException(code: 0): Call to undefined function T_EXTENDS() (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\extents.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to undefined function T_EXTENDS() at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\4623f3710b985b865b320348747058a3f404d843.php:2)
 [stacktrace]
@@ -3854,13 +3831,10 @@ asaxo\\storage\\framework\\views\\8d3010deb2780a94a894ea9adbc679daab5f09c3.php:1
 #0 {main}
 "} 
 [2017-11-07 14:28:24] local.ERROR: Parse error: syntax error, unexpected '{' (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '{' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:3, ErrorException(code: 0): Parse error: syntax error, unexpected '{' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:3, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '{' at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:3)
 [stacktrace]
@@ -3977,13 +3951,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 14:28:38] local.ERROR: Parse error: syntax error, unexpected '!' (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '!' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:4, ErrorException(code: 0): Parse error: syntax error, unexpected '!' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:4, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '!' at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:4)
 [stacktrace]
@@ -4100,13 +4071,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 14:29:15] local.ERROR: Undefined variable: bass3 (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) {"exception":"[object] (ErrorException(code: 0): Undefined variable: bass3 (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:11, ErrorException(code: 0): Undefined variable: bass3 (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:11, ErrorException(code: 0): Undefined variable: bass3 at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:11)
 [stacktrace]
@@ -4223,13 +4191,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-07 14:29:16] local.ERROR: Undefined variable: bass3 (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) (View: C:\xampp\htdocs\nasaxo\resources\views\view-sub.blade.php) {"exception":"[object] (ErrorException(code: 0): Undefined variable: bass3 (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) (View: C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:11, ErrorException(code: 0): Undefined variable: bass3 (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\view-sub.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:11, ErrorException(code: 0): Undefined variable: bass3 at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\0ea8d5b9416435252a765ded34632b20d4ae04d8.php:11)
 [stacktrace]
@@ -4439,8 +4404,7 @@ asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfo
 "} 
 [2017-11-07 16:55:28] local.ERROR: Type error: Argument 1 passed to Illuminate\Routing\Router::{closure}() must be an instance of Blueprint, instance of Illuminate\Database\Schema\Blueprint given, called in C:\xampp\htdocs\nasaxo\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php on line 164 {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Type error: Argument 1 passed to Illuminate\\Routing\\Router::{closure}() must be an instance of Blueprint, instance of Illuminate\\Database\\Schema\\Blueprint given, called in C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php on line 164 at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:96)
+asaxo\outes\\web.php:96)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(164): Illuminate\\Routing\\Router->{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
@@ -4451,8 +4415,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Account', Object(Closure))
 #4 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(101): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+asaxo\outes\\web.php(101): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #6 C:\\xampp\\htdocs\
@@ -4568,8 +4531,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+asaxo\outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -4685,8 +4647,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+asaxo\outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -4802,8 +4763,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+asaxo\outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -4919,8 +4879,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+asaxo\outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -5035,8 +4994,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(117): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(117): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -5151,8 +5109,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(117): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(117): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -5269,8 +5226,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(117): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(117): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -5373,8 +5329,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(121): Illuminate\\Database\\Schema\\Blueprint->__call('dropcollumn', Array)
+asaxo\outes\\web.php(121): Illuminate\\Database\\Schema\\Blueprint->__call('dropcollumn', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(72): Illuminate\\Routing\\Router->{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
 #2 C:\\xampp\\htdocs\
@@ -5384,8 +5339,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Account', Object(Closure))
 #5 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(123): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(123): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #6 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #7 C:\\xampp\\htdocs\
@@ -5488,8 +5442,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(121): Illuminate\\Database\\Schema\\Blueprint->__call('dropcollumn', Array)
+asaxo\outes\\web.php(121): Illuminate\\Database\\Schema\\Blueprint->__call('dropcollumn', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(72): Illuminate\\Routing\\Router->{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
 #2 C:\\xampp\\htdocs\
@@ -5499,8 +5452,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Account', Object(Closure))
 #5 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(123): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(123): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #6 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #7 C:\\xampp\\htdocs\
@@ -5603,8 +5555,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(121): Illuminate\\Database\\Schema\\Blueprint->__call('dropCollumn', Array)
+asaxo\outes\\web.php(121): Illuminate\\Database\\Schema\\Blueprint->__call('dropCollumn', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(72): Illuminate\\Routing\\Router->{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
 #2 C:\\xampp\\htdocs\
@@ -5614,8 +5565,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Account', Object(Closure))
 #5 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(123): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(123): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #6 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #7 C:\\xampp\\htdocs\
@@ -5732,8 +5682,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Role', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(146): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(146): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -5850,8 +5799,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Role', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(148): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(148): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -5968,8 +5916,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Role', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(148): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(148): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -6086,8 +6033,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('Role', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(148): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+asaxo\outes\\web.php(148): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -6775,8 +6721,7 @@ asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfo
 #27 {main}
 "} 
 [2017-11-09 08:32:39] local.ERROR: Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:152)
+asaxo\outes\\web.php:152)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -6832,8 +6777,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #27 {main}
 "} 
 [2017-11-09 08:33:09] local.ERROR: Class 'Rote' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Rote' not found at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:152)
+asaxo\outes\\web.php:152)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(380): require()
@@ -6904,8 +6848,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1690): Illuminate\\Database\\Query\\Builder->runSelect()
 #4 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(174): Illuminate\\Database\\Query\\Builder->get()
+asaxo\outes\\web.php(174): Illuminate\\Database\\Query\\Builder->get()
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #6 C:\\xampp\\htdocs\
@@ -7005,8 +6948,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #53 {main}
 "} 
 [2017-11-09 10:44:07] local.ERROR: Call to a member function get() on integer {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function get() on integer at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:239)
+asaxo\outes\\web.php:239)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
@@ -7124,8 +7066,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.ph
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Account', Object(Closure))
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+asaxo\outes\\web.php(102): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -7225,14 +7166,12 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-09 10:53:48] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:259)
+asaxo\outes\\web.php:259)
 [stacktrace]
 #0 {main}
 "} 
 [2017-11-09 11:13:56] local.ERROR: Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:291)
+asaxo\outes\\web.php:291)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -7291,8 +7230,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php:1440)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Database\\Eloquent\\Model->__call('withHidden', Array)
+asaxo\outes\\web.php(301): Illuminate\\Database\\Eloquent\\Model->__call('withHidden', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -7392,8 +7330,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #49 {main}
 "} 
 [2017-11-09 16:34:11] local.ERROR: Call to a member function toArray() on array {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function toArray() on array at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:301)
+asaxo\outes\\web.php:301)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
@@ -7494,8 +7431,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #48 {main}
 "} 
 [2017-11-09 16:35:50] local.ERROR: Call to a member function toArray() on null {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function toArray() on null at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:301)
+asaxo\outes\\web.php:301)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
@@ -7599,8 +7535,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Support\\Collection->__call('addHidden', Array)
+asaxo\outes\\web.php(301): Illuminate\\Support\\Collection->__call('addHidden', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -7700,12 +7635,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #49 {main}
 "} 
 [2017-11-09 16:36:59] local.ERROR: Non-static method Illuminate\Database\Eloquent\Model::getGuarded() should not be called statically {"exception":"[object] (ErrorException(code: 0): Non-static method Illuminate\\Database\\Eloquent\\Model::getGuarded() should not be called statically at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:301)
+asaxo\outes\\web.php:301)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8192, 'Non-static meth...', 'C:\\\\xampp\\\\htdocs...', 301, Array)
+asaxo\outes\\web.php(301): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8192, 'Non-static meth...', 'C:\\\\xampp\\\\htdocs...', 301, Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -7808,8 +7741,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Support\\Collection->__call('getGuarded', Array)
+asaxo\outes\\web.php(301): Illuminate\\Support\\Collection->__call('getGuarded', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -7912,8 +7844,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Support\\Collection->__call('getHidden', Array)
+asaxo\outes\\web.php(301): Illuminate\\Support\\Collection->__call('getHidden', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -8016,8 +7947,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Support\\Collection->__call('getHidden', Array)
+asaxo\outes\\web.php(301): Illuminate\\Support\\Collection->__call('getHidden', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -8117,8 +8047,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #49 {main}
 "} 
 [2017-11-09 16:40:23] local.ERROR: Parse error: syntax error, unexpected ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ')' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:301)
+asaxo\outes\\web.php:301)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -8179,8 +8108,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.ph
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1455): Illuminate\\Database\\Eloquent\\Model->__call('findOrFails', Array)
 #1 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(301): Illuminate\\Database\\Eloquent\\Model::__callStatic('findOrFails', Array)
+asaxo\outes\\web.php(301): Illuminate\\Database\\Eloquent\\Model::__callStatic('findOrFails', Array)
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #3 C:\\xampp\\htdocs\
@@ -8285,8 +8213,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1273): Illuminate\\Database\\Query\\Builder->__call('toArray', Array)
 #1 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(308): Illuminate\\Database\\Eloquent\\Builder->__call('toArray', Array)
+asaxo\outes\\web.php(308): Illuminate\\Database\\Eloquent\\Builder->__call('toArray', Array)
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #3 C:\\xampp\\htdocs\
@@ -8386,8 +8313,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #50 {main}
 "} 
 [2017-11-09 16:45:05] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 67112960 bytes) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 67112960 bytes) at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:310)
+asaxo\outes\\web.php:310)
 [stacktrace]
 #0 {main}
 "} 
@@ -8395,8 +8321,7 @@ outes\\web.php:310)
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(309): Illuminate\\Support\\Collection->__call('firstOrFail', Array)
+asaxo\outes\\web.php(309): Illuminate\\Support\\Collection->__call('firstOrFail', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -8496,12 +8421,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #49 {main}
 "} 
 [2017-11-09 16:50:34] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Builder::$firstOrFail {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Builder::$firstOrFail at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:309)
+asaxo\outes\\web.php:309)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(309): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', 'C:\\\\xampp\\\\htdocs...', 309, Array)
+asaxo\outes\\web.php(309): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', 'C:\\\\xampp\\\\htdocs...', 309, Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -8606,8 +8529,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1273): Illuminate\\Database\\Query\\Builder->__call('toArray', Array)
 #1 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(322): Illuminate\\Database\\Eloquent\\Builder->__call('toArray', Array)
+asaxo\outes\\web.php(322): Illuminate\\Database\\Eloquent\\Builder->__call('toArray', Array)
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #3 C:\\xampp\\htdocs\
@@ -8710,8 +8632,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(322): Illuminate\\Support\\Collection->__call('skip', Array)
+asaxo\outes\\web.php(322): Illuminate\\Support\\Collection->__call('skip', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -8814,8 +8735,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(322): Illuminate\\Support\\Collection->__call('select', Array)
+asaxo\outes\\web.php(322): Illuminate\\Support\\Collection->__call('select', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -8915,8 +8835,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #49 {main}
 "} 
 [2017-11-09 17:04:51] local.ERROR: Parse error: syntax error, unexpected 'count' (T_STRING) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'count' (T_STRING) at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:329)
+asaxo\outes\\web.php:329)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -8989,8 +8908,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(463): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(336): Illuminate\\Database\\Eloquent\\Builder->get()
+asaxo\outes\\web.php(336): Illuminate\\Database\\Eloquent\\Builder->get()
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -9116,8 +9034,7 @@ asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfo
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(343): Illuminate\\Support\\Collection->__call('select', Array)
+asaxo\outes\\web.php(343): Illuminate\\Support\\Collection->__call('select', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -9250,8 +9167,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.ph
 #13 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1455): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
 #14 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(364): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+asaxo\outes\\web.php(364): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
 #15 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}(Object(App\\Account))
 #16 C:\\xampp\\htdocs\
@@ -9384,8 +9300,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.ph
 #13 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1455): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
 #14 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(364): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+asaxo\outes\\web.php(364): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
 #15 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}(Object(App\\Account))
 #16 C:\\xampp\\htdocs\
@@ -9518,8 +9433,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.ph
 #13 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1455): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
 #14 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(365): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+asaxo\outes\\web.php(365): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
 #15 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}(Object(App\\Account))
 #16 C:\\xampp\\htdocs\
@@ -9652,8 +9566,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.ph
 #13 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1455): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
 #14 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(364): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+asaxo\outes\\web.php(364): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
 #15 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}(Object(App\\Account))
 #16 C:\\xampp\\htdocs\
@@ -9786,8 +9699,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.ph
 #13 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1455): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
 #14 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(365): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+asaxo\outes\\web.php(365): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
 #15 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}(Object(App\\Account))
 #16 C:\\xampp\\htdocs\
@@ -9887,12 +9799,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #63 {main}
 "} 
 [2017-11-13 02:58:24] local.ERROR: Creating default object from empty value {"exception":"[object] (ErrorException(code: 0): Creating default object from empty value at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:361)
+asaxo\outes\\web.php:361)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(361): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Creating defaul...', 'C:\\\\xampp\\\\htdocs...', 361, Array)
+asaxo\outes\\web.php(361): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Creating defaul...', 'C:\\\\xampp\\\\htdocs...', 361, Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -10822,8 +10732,7 @@ asaxo\\app\\Account.php:16)
 asaxo\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
 #1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Account')
 #2 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(372): spl_autoload_call('App\\\\Account')
+asaxo\outes\\web.php(372): spl_autoload_call('App\\\\Account')
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #4 C:\\xampp\\htdocs\
@@ -10929,8 +10838,7 @@ asaxo\\app\\Account.php:16)
 asaxo\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
 #1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Account')
 #2 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(372): spl_autoload_call('App\\\\Account')
+asaxo\outes\\web.php(372): spl_autoload_call('App\\\\Account')
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #4 C:\\xampp\\htdocs\
@@ -11036,8 +10944,7 @@ asaxo\\app\\Account.php:16)
 asaxo\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
 #1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Account')
 #2 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(372): spl_autoload_call('App\\\\Account')
+asaxo\outes\\web.php(372): spl_autoload_call('App\\\\Account')
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #4 C:\\xampp\\htdocs\
@@ -11137,8 +11044,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #51 {main}
 "} 
 [2017-11-13 06:40:52] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:374)
+asaxo\outes\\web.php:374)
 [stacktrace]
 #0 {main}
 "} 
@@ -11150,8 +11056,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(367): Illuminate\\Database\\Eloquent\\Builder->__call('toArray', Array)
 #2 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(372): Illuminate\\Database\\Eloquent\\Relations\\Relation->__call('toArray', Array)
+asaxo\outes\\web.php(372): Illuminate\\Database\\Eloquent\\Relations\\Relation->__call('toArray', Array)
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #4 C:\\xampp\\htdocs\
@@ -11258,8 +11163,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(367): Illuminate\\Database\\Eloquent\\Builder->__call('toArray', Array)
 #2 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(379): Illuminate\\Database\\Eloquent\\Relations\\Relation->__call('toArray', Array)
+asaxo\outes\\web.php(379): Illuminate\\Database\\Eloquent\\Relations\\Relation->__call('toArray', Array)
 #3 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #4 C:\\xampp\\htdocs\
@@ -11378,8 +11282,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #6 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(154): Illuminate\\Database\\Eloquent\\Builder->get(Array)
 #7 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(379): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
+asaxo\outes\\web.php(379): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
 #8 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #9 C:\\xampp\\htdocs\
@@ -11498,8 +11401,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #6 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(154): Illuminate\\Database\\Eloquent\\Builder->get(Array)
 #7 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(379): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
+asaxo\outes\\web.php(379): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
 #8 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #9 C:\\xampp\\htdocs\
@@ -12155,8 +12057,7 @@ asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfo
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php:1440)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(385): Illuminate\\Database\\Eloquent\\Model->__call('ntonFunction', Array)
+asaxo\outes\\web.php(385): Illuminate\\Database\\Eloquent\\Model->__call('ntonFunction', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -12268,8 +12169,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns
 #4 C:\\xampp\\htdocs\
 asaxo\\app\\Account.php(21): Illuminate\\Database\\Eloquent\\Model->belongsToMany('App\\\\test_nton')
 #5 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(385): App\\Account->ntonFunction()
+asaxo\outes\\web.php(385): App\\Account->ntonFunction()
 #6 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #7 C:\\xampp\\htdocs\
@@ -12386,8 +12286,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany.php(524): Illuminate\\Database\\Eloquent\\Builder->getModels()
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(385): Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany->get()
+asaxo\outes\\web.php(385): Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany->get()
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -12504,8 +12403,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.
 #5 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany.php(524): Illuminate\\Database\\Eloquent\\Builder->getModels()
 #6 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(385): Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany->get()
+asaxo\outes\\web.php(385): Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany->get()
 #7 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #8 C:\\xampp\\htdocs\
@@ -12605,8 +12503,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-14 09:51:48] local.ERROR: Parse error: syntax error, unexpected '(' (View: C:\xampp\htdocs\nasaxo\resources\views\form.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '(' (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\form.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\form.blade.php) at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\09bce193205362b1e90c743868dae7d39c79e422.php:1, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '(' at C:\\xampp\\htdocs\
 asaxo\\storage\\framework\\views\\09bce193205362b1e90c743868dae7d39c79e422.php:1)
 [stacktrace]
@@ -12723,8 +12620,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-14 09:53:18] local.ERROR: Route [fmrAdd] not defined. (View: C:\xampp\htdocs\nasaxo\resources\views\form.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [fmrAdd] not defined. (View: C:\\xampp\\htdocs\
-asaxo\
-esources\\views\\form.blade.php) at C:\\xampp\\htdocs\
+asaxo\esources\\views\\form.blade.php) at C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [fmrAdd] not defined. at C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
@@ -12841,8 +12737,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-14 09:55:58] local.ERROR: Parse error: syntax error, unexpected ';', expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ';', expecting ']' at C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php:395)
+asaxo\outes\\web.php:395)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -15843,8 +15738,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
+asaxo\outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -15947,8 +15841,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
+asaxo\outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -16051,8 +15944,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
+asaxo\outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -16262,8 +16154,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:97)
 [stacktrace]
 #0 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
+asaxo\outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
 #1 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #2 C:\\xampp\\htdocs\
@@ -16440,8 +16331,7 @@ asaxo\\app\\Providers\\macroProvider.php(18): Illuminate\\Foundation\\Bootstrap\
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php(103): call_user_func_array(Object(Closure), Array)
 #3 C:\\xampp\\htdocs\
-asaxo\
-outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
+asaxo\outes\\web.php(430): Illuminate\\Routing\\ResponseFactory->__call('cap', Array)
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(198): Illuminate\\Routing\\Router->{closure}()
 #5 C:\\xampp\\htdocs\
@@ -16918,8 +16808,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54):
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
 #3 C:\\xampp\\htdocs\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\
-estFull), 'show')
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\estFull), 'show')
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
 #5 C:\\xampp\\htdocs\
@@ -17025,8 +16914,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54):
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
 #3 C:\\xampp\\htdocs\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\
-estFull), 'show')
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\estFull), 'show')
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
 #5 C:\\xampp\\htdocs\
@@ -17132,8 +17020,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54):
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
 #3 C:\\xampp\\htdocs\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\
-estFull), 'show')
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\estFull), 'show')
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
 #5 C:\\xampp\\htdocs\
@@ -17239,8 +17126,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54):
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
 #3 C:\\xampp\\htdocs\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\
-estFull), 'show')
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\estFull), 'show')
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
 #5 C:\\xampp\\htdocs\
@@ -17346,8 +17232,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54):
 #2 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
 #3 C:\\xampp\\htdocs\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\
-estFull), 'show')
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\estFull), 'show')
 #4 C:\\xampp\\htdocs\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
 #5 C:\\xampp\\htdocs\
@@ -17658,8 +17543,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 08:17:27] local.ERROR: Use of undefined constant discount - assumed 'discount' (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\Login.blade.php) {"exception":"[object] (ErrorException(code: 0): Use of undefined constant discount - assumed 'discount' (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\Login.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\Login.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\01ddf89526139f222f5dfd3adca5e8684fa60514.php:6, ErrorException(code: 0): Use of undefined constant discount - assumed 'discount' at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\01ddf89526139f222f5dfd3adca5e8684fa60514.php:6)
 [stacktrace]
@@ -17776,8 +17660,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 08:39:59] local.ERROR: Object of class Illuminate\Routing\UrlGenerator could not be converted to string (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Home\Home.blade.php) {"exception":"[object] (ErrorException(code: 0): Object of class Illuminate\\Routing\\UrlGenerator could not be converted to string (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Home\\Home.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Home\\Home.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\81be46a5c0ca366d7ecd70a4aab14aac275bed1f.php:264, ErrorException(code: 0): Object of class Illuminate\\Routing\\UrlGenerator could not be converted to string at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\81be46a5c0ca366d7ecd70a4aab14aac275bed1f.php:264)
 [stacktrace]
@@ -18008,8 +17891,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 10:23:06] local.ERROR: Parse error: syntax error, unexpected '!', expecting ',' or ';' (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\RememberFindAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '!', expecting ',' or ';' (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\RememberFindAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\RememberFindAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\e2434b8299cef5251fcb185cc42442cb031b2394.php:4, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '!', expecting ',' or ';' at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\e2434b8299cef5251fcb185cc42442cb031b2394.php:4)
 [stacktrace]
@@ -18126,8 +18008,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 10:27:17] local.ERROR: Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\htdocs\\project_web\
-asaxo\
-outes\\web.php:11)
+asaxo\outes\\web.php:11)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -18183,13 +18064,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #27 {main}
 "} 
 [2017-11-15 10:59:09] local.ERROR: Use of undefined constant content - assumed 'content' (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\_layout.blade.php) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\_layout.blade.php) {"exception":"[object] (ErrorException(code: 0): Use of undefined constant content - assumed 'content' (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\_layout.blade.php) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\_layout.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\_layout.blade.php) (View: C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\_layout.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\a3718eea25b5cad0fedbbe543714dc873a93d87d.php:90, ErrorException(code: 0): Use of undefined constant content - assumed 'content' (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\_layout.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\_layout.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\a3718eea25b5cad0fedbbe543714dc873a93d87d.php:90, ErrorException(code: 0): Use of undefined constant content - assumed 'content' at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\a3718eea25b5cad0fedbbe543714dc873a93d87d.php:90)
 [stacktrace]
@@ -18526,13 +18404,10 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 11:40:01] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\index.blade.php) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\index.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\index.blade.php) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\index.blade.php) (View: C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\0bbff3dc445a5a3e66f75d83b12958192e6e8ff9.php:4, ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\0bbff3dc445a5a3e66f75d83b12958192e6e8ff9.php:4, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\0bbff3dc445a5a3e66f75d83b12958192e6e8ff9.php:4)
 [stacktrace]
@@ -18649,8 +18524,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:39:41] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -18767,8 +18641,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:40:45] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -18885,8 +18758,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:40:47] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19003,8 +18875,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:40:50] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19121,8 +18992,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:41:20] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19239,8 +19109,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:43:50] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19357,8 +19226,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:44:15] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19475,8 +19343,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:44:59] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19593,8 +19460,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:46:33] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19711,8 +19577,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:47:12] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19829,8 +19694,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:47:14] local.ERROR: Cannot end a section without first starting one. (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Cannot end a section without first starting one. (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85, InvalidArgumentException(code: 0): Cannot end a section without first starting one. at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesLayouts.php:85)
 [stacktrace]
@@ -19947,8 +19811,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:50:11] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20065,8 +19928,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:50:14] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20183,8 +20045,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:50:23] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20301,8 +20162,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:50:46] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20419,8 +20279,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:51:30] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20537,8 +20396,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:51:52] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20655,8 +20513,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:52:22] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20773,8 +20630,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:52:27] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -20891,8 +20747,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:52:29] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -21009,8 +20864,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:53:20] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -21127,8 +20981,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:54:06] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -21245,8 +21098,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:54:09] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -21363,8 +21215,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 12:54:21] local.ERROR: Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Account\InfomationAccount.blade.php) {"exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Account\\InfomationAccount.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected 'public' (T_PUBLIC) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\942a0237509ba938fea13f9c8f76fadb2682e1ba.php:56)
 [stacktrace]
@@ -21719,8 +21570,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-15 17:01:41] local.ERROR: Parse error: syntax error, unexpected '}' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '}' at C:\\xampp\\htdocs\\project_web\
-asaxo\
-outes\\web.php:34)
+asaxo\outes\\web.php:34)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Illuminate\\Routing\\Router->loadRoutes('C:\\\\xampp\\\\htdocs...')
@@ -21793,8 +21643,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(152): Il
 #7 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Routing\\Router->post('district', '')
 #8 C:\\xampp\\htdocs\\project_web\
-asaxo\
-outes\\web.php(33): Illuminate\\Support\\Facades\\Facade::__callStatic('post', Array)
+asaxo\outes\\web.php(33): Illuminate\\Support\\Facades\\Facade::__callStatic('post', Array)
 #9 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(376): Illuminate\\Routing\\Router->{closure}(Object(Illuminate\\Routing\\Router))
 #10 C:\\xampp\\htdocs\\project_web\
@@ -21802,8 +21651,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Il
 #11 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Routing\\Router->group(Array, Object(Closure))
 #12 C:\\xampp\\htdocs\\project_web\
-asaxo\
-outes\\web.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('group', Array)
+asaxo\outes\\web.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('group', Array)
 #13 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(376): Illuminate\\Routing\\Router->{closure}(Object(Illuminate\\Routing\\Router))
 #14 C:\\xampp\\htdocs\\project_web\
@@ -21811,8 +21659,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(336): Il
 #15 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Routing\\Router->group(Array, Object(Closure))
 #16 C:\\xampp\\htdocs\\project_web\
-asaxo\
-outes\\web.php(35): Illuminate\\Support\\Facades\\Facade::__callStatic('group', Array)
+asaxo\outes\\web.php(35): Illuminate\\Support\\Facades\\Facade::__callStatic('group', Array)
 #17 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(380): require('C:\\\\xampp\\\\htdocs...')
 #18 C:\\xampp\\htdocs\\project_web\
@@ -23473,8 +23320,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-16 04:06:41] local.ERROR: Call to undefined function csrt_token() (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Cart\index.blade.php) {"exception":"[object] (ErrorException(code: 0): Call to undefined function csrt_token() (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Cart\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Cart\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\c7622fb02ac7efe1b8cdfef9ada8434b9b68e63c.php:224, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to undefined function csrt_token() at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\c7622fb02ac7efe1b8cdfef9ada8434b9b68e63c.php:224)
 [stacktrace]
@@ -23591,8 +23437,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-16 04:06:57] local.ERROR: Call to undefined function crst_token() (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Cart\index.blade.php) {"exception":"[object] (ErrorException(code: 0): Call to undefined function crst_token() (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Cart\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Cart\\index.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\c7622fb02ac7efe1b8cdfef9ada8434b9b68e63c.php:224, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to undefined function crst_token() at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\c7622fb02ac7efe1b8cdfef9ada8434b9b68e63c.php:224)
 [stacktrace]
@@ -23715,8 +23560,7 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php:329)
 #0 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Routing\\Router->group('cart', Object(Closure))
 #1 C:\\xampp\\htdocs\\project_web\
-asaxo\
-outes\\web.php(8): Illuminate\\Support\\Facades\\Facade::__callStatic('group', Array)
+asaxo\outes\\web.php(8): Illuminate\\Support\\Facades\\Facade::__callStatic('group', Array)
 #2 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(380): require('C:\\\\xampp\\\\htdocs...')
 #3 C:\\xampp\\htdocs\\project_web\
@@ -24001,8 +23845,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 "} 
 [2017-11-16 05:29:39] local.ERROR: Call to undefined function csrf_feild() (View: C:\xampp\htdocs\project_web\nasaxo\resources\views\Order\invoice.blade.php) {"exception":"[object] (ErrorException(code: 0): Call to undefined function csrf_feild() (View: C:\\xampp\\htdocs\\project_web\
-asaxo\
-esources\\views\\Order\\invoice.blade.php) at C:\\xampp\\htdocs\\project_web\
+asaxo\esources\\views\\Order\\invoice.blade.php) at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\20752de621f4ddf6cf8adcb9bef260f20db23455.php:94, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to undefined function csrf_feild() at C:\\xampp\\htdocs\\project_web\
 asaxo\\storage\\framework\\views\\20752de621f4ddf6cf8adcb9bef260f20db23455.php:94)
 [stacktrace]
@@ -24125,16 +23968,12 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:1
 [stacktrace]
 #0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_put_conten...', 'C:\\\\xampp\\\\htdocs...', 122, Array)
 #1 C:\\xampp\\htdocs\\DoAnWeb\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(122): file_put_contents('C:\\\\xampp\\\\htdocs...', '<?php\
-\
-\
-\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(122): file_put_contents('C:\\\\xampp\\\\htdocs...', '<?php\\
+\\
 use Il...', 0)
 #2 C:\\xampp\\htdocs\\DoAnWeb\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(58): Illuminate\\Filesystem\\Filesystem->put('C:\\\\xampp\\\\htdocs...', '<?php\
-\
-\
-\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(58): Illuminate\\Filesystem\\Filesystem->put('C:\\\\xampp\\\\htdocs...', '<?php\\
+\\
 use Il...')
 #3 C:\\xampp\\htdocs\\DoAnWeb\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand.php(111): Illuminate\\Database\\Migrations\\MigrationCreator->create('TenMigrate', 'C:\\\\xampp\\\\htdocs...', 'UserName', true)
@@ -24175,16 +24014,12 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:1
 [stacktrace]
 #0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_put_conten...', 'C:\\\\xampp\\\\htdocs...', 122, Array)
 #1 C:\\xampp\\htdocs\\DoAnWeb\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(122): file_put_contents('C:\\\\xampp\\\\htdocs...', '<?php\
-\
-\
-\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(122): file_put_contents('C:\\\\xampp\\\\htdocs...', '<?php\\
+\\
 use Il...', 0)
 #2 C:\\xampp\\htdocs\\DoAnWeb\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(58): Illuminate\\Filesystem\\Filesystem->put('C:\\\\xampp\\\\htdocs...', '<?php\
-\
-\
-\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(58): Illuminate\\Filesystem\\Filesystem->put('C:\\\\xampp\\\\htdocs...', '<?php\\
+\\
 use Il...')
 #3 C:\\xampp\\htdocs\\DoAnWeb\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand.php(111): Illuminate\\Database\\Migrations\\MigrationCreator->create('create_Users_ta...', 'C:\\\\xampp\\\\htdocs...', 'Users', true)
@@ -24284,16 +24119,12 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:1
 [stacktrace]
 #0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_put_conten...', 'C:\\\\xampp\\\\htdocs...', 122, Array)
 #1 C:\\xampp\\htdocs\\DoAnWeb\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(122): file_put_contents('C:\\\\xampp\\\\htdocs...', '<?php\
-\
-\
-\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(122): file_put_contents('C:\\\\xampp\\\\htdocs...', '<?php\\
+\\
 use Il...', 0)
 #2 C:\\xampp\\htdocs\\DoAnWeb\
-asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(58): Illuminate\\Filesystem\\Filesystem->put('C:\\\\xampp\\\\htdocs...', '<?php\
-\
-\
-\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(58): Illuminate\\Filesystem\\Filesystem->put('C:\\\\xampp\\\\htdocs...', '<?php\\
+\\
 use Il...')
 #3 C:\\xampp\\htdocs\\DoAnWeb\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand.php(111): Illuminate\\Database\\Migrations\\MigrationCreator->create('create_Users_ta...', 'C:\\\\xampp\\\\htdocs...', 'Users', true)
@@ -25999,6 +25830,7 @@ asaxo\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illumi
 #55 {main}
 >>>>>>> c88d1d10ce22e3c4ccff2ceb7216c96b229e4293
 "} 
+<<<<<<< HEAD
 [2017-11-20 04:50:05] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Users` add primary key `users_id_primary`(`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Users` add primary key `users_id_primary`(`id`)) at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\project_web\
@@ -27196,6 +27028,239 @@ asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88)
 #25 C:\\xampp\\htdocs\\project_web\
 asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\project_web\
+=======
+[2017-11-20 05:33:56] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'nasaxo' {"exception":"[object] (Doctrine\\DBAL\\Driver\\PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:47, PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:43)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(64): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(42): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(183): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(915): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(940): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(399): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(325): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(657): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(156): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2017-11-20 05:33:56] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'nasaxo' (SQL: select * from information_schema.tables where table_schema = nasaxo and table_name = migrations) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' (SQL: select * from information_schema.tables where table_schema = nasaxo and table_name = migrations) at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:47, PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'nasaxo' at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:43)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(156): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#13 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
+[2017-11-20 05:34:34] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Users` add primary key `users_id_primary`(`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Users` add primary key `users_id_primary`(`id`)) at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Us...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `Us...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `Us...')
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('Users', Object(Closure))
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\database\\migrations\\2017_11_17_122656_create_Users_table.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateUsersTable->up()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2017-11-20 05:38:19] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `ProductPicture` add constraint `productpicture_id_picture_foreign` foreign key (`ID_Picture`) references `Picture` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `ProductPicture` add constraint `productpicture_id_picture_foreign` foreign key (`ID_Picture`) references `Picture` (`id`)) at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:107, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `nasaxo`.`#sql-2fc8_2a` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:105)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Pr...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `Pr...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `Pr...')
+#3 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('ProductPicture', Object(Closure))
+#6 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\database\\migrations\\2017_11_17_130427_create_ProductPicture_table.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateProductPictureTable->up()
+#8 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateProductPictureTable), 'up')
+#10 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Command\\Command.php(262): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\DoAnWeb\
+asaxo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\DoAnWeb\
+>>>>>>> 8f1f73c95e7459558963f309e6a361c9a2061aaf
 asaxo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
 "} 
