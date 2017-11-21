@@ -10,13 +10,13 @@
 				$imgs= $value->Pictures()->get()->toArray();
 				if(count($imgs)>0){
 					$img = $imgs[0]['Url']; ?>
-					<img src="{!! url('public/images/') !!}<?php echo  '/'.$img?>" class="clickDetail">
+					<img src="{!! url('public/images/') !!}<?php echo  '/'.$img?>" class="clickDetail" onclick="detailProduct()">
 					<?php 
 				}  ?>
 				<a href="#" class="add-to-cart">Add to Cart</a>
 			</div>
 			<!-- Name and price -->
-			<figcaption class="clickDetail">
+			<figcaption class="clickDetail" onclick="detailProduct()">
 				<!-- name prodyct -->
 				<h2><?php echo substr($value['Name'],0,22).' ...' ?></h2>
 				<!-- price -->
@@ -31,6 +31,12 @@
 	</div>
 	<?php
 }?>
+<script type="text/javascript">
+	function detailProduct(){
+		newUrl = url +'/product?id='+'1';
+		window.open(newUrl,'_blank');
+	}
+</script>
 <?php 
 }else {
 	echo "Không tìm thấy sản phẩm nào!";
@@ -50,7 +56,8 @@ if(isset($seeMore) && $seeMore){
 			document.appendChild(div);
 		}
 		function SeeMore(){
-			pageProduct.pageList++;
+			pageList=document.getElementById('pageList-frm');
+			pageList.value=parseInt(pageList.value)+1;
 			GetProducts();
 		};
 	</script>

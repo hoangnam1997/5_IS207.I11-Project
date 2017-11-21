@@ -1,12 +1,17 @@
+<?php 
+if(isset($_home) && $_home){?>
 @extends('_layout')
+<?php 
+}
+?>
 <!-- content-body -->
 @section('content')
 <div class="content-body">
 	@section('discount')
 	<!-- discount -->
 	<?php if(isset($discounts)){
-				echo $discounts;
-			}?>
+		echo $discounts;
+	}?>
 	<!-- 	end discount -->
 	@show
 	<!--  product -->
@@ -22,14 +27,14 @@
 			<?php if(isset($products)){
 				echo $products;
 			}?>
+		</div>
+		@show
+		<!-- end product -->
+		<!-- end content body -->
+		<!-- Email -->
 	</div>
-	@show
-	<!-- end product -->
-	<!-- end content body -->
-	<!-- Email -->
-</div>
-@stop
-@section('script')
-@parent
-<script type="text/javascript" src="{!! url('public/js/Home/product.js') !!}"></script>
-@stop
+	@stop
+	@section('script')
+	@parent
+	<script type="text/javascript" src="{!! url('public/js/Home/product.js') !!}"></script>
+	@stop

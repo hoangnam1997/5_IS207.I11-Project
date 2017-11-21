@@ -12,6 +12,14 @@ class HomeController extends Controller
 	static protected $_numberRecord = 12;
 	// default home
 	public function Index(){
+		$arrMethodIndex= array_merge($_GET, $_POST);
+		// danh sách biến view
+		$param = array(
+			'pageList' =>isset($arrMethodIndex['pageList']) ? $arrMethodIndex['pageList'] : 0 ,
+			'numberRecord' =>isset($arrMethodIndex['numberRecord']) ? $arrMethodIndex['numberRecord'] : HomeController::$_numberRecord,
+			'productCategory' =>isset($arrMethodIndex['productCategory']) ? $arrMethodIndex['productCategory'] : '' ,
+			'nameProduct' =>isset($arrMethodIndex['nameProduct']) ? $arrMethodIndex['nameProduct'] : '' ,
+		);
     	// lấy dánh sách
 		$discount=null;
 		// category 
@@ -20,27 +28,30 @@ class HomeController extends Controller
 		$dataViewDiscount = view('Home._PromotionLayout',['discounts'=>$discount]);
 		// view products
 		$dataViewProducts = HomeController::GetViewProducts();
-		return view('Home.Home',['categorys'=>$listCategory,'products'=>$dataViewProducts,'discounts'=>$dataViewDiscount]);
+		return view('Home.Home',['param'=>$param,'_home'=>true,'categorys'=>$listCategory,'products'=>$dataViewProducts,'discounts'=>$dataViewDiscount]);
 	}
 	//  lấy danh sách products hiển thi lên views
 	public function GetViewProducts(){
+		$arrMethod= array_merge($_GET,$_POST);
 		// các tham số truyền vào
 		// required
 		$arrRequired=array();
 		//  trang thứ
-		$pageList = isset($_POST['pageList']) ? $_POST['pageList'] : 0;
+		$pageList = isset($arrMethod['pageList']) ? $arrMethod['pageList'] : 0;
 		// Số lượng hiển thị
-		$numberRecord = isset($_POST['numberRecord']) ? $_POST['numberRecord'] : HomeController::$_numberRecord;
+		$numberRecord = isset($arrMethod['numberRecord']) ? $arrMethod['numberRecord'] : HomeController::$_numberRecord;		
 		// nhóm sản phẩm
-		$productCategory = isset($_POST['productCategory']) ? $_POST['productCategory'] : null;
+		$productCategory = isset($arrMethod['productCategory']) ? $arrMethod['productCategory'] : null;
 		// add category to reqired
-		if($productCategory!=null){
+		if($productCategory!=null && $productCategory!="" && !empty($productCategory)){
 			array_push($arrRequired,array( 'ID_ProductCategory','=',$productCategory));
 		}
 		// tên sản phẩm
-		$nameProduct = isset($_POST['nameProduct']) ? $_POST['nameProduct'] : '';
+		$nameProduct = isset($arrMethod['nameProduct']) ? $arrMethod['nameProduct'] : null;
 		// add name to reqired
-		array_push($arrRequired,array( 'Name','LIKE','%'.$nameProduct .'%' ));
+		if($nameProduct !=null && $nameProduct !="" && !empty($nameProduct)){
+			array_push($arrRequired,array( 'Name','LIKE','%'.$nameProduct .'%' ));
+		}
 		// hiển thị nút xem nhiều
 		$seeMore = true;
 		//  lấy danh sách product

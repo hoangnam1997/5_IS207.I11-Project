@@ -1,6 +1,7 @@
 <?php
 // home
-Route::get('/', 'HomeController@Index');
+Route::any('/', 'HomeController@Index');
+
 // lay them danh sach products
 Route::post('GetViewProducts', 'HomeController@GetViewProducts');
 // Cart

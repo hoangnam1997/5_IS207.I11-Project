@@ -19,6 +19,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
 </head>
 <body>
+	<!-- form ẩn danh sách biến -->
+	<script type="text/javascript">
+		var url="<?php echo url(''); ?>";
+	</script>
+	<!-- // go to view product -->
+	<form id="frmPage" style="display:'none';" action="<?php echo url('/'); ?>" method="GET" enctype='multipart/form-data'>
+		<input id="pageList-frm" type="hidden" name="pageList" value="<?php echo isset($param['pageList'])? $param['pageList'] : 0 ?>">	
+		<input id="numberRecord-frm" type="hidden" name="numberRecord" value="<?php echo isset($param['numberRecord'])? $param['numberRecord'] : 12 ?>">
+		<input id="productCategory-frm" type="hidden" name="productCategory" value="<?php if(isset($param['productCategory'])) echo $param['productCategory'] ?>">
+		<input id="nameProduct-frm" type="hidden" name="nameProduct" value="<?php if(isset($param['nameProduct'])) echo $param['nameProduct'] ?>">
+	</form>
 	<!-- model -->
 	<div class="modal fade in" id="homeModal" role="dialog">
 		<div class="modal-dialog">
@@ -71,7 +82,7 @@
 							<?php if(isset($categorys)){
 								foreach ($categorys as $value) {
 									?>
-									<li class="category-home" data-category='<?php echo $value['id']; ?>'><a href="#"><?php echo $value['Name']; ?></a></li>
+									<li class="category-home" data-category='<?php echo $value['id']; ?>'><a><?php echo $value['Name']; ?></a></li>
 									<?php 
 								}
 							} ?>
@@ -88,7 +99,7 @@
 	<!-- end top-header	 -->
 	<!-- content-body -->
 	<div class="content-body">
-		<div class="content-product">
+		<div class="content-product" id="contentProduct">
 			<?php echo $__env->yieldContent('content'); ?>
 		</div>
 		<!-- end product -->
@@ -124,16 +135,7 @@
 		</div>
 	</footer>
 	<?php $__env->startSection('script'); ?>
-	<script type="text/javascript">
-		// go to view product
-		var pageProduct ={
-			'pageList' : 0,
-			'numberRecord':12,
-			'productCategory':'',
-			'nameProduct':'',
-		}
-		var url="<?php echo url(''); ?>";
-	</script>
+	
 	<!-- end email -->
 	<script type="text/javascript" src="<?php echo url('public/js/jquery.min.js'); ?>"></script>
 	<!-- bút tráp  -->
