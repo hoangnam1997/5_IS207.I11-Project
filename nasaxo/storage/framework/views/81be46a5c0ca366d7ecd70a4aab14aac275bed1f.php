@@ -22,7 +22,6 @@
 				echo $products;
 			}?>
 	</div>
-	<div class='seeMoreProduct' id='seeMoreProduct'>Xem thêm</div>
 	<?php echo $__env->yieldSection(); ?>
 	<!-- end product -->
 	<!-- end content body -->

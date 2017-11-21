@@ -2,7 +2,7 @@
 // home
 Route::get('/', 'HomeController@Index');
 // lay them danh sach products
-Route::post('SeeMoreProducts', 'HomeController@SeeMoreProducts');
+Route::post('GetViewProducts', 'HomeController@GetViewProducts');
 // Cart
 Route::group(['prefix'=>'cart'],function(){
 	// home cart

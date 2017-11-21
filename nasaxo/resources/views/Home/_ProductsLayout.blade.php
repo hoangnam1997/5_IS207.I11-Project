@@ -30,14 +30,38 @@
 		</figure>
 	</div>
 	<?php
-}
+}?>
+<?php 
 }else {
 	echo "Không tìm thấy sản phẩm nào!";
 }
-if(!isset($seeMore) || !$seeMore){?>
-<script type="text/javascript">
-	$('#seeMoreProduct').remove();
-</script>
-<?php
+if(isset($seeMore) && $seeMore){
+	?>
+	<div class='col-md-12 seeMoreProduct' onclick="SeeMore()" id='seeMoreProduct'>Xem thêm</div>
+	<script type="text/javascript">
+		if(document.getElementById('seeMoreProduct')!=null){
+			document.getElementById('seeMoreProduct').style.display = 'block';
+		}else{
+			var div = document.createElement('div');
+			div.setAttribute('class','col-md-12 seeMoreProduct');
+			div.setAttribute('style','display:"block";');
+			div.setAttribute('id','seeMoreProduct');
+			div.setAttribute('onclick','SeeMore()');
+			document.appendChild(div);
+		}
+		function SeeMore(){
+			pageProduct.pageList++;
+			GetProducts();
+		};
+	</script>
+	<?php
+}else{
+	?>
+	<script type="text/javascript">
+		if(document.getElementById('seeMoreProduct')!=null){
+			document.getElementById('seeMoreProduct').style.display = 'none';
+		}
+	</script>
+	<?php
 }
 ?>

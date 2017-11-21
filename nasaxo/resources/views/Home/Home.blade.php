@@ -23,7 +23,6 @@
 				echo $products;
 			}?>
 	</div>
-	<div class='seeMoreProduct' id='seeMoreProduct'>Xem thêm</div>
 	@show
 	<!-- end product -->
 	<!-- end content body -->

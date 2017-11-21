@@ -59,7 +59,7 @@
 					<li>
 						<div class="input-group divSearch">
 							<input type="text" id='txtSearch' class="form-control" name="txtSearch" placeholder="Search...">
-							<span class="input-group-addon">
+							<span class="input-group-addon" id="btnSearch">
 								<i class="glyphicon glyphicon-search btnSearch"></i>
 							</span>
 						</div>
@@ -68,12 +68,13 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
 						<ul id="dropdownMenu" class="dropdown-menu">
-							<li><a href="#">T-shirt</a></li>
-							<li><a href="#">Shirt</a></li>
-							<li><a href="#">coat</a></li>
-							<li><a href="#">Trousers</a></li>
-							<li><a href="#">sports clothing</a></li>
-							<li><a href="#">vest/blazer coat</a></li>
+							<?php if(isset($categorys)){
+								foreach ($categorys as $value) {
+									?>
+									<li class="category-home" data-category='<?php echo $value['id']; ?>'><a href="#"><?php echo $value['Name']; ?></a></li>
+									<?php 
+								}
+							} ?>
 						</ul>
 					</li>
 					
@@ -123,15 +124,23 @@
 		</div>
 	</footer>
 	<?php $__env->startSection('script'); ?>
+	<script type="text/javascript">
+		// go to view product
+		var pageProduct ={
+			'pageList' : 0,
+			'numberRecord':12,
+			'productCategory':'',
+			'nameProduct':'',
+		}
+		var url="<?php echo url(''); ?>";
+	</script>
 	<!-- end email -->
 	<script type="text/javascript" src="<?php echo url('public/js/jquery.min.js'); ?>"></script>
 	<!-- bút tráp  -->
 	<script type="text/javascript" src="<?php echo url('public/js/bootstrap.min.js'); ?>"></script>
 	<!-- easing -->
 	<script type="text/javascript" src="<?php echo url('public/js/Home/jquery.easing.1.3.js'); ?>"></script>
-	<script type="text/javascript">
-		var url="<?php echo url(''); ?>";
-	</script>
+
 	<script type="text/javascript" src="<?php echo url('public/js/Home/index.js'); ?>"></script>
 	<?php echo $__env->yieldSection(); ?>
 </body>

@@ -36,7 +36,7 @@
 	border: 4px solid  #cc0033;
 	transform: rotateX(-90deg) translateZ(-32px);
 }
-div.product-image{
+div.product-detail-image{
 	margin: 0 10px 0 10px;
 	padding: 0;
 	background: transparent;
@@ -46,28 +46,28 @@ div.product-image{
 .row{
 	margin: 0;
 }
-.product.col-xs-12{
+.product-detail.col-xs-12{
 	margin: 0;
 }
-div#Product-carousel{
+div#product-detail-carousel{
 	width: 100%;
 	height: 100%;
 }
-span.head-product{
+span.head-product-detail{
 	font-size: 25px;
 	font-weight: bold;
 }
-.product-infomation{
+.product-detail-infomation{
 	font-size: 15px;
 	min-height: 350px;
 	text-align: left;
 }
-span.product-field{
+span.product-detail-field{
 	display: inline-block;
 	min-width: 80px;
 	font-weight: bold;
 }
-.product-imgItem{
+.product-detail-imgItem{
 	min-height: 350px;
 	max-height: 350px;
 	width: 100%;
@@ -107,25 +107,25 @@ div.field-col{
 	margin-top: 8px;
 	text-align: left;
 }
-div.product{
+div.product-detail{
 	background: #fff;
 	border-radius: 5px;
 	padding: 5px;
 	cursor: default;
 }
-span.product-price{
+span.product-detail-price{
 	font-size: 20px;
 	color: #cc0033;
 }
 span.price-invole{
 	font-weight: bold;
 }
-span.product-priceOld,span.priceOld-invole{
+span.product-detail-priceOld,span.priceOld-invole{
 	font-size: 12px;
 	text-decoration: line-through;
 	color: 	#a2a2a2;
 }
-span.product-discount,span.discount-invole{
+span.product-detail-discount,span.discount-invole{
 	font-weight: bold;
 	color: #FF3B26;
 }
@@ -141,20 +141,20 @@ span.btn-number{
 	vertical-align: middle;
 	margin-left: -4px!important;
 }
-input#txtNumberProduct{
+input#txtNumberproduct-detail{
 	border: 2px solid #D9D7D7;
 	max-width:30px;
 	min-height: 30px;
 	font-size: 13px;
 	margin-left: -4px;
 }
-div.product-involve{
+div.product-detail-involve{
 	margin-top: 10px;
 	padding: 0;
 	background: transparent;
 	border-radius: 5px;
 }
-.product-involve h4,.cmt-title h4{
+.product-detail-involve h4,.cmt-title h4{
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
@@ -201,11 +201,11 @@ div.involve-content,div.cmt-container{
 	height: 200px;
 	width: 100%;
 }
-.product-star{
+.product-detail-star{
 	text-align: left;
 	cursor: pointer;
 }
-.product-comment{
+.product-detail-comment{
 	margin-top: 10px;
 	padding: 0;
 	background: transparent;

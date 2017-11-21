@@ -1,3 +1,23 @@
+// lây danh sách products
+function GetProducts(){
+    var _token = $('meta[name="_token"]').attr('content');
+    urlAjax = url +'/GetViewProducts';
+    $.ajax({
+        url: urlAjax,
+        type:"POST",
+        data:{'_token':_token,'pageList':pageProduct.pageList,'numberRecord':pageProduct.numberRecord,'productCategory':pageProduct.productCategory,'nameProduct':pageProduct.nameProduct},
+        success: function($re){
+            $('#productList').append($re);
+        }
+    });
+}
+function clear(){
+    $('#txtSearch').val('');
+    pageProduct.pageList=0;
+    pageProduct.numberRecord=12;
+    pageProduct.productCategory='';
+    pageProduct.nameProduct ='';
+}
 $(document).ready(function(){
     var modelContent =$('#homeModal .modal-body');
     // scroll button back to top
@@ -25,5 +45,24 @@ $(document).ready(function(){
             }
         });
     });
-    
+    // thực hiện tìm kiếm sản phẩm với tên
+    $('#btnSearch').on('click',function(){
+        $('#productList').html('');
+        clear();
+        pageProduct.nameProduct = $('#txtSearch').val();
+        GetProducts();
+    });
+    // khi nhấp enter trên thanh tìm kiếm
+    $('#txtSearch').on('keypress',function(e){
+        if (e.which == 13) {
+            $('#btnSearch').click();
+        }
+    });
+    // LẤY DANH SÁCH THEO MỤC
+    $('.category-home').on('click',function(){
+        $('#productList').html('');
+        clear();
+        pageProduct.productCategory=$(this).data('category');
+        GetProducts();
+    });
 });
