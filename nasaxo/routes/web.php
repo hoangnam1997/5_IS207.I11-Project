@@ -15,7 +15,10 @@ Route::group(['prefix'=>'cart'],function(){
 });
 
 // Login
-Route::get('login','LoginController@Index');
+Route::group(['prefix'=>'login'],function(){
+	Route::get('/','LoginController@Index');
+	Route::post('acept','LoginController@Check');
+});
 // product
 Route::get('product','ProductController@Get');
 // Remember password

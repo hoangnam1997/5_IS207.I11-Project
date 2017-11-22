@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Product as Product;
 use App\ProductCategory as ProductCategory;
 use App\Promotion as Promotion;
-
 class HomeController extends Controller
 {
 	// số record products hiển thị mật định

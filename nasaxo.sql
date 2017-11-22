@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2017 lúc 09:31 AM
+-- Thời gian đã tạo: Th10 22, 2017 lúc 07:16 PM
 -- Phiên bản máy phục vụ: 10.1.26-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -608,7 +608,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Username`, `Password`, `Picture`, `Email`, `Description`, `IsDelete`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', '', 'admin@gmail.com', '', 0, NULL, NULL, NULL);
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

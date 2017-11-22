@@ -89,9 +89,16 @@
 							} ?>
 						</ul>
 					</li>
-					
 					<li><a href="{!! url('/cart') !!}" class="glyphicon glyphicon-shopping-cart"></a></li>
-					<li><a id="btnLogin" data-toggle="modal" data-target="#homeModal">Sign in</a></li>
+					<li id="accountHome">
+						@if (Cookie::get('accountHome') !== null)
+						<?php $values=Cookie::get('accountHome');
+							
+						 ?>
+						@else
+						<a id="btnLogin" data-toggle="modal" data-target="#homeModal">Sign in</a>
+						@endif
+					</li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div>
