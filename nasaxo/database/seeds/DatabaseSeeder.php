@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(["productcategory","product","productprice","picture","productpicture"]);
+        $this->call(["productcategory","product","productprice","picture","productpicture","promotions"]);
     }
 }
 // procuct category
@@ -123,6 +123,28 @@ class productpicture extends Seeder
             array("ID_Picture" =>"12",'ID_Product'=>12,"IsDelete"=>0),
             array("ID_Picture" =>"13",'ID_Product'=>13,"IsDelete"=>0),
             array("ID_Picture" =>"14",'ID_Product'=>14,"IsDelete"=>0),
+        ]);
+    }
+}
+class promotions extends Seeder{
+    public function run()
+    {
+        // thêm vào database
+        DB::table("picture")->insert([
+            array("Url" =>"promotions/1.jpg" ,"IsDelete"=>0),
+            array("Url" =>"promotions/2.jpg" ,"IsDelete"=>0),
+            array("Url" =>"promotions/3.jpg" ,"IsDelete"=>0),
+        ]);
+        // thêm vào database
+        DB::table("promotion")->insert([
+            array('EndDate'=>null,'StartDate'=>"2017-01-01",'BasePurchase'=>200000,'Discount'=>10,"Name" =>"1",'Description'=>"","IsDelete"=>0),
+            array('EndDate'=>null,'StartDate'=>"2017-02-01",'BasePurchase'=>100000,'Discount'=>10,"Name" =>"2",'Description'=>"","IsDelete"=>0),
+            array('EndDate'=>null,'StartDate'=>"2017-03-01",'BasePurchase'=>200000,'Discount'=>10,"Name" =>"3",'Description'=>"","IsDelete"=>0),
+        ]);
+        DB::table("promotionpicture")->insert([
+            array('ID_Picture'=>15,'ID_Promotion'=>"1","IsDelete"=>0),
+            array('ID_Picture'=>16,'ID_Promotion'=>"2","IsDelete"=>0),
+            array('ID_Picture'=>17,'ID_Promotion'=>"3","IsDelete"=>0),
         ]);
     }
 }

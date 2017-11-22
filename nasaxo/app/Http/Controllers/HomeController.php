@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 // khai báo product model
 use App\Product as Product;
 use App\ProductCategory as ProductCategory;
+use App\Promotion as Promotion;
+
 class HomeController extends Controller
 {
 	// số record products hiển thị mật định
@@ -20,12 +22,12 @@ class HomeController extends Controller
 			'productCategory' =>isset($arrMethodIndex['productCategory']) ? $arrMethodIndex['productCategory'] : '' ,
 			'nameProduct' =>isset($arrMethodIndex['nameProduct']) ? $arrMethodIndex['nameProduct'] : '' ,
 		);
-    	// lấy dánh sách
-		$discount=null;
+    	// lấy dánh Promotion::all() discount
+		$discount=Promotion::all();
+		// view discounts
+		$dataViewDiscount = view('Home._PromotionLayout',['promotions'=>$discount]);
 		// category 
 		$listCategory = ProductCategory::all();
-		// view discounts
-		$dataViewDiscount = view('Home._PromotionLayout',['discounts'=>$discount]);
 		// view products
 		$dataViewProducts = HomeController::GetViewProducts();
 		return view('Home.Home',['param'=>$param,'_home'=>true,'categorys'=>$listCategory,'products'=>$dataViewProducts,'discounts'=>$dataViewDiscount]);
