@@ -29,6 +29,7 @@
 		<input id="numberRecord-frm" type="hidden" name="numberRecord" value="<?php echo isset($param['numberRecord'])? $param['numberRecord'] : 12 ?>">
 		<input id="productCategory-frm" type="hidden" name="productCategory" value="<?php if(isset($param['productCategory'])) echo $param['productCategory'] ?>">
 		<input id="nameProduct-frm" type="hidden" name="nameProduct" value="<?php if(isset($param['nameProduct'])) echo $param['nameProduct'] ?>">
+		<input id="bestSeller-frm" type="hidden" name="bestSeller" value="<?php if(isset($param['bestSeller'])) {echo $param['bestSeller'];}else{echo '0';} ?>">
 	</form>
 	<!-- model -->
 	<div class="modal fade in" id="homeModal" role="dialog">
@@ -75,7 +76,7 @@
 							</span>
 						</div>
 					</li>
-					<li><a href="#">Best seller</a></li>
+					<li id="btnBestSeller"><a href="#">Best seller</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
 						<ul id="dropdownMenu" class="dropdown-menu">

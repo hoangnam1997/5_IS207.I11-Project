@@ -16,7 +16,12 @@ class Product extends Model
 	public function Prices(){
 		return $this->hasMany('App\ProductPrice','ID_Product');
 	}
+	// danh sacsh picture
 	public function Pictures(){
 		return $this->belongsToMany('App\Picture','ProductPicture','ID_Product','ID_Picture');
+	}
+	// danh sacsh order detail
+	public function OderDetails(){
+		return $this->hasMany('App\OrderProduct','ID_Product');
 	}
 }
