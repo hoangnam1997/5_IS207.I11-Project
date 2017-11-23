@@ -8,15 +8,19 @@ function Login($email,$passWord){
 		data: {'_token': _token,'email':$email,'password':$passWord},
 	})
 	.done(function($re) {
-		if($re==1){
+		if($re!=='0'){
 			$('#accountHome').html($re);
 			$('.modal .close').click();
 			$('.modal .modal-dialog .modal-body').html('');
+			loadScript();
+			return true;
 		}else{
-
+			alert($re);
+			return false;
 		}
 	})
 	.fail(function() {
+		alert('Không tìm thấy tài khoản hoặc mật khẩu sai!');
 		return false;
 	});
 }

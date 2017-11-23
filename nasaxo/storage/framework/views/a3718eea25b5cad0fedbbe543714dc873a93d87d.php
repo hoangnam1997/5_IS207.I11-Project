@@ -38,7 +38,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">×</button>
-					<h4 class="modal-title">Thông tin màu sắc</h4>
+					<h4 class="modal-title">Login</h4>
 				</div>
 				<div class="modal-body">
 					ahihi
@@ -83,7 +83,7 @@
 							<?php if(isset($categorys)){
 								foreach ($categorys as $value) {
 									?>
-									<li class="category-home" data-category='<?php echo $value['id']; ?>'><a><?php echo $value['Name']; ?></a></li>
+									<li class="category-home" data-category='<?php echo $value['id']; ?>'><a><?php echo $value['Name'] ?></a></li>
 									<?php 
 								}
 							} ?>
@@ -91,10 +91,21 @@
 					</li>
 					<li><a href="<?php echo url('/cart'); ?>" class="glyphicon glyphicon-shopping-cart"></a></li>
 					<li id="accountHome">
+						<!-- đã lưu accont -->
 						<?php if(Cookie::get('accountHome') !== null): ?>
-						<?php $values=Cookie::get('accountHome');
-							
-						 ?>
+						<?php 
+						$values=Cookie::get('accountHome');
+						$values = stripslashes($values);
+						$savedAccount = json_decode($values, true);
+						?>
+						<a class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo url('/public/images'); ?>/<?php echo $savedAccount['image']; ?>" class="user-image-home" alt="User Image"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li id="btnProfile" data-account="<?php echo $savedAccount['id'] ?>"><a>Profile</a></li>
+							<li id="btnLogout"><a>Logout</a></li>
+						</ul>
+						<?php
+						?>
+						<!-- chưa -->
 						<?php else: ?>
 						<a id="btnLogin" data-toggle="modal" data-target="#homeModal">Sign in</a>
 						<?php endif; ?>

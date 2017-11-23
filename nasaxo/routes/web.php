@@ -18,6 +18,7 @@ Route::group(['prefix'=>'cart'],function(){
 Route::group(['prefix'=>'login'],function(){
 	Route::get('/','LoginController@Index');
 	Route::post('acept','LoginController@Check');
+	Route::post('out','LoginController@Out');
 });
 // product
 Route::get('product','ProductController@Get');
