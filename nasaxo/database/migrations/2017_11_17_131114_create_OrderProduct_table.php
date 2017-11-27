@@ -15,14 +15,15 @@ class CreateOrderProductTable extends Migration
     {
         Schema::create('OrderProduct', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ID_Order')->unsigned();
-            $table->foreign('ID_Order')->references('id')->on('Order')->ondelete('cascade');
+            $table->integer('ID_Order')->nullable();
             $table->integer('ID_Product')->unsigned();
             $table->foreign('ID_Product')->references('id')->on('Product')->ondelete('cascade');
             $table->integer('ID_Size')->unsigned();
             $table->foreign('ID_Size')->references('id')->on('Size')->ondelete('cascade');
             $table->integer('ID_Color')->unsigned();
             $table->foreign('ID_Color')->references('id')->on('Color')->ondelete('cascade');
+            $table->integer('ID_User')->nullable();
+            $table->boolean('IsInCart');
             $table->integer('Count');
             $table->string('Description');
             $table->boolean('IsDelete');

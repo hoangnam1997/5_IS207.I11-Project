@@ -16,7 +16,7 @@ $('.add-to-cart').off('click').on('click',function(){
 				url: url + '/cart/add',
 				data: {'_token': _token, 'productId':$idProduct},
 			})
-			.done(function($re) {
+			.done(function($re) {//nêu thành công
 				if($re =='0'){ 
 					$.notify('Xảy ra lỗi!',{
 						globalPosition: 'bootom left',
@@ -24,6 +24,7 @@ $('.add-to-cart').off('click').on('click',function(){
 					});
 					return;
 				}
+				// hiển thị thông báo cho người dùng
 				$.notify($nameProduct,{
 					globalPosition: 'bootom left',
 					className: 'success',

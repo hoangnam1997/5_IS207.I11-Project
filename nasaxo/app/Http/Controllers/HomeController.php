@@ -74,6 +74,7 @@ class HomeController extends Controller
 		$skip=$skip == null ? 0: $skip;
 		$where=$where==null? [] : $where;
 		if($bestSeller!=0){
+
 			// lấy danh sách product join order detail
 			$valueJoinOrderDetail = Product::where($where)->with('OderDetails')->get();
 			// Sort desc
@@ -82,7 +83,9 @@ class HomeController extends Controller
 				{
 					$sum = 0;
 					foreach ($element->OderDetails as $value) {
-						$sum+= $value->Count;
+						if($value->IsInCart==false){
+							$sum+= $value->Count;
+						}
 					}
 				}
 				return $sum;

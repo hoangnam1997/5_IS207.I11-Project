@@ -24,4 +24,12 @@ class Product extends Model
 	public function OderDetails(){
 		return $this->hasMany('App\OrderProduct','ID_Product');
 	}
+	// láy danh sách size 
+	public function Sizes(){
+		return $this->belongsToMany('App\Size','ProductSize','ID_Product','ID_Size');
+	}
+	// láy danh sách color 
+	public function Colors(){
+		return $this->belongsToMany('App\Color','ProductColor','ID_Product','ID_Color');
+	}
 }

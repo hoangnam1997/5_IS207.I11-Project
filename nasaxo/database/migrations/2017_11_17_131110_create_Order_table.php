@@ -20,6 +20,8 @@ class CreateOrderTable extends Migration
             $table->foreign('ID_Promotion')->references('id')->on('Promotion')->ondelete('cascade');
             $table->integer('ID_DeliveryPlace')->unsigned();
             $table->foreign('ID_DeliveryPlace')->references('id')->on('DeliveryPlace')->ondelete('cascade');
+            $table->integer('ID_User')->unsigned();
+            $table->foreign('ID_User')->references('id')->on('Users')->ondelete('cascade');
             $table->date('CreateDate');
             $table->date('ConfirmDate');
             $table->boolean('IsPaied');

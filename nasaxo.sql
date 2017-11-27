@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 27, 2017 lúc 09:26 AM
+-- Thời gian đã tạo: Th10 27, 2017 lúc 02:58 PM
 -- Phiên bản máy phục vụ: 10.1.26-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -18,44 +18,36 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+
+--
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`id`, `Username`, `Password`, `Picture`, `Email`, `Description`, `IsDelete`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', 0, NULL, NULL, NULL);
+
 --
 -- Cơ sở dữ liệu: `nasaxo`
 --
 
---
--- Đang đổ dữ liệu cho bảng `promotion`
---
 
-INSERT INTO `promotion` (`id`, `Description`, `Name`, `Discount`, `BasePurchase`, `StartDate`, `EndDate`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, '', '1', 10, 200000.00, '2017-01-01', NULL, 0, NULL, NULL),
-(2, '', '2', 10, 100000.00, '2017-02-01', NULL, 0, NULL, NULL),
-(3, '', '3', 10, 200000.00, '2017-03-01', NULL, 0, NULL, NULL);
-
---
--- Đang đổ dữ liệu cho bảng `city`
---
-
-INSERT INTO `city` (`id`, `Name`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 'Hồ Chí Minh', '', 0, NULL, NULL);
---
--- Đang đổ dữ liệu cho bảng `district`
---
-
-INSERT INTO `district` (`id`, `Name`, `Description`, `ID_City`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 'Thủ Đức', '', 1, 0, NULL, NULL);
-
---
--- Đang đổ dữ liệu cho bảng `color`
---
 
 INSERT INTO `color` (`id`, `Description`, `Color`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, '', 'Đen', 0, NULL, NULL);
+(1, '', 'fffffff', 0, NULL, NULL);
+
 --
--- Đang đổ dữ liệu cho bảng `ward`
+-- Đang đổ dữ liệu cho bảng `role`
 --
 
-INSERT INTO `ward` (`id`, `Name`, `Description`, `ID_District`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 'Làng Đại Học', '', 1, 0, NULL, NULL);
+INSERT INTO `role` (`id`, `Name`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin', 0, NULL, NULL);
+
+--
+-- Đang đổ dữ liệu cho bảng `size`
+--
+
+INSERT INTO `size` (`id`, `Sizes`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 'M', '', 0, NULL, NULL);
 
 
 
@@ -82,6 +74,7 @@ INSERT INTO `picture` (`id`, `Url`, `IsDelete`, `created_at`, `updated_at`) VALU
 (16, 'promotions/2.jpg', 0, NULL, NULL),
 (17, 'promotions/3.jpg', 0, NULL, NULL),
 (18, 'accounts/account.png', 0, NULL, NULL);
+
 --
 -- Đang đổ dữ liệu cho bảng `productcategory`
 --
@@ -93,6 +86,7 @@ INSERT INTO `productcategory` (`id`, `Name`, `Description`, `IsDelete`, `created
 (4, 'TROUSERS', '', 0, NULL, NULL),
 (5, 'SPORT CLOTHING', '', 0, NULL, NULL),
 (6, 'VEST/BLAZER COAT', '', 0, NULL, NULL);
+
 --
 -- Đang đổ dữ liệu cho bảng `product`
 --
@@ -113,7 +107,57 @@ INSERT INTO `product` (`id`, `ID_ProductCategory`, `Name`, `Description`, `IsDel
 (13, 3, 'PAIGE Men\'s Kenton Filled', '', 0, NULL, NULL),
 (14, 3, 'OBEY Men\'s Soto Varsity', '', 0, NULL, NULL);
 
+--
+-- Đang đổ dữ liệu cho bảng `city`
+--
 
+INSERT INTO `city` (`id`, `Name`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 'Hồ Chí Minh', '', 0, NULL, NULL);
+
+--
+-- Đang đổ dữ liệu cho bảng `color`
+--
+--
+-- Đang đổ dữ liệu cho bảng `district`
+--
+
+INSERT INTO `district` (`id`, `Name`, `Description`, `ID_City`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 'Thủ Đức', '', 1, 0, NULL, NULL);
+
+--
+-- Đang đổ dữ liệu cho bảng `ward`
+--
+
+INSERT INTO `ward` (`id`, `Name`, `Description`, `ID_District`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 'Làng Đại Học', '', 1, 0, NULL, NULL);
+
+--
+-- Đang đổ dữ liệu cho bảng `deliveryplace`
+--
+
+INSERT INTO `deliveryplace` (`id`, `ID_User`, `ID_Ward`, `ReceiveName`, `NumberPhone`, `DeliveryPlaces`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 'Nam', '123123123', 'UIT', 0, NULL, NULL);
+
+
+--
+-- Đang đổ dữ liệu cho bảng `productcolor`
+--
+
+INSERT INTO `productcolor` (`id`, `ID_Product`, `ID_Color`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(46, 1, 1, 0, NULL, NULL),
+(47, 2, 1, 0, NULL, NULL),
+(48, 3, 1, 0, NULL, NULL),
+(49, 4, 1, 0, NULL, NULL),
+(50, 5, 1, 0, NULL, NULL),
+(51, 6, 1, 0, NULL, NULL),
+(52, 7, 1, 0, NULL, NULL),
+(53, 8, 1, 0, NULL, NULL),
+(54, 9, 1, 0, NULL, NULL),
+(55, 11, 1, 0, NULL, NULL),
+(56, 10, 1, 0, NULL, NULL),
+(57, 12, 1, 0, NULL, NULL),
+(58, 13, 1, 0, NULL, NULL),
+(59, 14, 1, 0, NULL, NULL);
 
 --
 -- Đang đổ dữ liệu cho bảng `productpicture`
@@ -157,6 +201,35 @@ INSERT INTO `productprice` (`id`, `Price`, `StartDate`, `EndDate`, `IsDelete`, `
 (14, '400000', '2017-11-01', NULL, 0, 14, '10', NULL, NULL);
 
 --
+-- Đang đổ dữ liệu cho bảng `productsize`
+--
+
+INSERT INTO `productsize` (`id`, `ID_Size`, `ID_Product`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 0, NULL, NULL),
+(2, 1, 2, 0, NULL, NULL),
+(3, 1, 3, 0, NULL, NULL),
+(4, 1, 4, 0, NULL, NULL),
+(5, 1, 5, 0, NULL, NULL),
+(6, 1, 6, 0, NULL, NULL),
+(7, 1, 7, 0, NULL, NULL),
+(8, 1, 8, 0, NULL, NULL),
+(9, 1, 9, 0, NULL, NULL),
+(10, 1, 10, 0, NULL, NULL),
+(11, 1, 11, 0, NULL, NULL),
+(12, 1, 12, 0, NULL, NULL),
+(13, 1, 13, 0, NULL, NULL),
+(14, 1, 14, 0, NULL, NULL);
+
+--
+-- Đang đổ dữ liệu cho bảng `promotion`
+--
+
+INSERT INTO `promotion` (`id`, `Description`, `Name`, `Discount`, `BasePurchase`, `StartDate`, `EndDate`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, '', '1', 10, 200000.00, '2017-01-01', NULL, 0, NULL, NULL),
+(2, '', '2', 10, 100000.00, '2017-02-01', NULL, 0, NULL, NULL),
+(3, '', '3', 10, 200000.00, '2017-03-01', NULL, 0, NULL, NULL);
+
+--
 -- Đang đổ dữ liệu cho bảng `promotionpicture`
 --
 
@@ -165,47 +238,24 @@ INSERT INTO `promotionpicture` (`id`, `ID_Picture`, `ID_Promotion`, `IsDelete`, 
 (2, 16, 2, 0, NULL, NULL),
 (3, 17, 3, 0, NULL, NULL);
 
---
--- Đang đổ dữ liệu cho bảng `role`
---
 
-INSERT INTO `role` (`id`, `Name`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin', 0, NULL, NULL);
-
---
--- Đang đổ dữ liệu cho bảng `size`
---
-
-INSERT INTO `size` (`id`, `Sizes`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 'M', '', 0, NULL, NULL);
-
---
--- Đang đổ dữ liệu cho bảng `users`
---
-
-INSERT INTO `users` (`id`, `Username`, `Password`, `Picture`, `Email`, `Description`, `IsDelete`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', 0, NULL, NULL, NULL);
-
---
--- Đang đổ dữ liệu cho bảng `deliveryplace`
---
-
-INSERT INTO `deliveryplace` (`id`, `ID_User`, `ID_Ward`, `ReceiveName`, `NumberPhone`, `DeliveryPlaces`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Nam', '123123123', 'UIT', 0, NULL, NULL);
 --
 -- Đang đổ dữ liệu cho bảng `order`
 --
 
-INSERT INTO `order` (`id`, `Description`, `ID_Promotion`, `ID_DeliveryPlace`, `CreateDate`, `ConfirmDate`, `IsPaied`, `IsDelivered`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, '', 1, 1, '2017-11-01', '2017-11-01', 1, 1, 0, NULL, NULL);
+INSERT INTO `order` (`id`, `Description`, `ID_Promotion`, `ID_DeliveryPlace`, `ID_User`, `CreateDate`, `ConfirmDate`, `IsPaied`, `IsDelivered`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, '', 1, 1, 1, '2017-11-01', '2017-11-01', 1, 1, 0, NULL, NULL);
 
 --
 -- Đang đổ dữ liệu cho bảng `orderproduct`
 --
 
-INSERT INTO `orderproduct` (`id`, `ID_Order`, `ID_Product`, `ID_Size`, `ID_Color`, `Count`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
-(1, 1, 3, 1, 1, 20, '', 0, NULL, NULL),
-(2, 1, 14, 1, 1, 19, '', 0, NULL, NULL);
+INSERT INTO `orderproduct` (`id`, `ID_Order`, `ID_Product`, `ID_Size`, `ID_Color`, `ID_User`, `IsInCart`, `Count`, `Description`, `IsDelete`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, 1, 1, 1, 0, 20, '', 0, NULL, NULL),
+(2, 1, 14, 1, 1, 1, 0, 19, '', 0, NULL, NULL),
+(3, NULL, 1, 1, 1, 1, 1, 4, '', 0, '2017-11-27 06:53:57', '2017-11-27 06:55:53'),
+(4, NULL, 14, 1, 1, 1, 1, 1, '', 0, '2017-11-27 06:56:48', '2017-11-27 06:56:48'),
+(5, NULL, 2, 1, 1, 1, 1, 5, '', 0, '2017-11-27 06:57:03', '2017-11-27 06:57:06');
 
 --
 -- Đang đổ dữ liệu cho bảng `userspicture`
@@ -220,7 +270,6 @@ INSERT INTO `userspicture` (`id`, `ID_Users`, `ID_Picture`, `IsDelete`, `created
 
 INSERT INTO `user_role` (`id`, `ID_Users`, `ID_Role`, `IsDelete`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 0, NULL, NULL);
-
 
 COMMIT;
 
