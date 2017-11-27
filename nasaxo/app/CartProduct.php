@@ -8,6 +8,6 @@ class CartProduct extends Model
 {
     public $timestamps = true;
     protected $table = 'cartproduct';
-    protected $fillable = ['id','ID_Product','CreateDate','Count','IsDelete'];
+    protected $fillable = ['id','ID_Product','ID_User','CreateDate','Count','IsDelete'];
   
 }

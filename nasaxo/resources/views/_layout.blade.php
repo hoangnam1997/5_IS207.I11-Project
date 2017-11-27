@@ -17,6 +17,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+	<!-- jquery -->
+	<script type="text/javascript" src="{!! url('public/js/jquery.min.js') !!}"></script>
+	<!-- bút tráp  -->
+	<script type="text/javascript" src="{!! url('public/js/bootstrap.min.js') !!}"></script>
+	<!-- notify -->
+	<script type="text/javascript" src="{!! url('public/js/notify.js') !!}"></script>
+
 </head>
 <body>
 	<!-- form ẩn danh sách biến -->
@@ -89,7 +96,7 @@
 							} ?>
 						</ul>
 					</li>
-					<li><a href="{!! url('/cart') !!}" class="glyphicon glyphicon-shopping-cart"></a></li>
+					<li id="btnCart"><a class="glyphicon glyphicon-shopping-cart"></a></li>
 					<li id="accountHome">
 						<!-- đã lưu accont -->
 						@if (Cookie::get('accountHome') !== null)
@@ -155,10 +162,7 @@
 	</footer>
 	@section('script')
 	
-	<!-- end email -->
-	<script type="text/javascript" src="{!! url('public/js/jquery.min.js') !!}"></script>
-	<!-- bút tráp  -->
-	<script type="text/javascript" src="{!! url('public/js/bootstrap.min.js') !!}"></script>
+	
 	<!-- easing -->
 	<script type="text/javascript" src="{!! url('public/js/Home/jquery.easing.1.3.js') !!}"></script>
 

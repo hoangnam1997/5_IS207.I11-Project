@@ -15,7 +15,7 @@ function Login($email,$passWord){
 			loadScript();
 			return true;
 		}else{
-			alert($re);
+			alert('Không tìm thấy tài khoản hoặc mật khẩu sai!');
 			return false;
 		}
 	})

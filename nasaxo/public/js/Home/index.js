@@ -23,7 +23,26 @@ function GetProducts(){
         }
     });
 }
-
+// kiểm tra login
+function CheckLogin($result){
+    var _token = $('meta[name="_token"]').attr('content');
+    urlAjax = url +'/checklogin';
+    $.ajax({
+        url: urlAjax,
+        type:"POST",
+        data:{'_token':_token,'0':0,'1':1},
+    })
+    .done(function($re){
+        if($re == '1'){
+            $result(true);
+        }else{
+            $result(false);
+        }
+    })
+    .fail(function(){
+        $result(false);
+    });
+}
 // trở về trang home với thuôc tính
 function GetHomeWithParam(){
     divProduct =  $('#productList');
@@ -53,13 +72,13 @@ function loadScript(){
         }
     });
     // easing scroll
-    $('#scroll').on('click',function(){
+    $('#scroll').off("click").on('click',function(){
         $("html, body").animate({
             scrollTop : 4},
             500,'easeOutQuint');
     });
     // thực hiện gọi form về login
-    $('#btnLogin').on('click',function(){
+    $('#btnLogin').off("click").on('click',function(){
         var urlAjax=url+'/login';
         $.ajax({
             type:'GET',
@@ -71,7 +90,7 @@ function loadScript(){
         });
     });
     // thực hiện tìm kiếm sản phẩm với tên
-    $('#btnSearch').on('click',function(){
+    $('#btnSearch').off("click").on('click',function(){
         if($('#productList')!=null)
         {
             $('#productList').html('');
@@ -81,13 +100,13 @@ function loadScript(){
         GetProducts();
     });
     // khi nhấp enter trên thanh tìm kiếm
-    $('#txtSearch').on('keypress',function(e){
+    $('#txtSearch').off("click").on('keypress',function(e){
         if (e.which == 13) {
             $('#btnSearch').click();
         }
     });
     // LẤY DANH SÁCH THEO MỤC
-    $('.category-home').on('click',function(){
+    $('.category-home').off("click").on('click',function(){
         if($('#productList').length>0){
             $('#productList').html('');
         }
@@ -96,7 +115,7 @@ function loadScript(){
         GetProducts();
     });
     // lay danh sach best seller
-    $('#btnBestSeller').on('click',function(){
+    $('#btnBestSeller').off("click").on('click',function(){
         if($('#productList').length>0){
             $('#productList').html('');
         }
@@ -105,7 +124,7 @@ function loadScript(){
         GetProducts();
     });
     // logout
-    $('#btnLogout').on('click',function(){
+    $('#btnLogout').off("click").on('click',function(){
         var _token = $('meta[name="_token"]').attr('content');
         var urlAjax=url+'/login/out';
         $.ajax({
@@ -115,14 +134,25 @@ function loadScript(){
             data: {'_token':_token},
             success: function($re){
                 $('#accountHome').html($re);
-                loadScript();
+                 window.location.href=url;
             }
         });
     });
-    // logout
-    $('#btnProfile').on('click',function(){
-
+    // profile
+    $('#btnProfile').off("click").on('click',function(){
         alert('profile');
+    });
+    // gôt cart
+    $('#btnCart').off("click").on('click',function(){
+        CheckLogin(function($result){
+            if($result){
+                // đi tới trang giỏ hàng
+                window.location.href=url +'/cart';
+            }else{
+                // thông báo vui lòng đăng nhập
+                alert('Vui lòng đăng nhập!');
+            }
+        });
     });
 }
 $(document).ready(function(){

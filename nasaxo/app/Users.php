@@ -13,4 +13,7 @@ class Users extends Model
 	public function Picture(){
 		return $this->belongsToMany('App\Picture','UsersPicture','ID_Users','ID_Picture');
 	}
+	public function Roles(){
+		return $this->belongsToMany('App\Role','User_Role','ID_Users','ID_Role');
+	}
 }

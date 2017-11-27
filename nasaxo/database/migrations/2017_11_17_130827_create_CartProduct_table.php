@@ -17,6 +17,8 @@ class CreateCartProductTable extends Migration
             $table->increments('id');
             $table->integer('ID_Product')->unsigned();
             $table->foreign('ID_Product')->references('id')->on('Product')->onDelete('cascade');
+            $table->integer('ID_User')->unsigned();
+            $table->foreign('ID_User')->references('id')->on('Users')->onDelete('cascade');
             $table->date('CreateDate');
             $table->integer('Count');
             $table->boolean('IsDelete');

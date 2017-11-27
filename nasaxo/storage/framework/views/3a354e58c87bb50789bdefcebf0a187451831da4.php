@@ -10,13 +10,13 @@
 				$imgs= $value->Pictures()->get()->toArray();
 				if(count($imgs)>0){
 					$img = $imgs[0]['Url']; ?>
-					<img src="<?php echo url('public/images/'); ?><?php echo  '/'.$img?>" class="clickDetail" onclick="detailProduct()">
+					<img src="<?php echo url('public/images/'); ?><?php echo  '/'.$img?>" class="clickDetail" onclick="detailProduct(<?php echo $value->id; ?>)">
 					<?php 
 				}  ?>
-				<a href="#" class="add-to-cart">Add to Cart</a>
+				<a data-id='<?php echo $value->id; ?>' data-name="<?php echo $value->Name; ?>" class="add-to-cart">Add to Cart</a>
 			</div>
 			<!-- Name and price -->
-			<figcaption class="clickDetail" onclick="detailProduct()">
+			<figcaption class="clickDetail" onclick="detailProduct(<?php echo $value->id; ?>)">
 				<!-- name prodyct -->
 				<h2><?php echo substr($value['Name'],0,22).' ...' ?></h2>
 				<!-- price -->
@@ -31,12 +31,7 @@
 	</div>
 	<?php
 }?>
-<script type="text/javascript">
-	function detailProduct(){
-		newUrl = url +'/product?id='+'1';
-		window.open(newUrl,'_blank');
-	}
-</script>
+<script type="text/javascript" src="<?php echo url('public/js/Home/product.js'); ?>"></script>
 <?php 
 }else {
 	echo "Không tìm thấy sản phẩm nào!";

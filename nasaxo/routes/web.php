@@ -1,11 +1,16 @@
 <?php
+// check login
+Route::any('/checklogin','HomeController@CheckLogin');
+
 // home
-Route::any('/', 'HomeController@Index');
+Route::any('/',array('as' => 'home', 'uses' => 'HomeController@Index'));
 
 // lay them danh sach products
 Route::post('GetViewProducts', 'HomeController@GetViewProducts');
 // Cart
 Route::group(['prefix'=>'cart'],function(){
+	// thêm sản phẩm vào cart
+	Route::post('add','CartController@Add');
 	// home cart
 	Route::get('/','CartController@Index');
 	// address

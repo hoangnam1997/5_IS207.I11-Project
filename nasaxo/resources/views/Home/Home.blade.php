@@ -36,5 +36,4 @@ if(isset($_home) && $_home){?>
 	@stop
 	@section('script')
 	@parent
-	<script type="text/javascript" src="{!! url('public/js/Home/product.js') !!}"></script>
 	@stop

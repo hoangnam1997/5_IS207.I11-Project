@@ -36,7 +36,6 @@ if(isset($_home) && $_home){?>
 	<?php $__env->stopSection(); ?>
 	<?php $__env->startSection('script'); ?>
 	##parent-placeholder-cb5346a081dcf654061b7f897ea14d9b43140712##
-	<script type="text/javascript" src="<?php echo url('public/js/Home/product.js'); ?>"></script>
 	<?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('_layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
