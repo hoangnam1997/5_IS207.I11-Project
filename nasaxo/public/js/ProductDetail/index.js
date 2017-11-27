@@ -11,7 +11,7 @@ function onSwapImg($from,$to){
 $('.listImgPrduct .img-loader').on('mouseover',function(){
 	$('.listImgPrduct .img-loader').css('border', 'none');
 	$(this).css('border', '1px solid #7F7B7B');
-	onSwapImg($(this),$('#productImgItem'));
+	onSwapImg($(this),$('#product-detailImgItem'));
 	$('.zoomContainer').remove();
 	zoomImage('.zoom-img');
 });
