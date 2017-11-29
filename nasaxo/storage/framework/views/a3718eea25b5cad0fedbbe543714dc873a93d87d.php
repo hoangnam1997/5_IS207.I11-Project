@@ -10,6 +10,8 @@
 	<?php $__env->startSection('link'); ?> 
 	<!-- bootstrap css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/bootstrap.css'); ?>">
+	<!-- css jqueri ui -->
+	<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/jquery-ui.min.css'); ?>">
 	<!-- css my cústom -->
 	<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/Home/Home.css'); ?>">
 	<?php echo $__env->yieldSection(); ?>
@@ -25,6 +27,9 @@
 	<script type="text/javascript" src="<?php echo url('public/js/notify.js'); ?>"></script>
 	<!-- cookie -->
 	<script type="text/javascript" src="<?php echo url('public/js/jquery.cookie.js'); ?>"></script>
+	<!-- jqueri ui -->
+	<script type="text/javascript" src="<?php echo url('public/js/jquery-ui.min.js'); ?>"></script>
+
 
 </head>
 <body>

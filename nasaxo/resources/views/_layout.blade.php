@@ -10,6 +10,8 @@
 	@section('link') 
 	<!-- bootstrap css -->
 	<link rel="stylesheet" type="text/css" href="{!! url('public/css/bootstrap.css') !!}">
+	<!-- css jqueri ui -->
+	<link rel="stylesheet" type="text/css" href="{!! url('public/css/jquery-ui.min.css') !!}">
 	<!-- css my cústom -->
 	<link rel="stylesheet" type="text/css" href="{!! url('public/css/Home/Home.css') !!}">
 	@show
@@ -25,6 +27,9 @@
 	<script type="text/javascript" src="{!! url('public/js/notify.js') !!}"></script>
 	<!-- cookie -->
 	<script type="text/javascript" src="{!! url('public/js/jquery.cookie.js') !!}"></script>
+	<!-- jqueri ui -->
+	<script type="text/javascript" src="{!! url('public/js/jquery-ui.min.js') !!}"></script>
+
 
 </head>
 <body>

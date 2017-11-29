@@ -16,7 +16,9 @@ p{
 h3 {
     padding-top: 2px;
 }
-
+.progress{
+    background: #00b6f0!important;
+}
 .address-invoice {
     border: 2px solid rgba(0, 0, 0, 0.35);
     padding-left: 10px;

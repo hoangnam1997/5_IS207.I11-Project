@@ -52,6 +52,12 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::post('manage','ManageHomeController@Login');
 	// group for address
 	Route::group(['prefix'=>'address'],function(){
+		// get danh sách city
+		Route::any('getallcity','ManageAddressController@GetCitys');
+		// get danh sách districts
+		Route::any('getdistrictsbycity','ManageAddressController@GetDistrictsByIdCity');
+		// get danh sách districts
+		Route::any('getwardbydistrict','ManageAddressController@GetWardsByIdDistrict');
 		// lấy ra view quận hyện
 		Route::post('district','ManageAddressController@GetDistrictView');
 		// lấy view thành phố

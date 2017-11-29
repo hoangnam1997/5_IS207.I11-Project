@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{!! url('public/css/Order/payment_address.css') !!}">
 @stop
 @section('content-order')
+<?php if(isset($deliveryPlace)) print_r($deliveryPlace[0]->DeliveryPlaces); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-7 col-md-push-2">
@@ -11,29 +12,36 @@
 				<form action="{!! url('cart/invoice') !!}" enctype="multipart/form-data" method="post">
 					{{ csrf_field() }}
 					<div class="form-group">
-						<label for="Name">Họ tên</label>
-						<input type="text" class="form-control" id="Name" placeholder="Nhập họ tên">
+						<label for="Name">Họ tên người nhận</label>
+						<input type="text" class="form-control" id="Name" name="name" placeholder="Nhập họ tên" required>
 					</div>
 					<div class="form-group">
-						<label for="SDT">SĐT</label>
-						<input type="email" class="form-control" id="SĐT" placeholder="Nhập SĐT">
+						<label for="SDT">Số điện thoại</label>
+						<input type="text" class="form-control" id="SĐT" name="phone" placeholder="Nhập SĐT" required>
 					</div>
 					<div class="form-group">
 						<label for="Tinh">Tỉnh/Thành phố</label>
-						<input type="password" class="form-control" id="Tinh" placeholder="nhập tên tỉnh/thành phố">
+						<input type="text" class="hidden" id="cityControl" name="city" required>
+						<input type="text" class="form-control" id="city" placeholder="nhập tên tỉnh/thành phố">
 					</div>  
 					<div class="form-group">
 						<label for="Quan">Quận huyện/phường xã</label>
-						<input type="password" class="form-control" id="Quan" placeholder="Nhập tên quận huyện hoặc phường xã
+						<input type="text" class="hidden" id="districtControl" name="district" required>
+						<input type="text" class="form-control" id="district" placeholder="Nhập tên quận huyện hoặc phường xã
 						">
 					</div>  
 					<div class="form-group">
-						<label for="DiaChi">Địa chỉ</label>
-						<input type="password" class="form-control" id="Quan" placeholder="Nhập địa chỉ
+						<label for="ward">Khu vực</label>
+						<input type="text" class="hidden" id="wardControl" name="ward" required>
+						<input type="text" class="form-control" id="ward" placeholder="Nhập địa chỉ
 						">
 					</div>   
-					<button id="btnSubmitAddress" type="submit" class="btn btn-info">Cập nhật</button>
-					<button id="btnCancle" type="button" class="btn btn-info">Hủy bỏ</button>
+					<div class="form-group">
+						<label for="DiaChi">Địa chỉ</label>
+						<input type="text" class="form-control" id="DiaChi" name="deveryPlace" placeholder="Nhập địa chỉ
+						" required>
+					</div>   
+					<button id="btnSubmitAddress" type="submit" class="btn btn-info pull-right">Tiếp tục</button>
 				</form>
 			</div>
 		</div>

@@ -28,23 +28,28 @@ class CartController extends Controller
                 $arrProducts = json_decode($_COOKIE['buyProductList'],true);
                 // thực hiện thêm vào database
                 foreach ($arrProducts as $value) {
-
                     $detailOrder = OrderProduct::find($value['id']);
                     $detailOrder->ID_Size= $value['size'];
                     $detailOrder->ID_Color= $value['color'];
                     $detailOrder->Count= $value['count'];
                     $detailOrder->save();
                 }
-                $listCategory = ProductCategory::all();
-                $deliveryplace ='';
-                return view('Order.payment_address',['categorys'=>$listCategory,'deliveryPlace'=>$deliveryplace]);
             }
+            // lấy account
+            $idUser=CartController::getIdLogin();
+            $user=Users::find($idUser);
+            // lấy thông tin địa chỉ
+            $deliveryplace =$user->DeliveryPlace()->get();
+            $listCategory = ProductCategory::all();
+            return view('Order.payment_address',['categorys'=>$listCategory,'deliveryPlace'=>$deliveryplace]);
+
         }
-        return redirect('/cart');
+        return redirect('/');
     }
     // goto view invoice cart
     public function Invoice(){
         if($this->isLogin([0,1])){
+
             $listCategory = ProductCategory::all();
             return view('Order.invoice',['categorys'=>$listCategory]);
         }
