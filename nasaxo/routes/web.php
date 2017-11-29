@@ -17,6 +17,8 @@ Route::group(['prefix'=>'cart'],function(){
 	Route::post('order','CartController@Order');
 	// thanh toán
 	Route::post('invoice','CartController@Invoice');
+	// delete item
+	Route::post('delete','CartController@Delete');
 });
 
 // Login

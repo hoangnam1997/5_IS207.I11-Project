@@ -7,6 +7,7 @@ use App\ProductCategory as ProductCategory;
 use App\Users as Users;
 use App\OrderProduct as OrderProduct;
 use App\Product as Product;
+use Cookie;
 class CartController extends Controller
 {
 	// goto view cart
@@ -22,13 +23,48 @@ class CartController extends Controller
     }
     // goto view pay cart
     public function Order(){
-        $listCategory = ProductCategory::all();
-        return view('Order.payment_address',['categorys'=>$listCategory]);
+        if($this->isLogin([0,1])){
+            if(isset($_COOKIE['buyProductList'])){
+                $arrProducts = json_decode($_COOKIE['buyProductList'],true);
+                // thực hiện thêm vào database
+                foreach ($arrProducts as $value) {
+
+                    $detailOrder = OrderProduct::find($value['id']);
+                    $detailOrder->ID_Size= $value['size'];
+                    $detailOrder->ID_Color= $value['color'];
+                    $detailOrder->Count= $value['count'];
+                    $detailOrder->save();
+                }
+                $listCategory = ProductCategory::all();
+                $deliveryplace ='';
+                return view('Order.payment_address',['categorys'=>$listCategory,'deliveryPlace'=>$deliveryplace]);
+            }
+        }
+        return redirect('/cart');
     }
     // goto view invoice cart
     public function Invoice(){
-        $listCategory = ProductCategory::all();
-        return view('Order.invoice',['categorys'=>$listCategory]);
+        if($this->isLogin([0,1])){
+            $listCategory = ProductCategory::all();
+            return view('Order.invoice',['categorys'=>$listCategory]);
+        }
+        return redirect('/');
+
+    }
+    // delete cart item
+    public function Delete(){
+        if($this->isLogin([0,1])){
+            $aParameter= array_merge($_POST,$_GET);
+        // kiểm tra có tham số truyền vào không
+            if(isset($aParameter['idOrderProduct'])){
+                $item =  OrderProduct::find($aParameter['idOrderProduct']);
+                $item->IsDelete = true;
+                $item->save();
+                return '1';
+            }
+            return '0';
+        }
+        return redirect('/');
     }
     // thêm vào giỏ hàng
     public function Add(){
@@ -42,7 +78,7 @@ class CartController extends Controller
             $description='';
             $cartProductOld=OrderProduct::where([['ID_Product','=',$idProduct],['ID_User','=',$idUser],['IsInCart','=',1]])->get();
             if(count($cartProductOld)>0){
-                $cartProductOld[0]->Count = $cartProductOld[0]->IsDelete ? 1 : ++$cartProductOld[0]->Count;
+                $cartProductOld[0]->Count = $cartProductOld[0]->IsDelete == true ? 1 : ++$cartProductOld[0]->Count;
                 $cartProductOld[0]->IsDelete = false;
                 $cartProductOld[0]->save();
             }else{
@@ -61,6 +97,6 @@ class CartController extends Controller
             return '1';
         }
         return '0';
-        
+
     }
 }

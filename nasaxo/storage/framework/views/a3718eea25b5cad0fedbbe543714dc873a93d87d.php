@@ -23,6 +23,8 @@
 	<script type="text/javascript" src="<?php echo url('public/js/bootstrap.min.js'); ?>"></script>
 	<!-- notify -->
 	<script type="text/javascript" src="<?php echo url('public/js/notify.js'); ?>"></script>
+	<!-- cookie -->
+	<script type="text/javascript" src="<?php echo url('public/js/jquery.cookie.js'); ?>"></script>
 
 </head>
 <body>
