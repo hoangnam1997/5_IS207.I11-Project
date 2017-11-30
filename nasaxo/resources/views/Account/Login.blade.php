@@ -9,7 +9,7 @@
 		<form class="frmLogin">
 			<div class="form-group">
 				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Nhập email">
+				<input type="email" class="form-control" id="email" placeholder="Nhập email hoặc tài khoản đăng nhập">
 			</div>
 			<div class="form-group">
 				<label for="pwd">Mật khẩu:</label>
@@ -24,24 +24,20 @@
 	<div id="Dangki" class="tab-pane fade">
 		<form class="frmLogin">
 			<div class="form-group">
-				<label for="Name">Họ tên:</label>
-				<input type="text" class="form-control" id="Name" placeholder="Nhập họ tên">
-			</div>
-			<div class="form-group">
 				<label for="TenDangNhap">Tên đăng nhập:</label>
-				<input type="text" class="form-control" id="TenDangNhap" placeholder="Nhập tên đăng nhập">
+				<input type="text" class="form-control" id="usernameRegis" placeholder="Nhập tên đăng nhập">
 			</div>
 			<div class="form-group">
 				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Nhập email">
+				<input type="email" class="form-control" id="emailRegis" placeholder="Nhập email">
 			</div>
 			<div class="form-group">
 				<label for="pwd">Password:</label>
-				<input type="password" class="form-control" id="pwd" placeholder="nhập mật khẩu">
+				<input type="password" class="form-control" id="pwdRegis" placeholder="nhập mật khẩu">
 			</div>  
 			<div class="form-group">
 				<label for="Repeat_pwd">Nhập lại mật khẩu:</label>
-				<input type="password" class="form-control" id="Repeat_pwd" placeholder="nhập lại mật khẩu">
+				<input type="password" class="form-control" id="Repeat_pwdRegis" placeholder="nhập lại mật khẩu">
 			</div>                  
 			<button id="btnRegistration" type="button" class="btn btn-info">Đăng kí</button>
 		</form>

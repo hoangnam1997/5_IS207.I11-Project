@@ -28,6 +28,11 @@ Route::group(['prefix'=>'login'],function(){
 	Route::get('/','LoginController@Index');
 	Route::post('acept','LoginController@Check');
 	Route::post('out','LoginController@Out');
+	// tạo tài khoản
+	Route::any('regis','LoginController@Rigis');
+	Route::any('checkusername','LoginController@CheckUsername');
+	Route::any('checkemail','LoginController@CheckEmail');
+
 });
 // product
 Route::get('product','ProductController@Get');
