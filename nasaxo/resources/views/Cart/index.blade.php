@@ -128,9 +128,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<form enctype="multipart/form-data" action="{!! url('/cart/order') !!}" method="POST" name="frmBuy">
+			<form id="submitCart" enctype="multipart/form-data" action="{!! url('/cart/order') !!}" method="POST" name="frmBuy">
 				{{csrf_field()}}	
 				<div class="button-Order">
+					<input id="countCart" type="text" class="hidden" value="<?php echo isset($listCartProduct) ?  count($listCartProduct) : 0?>" name="">
 					<button type="submit" id="btnBuyProduct" class="col-md-4 col-md-push-7 btn btn-danger">Đặt hàng</button>
 				</div>
 			</form>

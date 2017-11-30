@@ -62,5 +62,12 @@ $(document).ready(function(){
 			$('#ward').removeData('autocomplete');
 		}
 	});
+	// autocomblete if exists
+	if(!($('#cityControl').val() == null || $('#cityControl').val() == '' || $('#cityControl').val()=='undefined') ){
+		districtsAutocomplete($('#cityControl').val());
+	}
+	if(!($('#districtControl').val() == null || $('#districtControl').val() == '' || $('#districtControl').val()=='undefined') ){
+		wardsAutocomplete($('#districtControl').val());
+	}
 
 });

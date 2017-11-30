@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('Username');
             $table->string('Password');
-            $table->string('Picture');
             $table->string('Email');
             $table->string('Description');
             $table->boolean('IsDelete');

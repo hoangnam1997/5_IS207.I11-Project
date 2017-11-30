@@ -7,7 +7,11 @@ use App\ProductCategory as ProductCategory;
 use App\Users as Users;
 use App\OrderProduct as OrderProduct;
 use App\Product as Product;
+use App\DeliveryPlace as DeliveryPlace;
+use App\Order as Order;
+use App\Promotion as Promotion;
 use Cookie;
+use DateTime;
 class CartController extends Controller
 {
 	// goto view cart
@@ -42,16 +46,51 @@ class CartController extends Controller
             $deliveryplace =$user->DeliveryPlace()->get();
             $listCategory = ProductCategory::all();
             return view('Order.payment_address',['categorys'=>$listCategory,'deliveryPlace'=>$deliveryplace]);
-
         }
         return redirect('/');
     }
     // goto view invoice cart
     public function Invoice(){
         if($this->isLogin([0,1])){
-
+            $aParameter = array_merge($_GET,$_POST);
+            $name = isset($aParameter['name']) ?$aParameter['name'] : "";
+            $phone = isset($aParameter['phone']) ?$aParameter['phone'] : "";
+            $ward = isset($aParameter['ward']) ?$aParameter['ward'] : "";
+            $deveryPlace = isset($aParameter['deveryPlace']) ?$aParameter['deveryPlace'] : "";
+            $isDelete = 0;
+            $idUser= CartController::getIdLogin();
+            // get user
+            $user=Users::find($idUser);
+            if(count($user)>0){
+                $deliveryplace = $user->DeliveryPlace()->get();
+                // check ton tai dia chi
+                if(count($deliveryplace)>0){
+                    $deliveryplace[0]->ID_Ward =$ward;
+                    $deliveryplace[0]->ReceiveName =$name;
+                    $deliveryplace[0]->NumberPhone =$phone;
+                    $deliveryplace[0]->DeliveryPlaces =$deveryPlace;
+                    $deliveryplace[0]->IsDelete = $isDelete;
+                    $deliveryplace[0]->save();
+                }else{
+                    // them moi
+                    $delivery = new DeliveryPlace;
+                    $delivery->ID_Ward =$ward;
+                    $delivery->ID_User =$idUser;
+                    $delivery->ReceiveName =$name;
+                    $delivery->NumberPhone =$phone;
+                    $delivery->DeliveryPlaces =$deveryPlace;
+                    $delivery->IsDelete = $isDelete;
+                    $delivery->save();
+                }
+            }
+            // danh sách giỏ hàng
+            $listCartProduct = OrderProduct::where([['IsDelete','=',false],['ID_User','=',$idUser],['IsInCart','=',1]])->get();
+            // danh sách khuyến mãi
+            $dateNow = new DateTime(date('d-m-Y'));
+            $listPromoton = Promotion::where([['EndDate','=',null]])->orWhere([['EndDate','>',$dateNow],['StartDate','<',$dateNow]])->get();
+            // danh sách category
             $listCategory = ProductCategory::all();
-            return view('Order.invoice',['categorys'=>$listCategory]);
+            return view('Order.invoice',['categorys'=>$listCategory,'user'=>$user,'listCartProduct'=>$listCartProduct,'lisPromotion'=>$listPromoton]);
         }
         return redirect('/');
 
@@ -70,6 +109,41 @@ class CartController extends Controller
             return '0';
         }
         return redirect('/');
+    }
+    // tạo hóa đơn
+    public function CreateOrder(){
+        if($this->isLogin([0,1])){
+            $idUser= CartController::getIdLogin();
+            $user=Users::find($idUser);
+            $deliveryplace = $user->DeliveryPlace()->get();
+            if(!(isset($deliveryplace[0]))){
+                return '0';
+            }
+            // thêm hóa đơn
+            $order = new Order;
+            $order->Description='';
+            if(isset($_COOKIE['promotion'])){
+                $order->ID_Promotion = unserialize($_COOKIE['promotion']);
+                $order->ID_DeliveryPlace =  $deliveryplace[0]->id;
+                $order->ID_User = $idUser;
+                $order->CreateDate = date('Y-m-d');
+                $order->ConfirmDate = null;
+                $order->IsPaied = 0;
+                $order->IsDelivered = 0;
+                $order->IsDelete = 0;
+                if($order->save()){
+                // danh sách giỏ hàng
+                    $listCartProduct = OrderProduct::where([['IsDelete','=',false],['ID_User','=',$idUser],['IsInCart','=',1]])->get();
+                    foreach ($listCartProduct as $valueCart) {
+                        $valueCart->IsInCart = 0;
+                        $valueCart->ID_Order =  $order->id;
+                        $valueCart->save();
+                    }
+                    return '1';
+                }
+            }
+        }
+        return redirect('0');
     }
     // thêm vào giỏ hàng
     public function Add(){

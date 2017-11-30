@@ -8,7 +8,7 @@ use App\Users as Users;
 use Cookie;
 class LoginController extends Controller
 {
-	protected $imageDefault = "accounts/account.png";
+	protected static $imageDefault = "accounts/account.png";
 	public function index(){
 		return view('Account.Login');
 	}
@@ -24,7 +24,7 @@ class LoginController extends Controller
 		// get user
 		$user=Users::where([['Email','=',$email],['Password','=',md5($password)]])->get();
 		if(count($user)>0){
-			// $imgUrl = $this->$imageDefault;
+			$imgUrl=LoginController::$imageDefault;
 			$picture =  $user[0]->Picture()->get();
 			if(count($picture)>0){
 				$imgUrl=$picture[0]->Url;

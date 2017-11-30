@@ -23,7 +23,7 @@ class CreateOrderTable extends Migration
             $table->integer('ID_User')->unsigned();
             $table->foreign('ID_User')->references('id')->on('Users')->ondelete('cascade');
             $table->date('CreateDate');
-            $table->date('ConfirmDate');
+            $table->date('ConfirmDate')->nullable();
             $table->boolean('IsPaied');
             $table->boolean('IsDelivered');
             $table->boolean('IsDelete');

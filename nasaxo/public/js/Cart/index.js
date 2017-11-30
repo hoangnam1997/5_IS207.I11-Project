@@ -58,6 +58,13 @@ function clickElement(){
 	});
 	// thực hiện mua sản phẩm
 	$('#btnBuyProduct').off('click').on('click',function(){
+		if($('#countCart').val()<=0){
+			$('#submitCart').submit(function(event) {
+				event.preventDefault();
+			});
+			alert('Vui lòng thêm sản phẩm mốn mua!');
+			return;
+		}
 		$valueProducts = [];
 		$listProducts = $('.cart-product');
 		// lấy danh sách product

@@ -143,27 +143,13 @@
 	<!-- end back to top -->
 	<!-- Email -->
 	<footer class="container footer">
-		<div class="row">
+		<div class="row text-center">
 			<!-- address -->
-			<div class="col-md-6 address">
-
+			<div class="col-md-6 col-md-push-3">
 				<span><b>Address:</b>  KTX-khu B ĐHQG TP HCM</span><br>
 				<span><b>Phone:</b> 0952 432 685</span><br>
 				<span><b>Email:</b> mail@gmail.com</span><br>
 				<span><b>Working days/hours:</b> Mon-Sun/9:00AM-8:00PM</span><br>
-			</div>
-			<!-- email -->
-			<div class="col-md-4 col-md-push-2 input ">
-				<span><b>NEWSLETTER</b></span><br>
-				<p class="nomargin">Type your best E-mail Address</p>
-
-				<form method="get" action="#" class="input-group">
-					<input type="text" class="form-control" name="s" id="s" value="" placeholder="E-mail Address">
-					<span class="input-group-addon" id="btnSendMail">
-						<i class="fa fa-search"></i>
-					</span>
-				</form>
-
 			</div>
 		</div>
 	</footer>

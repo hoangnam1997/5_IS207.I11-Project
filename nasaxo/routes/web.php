@@ -19,6 +19,8 @@ Route::group(['prefix'=>'cart'],function(){
 	Route::post('invoice','CartController@Invoice');
 	// delete item
 	Route::post('delete','CartController@Delete');
+	// create order
+	Route::post('createorder','CartController@CreateOrder');
 });
 
 // Login

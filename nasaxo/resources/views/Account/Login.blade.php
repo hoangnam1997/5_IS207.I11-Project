@@ -16,7 +16,6 @@
 				<input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
 			</div>
 			<div class="checkbox">
-				<label><input type="checkbox"> Nhớ mật khẩu</label>
 				<a href="{!! url('/remember/find') !!}" class="RememberPass">Quên mật khẩu</a>
 			</div>
 			<button id="btnLogin" type="button" class="btn btn-info">Đăng nhập</button>
