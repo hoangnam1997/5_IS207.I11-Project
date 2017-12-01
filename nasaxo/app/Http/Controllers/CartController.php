@@ -16,7 +16,7 @@ class CartController extends Controller
 {
 	// goto view cart
     public function Index(){
-        if($this->isLogin([0,1])){
+        if($this->isLogin([1,2])){
             // category 
             $listCategory = ProductCategory::all();
             $idUser= CartController::getIdLogin();
@@ -27,7 +27,7 @@ class CartController extends Controller
     }
     // goto view pay cart
     public function Order(){
-        if($this->isLogin([0,1])){
+        if($this->isLogin([1,2])){
             if(isset($_COOKIE['buyProductList'])){
                 $arrProducts = json_decode($_COOKIE['buyProductList'],true);
                 // thực hiện thêm vào database
@@ -51,7 +51,7 @@ class CartController extends Controller
     }
     // goto view invoice cart
     public function Invoice(){
-        if($this->isLogin([0,1])){
+        if($this->isLogin([1,2])){
             $aParameter = array_merge($_GET,$_POST);
             $name = isset($aParameter['name']) ?$aParameter['name'] : "";
             $phone = isset($aParameter['phone']) ?$aParameter['phone'] : "";
@@ -97,7 +97,7 @@ class CartController extends Controller
     }
     // delete cart item
     public function Delete(){
-        if($this->isLogin([0,1])){
+        if($this->isLogin([1,2])){
             $aParameter= array_merge($_POST,$_GET);
         // kiểm tra có tham số truyền vào không
             if(isset($aParameter['idOrderProduct'])){
@@ -112,7 +112,7 @@ class CartController extends Controller
     }
     // tạo hóa đơn
     public function CreateOrder(){
-        if($this->isLogin([0,1])){
+        if($this->isLogin([1,2])){
             $idUser= CartController::getIdLogin();
             $user=Users::find($idUser);
             $deliveryplace = $user->DeliveryPlace()->get();
@@ -148,7 +148,7 @@ class CartController extends Controller
     // thêm vào giỏ hàng
     public function Add(){
         $arrMethod = array_merge($_GET, $_POST);
-        if($this->isLogin([0,1])){
+        if($this->isLogin([1,2])){
             $idProduct = $arrMethod['productId'];
             $idUser= CartController::getIdLogin();
             $idSize =isset($arrMethod['size']) ? $arrMethod['size'] : Product::find($idProduct)->Sizes()->get()[0]->id;

@@ -103,30 +103,35 @@ function Registration($username, $email, $password, $rePasswork){
 	if(!checkpass($password) || !checkrePass($password,$rePasswork)){
 		return false;
 	}
-	// // thực hiện tạo tài khoản
-	// var _token = $('meta[name="_token"]').attr('content');
-	// $.ajax({
-	// 	type: 'post',
-	// 	url: url + '/login/regis',
-	// 	cache: false,
-	// 	data: {'_token': _token,'email':$email,'password':$passWord},
-	// })
-	// .done(function($re) {
-	// 	if($re!=='0'){
-	// 		$('#accountHome').html($re);
-	// 		$('.modal .close').click();
-	// 		$('.modal .modal-dialog .modal-body').html('');
-	// 		loadScript();
-	// 		return true;
-	// 	}else{
-	// 		alert('Không tìm thấy tài khoản hoặc mật khẩu sai!');
-	// 		return false;
-	// 	}
-	// })
-	// .fail(function() {
-	// 	alert('Không thể tạo tài khoản!');
-	// 	return false;
-	// });
+	$listArr ={
+	'username' : $($username).val(),
+	'email': $($email).val(),
+	'password': $($password).val(),
+	};
+	// thực hiện tạo tài khoản
+	var _token = $('meta[name="_token"]').attr('content');
+	$.ajax({
+		type: 'post',
+		url: url + '/login/regis',
+		cache: false,
+		data: {'_token': _token,'user':$listArr},
+	})
+	.done(function($re) {
+		if($re!=='0'){
+			$('#accountHome').html($re);
+			$('.modal .close').click();
+			$('.modal .modal-dialog .modal-body').html('');
+			loadScript();
+			return true;
+		}else{
+			alert('Không tìm thấy tài khoản hoặc mật khẩu sai!');
+			return false;
+		}
+	})
+	.fail(function() {
+		alert('Không thể tạo tài khoản!');
+		return false;
+	});
 }
 // thực hiện login
 $('#btnLogin').off('click').on('click',function(){
@@ -176,4 +181,17 @@ $('#emailRegis').off('change').on('change',function(){
 			$($element).after($mess);
 		}
 	});
+});
+//  kiểm tra mật khẩu
+$('#pwdRegis').off('change').on('change',function(){
+	$('#pwdRegis ~ .messRegis').remove();
+	if(!checkpass(this)){
+		return;
+	}
+	checkrePass($(this,'#Repeat_pwdRegis'));
+});
+//  kiểm tra mật khẩu
+$('#Repeat_pwdRegis').off('change').on('change',function(){
+	$('#Repeat_pwdRegis ~ .messRegis').remove();
+	checkrePass($('#pwdRegis'),this);
 });

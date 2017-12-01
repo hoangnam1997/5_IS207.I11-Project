@@ -30,7 +30,7 @@ function CheckLogin($result){
     $.ajax({
         url: urlAjax,
         type:"POST",
-        data:{'_token':_token,'0':0,'1':1},
+        data:{'_token':_token,'0':1,'1':2},
     })
     .done(function($re){
         if($re == '1'){

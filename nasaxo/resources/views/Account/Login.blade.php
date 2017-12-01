@@ -24,19 +24,19 @@
 	<div id="Dangki" class="tab-pane fade">
 		<form class="frmLogin">
 			<div class="form-group">
-				<label for="TenDangNhap">Tên đăng nhập:</label>
+				<label for="usernameRegis">Tên đăng nhập:</label>
 				<input type="text" class="form-control" id="usernameRegis" placeholder="Nhập tên đăng nhập">
 			</div>
 			<div class="form-group">
-				<label for="email">Email:</label>
+				<label for="emailRegis">Email:</label>
 				<input type="email" class="form-control" id="emailRegis" placeholder="Nhập email">
 			</div>
 			<div class="form-group">
-				<label for="pwd">Password:</label>
+				<label for="pwdRegis">Password:</label>
 				<input type="password" class="form-control" id="pwdRegis" placeholder="nhập mật khẩu">
 			</div>  
 			<div class="form-group">
-				<label for="Repeat_pwd">Nhập lại mật khẩu:</label>
+				<label for="Repeat_pwdRegis">Nhập lại mật khẩu:</label>
 				<input type="password" class="form-control" id="Repeat_pwdRegis" placeholder="nhập lại mật khẩu">
 			</div>                  
 			<button id="btnRegistration" type="button" class="btn btn-info">Đăng kí</button>
