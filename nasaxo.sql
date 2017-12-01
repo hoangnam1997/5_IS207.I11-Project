@@ -1,5 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.7.0
+﻿-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
