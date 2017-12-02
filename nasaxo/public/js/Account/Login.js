@@ -71,8 +71,10 @@ function isExistsEmail($email,$result){
 		}else{
 			return $result(false);
 		}
+	})
+	.fail(function(){
+		return $result(false);
 	});
-	return $result(false);
 }
 // kiểm tồn tại username
 function isExistsUsername($username,$result){
@@ -90,11 +92,14 @@ function isExistsUsername($username,$result){
 		}else{
 			return $result(false);
 		}
+	})
+	.fail(function(){
+		return $result(false);
 	});
-	return $result(false);
 }
 // thực hiện tạo tài khoản
 function Registration($username, $email, $password, $rePasswork){
+	$('#btnRegistration ~ .messRegis').remove();
 	if($($username).val()=='' || $($username).val()=='' || $($username).val()=='' || $($username).val()==''){
 		$mess= '<label class="messRegis" style="color:red;">Vui lòng nhập đầy đủ thông tin</label>';
 		$('#btnRegistration').after($mess);
@@ -104,9 +109,9 @@ function Registration($username, $email, $password, $rePasswork){
 		return false;
 	}
 	$listArr ={
-	'username' : $($username).val(),
-	'email': $($email).val(),
-	'password': $($password).val(),
+		'username' : $($username).val(),
+		'email': $($email).val(),
+		'password': $($password).val(),
 	};
 	// thực hiện tạo tài khoản
 	var _token = $('meta[name="_token"]').attr('content');
@@ -124,12 +129,12 @@ function Registration($username, $email, $password, $rePasswork){
 			loadScript();
 			return true;
 		}else{
-			alert('Không tìm thấy tài khoản hoặc mật khẩu sai!');
+			alert('Chưa nhập đúng thông tin!');
 			return false;
 		}
 	})
 	.fail(function() {
-		alert('Không thể tạo tài khoản!');
+		alert('Chưa nhập đúng thông tin!');
 		return false;
 	});
 }
@@ -143,10 +148,13 @@ $('#btnRegistration').off('click').on('click',function(){
 	$email = $('#emailRegis');
 	$pass = $('#pwdRegis');
 	$repass = $('#Repeat_pwdRegis');
+	$('#pwdRegis ~ .messRegis').remove();
+	$('#Repeat_pwdRegis ~ .messRegis').remove();
 	Registration($username,$email,$pass,$repass);
 });
 // kiem tra username
-$('#usernameRegis').off('change').on('change',function(){
+$('#usernameRegis').focusout(function(){
+	$element = $(this);
 	$('#usernameRegis ~ .messRegis').remove();
 	// kiểm tra có trống
 	if($(this).val()==''){
@@ -155,7 +163,6 @@ $('#usernameRegis').off('change').on('change',function(){
 		return;
 	}
 	// kiểm tra tồn tại
-	$element = $(this);
 	isExistsUsername($(this).val(),function($re){
 		if($re){
 			$mess= '<label class="messRegis" style="color:red;">Tài khoản đã tồn tại</label>';
@@ -164,7 +171,7 @@ $('#usernameRegis').off('change').on('change',function(){
 	});
 });
 // kiem tra email
-$('#emailRegis').off('change').on('change',function(){
+$('#emailRegis').focusout(function(){
 	$element = $(this);
 	$('#emailRegis ~ .messRegis').remove();
 	if($(this).val()==''){
@@ -183,7 +190,7 @@ $('#emailRegis').off('change').on('change',function(){
 	});
 });
 //  kiểm tra mật khẩu
-$('#pwdRegis').off('change').on('change',function(){
+$('#pwdRegis').focusout(function(){
 	$('#pwdRegis ~ .messRegis').remove();
 	if(!checkpass(this)){
 		return;
@@ -191,7 +198,7 @@ $('#pwdRegis').off('change').on('change',function(){
 	checkrePass($(this,'#Repeat_pwdRegis'));
 });
 //  kiểm tra mật khẩu
-$('#Repeat_pwdRegis').off('change').on('change',function(){
+$('#Repeat_pwdRegis').focusout(function(){
 	$('#Repeat_pwdRegis ~ .messRegis').remove();
 	checkrePass($('#pwdRegis'),this);
 });

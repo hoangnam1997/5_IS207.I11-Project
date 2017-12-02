@@ -19,7 +19,7 @@ class CartController extends Controller
         if($this->isLogin([1,2])){
             // category 
             $listCategory = ProductCategory::all();
-            $idUser= CartController::getIdLogin();
+            $idUser= $this->getIdLogin();
             $listCartProduct = OrderProduct::where([['IsDelete','=',false],['ID_User','=',$idUser],['IsInCart','=',1]])->get();
             return view('Cart.index',['categorys'=>$listCategory,'listCartProduct'=>$listCartProduct]);
         }
@@ -40,7 +40,7 @@ class CartController extends Controller
                 }
             }
             // lấy account
-            $idUser=CartController::getIdLogin();
+            $idUser=$this->getIdLogin();
             $user=Users::find($idUser);
             // lấy thông tin địa chỉ
             $deliveryplace =$user->DeliveryPlace()->get();
@@ -58,7 +58,7 @@ class CartController extends Controller
             $ward = isset($aParameter['ward']) ?$aParameter['ward'] : "";
             $deveryPlace = isset($aParameter['deveryPlace']) ?$aParameter['deveryPlace'] : "";
             $isDelete = 0;
-            $idUser= CartController::getIdLogin();
+            $idUser= $this->getIdLogin();
             // get user
             $user=Users::find($idUser);
             if(count($user)>0){
@@ -113,7 +113,7 @@ class CartController extends Controller
     // tạo hóa đơn
     public function CreateOrder(){
         if($this->isLogin([1,2])){
-            $idUser= CartController::getIdLogin();
+            $idUser= $this->getIdLogin();
             $user=Users::find($idUser);
             $deliveryplace = $user->DeliveryPlace()->get();
             if(!(isset($deliveryplace[0]))){
@@ -150,7 +150,7 @@ class CartController extends Controller
         $arrMethod = array_merge($_GET, $_POST);
         if($this->isLogin([1,2])){
             $idProduct = $arrMethod['productId'];
-            $idUser= CartController::getIdLogin();
+            $idUser= $this->getIdLogin();
             $idSize =isset($arrMethod['size']) ? $arrMethod['size'] : Product::find($idProduct)->Sizes()->get()[0]->id;
             $idColor = isset($arrMethod['color']) ? $arrMethod['color'] : Product::find($idProduct)->Colors()->get()[0]->id;
             $isInCart = 1;

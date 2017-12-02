@@ -2,64 +2,75 @@
 // request email
 // fa fa-exclamation fa-2x
 // fa fa-check fa-2x
-function isValidEmailAddress(emailAddress) {
-	var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-	return pattern.test(emailAddress);
-};
-function SetTrueFalse($true,$elementSet,$i){
-	if($true >0){
-		$($elementSet).removeClass('input-false');
-		$($i).attr({'class':'check-done fa fa-check fa-2x'});
-	}else{
-		$($elementSet).addClass('input-false');
-		$($i).attr({'class':'check-false fa fa-exclamation fa-2x'});
+// kiểm tra độ dài mật khẩu
+function checkpass($password){
+	if($($password).val()=='' || $($password).val().length < 8){
+		$mess= '<label class="messRegis" style="color:red;">Mật khẩu phải lớn hơn 8 kí tự</label>';
+		$($password).after($mess);
+		return false;
 	}
-	$($i).css('display', 'inline-block');
+	return true;
 }
-$(document).ready(function(){
-	// function check email
-	$('#txtEmail').focusout(function(){
-		if(isValidEmailAddress($(this).val())){
-			SetTrueFalse(1,$('#txtEmail'),$('#checkEmail'));
+// kiểm tra trùng pass
+function checkrePass($password,$rePasswork){
+	if($($password).val() != $($rePasswork).val()){
+		$mess= '<label class="messRegis" style="color:red;">Mật khẩu không trùng nhau</label>';
+		$($rePasswork).after($mess);
+		return false;
+	}
+	return true;
+}
+// kiểm tra email
+function checkOldPass($pass,$result){
+	// thực kiểm tra tồn tại
+	var _token = $('meta[name="_token"]').attr('content');
+	$urlNew = url + '/account/checkpassold';
+	$.ajax({
+		type: 'POST',
+		url: $urlNew,
+		data: {'_token':_token,'passOld': $pass},
+	})
+	.done(function($re) {
+		if($re =='1'){
+			return $result(true);
 		}else{
-			SetTrueFalse(0,$('#txtEmail'),$('#checkEmail'));
+			return $result(false);
+		}
+	})
+	.fail(function(){
+		return $result(false);
+	});
+
+}
+//  function check pass word old
+$('#txtOldPass').focusout(function(){
+	$('#txtOldPass ~ .messRegis').remove();
+	checkOldPass($('#txtOldPass').val(),function($re){
+		$('#txtOldPass ~ .messRegis').remove();
+		if(!$re){
+			$mess= '<label class="messRegis" style="color:red;">Mật khẩu không đúng</label>';
+			$('#txtOldPass').after($mess);
+			return false;
 		}
 	});
-	// function check name
-	$('#txtName').focusout(function(){
-		if(1){
-			SetTrueFalse(1,$('#txtName'),$('#checkName'));
-		}else{
-			SetTrueFalse(0,$('#txtName'),$('#checkName'));
-		}
-	});
-	//  function check pass word old
-	$('#txtOldPass').focusout(function(){
-		if(1){
-			SetTrueFalse(1,$('#txtOldPass'),$('#checkOldPass'));
-		}else{
-			SetTrueFalse(0,$('#txtOldPass'),$('#checkOldPass'));
-		}
-	});
-	$('#txtPass').focusout(function(){
-		if(1){
-			SetTrueFalse(1,$('#txtPass'),$('#checkPass'));
-		}else{
-			SetTrueFalse(0,$('#txtPass'),$('#checkPass'));
-		}
-	});
-	$('#txtRePass').focusout(function(){
-		if(1){
-			SetTrueFalse(1,$('#txtRePass'),$('#checkRePass'));
-		}else{
-			SetTrueFalse(0,$('#txtRePass'),$('#checkRePass'));
-		}
-	});
-	$('#ckbChangePass').on('change',function(){
-		if($(this).is(':checked')){
-			$('#Password-content').toggle(300);
-		}else{
-			$('#Password-content').toggle(300);
-		}
-	});
+});
+$('#txtPass').focusout(function(){
+	$('#txtPass ~ .messRegis').remove();
+	$('#txtRePass ~ .messRegis').remove();
+	if(!checkpass(this)){
+		return;
+	}
+	checkrePass(this,$('#txtRePass'));
+});
+$('#txtRePass').focusout(function(){
+	$('#txtRePass ~ .messRegis').remove();
+	checkrePass($('#txtPass'),this);
+});
+// hiển thị change pass
+$('#ckbChangePass').on('change',function(){
+	if($(this).is(':checked')){
+		$('#Password-content').toggle(300);
+	}else{
+		$('#Password-content').toggle(300);
+	}
 });

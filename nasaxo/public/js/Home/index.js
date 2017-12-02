@@ -140,7 +140,15 @@ function loadScript(){
     });
     // profile
     $('#btnProfile').off("click").on('click',function(){
-        alert('profile');
+        CheckLogin(function($result){
+            if($result){
+                // đi tới trang giỏ hàng
+                window.location.href=url +'/account';
+            }else{
+                // thông báo vui lòng đăng nhập
+                alert('Vui lòng đăng nhập!');
+            }
+        });
     });
     // gôt cart
     $('#btnCart').off("click").on('click',function(){

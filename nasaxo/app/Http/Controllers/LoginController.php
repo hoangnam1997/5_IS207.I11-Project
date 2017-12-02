@@ -76,6 +76,12 @@ class LoginController extends Controller
 			if(count($user)>0){
 				return '0';
 			}
+			if(strlen($usserNew['password'])<8){
+				return '0';
+			}
+			if(!filter_var($usserNew['email'], FILTER_VALIDATE_EMAIL)){
+				return '0';
+			}
 			// save account
 			$imgUrl=LoginController::$imageDefault;
 			$newUs = new Users;

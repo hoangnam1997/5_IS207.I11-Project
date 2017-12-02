@@ -1,25 +1,20 @@
+<?php if(isset($user)){ ?>
 <!-- tên đăng nhập -->
 <div class="group-content">
 	<span  class="field-lable">Tên đăng nhập: </span>
-	<input id="txtUserName" disabled class="field-input" type="text" name="userName" value="namnh">
+	<input id="txtUserName" disabled class="field-input" type="text" name="userName" value="<?php echo $user->Username; ?>">
 </div>
 <!-- end tên đăng nhập -->
-<!-- họ tên -->
-<div class="group-content">
-	<span  class="field-lable">Họ tên: </span>
-	<input id="txtName" class="field-input" type="text" name="txtName" value="Nguyễn Hoàng Nam">
-	<i id="checkName" style="display: none;" aria-hidden="true"></i>
-</div>
-<!-- end họ tên -->
+<!-- email -->
 <div class="group-content">
 	<span class="field-lable">Email: </span>
-	<input class="field-input" type="text" name="txtEmail" id="txtEmail" value="15520515@gm.uit.edu.vn">
-	<i id="checkEmail" style="display: none;" aria-hidden="true"></i>
+	<input class="field-input" disabled type="text" name="txtEmail" id="txtEmail" value="<?php echo $user->Email; ?>">
 </div>
+<!-- ./email -->
 <!-- start description -->
 <div class="group-content">
 	<span class="field-lable">Mô tả về bản thân:  </span>
-	<textarea class="field-input" type="text" name="txtDescription" id="txtDescription">Đây là mô tả cá nhân.</textarea>
+	<textarea class="field-input" type="text" name="txtDescription" id="txtDescription"><?php echo $user->Description; ?></textarea>
 </div>
 <!-- end description -->
 <div class="group-content">
@@ -48,9 +43,10 @@
 </div>
 <!-- end password -->
 <div class="password-content">
-	<input class="btn-update" type="button" name="btnUpdate" id="btnUpdate" value="Cập nhật">
+	<input class="btn-update btn btn-success" type="button" name="btnUpdate" id="btnUpdate" value="Cập nhật">
 </div>
+<script type="text/javascript" src="{!! url('public/js/Account/InfomationAccount.js') !!}"></script>
+<?php } ?>
 <!-- end content -->
 <!-- end container -->
 <!-- custom js -->
-<script type="text/javascript" src="{!! url('public/js/Account/InfomationAccount.js') !!}"></script>
