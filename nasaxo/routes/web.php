@@ -50,7 +50,8 @@ Route::group(['prefix'=>'account'],function(){
 	Route::get('/','AccountController@Index');
 	Route::post('infomation','AccountController@Info');
 	Route::post('mess','AccountController@Mess');
-	Route::any('checkpassold','AccountController@CheckPassOld');
+	Route::post('checkpassold','AccountController@CheckPassOld');
+	Route::post('changeinfo','AccountController@ChangeInfo');
 });
 // admin route
 Route::group(['prefix'=>'admin'],function(){

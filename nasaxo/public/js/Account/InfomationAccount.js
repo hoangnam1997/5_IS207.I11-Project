@@ -74,3 +74,55 @@ $('#ckbChangePass').on('change',function(){
 		$('#Password-content').toggle(300);
 	}
 });
+// cập nhật tài khoản
+$('#btnUpdate').off('click').on('click',function(){
+	$('.messRegis').remove();
+	var _token = $('meta[name="_token"]').attr('content');
+	if($('#ckbChangePass').is(':checked')){
+		checkOldPass($('#txtOldPass').val(),function($re){
+			if(!$re){
+				$mess= '<label class="messRegis" style="color:red;">Mật khẩu không đúng</label>';
+				$('#txtOldPass').after($mess);
+				return false;
+			}
+			if(!checkpass('#txtPass')){
+				return false;
+			}
+			if(!checkrePass($('#txtPass'),'#txtRePass')){
+				return false;
+			}
+			$.ajax({
+				type : 'POST',
+				url: url + '/account/changeinfo',
+				data: {'_token':_token ,'Description' : $('#txtDescription').val(),'PasswordOld' : $('#txtOldPass').val(),'Password' : $('#txtPass').val()},
+			})
+			.done(function($re) {
+				if($re =='1'){
+					alert('Cập nhật thành công!');
+				}else{
+					alert('Xảy ra lỗi!');
+				}
+			})
+			.fail(function() {
+				alert('Xảy ra lỗi!');
+			});
+		});
+	}else{
+		$.ajax({
+			type : 'POST',
+			url: url + '/account/changeinfo',
+			data: {'_token':_token ,'Description' : $('#txtDescription').val()},
+		})
+		.done(function($re) {
+			if($re =='1'){
+				alert('Cập nhật thành công!');
+			}else{
+				alert('Xảy ra lỗi!');
+			}
+		})
+		.fail(function() {
+			alert('Xảy ra lỗi!');
+		});
+	}
+	
+});

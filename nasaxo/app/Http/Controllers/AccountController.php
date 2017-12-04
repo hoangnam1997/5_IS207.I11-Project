@@ -35,6 +35,7 @@ class AccountController extends Controller
 		}
 		return 'Có lỗi xảy ra!';
 	}
+	// thay đổi mật khẩu
 	public function CheckPassOld(){
 		if($this->isLogin([1,2])){
 			$aParameter = array_merge($_GET,$_POST);
@@ -47,4 +48,30 @@ class AccountController extends Controller
 		}
 		return '0';
 	}
+	// thay đổi thông tin
+	public function ChangeInfo(){
+		if($this->isLogin([1,2])){
+			$aParameter = array_merge($_GET,$_POST);
+			$idUser =  $this->getIdLogin();
+			$user = null;
+			if(isset($aParameter['PasswordOld']) && isset($aParameter['Password'])){
+				$user=Users::where([['id','=',$idUser],['Password','=',md5($aParameter['PasswordOld'])]])->get();
+			}else {
+				$user=Users::where([['id','=',$idUser]])->get();
+			}
+			if($user!=null && count($user)>0){
+				if(isset($aParameter['PasswordOld']) && isset($aParameter['Password'])){
+					$user[0]->Description = $aParameter['Description'];
+					$user[0]->Password = md5($aParameter['Password']);
+				}else {
+					$user[0]->Description = $aParameter['Description'];
+				}
+				if($user[0]->save())
+					return '1';
+			}
+		}
+		return '0';
+	}
+	
+
 }
