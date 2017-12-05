@@ -1,42 +1,13 @@
-<div class="groupMessage-read">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
-<div class="groupMessage-read">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
-<div class="groupMessage-unread">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-checkRead fa fa-bell-slash-o" aria-hidden="true" title="Tắt thông báo"></i>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
-<div class="groupMessage-unread">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-checkRead fa fa-bell-slash-o" aria-hidden="true" title="Tắt thông báo"></i>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
-<div class="groupMessage-unread">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-checkRead fa fa-bell-slash-o" aria-hidden="true" title="Tắt thông báo"></i>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
-<div class="groupMessage-unread">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-checkRead fa fa-bell-slash-o" aria-hidden="true" title="Tắt thông báo"></i>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
-<div class="groupMessage-unread">
-	<div class="mesage-date">13/10/2017</div>
-	<i class="message-checkRead fa fa-bell-slash-o" aria-hidden="true" title="Tắt thông báo"></i>
-	<i class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
-	<div class="message-notify">Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop .Vui trung thu, rước đèn hết ý! Từ ngày 19/9 - 8/10, 15.000 Lồng đèn Trung Thu tặng bé. Áp dụng cho đơn hàng từ 200k các sản phẩm dành cho trẻ em tại shop</div>
-</div>
+<?php if(isset($user)){
+	$listNotify = $user->Messages()->where([['IsDelete','=',false]])->get();
+	foreach ($listNotify as $value) {?>
+	<div class="<?php echo $value->IsNotify == true ? 'groupMessage-unread' : 'groupMessage-read'?>" data-notify="<?php echo $value->IsNotify==true ? '1':'0'; ?>">
+		<div class="mesage-date"><?php echo isset($value->CreateDate) ? $value->CreateDate : "";  ?></div>
+		<i data-id="<?php echo $value->id; ?>" class="message-checkRead fa <?php echo $value->IsNotify == true ? 'fa-bell-o' : 'fa-bell-slash-o'?>" aria-hidden="true" title="<?php echo $value->IsNotify == false ? 'Bật' : 'Tắt'?> thông báo"></i>
+		<i data-id="<?php echo $value->id; ?>" class="message-delete fa fa-trash-o" aria-hidden="true" title="Xóa thông báo"></i>
+		<div class="message-notify"><?php echo isset($value->Description) ? $value->Description : ""; ?></div>
+	</div>
+	<?php }
+} ?>
 <!-- custom js -->
 <script type="text/javascript" src="<?php echo url('public/js/Account/MessageAccount.js'); ?>"></script>

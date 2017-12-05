@@ -52,6 +52,7 @@ Route::group(['prefix'=>'account'],function(){
 	Route::post('mess','AccountController@Mess');
 	Route::post('checkpassold','AccountController@CheckPassOld');
 	Route::post('changeinfo','AccountController@ChangeInfo');
+	Route::post('updateMess','AccountController@UpdateMess');
 });
 // admin route
 Route::group(['prefix'=>'admin'],function(){

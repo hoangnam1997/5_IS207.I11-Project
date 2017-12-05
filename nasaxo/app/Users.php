@@ -21,4 +21,8 @@ class Users extends Model
 	public function DeliveryPlace(){
 		return $this->hasOne('App\DeliveryPlace','ID_User');
 	}
+	// lấy quyền
+	public function Messages(){
+		return $this->hasMany('App\Message','ID_Users');
+	}
 }

@@ -8,7 +8,7 @@
 <div class="row">
 	<div class="col-xs-12 infomation-account">
 		<h4 id="h4Infomation">THÔNG TIN TÀI KHOẢN</h4>
-		<h4 id="h4Mesage">THÔNG BÁO CỦA TÔI <span>(5)</span></h4>
+		<h4 id="h4Mesage">THÔNG BÁO CỦA TÔI <span>( <span id='countNotify'><?php echo isset($countNotify)? $countNotify :'0' ?> </span> )</span></h4>
 		<!-- start content -->
 		<div id="infomation-content" class="infomation-content">
 
