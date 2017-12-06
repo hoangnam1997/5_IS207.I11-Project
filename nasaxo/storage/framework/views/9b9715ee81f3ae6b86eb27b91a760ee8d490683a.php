@@ -140,49 +140,7 @@
 			<!-- end title -->
 			<!-- start all cmt -->
 			<div class="cmt-container">
-				<!-- new cmt -->
-				<div class="account-cmt">
-					<img class="img-account" src="<?php echo url('public/images/account.png'); ?>">
-					<textarea class="txtComment" placeholder="Bạn đang nghĩ gì, Boy?"></textarea>
-					<span class="btn-PostComment">Đăng</span>
-				</div>
-				<!-- end new cmt -->
-				<!-- cmt old -->
-				<div class="all-cmt">
-					<div class="item-cmt">
-						<img class="img-account" src="<?php echo url('public/images/account.png'); ?>">
-						<div class="body-cmt">
-							<span class="item-name">Tên của tôi</span>
-							<span class="item-cmt">Sản phẩm này thật tuyệt vời!</span>
-							<span class="item-detail" title="16:00 12:10:2017">2 giờ</span>
-						</div>
-					</div>
-					<div class="item-cmt">
-						<img class="img-account" src="<?php echo url('public/images/account.png'); ?>">
-						<div class="body-cmt">
-							<span class="item-name">Tên của tôi</span>
-							<span class="item-cmt">Sản phẩm này thật tuyệt vời!</span>
-							<span class="item-detail" title="16:00 12:10:2017">2 giờ</span>
-						</div>
-					</div>
-					<div class="item-cmt">
-						<img class="img-account" src="<?php echo url('public/images/account.png'); ?>">
-						<div class="body-cmt">
-							<span class="item-name">Tên của tôi</span>
-							<span class="item-cmt">Sản phẩm này thật tuyệt vời!</span>
-							<span class="item-detail" title="16:00 12:10:2017">2 giờ</span>
-						</div>
-					</div>
-					<div class="item-cmt">
-						<img class="img-account" src="<?php echo url('public/images/account.png'); ?>">
-						<div class="body-cmt">
-							<span class="item-name">Tên của tôi</span>
-							<span class="item-cmt">Sản phẩm này thật tuyệt vời!</span>
-							<span class="item-detail" title="16:00 12:10:2017">2 giờ</span>
-						</div>
-					</div>
-				</div>
-				<!-- end old cmt -->
+				<div class="fb-comments" data-href="<?php echo url('');; ?>/product?id=<?php echo $itemProduct->id; ?>" data-width="100%" data-numposts="5"></div>
 			</div>
 			<!-- end start all cmt -->
 		</div>
