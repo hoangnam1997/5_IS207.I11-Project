@@ -25,4 +25,8 @@ class Users extends Model
 	public function Messages(){
 		return $this->hasMany('App\Message','ID_Users');
 	}
+	// lấy danh sách hóa đơn
+	public function Orders(){
+		return $this->hasMany('App\Order','ID_User');
+	}
 }

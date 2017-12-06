@@ -32,4 +32,8 @@ class Product extends Model
 	public function Colors(){
 		return $this->belongsToMany('App\Color','ProductColor','ID_Product','ID_Color');
 	}
+	// lấy product category
+	public function ProductCategory(){
+		return $this->belongsTo('App\ProductCategory','ID_ProductCategory');
+	}
 }

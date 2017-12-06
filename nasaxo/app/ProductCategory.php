@@ -13,4 +13,7 @@ class ProductCategory extends Model
 	protected $fillable = ['id','Name','Description','IsDelete'];
 	// fill hidden
 	// protected $hidden = [''];
+	public function Products(){
+		return $this->hasMany('App\Product','ID_ProductCategory');
+	}
 }

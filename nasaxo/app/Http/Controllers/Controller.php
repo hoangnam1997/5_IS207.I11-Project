@@ -10,6 +10,17 @@ use App\Users as Users;
 use Cookie;
 class Controller extends BaseController{
   use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+  protected static $imageDefault = "accounts/account.png";
+  // thực hiện random
+  function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+      $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+  }
     // check account with roles
   public function isLogin($role=[]){
     $account = null;
@@ -49,8 +60,8 @@ public function getIdLogin(){
     $accountCookie = cookie::get('accountHome');
     $savedAccount = json_decode($accountCookie, true);
     return $savedAccount['id'];
- }
- return -1;
+  }
+  return -1;
 }
 
 

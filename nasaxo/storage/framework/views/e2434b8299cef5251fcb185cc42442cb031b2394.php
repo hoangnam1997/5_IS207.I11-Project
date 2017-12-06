@@ -1,22 +1,20 @@
 <!-- start Rfind account -->
 
 <?php $__env->startSection('content'); ?>
-<form enctype='multipart/form-data' action="<?php echo url('remember/type'); ?>" name="frmFind" method="POST">
-	<?php echo e(csrf_field()); ?>	
+<div name="frmFind">
 	<div class="rememver-content">
 		<div class="infomation-content">
 			<h4>Tìm tài khoản của bạn</h4>
 			<div class="find-content">
 				<span class="Remember-email">Vui lòng nhập tên tài khoản hoặc email để tìm kiếm tài khoản</span>
-				<input class="txtInputRemember" type="text" name="txtEmail" id="txtEmail" placeholder="Tên tài khoản hoặc email">
+				<input class="txtInputRemember" type="text" name="txtEmail" id="txtEmailRemember" placeholder="Tên tài khoản hoặc email">
 			</div>
 			<div class="footer-remember">
-				<button class="footerBtn btn-success " type="submit" name="btnSuccess" id="btnSuccess">Tìm kiếm</button>
-				<button class="footerBtn btn-cancel" type="button" name="btnCancel" id="btnCancel">Hủy</button>
+				<button class="footerBtn btn-success " name="btnSuccess" id="btnSuccess">Tìm kiếm</button>
 			</div>
 		</div>
 	</div>
-</form>
+</div>
 <!-- end find account -->
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('script'); ?>

@@ -24,12 +24,26 @@ function LoadMessageAccount(){
 		}
 	});
 }
+function LoadOrderAccount(){
+	var _token = $('meta[name="_token"]').attr('content');
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url +'/account/order',
+		 data: { '_token': _token},
+		success: function($data){
+			$('#infomation-content').html($data);
+		}
+	});
+}
 function onClick($element){
 	var id = $($element).attr('id');
 	switch(id){
 		case "h4Infomation":LoadInfomationAccount();
 		break;
 		case "h4Mesage":LoadMessageAccount();
+		break;
+		case "h4Order":LoadOrderAccount();
 		break;
 		default:
 		LoadInfomationAccount();

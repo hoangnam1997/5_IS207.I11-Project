@@ -38,21 +38,27 @@ Route::group(['prefix'=>'login'],function(){
 Route::get('product','ProductController@Get');
 // Remember password
 Route::group(['prefix'=>'remember'],function(){
+	Route::any('findAccount','AccountController@FindAcount');
 	// tìm kiếm tài khoản
-	Route::get('find','RememberController@Index');
+	Route::any('find','RememberController@Index');
 	// nhập mã
-	Route::post('type','RememberController@Type');
+	Route::any('type','RememberController@Type');
 	//  đổi mật khẩu
-	Route::post('changepass','RememberController@ChangePass');
+	Route::any('changepass','RememberController@ChangePass');
+	// xác nhận
+	Route::post('checkToken','AccountController@CheckToken');
+	Route::post('changepass','AccountController@ChangePass');
 });
 // Thông tin tài khoản
 Route::group(['prefix'=>'account'],function(){
 	Route::get('/','AccountController@Index');
 	Route::post('infomation','AccountController@Info');
 	Route::post('mess','AccountController@Mess');
+	Route::post('order','AccountController@Order');
 	Route::post('checkpassold','AccountController@CheckPassOld');
 	Route::post('changeinfo','AccountController@ChangeInfo');
 	Route::post('updateMess','AccountController@UpdateMess');
+
 });
 // admin route
 Route::group(['prefix'=>'admin'],function(){

@@ -13,7 +13,6 @@ use App\User_Role as User_Role;
 use Cookie;
 class LoginController extends Controller
 {
-	protected static $imageDefault = "accounts/account.png";
 	public function index(){
 		return view('Account.Login');
 	}

@@ -1,5 +1,9 @@
+<?php if(isset($itemProduct)){?>
+
 @extends('_layout')
-@section('title','Đây là tên Sản phẩm')
+@section('title')
+<?php echo $itemProduct->Name;?>
+@stop
 @section('link')
 @parent
 <!-- Swiper css -->
@@ -13,24 +17,19 @@
 		<!-- start infomation product-detail -->
 		<div class="product-detail col-xs-12 ">
 			<div class="col-xs-2 col-md-1 listImgPrduct">
-				<img class="img-loader" src="{!! url('public/images/1.jpeg') !!}">
-				<img class="img-loader" src="{!! url('public/images/2.jpeg') !!}">
-				<img class="img-loader" src="{!! url('public/images/3.jpeg') !!}">
-				<img class="img-loader" src="{!! url('public/images/4.jpg') !!}">
-				<img class="img-loader" src="{!! url('public/images/8.png') !!}">
-				<img class="img-loader" src="{!! url('public/images/7.jpg') !!}">
-				<img class="img-loader" src="{!! url('public/images/9.jpg') !!}">
-				<img class="img-loader" src="{!! url('public/images/10.png') !!}">
-				<img class="img-loader" src="{!! url('public/images/11.jpg') !!}">
+				<?php $listPicture = $itemProduct->Pictures()->get() ?>
+				<?php foreach ($listPicture as $valuePicture): ?>
+					<img class="img-loader" src="{!! url('public/images') !!}/<?php echo  $valuePicture->Url; ?>">
+				<?php endforeach ?>
 			</div>
 			<!-- start product-detail image -->
 			<div class="col-md-3 col-xs-5 product-detail-image">
-				<img id="product-detailImgItem" class="zoom-img product-detail-imgItem" src="{!! url('public/images/1.jpeg') !!}" alt="First slide">
+				<img id="product-detailImgItem" class="zoom-img product-detail-imgItem" src="{!! url('public/images') !!}/<?php echo isset($listPicture[0]) ? $listPicture[0]->Url : 'default.jpg'; ?>" alt="First slide">
 			</div>
 			<!-- end image -->
 			<!-- start infomation and select count - color -->
 			<div class="product-detail-infomation col-md-7 col-xs-4">
-				<span class="head-product-detail">Đây là tên Sản phẩm</span>
+				<span class="head-product-detail"><?php echo $itemProduct->Name; ?></span>
 				<!-- star of product-detail -->
 				<div class="product-detail-star">
 					<img src="{!! url('public/images/star-on.png') !!}" alt="1">
@@ -41,95 +40,54 @@
 				</div>
 				<!-- giá -->
 				<div class="field-col">
+					<?php $price = $itemProduct->Prices()->whereNull('EndDate')->get()[0]; ?>
 					<span class="product-detail-field">Giá: </span>
-					<span class="product-detail-price">100.000đ</span>
-					<span class="product-detail-priceOld">200.000đ</span>
-					<span class="product-detail-discount">-50%</span>
+					<span class="product-detail-price"><?php echo $price->Price - ($price->Price * $price->Discount / 100); ?> VNĐ</span>
+					<span class="product-detail-priceOld"><?php echo $price->Price; ?> VNĐ</span>
+					<span class="product-detail-discount">-<?php echo $price->Discount; ?> %</span>
 				</div>
 				<!-- end giá -->
 				<!-- start size -->
+				<?php $listSize = $itemProduct->Sizes()->where([['ProductSize.IsDelete','=',false]])->get(); 
+				if(count($listSize)>0){?>
 				<div class="field-col">
-					<span class="product-detail-field">Size: </span>
-					<div class="radio-field">
-						<span class="radio-inline">
-							<input id="rdSize_1" checked="checked" class="radio-infomation" type="radio" name="size-radio">
-							<label for="rdSize_1">
-								<span style="background: transparent;">S</span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdSize_2" class="radio-infomation" type="radio" name="size-radio">
-							<label for="rdSize_2">
-								<span style="background: transparent;">M</span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdSize_3" class="radio-infomation" type="radio" name="size-radio">
-							<label for="rdSize_3">
-								<span style="background: transparent;">L</span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdSize_4" class="radio-infomation" type="radio" name="size-radio">
-							<label for="rdSize_4">
-								<span style="background: transparent;">XL</span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdSize_5" class="radio-infomation" type="radio" name="size-radio">
-							<label for="rdSize_5">
-								<span style="background: transparent;">XXL</span>
-							</label>
-						</span>
-					</div>
+					<span class="product-detail-field">Kích thước: </span>
+					<!-- danh sách kích thứóc -->
+					<span class="radio-inline">
+						<!-- lấy danh kích cở -->
+						<?php foreach ($listSize as $valueSize) {?>
+						<input id="rdSize_<?php echo $itemProduct->id; ?>_<?php echo $valueSize->id; ?>" class="radio-infomation" type="radio" name="rdSize_<?php echo $itemProduct->id; ?>" data-size="<?php echo $valueSize->id; ?>" >
+						<label for="rdSize_<?php echo $itemProduct->id; ?>_<?php echo $valueSize->id; ?>">
+							<!-- value size -->
+							<span style="background: transparent;"><?php echo $valueSize->Sizes ?></span>
+						</label>
+						<?php } ?>
+					</span>
 				</div>
+				<br>
+				<?php } ?>
 				<!-- end size -->
 				<!-- start color -->
+				<?php 
+							// lấy danh sách không bị delete
+				$colorProduct = $itemProduct->Colors()->where([['ProductColor.IsDelete','=',false]])->get();
+				if(count($colorProduct)>0){?>
 				<div class="field-col">
-					<span class="product-detail-field">Màu sắt: </span>
+					<span class="product-detail-field">Màu sắc: </span>
 					<div class="radio-field">
 						<span class="radio-inline">
-							<input checked="checked" id="rdColor_1" class="radio-infomation" type="radio" name="color-radio">
-							<label for="rdColor_1">
-								<span style="background: red;"></span>
+							<!-- lấy danh sách màu sắt -->
+							<?php foreach ($colorProduct as $valueColor) {?>
+							<input id="rdColor_<?php echo $itemProduct->id; ?>_<?php echo $valueColor->id; ?>" class="radio-infomation" type="radio" name="rdColor_<?php echo $itemProduct->id; ?>" data-color="<?php echo $valueColor->id; ?>" >
+							<label for="rdColor_<?php echo $itemProduct->id; ?>_<?php echo $valueColor->id; ?>">
+								<span style="background: #<?php echo $valueColor->Color ?>;"></span>
 							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdColor_2" class="radio-infomation" type="radio" name="color-radio">
-							<label for="rdColor_2">
-								<span style="background: blue;"></span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdColor_3" class="radio-infomation" type="radio" name="color-radio">
-							<label for="rdColor_3">
-								<span style="background: yellow;"></span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdColor_4" class="radio-infomation" type="radio" name="color-radio">
-							<label for="rdColor_4">
-								<span style="background: grey;"></span>
-							</label>
-						</span>
-						<span class="radio-inline">
-							<input id="rdColor_5" class="radio-infomation" type="radio" name="color-radio">
-							<label for="rdColor_5">
-								<span style="background: green;"></span>
-							</label>
+							<?php } ?>
 						</span>
 					</div>
 				</div>
+				<?php } ?>
 				<!-- end color -->
-				<!-- start số lượng -->
-				<div class="field-col">
-					<span class="product-detail-field">Số lượng: </span>
-					<span class="btn-number">-</span>
-					<input  type="number" name="txtNumberproduct-detail" id="txtNumberproduct-detail" value="1">
-					<span class="btn-number">+</span>
-
-				</div>
-				<!-- end số lượng -->
 				<div class="add-cart">
 					<div class="btn-addToCart">
 						<div class="default-state">
@@ -153,55 +111,18 @@
 			<div class="involve-content">
 				<div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide swiper-slide-active">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/1.jpeg') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 1</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
+						<?php $listProductInvolve = $itemProduct->ProductCategory()->get()[0]->Products()->where([['IsDelete','=',false]])->get();
+						?>
+						<?php foreach ($listProductInvolve as $valueInvolve) { ?>
+						<?php $priceInvolve = $valueInvolve->Prices()->whereNull('EndDate')->get()[0]; ?>
+						<div class="swiper-slide" title="<?php echo $valueInvolve->Name; ?>" onclick="detailProduct(<?php echo $valueInvolve->id; ?>)"">
+							<div class="image-invole" style="background-image: url('{!! url('public/images/') !!}/<?php echo $valueInvolve->Pictures()->get()[0]->Url; ?>');"></div>
+							<span class="title-invole"><?php echo substr($valueInvolve->Name,0,22).' ...' ?></span>
+							<span class="price-invole"><?php echo $priceInvolve->Price - ($priceInvolve->Price * $priceInvolve->Discount / 100); ?> VNĐ</span>
+							<span class="priceOld-invole"><?php echo $priceInvolve->Price ?> VNĐ</span>
+							<span class="discount-invole">-<?php echo $priceInvolve->Discount; ?>%</span>
 						</div>
-						<div class="swiper-slide">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/2.jpeg') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 2</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
-						</div>
-						<div class="swiper-slide">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/3.jpg') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 3</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
-						</div>
-						<div class="swiper-slide">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/4.jpg') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 4</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
-						</div>
-						<div class="swiper-slide">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/7.jpg') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 5</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
-						</div>
-						<div class="swiper-slide">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/8.png') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 6</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
-						</div>
-						<div class="swiper-slide">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/9.jpg') !!}');"></div>
-							<span class="title-invole">Sản phẩm liên quan 7</span>
-							<span class="price-invole">100.000đ</span>
-							<span class="priceOld-invole">200.000đ</span>
-							<span class="discount-invole">-50%</span>
-						</div>
+						<?php } ?>
 					</div>
 					<div class="swiper-button-next" style="z-index: 1000"></div>
 					<div class="swiper-button-prev swiper-button-disabled"></div>
@@ -279,3 +200,4 @@
 <!-- custom javascript -->
 <script type="text/javascript" src="{!! url('public/js/ProductDetail/index.js') !!}"></script>
 @stop
+<?php } ?>

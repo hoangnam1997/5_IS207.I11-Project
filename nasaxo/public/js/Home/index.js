@@ -6,6 +6,11 @@ pageProduct = {
     'nameProduct' :document.getElementById('nameProduct-frm'),
     'bestSeller': document.getElementById('bestSeller-frm'),
 }
+// create by namnh
+function detailProduct($id){
+    newUrl = url +'/product?id='+$id;
+    window.open(newUrl,'_blank');
+}
 // lấy danh sách products
 function GetProducts(){
     GetHomeWithParam();

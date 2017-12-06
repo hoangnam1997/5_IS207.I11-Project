@@ -1,8 +1,4 @@
-// create by namnh
-function detailProduct($id){
-	newUrl = url +'/product?id='+$id;
-	window.open(newUrl,'_blank');
-}
+
 // thực hiện thêm 
 $('.add-to-cart').off('click').on('click',function(){
 	$idProduct = $(this).data('id');
