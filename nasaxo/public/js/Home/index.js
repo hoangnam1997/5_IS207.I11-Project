@@ -1,11 +1,4 @@
-// lây danh sách products
-pageProduct = {
-    'pageList' :document.getElementById('pageList-frm'),
-    'numberRecord' :document.getElementById('numberRecord-frm'),
-    'productCategory' :document.getElementById('productCategory-frm'),
-    'nameProduct' :document.getElementById('nameProduct-frm'),
-    'bestSeller': document.getElementById('bestSeller-frm'),
-}
+
 // create by namnh
 function detailProduct($id){
     newUrl = url +'/product?id='+$id;
@@ -178,7 +171,7 @@ function loadScript(){
             data: {'_token':_token},
             success: function($re){
                 $('#accountHome').html($re);
-                 window.location.href=url;
+                window.location.href=url;
             }
         });
     });
@@ -208,5 +201,13 @@ function loadScript(){
     });
 }
 $(document).ready(function(){
+    // lây danh sách products
+    pageProduct = {
+        'pageList' :document.getElementById('pageList-frm'),
+        'numberRecord' :document.getElementById('numberRecord-frm'),
+        'productCategory' :document.getElementById('productCategory-frm'),
+        'nameProduct' :document.getElementById('nameProduct-frm'),
+        'bestSeller': document.getElementById('bestSeller-frm'),
+    }
     loadScript();
 });
