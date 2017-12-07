@@ -5,6 +5,7 @@
 	<title><?php $__env->startSection('title'); ?> Nasaxo  Shop <?php echo $__env->yieldSection(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="_token" content="<?php echo e(csrf_token()); ?>">
+	<meta property="fb:app_id" content="1905424643105702" />
 	<!-- font fa -->
 	<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/font-awesome.min.css'); ?>">
 	<?php $__env->startSection('link'); ?> 
@@ -29,7 +30,8 @@
 	<script type="text/javascript" src="<?php echo url('public/js/jquery.cookie.js'); ?>"></script>
 	<!-- jqueri ui -->
 	<script type="text/javascript" src="<?php echo url('public/js/jquery-ui.min.js'); ?>"></script>
-
+	<!-- script home -->
+	<script type="text/javascript" src="<?php echo url('public/js/Home/index.js'); ?>"></script>
 
 </head>
 <body>
@@ -168,7 +170,6 @@
 	<!-- easing -->
 	<script type="text/javascript" src="<?php echo url('public/js/Home/jquery.easing.1.3.js'); ?>"></script>
 
-	<script type="text/javascript" src="<?php echo url('public/js/Home/index.js'); ?>"></script>
 	<?php echo $__env->yieldSection(); ?>
 </body>
 </html>

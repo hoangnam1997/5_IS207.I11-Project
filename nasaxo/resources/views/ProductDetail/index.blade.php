@@ -32,120 +32,122 @@
 				<span class="head-product-detail"><?php echo $itemProduct->Name; ?></span>
 				<!-- star of product-detail -->
 				<div class="product-detail-star">
-					<img src="{!! url('public/images/star-on.png') !!}" alt="1">
-					<img src="{!! url('public/images/star-on.png') !!}" alt="2">
-					<img src="{!! url('public/images/star-on.png') !!}" alt="3">
-					<img src="{!! url('public/images/star-on.png') !!}" alt="4">
-					<img src="{!! url('public/images/star-off.png') !!}" alt="5">
-				</div>
-				<!-- giá -->
-				<div class="field-col">
-					<?php $price = $itemProduct->Prices()->whereNull('EndDate')->get()[0]; ?>
-					<span class="product-detail-field">Giá: </span>
-					<span class="product-detail-price"><?php echo $price->Price - ($price->Price * $price->Discount / 100); ?> VNĐ</span>
-					<span class="product-detail-priceOld"><?php echo $price->Price; ?> VNĐ</span>
-					<span class="product-detail-discount">-<?php echo $price->Discount; ?> %</span>
-				</div>
-				<!-- end giá -->
-				<!-- start size -->
-				<?php $listSize = $itemProduct->Sizes()->where([['ProductSize.IsDelete','=',false]])->get(); 
-				if(count($listSize)>0){?>
-				<div class="field-col">
-					<span class="product-detail-field">Kích thước: </span>
-					<!-- danh sách kích thứóc -->
+					<?php $Point = isset($Point) ? $Point : 0; ?>
+					<?php if(isset($Point)){
+						for ($iPoint=1; $iPoint <= 5 ; $iPoint++) {?>
+						<img data-product="<?php echo $itemProduct->id; ?>" data-point='<?php echo $iPoint ?>' src="{!! url('public/images') !!}/<?php echo $iPoint<=$Point ? 'star-on.png' : 'star-off.png' ?>" alt="<?php echo $iPoint ?>">
+						<?php
+					}
+				} ?>
+			</div>
+			<!-- giá -->
+			<div class="field-col">
+				<?php $price = $itemProduct->Prices()->whereNull('EndDate')->get()[0]; ?>
+				<span class="product-detail-field">Giá: </span>
+				<span class="product-detail-price"><?php echo $price->Price - ($price->Price * $price->Discount / 100); ?> VNĐ</span>
+				<span class="product-detail-priceOld"><?php echo $price->Price; ?> VNĐ</span>
+				<span class="product-detail-discount">-<?php echo $price->Discount; ?> %</span>
+			</div>
+			<!-- end giá -->
+			<!-- start size -->
+			<?php $listSize = $itemProduct->Sizes()->where([['ProductSize.IsDelete','=',false]])->get(); 
+			if(count($listSize)>0){?>
+			<div class="field-col">
+				<span class="product-detail-field">Kích thước: </span>
+				<!-- danh sách kích thứóc -->
+				<span class="radio-inline">
+					<!-- lấy danh kích cở -->
+					<?php foreach ($listSize as $valueSize) {?>
+					<input id="rdSize_<?php echo $itemProduct->id; ?>_<?php echo $valueSize->id; ?>" class="radio-infomation" type="radio" name="rdSize_<?php echo $itemProduct->id; ?>" data-size="<?php echo $valueSize->id; ?>" >
+					<label for="rdSize_<?php echo $itemProduct->id; ?>_<?php echo $valueSize->id; ?>">
+						<!-- value size -->
+						<span style="background: transparent;"><?php echo $valueSize->Sizes ?></span>
+					</label>
+					<?php } ?>
+				</span>
+			</div>
+			<br>
+			<?php } ?>
+			<!-- end size -->
+			<!-- start color -->
+			<?php 
+							// lấy danh sách không bị delete
+			$colorProduct = $itemProduct->Colors()->where([['ProductColor.IsDelete','=',false]])->get();
+			if(count($colorProduct)>0){?>
+			<div class="field-col">
+				<span class="product-detail-field">Màu sắc: </span>
+				<div class="radio-field">
 					<span class="radio-inline">
-						<!-- lấy danh kích cở -->
-						<?php foreach ($listSize as $valueSize) {?>
-						<input id="rdSize_<?php echo $itemProduct->id; ?>_<?php echo $valueSize->id; ?>" class="radio-infomation" type="radio" name="rdSize_<?php echo $itemProduct->id; ?>" data-size="<?php echo $valueSize->id; ?>" >
-						<label for="rdSize_<?php echo $itemProduct->id; ?>_<?php echo $valueSize->id; ?>">
-							<!-- value size -->
-							<span style="background: transparent;"><?php echo $valueSize->Sizes ?></span>
+						<!-- lấy danh sách màu sắt -->
+						<?php foreach ($colorProduct as $valueColor) {?>
+						<input id="rdColor_<?php echo $itemProduct->id; ?>_<?php echo $valueColor->id; ?>" class="radio-infomation" type="radio" name="rdColor_<?php echo $itemProduct->id; ?>" data-color="<?php echo $valueColor->id; ?>" >
+						<label for="rdColor_<?php echo $itemProduct->id; ?>_<?php echo $valueColor->id; ?>">
+							<span style="background: #<?php echo $valueColor->Color ?>;"></span>
 						</label>
 						<?php } ?>
 					</span>
 				</div>
-				<br>
-				<?php } ?>
-				<!-- end size -->
-				<!-- start color -->
-				<?php 
-							// lấy danh sách không bị delete
-				$colorProduct = $itemProduct->Colors()->where([['ProductColor.IsDelete','=',false]])->get();
-				if(count($colorProduct)>0){?>
-				<div class="field-col">
-					<span class="product-detail-field">Màu sắc: </span>
-					<div class="radio-field">
-						<span class="radio-inline">
-							<!-- lấy danh sách màu sắt -->
-							<?php foreach ($colorProduct as $valueColor) {?>
-							<input id="rdColor_<?php echo $itemProduct->id; ?>_<?php echo $valueColor->id; ?>" class="radio-infomation" type="radio" name="rdColor_<?php echo $itemProduct->id; ?>" data-color="<?php echo $valueColor->id; ?>" >
-							<label for="rdColor_<?php echo $itemProduct->id; ?>_<?php echo $valueColor->id; ?>">
-								<span style="background: #<?php echo $valueColor->Color ?>;"></span>
-							</label>
-							<?php } ?>
-						</span>
+			</div>
+			<?php } ?>
+			<!-- end color -->
+			<div class="add-cart" data-id='<?php echo $itemProduct->id; ?>' data-name="<?php echo $itemProduct->Name; ?>">
+				<div class="btn-addToCart">
+					<div class="default-state">
+						<span class="fa fa-cart-plus fa-2x"></span>
+						<span>Thêm vào giỏ hàng</span>
 					</div>
-				</div>
-				<?php } ?>
-				<!-- end color -->
-				<div class="add-cart">
-					<div class="btn-addToCart">
-						<div class="default-state">
-							<span class="fa fa-cart-plus fa-2x"></span>
-							<span>Thêm vào giỏ hàng</span>
-						</div>
-						<div class="active-state">
-							<span class="fa fa-cart-plus fa-2x"></span>
-							<span>Thêm vào giỏ hàng</span>
-						</div>
+					<div class="active-state">
+						<span class="fa fa-cart-plus fa-2x"></span>
+						<span>Thêm vào giỏ hàng</span>
 					</div>
 				</div>
 			</div>
-			<!-- end infomation and select count - color -->
 		</div>
-		<!-- end infomation product-detail -->
-		<!-- start involve product-detail -->
-		<div class="product-detail-involve col-xs-12">
-			<h4>SẢN PHẨM THƯỜNG ĐƯỢC XEM CÙNG</h4>
-			<!-- start slider involve product-detail -->
-			<div class="involve-content">
-				<div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
-					<div class="swiper-wrapper">
-						<?php $listProductInvolve = $itemProduct->ProductCategory()->get()[0]->Products()->where([['IsDelete','=',false]])->get();
-						?>
-						<?php foreach ($listProductInvolve as $valueInvolve) { ?>
-						<?php $priceInvolve = $valueInvolve->Prices()->whereNull('EndDate')->get()[0]; ?>
-						<div class="swiper-slide" title="<?php echo $valueInvolve->Name; ?>" onclick="detailProduct(<?php echo $valueInvolve->id; ?>)"">
-							<div class="image-invole" style="background-image: url('{!! url('public/images/') !!}/<?php echo $valueInvolve->Pictures()->get()[0]->Url; ?>');"></div>
-							<span class="title-invole"><?php echo substr($valueInvolve->Name,0,22).' ...' ?></span>
-							<span class="price-invole"><?php echo $priceInvolve->Price - ($priceInvolve->Price * $priceInvolve->Discount / 100); ?> VNĐ</span>
-							<span class="priceOld-invole"><?php echo $priceInvolve->Price ?> VNĐ</span>
-							<span class="discount-invole">-<?php echo $priceInvolve->Discount; ?>%</span>
-						</div>
-						<?php } ?>
-					</div>
-					<div class="swiper-button-next" style="z-index: 1000"></div>
-					<div class="swiper-button-prev swiper-button-disabled"></div>
-				</div>
-			</div>
-			<!-- end imvolve -->
-		</div>
-		<!-- end involve product-detail -->
-		<!-- start comment -->
-		<div class="product-detail-comment col-xs-12">
-			<!-- title -->
-			<div class="cmt-title">
-				<h4>BÌNH LUẬN VỀ SẢN PHẨM</h4>
-			</div>
-			<!-- end title -->
-			<!-- start all cmt -->
-			<div class="cmt-container">
-				<div class="fb-comments" data-href="{!! url(''); !!}/product?id=<?php echo $itemProduct->id; ?>" data-width="100%" data-numposts="5"></div>
-			</div>
-			<!-- end start all cmt -->
-		</div>
-		<!-- end comment -->
+		<!-- end infomation and select count - color -->
 	</div>
+	<!-- end infomation product-detail -->
+	<!-- start involve product-detail -->
+	<div class="product-detail-involve col-xs-12">
+		<h4>SẢN PHẨM THƯỜNG ĐƯỢC XEM CÙNG</h4>
+		<!-- start slider involve product-detail -->
+		<div class="involve-content">
+			<div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
+				<div class="swiper-wrapper">
+					<?php $listProductInvolve = $itemProduct->ProductCategory()->get()[0]->Products()->where([['IsDelete','=',false]])->get();
+					?>
+					<?php foreach ($listProductInvolve as $valueInvolve) { ?>
+					<?php $priceInvolve = $valueInvolve->Prices()->whereNull('EndDate')->get()[0]; ?>
+					<div class="swiper-slide" title="<?php echo $valueInvolve->Name; ?>" onclick="detailProduct(<?php echo $valueInvolve->id; ?>)"">
+						<div class="image-invole" style="background-image: url('{!! url('public/images/') !!}/<?php echo $valueInvolve->Pictures()->get()[0]->Url; ?>');"></div>
+						<span class="title-invole"><?php echo substr($valueInvolve->Name,0,22).' ...' ?></span>
+						<span class="price-invole"><?php echo $priceInvolve->Price - ($priceInvolve->Price * $priceInvolve->Discount / 100); ?> VNĐ</span>
+						<span class="priceOld-invole"><?php echo $priceInvolve->Price ?> VNĐ</span>
+						<span class="discount-invole">-<?php echo $priceInvolve->Discount; ?>%</span>
+					</div>
+					<?php } ?>
+				</div>
+				<div class="swiper-button-next" style="z-index: 1000"></div>
+				<div class="swiper-button-prev swiper-button-disabled"></div>
+			</div>
+		</div>
+		<!-- end imvolve -->
+	</div>
+	<!-- end involve product-detail -->
+	<!-- start comment -->
+	<div class="product-detail-comment col-xs-12">
+		<!-- title -->
+		<div class="cmt-title">
+			<h4>BÌNH LUẬN VỀ SẢN PHẨM</h4>
+		</div>
+		<!-- end title -->
+		<!-- start all cmt -->
+		<div class="cmt-container">
+			<div class="fb-comments" data-href="{!! url(''); !!}/product?id=<?php echo $itemProduct->id; ?>" data-width="100%" data-numposts="5" data-order-by="reverse_time"></div>
+		</div>
+		<!-- end start all cmt -->
+	</div>
+	<!-- end comment -->
+</div>
 </div>
 <!-- end row -->
 @stop

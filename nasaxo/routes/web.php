@@ -35,7 +35,10 @@ Route::group(['prefix'=>'login'],function(){
 
 });
 // product
-Route::get('product','ProductController@Get');
+Route::group(['prefix'=>'product'],function(){
+	Route::get('/','ProductController@Get');
+	Route::any('star','ProductController@StarProduct');
+});
 // Remember password
 Route::group(['prefix'=>'remember'],function(){
 	Route::any('findAccount','AccountController@FindAcount');

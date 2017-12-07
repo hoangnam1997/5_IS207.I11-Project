@@ -34,4 +34,33 @@ function zoomImage($selecter){
 	}); 
 }
 zoomImage('.zoom-img');
+addToCart($('.add-cart'));
+// thực hiện đánh giá
+$('.product-detail-star img').off('click').on('click',function(){
+	$eStar = $(this);
+	$eStarBefore = $(this).prevAll('img');
+	$eStarNext = $(this).nextAll('img');
+
+	$valueStar = $(this).data('point');
+	$valueID = $(this).data('product');
+	CheckLogin(function($result){
+		if($result){
+			$eStar.attr('src','public/images/star-on.png');
+			$eStarBefore.attr('src','public/images/star-on.png');
+			$eStarNext.attr('src','public/images/star-off.png');
+			var _token = $('meta[name="_token"]').attr('content');
+			$.ajax({
+				type: 'POST',
+				cache: false,
+				url: url +'/product/star',
+				data: { '_token': _token,'idProduct':$valueID,'valueStar':$valueStar},
+				success: function($data){
+					console.log($data);
+				}
+			});
+		}else{
+			alert('Vui lòng đăng nhập!');
+		}
+	});
+});
 
