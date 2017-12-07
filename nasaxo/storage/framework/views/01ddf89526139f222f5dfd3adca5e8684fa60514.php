@@ -8,12 +8,12 @@
 	<div id="Dangnhap" class="tab-pane fade in active">
 		<form class="frmLogin">
 			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Nhập email hoặc tài khoản đăng nhập">
+				<label for="email">Email hoặc tên đăng nhập:</label>
+				<input type="email" class="form-control" id="email" >
 			</div>
 			<div class="form-group">
 				<label for="pwd">Mật khẩu:</label>
-				<input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
+				<input type="password" class="form-control" id="pwd" >
 			</div>
 			<div class="checkbox">
 				<a href="<?php echo url('/remember/find'); ?>" class="RememberPass">Quên mật khẩu</a>
@@ -25,19 +25,19 @@
 		<form class="frmLogin">
 			<div class="form-group">
 				<label for="usernameRegis">Tên đăng nhập:</label>
-				<input type="text" class="form-control" id="usernameRegis" placeholder="Nhập tên đăng nhập">
+				<input type="text" class="form-control" id="usernameRegis" >
 			</div>
 			<div class="form-group">
 				<label for="emailRegis">Email:</label>
-				<input type="email" class="form-control" id="emailRegis" placeholder="Nhập email">
+				<input type="email" class="form-control" id="emailRegis" >
 			</div>
 			<div class="form-group">
 				<label for="pwdRegis">Password:</label>
-				<input type="password" class="form-control" id="pwdRegis" placeholder="nhập mật khẩu">
+				<input type="password" class="form-control" id="pwdRegis" >
 			</div>  
 			<div class="form-group">
 				<label for="Repeat_pwdRegis">Nhập lại mật khẩu:</label>
-				<input type="password" class="form-control" id="Repeat_pwdRegis" placeholder="nhập lại mật khẩu">
+				<input type="password" class="form-control" id="Repeat_pwdRegis" >
 			</div>                  
 			<button id="btnRegistration" type="button" class="btn btn-info">Đăng kí</button>
 		</form>

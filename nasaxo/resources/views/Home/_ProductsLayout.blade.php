@@ -18,7 +18,7 @@
 			<!-- Name and price -->
 			<figcaption class="clickDetail" onclick="detailProduct(<?php echo $value->id; ?>)">
 				<!-- name prodyct -->
-				<h2><?php echo substr($value['Name'],0,22).' ...' ?></h2>
+				<h3 class="nameProductHome"><?php echo substr($value['Name'],0,30).' ...' ?></h3>
 				<!-- price -->
 				<div class="price"><?php
 				$price=	$value->Prices()->whereNull('endDate')->get(); 

@@ -6,8 +6,8 @@
 		<div class="infomation-content">
 			<h4>Tìm tài khoản của bạn</h4>
 			<div class="find-content">
-				<span class="Remember-email">Vui lòng nhập tên tài khoản hoặc email để tìm kiếm tài khoản</span>
-				<input class="txtInputRemember" type="text" name="txtEmail" id="txtEmailRemember" placeholder="Tên tài khoản hoặc email">
+				<span class="Remember-email">Vui lòng nhập tên tài khoản hoặc email </span>
+				<input class="txtInputRemember" type="text" name="txtEmail" id="txtEmailRemember" >
 			</div>
 			<div class="footer-remember">
 				<button class="footerBtn btn-success " name="btnSuccess" id="btnSuccess">Tìm kiếm</button>
