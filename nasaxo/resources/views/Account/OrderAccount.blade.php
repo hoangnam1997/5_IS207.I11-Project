@@ -27,7 +27,7 @@ if(isset($user)){
 				$product = $valueOrderDetail->Product()->get()[0];
 				$result[] = $product->Name;
 							// tính toán tiền
-				$price=	$product->Prices()->whereNull('endDate')->get(); 
+				$price=	$product->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','<',$value->CreateDate]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null]])->get(); 
 				$pricefinal=0;
 							// tính toán tiền
 				if(count($price)>0){
