@@ -34,7 +34,7 @@ class LoginController extends Controller
 				$imgUrl=$picture[0]->Url;
 			}
 			// set cookie
-			$cookieValue= array('id' =>$user[0]->id,'image'=>$imgUrl);
+			$cookieValue= array('id' =>$user[0]->id,'image'=>$imgUrl,'username'=>$user[0]->Username,'description'=>$user[0]->Description);
 			Cookie::queue('accountHome',json_encode($cookieValue));
 			return view('Account._partialAceptLogin',['Account'=>$cookieValue]);
 		}

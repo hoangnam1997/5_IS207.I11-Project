@@ -67,9 +67,13 @@
 <body>
 	<div class="login">
 		<form enctype='multipart/form-data' method="POST" action="<?php echo url('/admin/manage'); ?>" name="frmLogin">
-			<?php echo e(csrf_field()); ?>	
-			<input type="text" name="u" placeholder="Username" required="required" />
-			<input type="password" name="p" placeholder="Password" required="required" />
+			<?php echo e(csrf_field()); ?>
+
+			<?php if(isset($isFalse) && $isFalse == true) {?>
+			<span style="color: #EFBFBF;">Tài khoản hoặc mật khẩu sai!<br><br></span>	
+			<?php } ?>
+			<input type="text" name="email" placeholder="Nhập tên đăng nhập hoặc email" required="required" />
+			<input type="password" name="password" placeholder="Mật khẩu" required="required" />
 			<button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
 		</form>
 	</div>

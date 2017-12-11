@@ -68,7 +68,9 @@ Route::group(['prefix'=>'admin'],function(){
 	// trang đầu
 	Route::get('/','ManageHomeController@Index');
 	// login
-	Route::post('manage','ManageHomeController@Login');
+	Route::any('manage','ManageHomeController@Login');
+	Route::any('logout','ManageHomeController@logOut');
+
 	// group for address
 	Route::group(['prefix'=>'address'],function(){
 		// get danh sách city

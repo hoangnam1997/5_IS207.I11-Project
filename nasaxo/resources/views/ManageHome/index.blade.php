@@ -21,8 +21,20 @@
   <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   @show
+  <script type="text/javascript">
+    var url="{!! url('') !!}";
+  </script>
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
+  <?php 
+  $user = isset($UserView) ? $UserView : json_decode(Cookie::get('accountHome'),true);
+  $countMess= 0;
+  $listMess =[];
+  if(isset($userLogin)){
+    $countMess= ($userLogin->Messages()->count());
+    $listMess= ($userLogin->Messages()->get());
+  }
+  ?>
   <div class="wrapper">
     <header class="main-header" style="">
       <!-- Logo -->
@@ -42,65 +54,46 @@
             <li class="dropdown notifications-menu">
               <a class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-bell-o"></i>
-                <span class="label label-warning">10</span>
+                <span class="label label-warning"><?php echo $countMess; ?></span>
               </a>
               <ul class="dropdown-menu">
-                <li class="header">You have 10 notifications</li>
+                <li class="header">You have <?php echo $countMess; ?> notifications</li>
                 <li>
                   <!-- inner menu: contains the actual data -->
                   <ul class="menu">
-                    <li>
+                    <?php foreach ($listMess as $value) { ?>
+                    <li title="<?php echo $value->Description; ?>">
                       <a>
-                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        <i class="fa fa-user text-red"></i> <?php echo substr($value->Description,0,40); ?>...
                       </a>
                     </li>
-                    <li>
-                      <a>
-                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                        page and may cause design problems
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <i class="fa fa-users text-red"></i> 5 new members joined
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <i class="fa fa-user text-red"></i> You changed your username
-                      </a>
-                    </li>
+                    <?php } ?>
                   </ul>
                 </li>
-                <li class="footer"><a>View all</a></li>
+                <li class="footer" id="messViewAll"><a>View all</a></li>
               </ul>
             </li>
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a class="dropdown-toggle" data-toggle="dropdown">
-                <img src="{!! url('public/images/admin.jpg') !!}" class="user-image" alt="User Image">
-                <span class="hidden-xs">Nguyễn Hoàng Nam</span>
+                <img src="{!! url('public/images') !!}/<?php echo  isset($user['image'])? $user['image'] : ""; ?>" class="user-image" alt="User Image">
+                <span visible class="hidden-xs"><?php echo  isset($user['username'])? $user['username'] : "Nasaxo"; ?> </span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="{!! url('public/images/admin.jpg') !!}" class="img-circle" alt="User Image">
+                  <img src="{!! url('public/images') !!}/<?php echo  isset($user['image'])? $user['image'] : ""; ?>" class="img-circle" alt="User Image">
                   <p>
-                    Nguyễn Hoàng Nam - Web Developer
+                    <?php echo  isset($user['description'])? $user['description'] : ""; ?>
                   </p>
                 </li>
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a class="btn btn-default btn-flat">Profile</a>
+                    <a class="btn btn-default btn-flat" id='btnProfile'>Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a class="btn btn-default btn-flat">Sign out</a>
+                    <a class="btn btn-default btn-flat" id='btnLogout'>Sign out</a>
                   </div>
                 </li>
               </ul>
