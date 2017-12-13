@@ -1,14 +1,14 @@
 // function set active for focus
-$('.treeview-menu>li').off('click').on('click',function(){
+$('.treeview-menu>li').on('click',function(){
 	$('.treeview-menu>li').removeClass('active');
 	$(this).addClass('active');
 });
-$('.sidebar-menu>li').off('click').on('click',function(){
+$('.sidebar-menu>li').on('click',function(){
 	$('.sidebar-menu>li').removeClass('active');
 	$(this).addClass('active');
 });
 // function ajax get view for admin
-$('.getView').off('click').on('click',function(){
+$('.getView').on('click',function(){
 	var $viewAjax = $(this).data("view");
 	var _token = $('meta[name="_token"]').attr('content');
 	if($viewAjax != 'undefined' && $viewAjax != null){

@@ -156,10 +156,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="getView"><a><i class="fa fa-circle-o"></i>Doanh thu</a></li>
-              <li class="getView"><a><i class="fa fa-circle-o"></i>Sản phẩm bán chạy</a></li>
-              <li class="getView"><a><i class="fa fa-circle-o"></i>Sản phẩm Không bán chạy</a></li>
-              <li class="getView"><a><i class="fa fa-circle-o"></i>Khách hàng mua nhiều</a></li>
+              <li class="getView" data-view="statictis/revenue"><a><i class="fa fa-circle-o"></i>Doanh thu</a></li>
+              <li class="getView" data-view="statictis/bestsell"><a><i class="fa fa-circle-o"></i>Sản phẩm</a></li>
+              <li class="getView" data-view="statictis/customer"><a><i class="fa fa-circle-o"></i>Khách hàng mua nhiều</a></li>
             </ul>
           </li>
           <!-- end thống kê -->

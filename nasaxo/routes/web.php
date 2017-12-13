@@ -117,5 +117,19 @@ Route::group(['prefix'=>'admin'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageProductController@GetProducts');
 	});
+	// group statictis
+	Route::group(['prefix'=>'statictis'],function(){
+		// lấy view màu sắt
+		Route::post('revenue','ManageStatictisController@Revenue');
+		Route::any('revenueView','ManageStatictisController@RevenuePartialStatistics');
+
+		Route::post('bestsell','ManageStatictisController@Bestsell');
+		Route::any('bestsellView','ManageStatictisController@BestsellPartialStatistics');
+
+		Route::post('customer','ManageStatictisController@Customer');
+		Route::any('customerView','ManageStatictisController@CustomerPartialStatistics');
+
+
+	});
 });
 
