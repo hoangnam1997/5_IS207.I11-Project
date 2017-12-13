@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Users as Users;
+use App\Message as Message;
 use Cookie;
 class ManageHomeController extends Controller
 {
@@ -14,6 +15,17 @@ class ManageHomeController extends Controller
 			return view('ManageHome.index',['userLogin'=>$user]);
 		}
 		return view('ManageLogin.ManageLogin');
+	}
+	// 
+	public function Profile(){
+		if($this->isLogin([1])){
+            // category 
+			$idUser= $this->getIdLogin();
+			// lấy số lượng message
+			$countNotify=Message::where([['IsNotify','=',true],['IsDelete','=',false],['ID_Users','=',$idUser]])->count();
+			return view('ManageHome._profile',['countNotify'=>$countNotify]);
+		}
+		return redirect('/admin');
 	}
 	// log out
 	public function logOut(){

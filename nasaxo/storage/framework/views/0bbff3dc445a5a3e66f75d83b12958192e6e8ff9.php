@@ -9,7 +9,7 @@
 	<div class="col-xs-12 infomation-account">
 		<h4 id="h4Infomation">Thông tin tài khoản</h4>
 		<h4 id="h4Order">Thông tin đặt hàng</h4>
-		<h4 id="h4Mesage">Thông báo<span>( <span id='countNotify'><?php echo isset($countNotify)? $countNotify :'0' ?> </span> )</span></h4>
+		<h4 id="h4Mesage">Thông báo<span>( <span class='countNotify'><?php echo isset($countNotify)? $countNotify :'0' ?> </span> )</span></h4>
 		<!-- start content -->
 		<div id="infomation-content" class="infomation-content">
 

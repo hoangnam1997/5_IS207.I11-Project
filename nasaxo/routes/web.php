@@ -70,7 +70,8 @@ Route::group(['prefix'=>'admin'],function(){
 	// login
 	Route::any('manage','ManageHomeController@Login');
 	Route::any('logout','ManageHomeController@logOut');
-
+	// thông tin tai khoản
+	Route::any('profile','ManageHomeController@Profile');
 	// group for address
 	Route::group(['prefix'=>'address'],function(){
 		// get danh sách city

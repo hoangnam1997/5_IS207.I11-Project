@@ -63,6 +63,33 @@ public function getIdLogin(){
   }
   return -1;
 }
-
+public function getTypeImage($src){
+  $typeString = null;
+  $typeInt = exif_imagetype($src);
+  switch($typeInt) {
+    case IMAGETYPE_GIF:
+    $typeString = 'gif';
+    break;
+    case IMAGETYPE_JPEG:
+    $typeString = 'jpeg';
+    break;
+    case IMAGETYPE_PNG:
+    $typeString = 'png';
+    break;
+    case IMAGETYPE_SWF:
+    $typeString = 'swf';
+    break;
+    case IMAGETYPE_PSD:
+    $typeString = 'psd';
+    break;
+    case IMAGETYPE_ICO:
+    $typeString = 'ico';
+    break;
+    default: 
+    $typeString = 'png';
+    break;
+  }
+  return $typeString;
+}
 
 }

@@ -31,8 +31,8 @@
   $countMess= 0;
   $listMess =[];
   if(isset($userLogin)){
-    $countMess= ($userLogin->Messages()->count());
-    $listMess= ($userLogin->Messages()->get());
+    $countMess= ($userLogin->Messages()->where([['IsDelete','=',false],['IsNotify','=',true]])->count());
+    $listMess= ($userLogin->Messages()->where([['IsDelete','=',false],['IsNotify','=',true]])->get());
   }
   ?>
   <div class="wrapper">
@@ -54,10 +54,10 @@
             <li class="dropdown notifications-menu">
               <a class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-bell-o"></i>
-                <span class="label label-warning"><?php echo $countMess; ?></span>
+                <span class="label label-warning"><span class="countNotify"><?php echo $countMess; ?> </span></span>
               </a>
               <ul class="dropdown-menu">
-                <li class="header">You have <?php echo $countMess; ?> notifications</li>
+                <li class="header">You have <span class="countNotify"><?php echo $countMess; ?></span> notifications</li>
                 <li>
                   <!-- inner menu: contains the actual data -->
                   <ul class="menu">
@@ -70,7 +70,7 @@
                     <?php } ?>
                   </ul>
                 </li>
-                <li class="footer"><a>View all</a></li>
+                <li class="footer getView" id="messViewAll" data-view="profile"><a>View all</a></li>
               </ul>
             </li>
             <!-- User Account: style can be found in dropdown.less -->
@@ -90,7 +90,7 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a class="btn btn-default btn-flat" id='btnProfile'>Profile</a>
+                    <a class="btn btn-default btn-flat getView" data-view="profile" id='btnProfile'>Profile</a>
                   </div>
                   <div class="pull-right">
                     <a class="btn btn-default btn-flat" id='btnLogout'>Sign out</a>

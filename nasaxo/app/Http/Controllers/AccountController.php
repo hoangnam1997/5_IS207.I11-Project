@@ -9,6 +9,8 @@ use Mail;
 use Cookie;
 use App\Users as Users;
 use App\Message as Message;
+use App\Picture as Picture;
+use App\UsersPicture as UsersPicture;
 class AccountController extends Controller
 {
 	public function Index(){
@@ -148,6 +150,8 @@ class AccountController extends Controller
 	public function ChangeInfo(){
 		if($this->isLogin([1,2])){
 			$aParameter = array_merge($_GET,$_POST);
+			
+
 			$idUser =  $this->getIdLogin();
 			$user = null;
 			if(isset($aParameter['PasswordOld']) && isset($aParameter['Password'])){
@@ -162,7 +166,26 @@ class AccountController extends Controller
 				}else {
 					$user[0]->Description = $aParameter['Description'];
 				}
-				if($user[0]->save())
+
+				// insert picture
+				$extention = $this->getTypeImage($aParameter['image']);
+				$idMaxImage = Picture::max('id');
+				$imageName = ++$idMaxImage. '.' . $extention;
+				$url =  'public/images/accounts'.'/'. $imageName;
+				$picture = new Picture;
+				$picture->Url = 'accounts/'.$imageName;
+				$picture->IsDelete = false;
+
+				// thêm userpicture
+				$userPicture = new UsersPicture;
+				$userPicture->ID_Users = $user[0]->id;
+				$userPicture->ID_Picture = $idMaxImage;
+				$userPicture->IsDelete = false;
+
+				// delete user picture
+				UsersPicture::where([['ID_Users','=',$user[0]->id]])->delete();
+				file_put_contents($url,file_get_contents($aParameter['image']));
+				if($user[0]->save() && $picture->save() && $userPicture->save())
 					return '1';
 			}
 		}

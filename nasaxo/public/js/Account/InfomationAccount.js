@@ -78,6 +78,7 @@ $('#ckbChangePass').on('change',function(){
 $('#btnUpdate').off('click').on('click',function(){
 	$('.messRegis').remove();
 	var _token = $('meta[name="_token"]').attr('content');
+	$itemIage = $('#imgUser');
 	if($('#ckbChangePass').is(':checked')){
 		checkOldPass($('#txtOldPass').val(),function($re){
 			if(!$re){
@@ -111,18 +112,38 @@ $('#btnUpdate').off('click').on('click',function(){
 		$.ajax({
 			type : 'POST',
 			url: url + '/account/changeinfo',
-			data: {'_token':_token ,'Description' : $('#txtDescription').val()},
+			data: {'_token':_token, 'image': $itemIage.attr('src'),'Description' : $('#txtDescription').val()},
 		})
 		.done(function($re) {
 			if($re =='1'){
 				alert('Cập nhật thành công!');
 			}else{
 				alert('Xảy ra lỗi!');
+				console.log($re);
 			}
 		})
 		.fail(function() {
 			alert('Xảy ra lỗi!');
+			console.log('Không có gi');
 		});
 	}
 	
+});
+// function onclick change image
+$('.input-Img').on('click',function(){
+	$(this).parent().find('input[type=file]').click();
+});
+// function when input file changes
+$('input[type=file]').on('change',function(e){
+	imgElement = $(this).parent().find('.input-Img');
+	if (this.files && this.files[0]) {
+		var reader = new FileReader();
+
+		reader.onload = function (e) {
+			$(imgElement).attr('src', e.target.result);
+		}
+		if(e.target.files[0]['type'].split('/')[0]=='image'){
+			reader.readAsDataURL(this.files[0]);
+		}
+	}
 });
