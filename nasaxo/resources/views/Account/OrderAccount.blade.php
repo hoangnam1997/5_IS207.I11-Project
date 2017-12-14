@@ -49,6 +49,8 @@ if(isset($user)){
 				<?php 
 				if($value->IsDelivered){
 					echo 'Đã giao';
+				}elseif($value->IsDelete){
+					echo 'Hủy';
 				}elseif($value->ConfirmDate != null){
 					echo 'Đã xác nhận';
 				}else{

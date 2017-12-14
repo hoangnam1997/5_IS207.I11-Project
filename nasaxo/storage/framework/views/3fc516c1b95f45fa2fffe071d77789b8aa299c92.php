@@ -180,8 +180,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="getView"><a><i class="fa fa-circle-o"></i>Đơn đặt hàng chưa xác nhận</a></li>
-              <li class="getView"><a><i class="fa fa-circle-o"></i>Đơn đặt hàng đã xác nhận</a></li>
+              <li class="getView" data-view="order/new"><a><i class="fa fa-circle-o"></i>Đơn đặt hàng chưa xác nhận</a></li>
+              <li class="getView" data-view="order/confirm"><a><i class="fa fa-circle-o"></i>Đơn đặt hàng đã xác nhận</a></li>
             </ul>
           </li>
           <!-- end hóa đơn -->

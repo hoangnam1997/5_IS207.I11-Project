@@ -106,6 +106,9 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'customer'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageCustomerController@GetCustomers');
+		Route::post('search','ManageCustomerController@actionSearch');
+		Route::post('sendEmail','ManageCustomerController@actionSendMail');
+
 	});
 	// group productcategory
 	Route::group(['prefix'=>'productcategory'],function(){
@@ -128,6 +131,17 @@ Route::group(['prefix'=>'admin'],function(){
 
 		Route::post('customer','ManageStatictisController@Customer');
 		Route::any('customerView','ManageStatictisController@CustomerPartialStatistics');
+
+
+	});
+	// group order
+	Route::group(['prefix'=>'order'],function(){
+		// lấy view màu sắt
+		Route::post('new','ManageOrderController@actionNewOrder');
+		Route::post('confirm','ManageOrderController@actionConfirmed');
+		Route::post('delete','ManageOrderController@actionDelete');
+		Route::post('done','ManageOrderController@actionDone');
+		Route::post('confirmOrder','ManageOrderController@actionConfirm');
 
 
 	});

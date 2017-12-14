@@ -1,32 +1,25 @@
-// create by namnh
-// create table from data listDataTable 
-var columnFormat = {
-	"tr": {
-			// "class": "col"
-		},
-		"td": [{
-			// "class": "",
-			"text": "#STT#"
-		},{
-			// "class": "",
-			"text": "#Name#"
-		},{
-			// "class": "",
-			"text": "#Email#"
-		},{
-			// "class": "",
-			"text": "#DeliveryPlace#<button class='btn btn-link btnDetailDeliveryPlace'>Chi tiết</button>"
-		},{
-			// "class": "",
-			"text": "#Description#"
-		},{
-			// "class": "",
-			"text": "#Action#"
+// function ajax get view for admin
+$('#btnSearch').on('click',function(){
+	var _token = $('meta[name="_token"]').attr('content');
+	$valueSearch = $('#inputSearch').val();
+	// tạo ra đường dẫn route
+	urlNew = url + '/admin/customer/search';
+	// thực hiện lấy view về
+	$.ajax({
+		type:"POST",
+		url: urlNew,
+		cache:false,
+		data:{'_token':_token,'valueSearch':$valueSearch},
+		success:function($re){
+			$('#contentBodySearch').html($re);
 		}
-		]
-	};
-	function pageLoaded(){
-		$('.sendEmail').attr('data-toggle','modal');
-		$('.sendEmail').attr('data-target','#CustomerModal');
+	});
+});
+$("#inputSearch").keyup(function(event)
+{
+	var code = event.keyCode || event.which;
+	if (code === 13)
+	{
+		$('#btnSearch').click();
 	}
-	var inat = $("#table-content").PagingTable(columnFormat,listDataTable,pageLoaded);
+});
