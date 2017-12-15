@@ -19,7 +19,7 @@ class ManageCustomerController extends Controller
 			$valueSearch=$aParameter['valueSearch'];
 		}
 		// lấy danh sách khách hàng từ database
-		$listCustomer=Users::Where([['IsDelete','=',false],['Username','like','%'.$valueSearch.'%']])->get();
+		$listCustomer=Users::Where([['IsDelete','=',false],['Username','like','%'.$valueSearch.'%']])->orWhere([['IsDelete','=',false],['Email','like','%'.$valueSearch.'%']])->get();
 		return view('ManageCustomer._search',['listUser'=>$listCustomer]);
 	}
 	// lấy danh sách customer theo input search

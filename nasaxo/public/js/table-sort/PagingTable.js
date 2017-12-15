@@ -382,6 +382,15 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
                 CreatePageNavition();
             }
         },
+        //lấy item
+        getItem:function (key, keyValue) {
+            for (var i = 0; i < listRowTable.length; i++) {
+                if (listRowTable[i].data[key] == keyValue) {
+                    return listRowTable[i];
+                }
+            }
+            return null;
+        },
         //update item with ky ang key value
         UpdateItemInListRowTable:function (key, keyValue, value) {
             var isUpdate = false;
@@ -396,6 +405,9 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
             if (isUpdate) {
                 GetRecordInpage(pageNow);
             }
+        },
+        getCountItem: function(){
+            return listRowTable.length;
         }
     }
     return pagin;

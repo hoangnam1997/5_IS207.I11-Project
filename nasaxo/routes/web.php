@@ -114,6 +114,12 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'productcategory'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageProductCategoryController@GetProductCategorys');
+		Route::post('search','ManageProductCategoryController@actionSearch');
+		Route::post('delete','ManageProductCategoryController@actionDelete');
+		Route::post('add','ManageProductCategoryController@actionAdd');
+		Route::post('update','ManageProductCategoryController@actionUpdate');
+
+
 	});
 	// group product
 	Route::group(['prefix'=>'product'],function(){
