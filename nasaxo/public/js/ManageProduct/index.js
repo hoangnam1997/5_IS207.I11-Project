@@ -1,140 +1,3 @@
-// create by namnh
-// create table from data listDataTable 
-var columnFormat = {
-	"tr": {
-			// "class": "col"
-		},
-		"td": [{
-			// "class": "",
-			"text": "#STT#"
-		},{
-			"class":"positionLeft",
-			"text": "#Picture#"
-		},{
-			// "class": "",
-			"text": "#Name#"
-		},{
-			// "class": "",
-			"text": "#ProductCategory#"
-		},{
-			// "class": "",
-			"text": "#Price#<label class='lable-detail' data-detail='#STT#'>Chi tiết</label>"
-		},{
-			// "class": "",
-			"text": "#Description#"
-		},{
-			// "class": "",
-			"text": "#Action#"
-		}
-		]
-	};
-// list dataTalePrice
-var listDataTablePrice = [{
-	"data":{
-		"STT":"1",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-},{
-	"data":{
-		"STT":"2",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-},{
-	"data":{
-		"STT":"3",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-},{
-	"data":{
-		"STT":"4",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-},{
-	"data":{
-		"STT":"5",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-},{
-	"data":{
-		"STT":"6",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-},{
-	"data":{
-		"STT":"7",
-		"StartDay":'01/01/0001',
-		"EndDay":"01/01/0001",
-		"Price":"20.000đ",
-		"Discount":"5%",
-	},
-	"flag":0
-}];
-// columnFormat for price
-var columnFormatPrice = {
-	"tr": {
-			// "class": "col"
-		},
-		"td": [{
-			// "class": "",
-			"text": "#STT#"
-		},{
-			"text": "#StartDay#"
-		},{
-			// "class": "",
-			"text": "#EndDay#"
-		},{
-			// "class": "",
-			"text": "#Price#"
-		},{
-			// "class": "",
-			"text": "#Discount#"
-		}
-		]
-	};
-//function onclick detail 
-function onClickDetail(){
-	$("#tablePrice").PagingTable(columnFormatPrice,listDataTablePrice);
-}
-function pageLoaded(){
-	$('.editProductCategory').attr('data-toggle','modal');
-	$('.editProductCategory').attr('data-target','#ProductModal');
-	$('.lable-detail').attr('data-toggle','modal');
-	$('.lable-detail').attr('data-target','#PriceDetailModal');
-	$('.lable-detail').on('click',function(){
-		onClickDetail();
-	});
-}
-// remove picture
-function RemovePictureEvent(elemtne){
-	$(elemtne).find('.removeImg').on('click',function(){
-		$(this).parent().remove();
-	});
-}
-var inat = $("#table-content").PagingTable(columnFormat,listDataTable,pageLoaded);
 // function onclick change image
 $('.input-Img').on('click',function(){
 	$(this).parent().find('input[type=file]').click();
@@ -155,4 +18,36 @@ $('input[type=file]').on('change',function(e){
 		}
 	});
 	$(this).val('');
+});
+// remove picture
+function RemovePictureEvent(elemtne){
+	$(elemtne).find('.removeImg').on('click',function(){
+		$(this).parent().remove();
+	});
+}
+
+// function ajax get view for admin
+$('#btnSearch').on('click',function(){
+	var _token = $('meta[name="_token"]').attr('content');
+	$valueSearch = $('#inputSearch').val();
+	// tạo ra đường dẫn route
+	urlNew = url + '/admin/product/search';
+	// thực hiện lấy view về
+	$.ajax({
+		type:"POST",
+		url: urlNew,
+		cache:false,
+		data:{'_token':_token,'valueSearch':$valueSearch},
+		success:function($re){
+			$('#contentBodySearch').html($re);
+		}
+	});
+});
+$("#inputSearch").keyup(function(event)
+{
+	var code = event.keyCode || event.which;
+	if (code === 13)
+	{
+		$('#btnSearch').click();
+	}
 });

@@ -125,6 +125,10 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'product'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageProductController@GetProducts');
+		Route::any('search','ManageProductController@actionSearch');
+		Route::any('delete','ManageProductController@actionDelete');
+		Route::any('prices','ManageProductController@actionGetPrices');
+
 	});
 	// group statictis
 	Route::group(['prefix'=>'statictis'],function(){
