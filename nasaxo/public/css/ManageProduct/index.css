@@ -1,4 +1,15 @@
 /* create by namnh */
+.itemDetail{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 25px;
+}
+.itemDetail{
+	border: 1px solid #A0A0A0;
+	margin: 3px;
+}
 .search-input{
 	padding-top: 15px;
 }
@@ -9,6 +20,12 @@
 }
 .Table-Pagination{
 	text-align: right;
+}
+.modal-backdrop{
+	z-index: 98!important;
+}
+.modal{
+	z-index: 99!important;
 }
 .header-content{
 	padding-top: 10px;
@@ -29,6 +46,9 @@
 	border-bottom: 1px solid #A0A0A0;
 	color: #2FB42F;
 }
+.itemDivDetail{
+	display: inline-block;
+}
 .img-product-edit{
 	width: 60px;
 	height: 60px;
@@ -37,6 +57,14 @@
 }
 .item-picture{
 	display: inline-block;
+}
+.removeItem{
+	position: relative;
+	top: -17px;
+	left: -15px;
+	color: #450404;
+	font-size: 13px;
+	cursor: pointer;
 }
 .removeImg{
 	position: relative;

@@ -96,11 +96,13 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'color'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageColorController@GetColors');
+		Route::any('getListColor','ManageColorController@actionGetColors');
 	});
 	// group size
 	Route::group(['prefix'=>'size'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageSizeController@GetSizes');
+		Route::any('getListSize','ManageSizeController@actionGetSizes');
 	});
 	// group customer
 	Route::group(['prefix'=>'customer'],function(){
@@ -114,6 +116,7 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'productcategory'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageProductCategoryController@GetProductCategorys');
+		Route::any('getListCategory','ManageProductCategoryController@actionGetList');
 		Route::post('search','ManageProductCategoryController@actionSearch');
 		Route::post('delete','ManageProductCategoryController@actionDelete');
 		Route::post('add','ManageProductCategoryController@actionAdd');
@@ -128,6 +131,8 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::any('search','ManageProductController@actionSearch');
 		Route::any('delete','ManageProductController@actionDelete');
 		Route::any('prices','ManageProductController@actionGetPrices');
+		Route::any('add','ManageProductController@actionAdd');
+		Route::any('getItem','ManageProductController@actionGetItem');
 
 	});
 	// group statictis

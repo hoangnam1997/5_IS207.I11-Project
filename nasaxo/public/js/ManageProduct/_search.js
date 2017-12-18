@@ -75,6 +75,54 @@ function onClickDetail($element){
 function pageLoaded(){
 	$('.editItem').attr('data-toggle','modal');
 	$('.editItem').attr('data-target','#ProductModal');
+	$('.editItem').on('click',function(){
+		cls();
+		$idEdit = $(this).data('edit');
+		$('#btnSubmitModel').attr('data-action','update');
+		$('#btnSubmitModel').attr('data-id',$idEdit);
+		// lấy thông tin chèn vào form
+		var _token = $('meta[name="_token"]').attr('content');
+		// tạo ra đường dẫn route
+		urlNew = url + '/admin/product/getItem';
+		// thực hiện lấy view về
+		$.ajax({
+			type:"POST",
+			url: urlNew,
+			cache:false,
+			data:{'_token':_token,'idSend':$idEdit},
+			success:function($re){
+				// tên nhóm sp
+				$('#txtCategory').val($re['nameCategory']);
+				// id nhóm
+				$('#txtIdCategory').val($re['idCategory']);
+				// tên sp
+				$('#Product').val($re['nameProduct']);
+				// giảm giá
+				$('#discountProduct').val($re['discount']);
+				// giá
+				$('#priceProduct').val($re['price']);
+				// mô tả
+				$('#inputDescriotion').val($re['Description']);
+				// màu 
+				$('#groupColors').html($re['listColor']);
+				// size
+				$('#groupSizes').html($re['listSize']);
+				// hình ảnh
+				$('#groupPicture').html($re['pictures']);
+
+				$('#groupSizes').find('.removeItem').off('click').on('click',function(){
+					$(this).parent().remove();
+				});
+				$('#groupColors').find('.removeItem').off('click').on('click',function(){
+					$(this).parent().remove();
+				});
+				$('#groupPicture').find('.item-picture').off('click').on('click',function(){
+					$(this).remove();
+				});
+			}
+		});
+	});
+	
 	$('.lable-detail').attr('data-toggle','modal');
 	$('.lable-detail').attr('data-target','#PriceDetailModal');
 	$('.lable-detail').on('click',function(){

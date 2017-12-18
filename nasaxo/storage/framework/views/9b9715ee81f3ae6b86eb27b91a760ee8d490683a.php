@@ -118,7 +118,8 @@
 					<?php foreach ($listProductInvolve as $valueInvolve) { ?>
 					<?php $priceInvolve = $valueInvolve->Prices()->whereNull('EndDate')->get()[0]; ?>
 					<div class="swiper-slide" title="<?php echo $valueInvolve->Name; ?>" onclick="detailProduct(<?php echo $valueInvolve->id; ?>)"">
-						<div class="image-invole" style="background-image: url('<?php echo url('public/images/'); ?>/<?php echo $valueInvolve->Pictures()->get()[0]->Url; ?>');"></div>
+						<?php $img = $valueInvolve->Pictures()->get(); ?>
+						<div class="image-invole" style="background-image: url('<?php echo url('public/images/'); ?>/<?php echo isset($img[0]) ? $img[0]->Url : "default.jpg"; ?>');"></div>
 						<span class="title-invole"><?php echo substr($valueInvolve->Name,0,22).' ...' ?></span>
 						<span class="price-invole"><?php echo $priceInvolve->Price - ($priceInvolve->Price * $priceInvolve->Discount / 100); ?> VNĐ</span>
 						<span class="priceOld-invole"><?php echo $priceInvolve->Price ?> VNĐ</span>

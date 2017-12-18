@@ -4,7 +4,7 @@
 <div class="modal fade" id="ProductModal" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content product-->
-		<div class="modal-content">
+		<div class="modal-content" style="z-index: 10;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<h4 class="modal-title">Thông tin sản phẩm</h4>
@@ -12,16 +12,12 @@
 			<div class="modal-body">
 				<form class="form-horizontal" action="">
 					<div class="form-group">
-						<label class="control-label col-sm-3" for="Product">Nhóm sản phẩm:</label>
+						<label class="control-label col-sm-3" for="txtCategory">Nhóm sản phẩm:</label>
 						<div class="col-xs-9">
 							<div class="input-group col-sm-12">
 								<span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
-								<select class="form-control">
-									<option value="0">Nhóm 1</option>
-									<option value="1">Nhóm 2</option>
-									<option value="2">Nhóm 3</option>
-									<option value="3">Nhóm 4</option>
-								</select>
+								<input type="hidden" class="form-control" id="txtIdCategory">
+								<input type="text" class="form-control" id="txtCategory">
 							</div>
 						</div>
 					</div>
@@ -30,7 +26,35 @@
 						<div class="col-xs-9">
 							<div class="input-group col-sm-12">
 								<span class="input-group-addon"><i class="fa fa-tags" aria-hidden="true"></i></span>
-								<input type="text" class="form-control" id="Product" name="Product" value="Sản phẩm" placeholder="Nhập thông tin sản phẩm">
+								<input type="text" class="form-control" id="Product" name="Product">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="txtColor">Màu sắc:</label>
+						<div class="col-xs-9">
+							<div class="inputPictureGroup ">
+								<div class="input-group col-sm-12">
+									<span class="input-group-addon"><i class="fa fa-tags" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" id="txtColor">
+								</div>
+								<div id="groupColors">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="txtSize">Kích thước:</label>
+						<div class="col-xs-9" >
+							<div class="inputPictureGroup ">
+								<div class="input-group col-sm-12">
+									<span class="input-group-addon"><i class="fa fa-tags" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" id="txtSize">
+								</div>
+								<div id="groupSizes">
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -39,7 +63,7 @@
 						<div class="col-xs-9">
 							<div class="input-group col-sm-12">
 								<span class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></span>
-								<input type="text" class="form-control" id="priceProduct" name="priceProduct" value="20.000đ" placeholder="Nhập giá">
+								<input type="text" class="form-control" id="priceProduct" name="priceProduct">
 							</div>
 						</div>
 					</div>
@@ -48,7 +72,7 @@
 						<div class="col-xs-9">
 							<div class="input-group col-sm-12">
 								<span class="input-group-addon"><i class="fa fa-bomb" aria-hidden="true"></i></span>
-								<input type="text" class="form-control" id="discountProduct" name="discountProduct" value="5" placeholder="Nhập khuyến mãi (%)">
+								<input type="text" class="form-control" id="discountProduct" name="discountProduct" placeholder="Nhập khuyến mãi (%)">
 							</div>
 						</div>
 					</div>
@@ -76,7 +100,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-info" data-dismiss="modal">Chấp nhận</button>
+				<button id="btnSubmitModel" type="button" class="btn btn-info">Chấp nhận</button>
 				<button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
 			</div>
 		</div>

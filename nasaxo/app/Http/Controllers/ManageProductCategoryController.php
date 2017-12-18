@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\ProductCategory as ProductCategory;
 use App\Product as Product;
+use Response;
 class ManageProductCategoryController extends Controller
 {
     public function GetProductCategorys(){
@@ -15,10 +16,22 @@ class ManageProductCategoryController extends Controller
     // *Date: 14/12/2017
     // *Description: Search
     public function actionSearch(){
-    	$aParameter = array_merge($_POST,$_GET);
-    	$valueSearch =isset($aParameter['valueSearch'])? $aParameter['valueSearch'] : "";
-    	$listCategory = ProductCategory::where([['IsDelete','=',false],['Name','like','%'. $valueSearch .'%']])->get();
-    	return view('ManageProductCategory._search',['listCategory'=>$listCategory]);
+        $aParameter = array_merge($_POST,$_GET);
+        $valueSearch =isset($aParameter['valueSearch'])? $aParameter['valueSearch'] : "";
+        $listCategory = ProductCategory::where([['IsDelete','=',false],['Name','like','%'. $valueSearch .'%']])->get();
+        return view('ManageProductCategory._search',['listCategory'=>$listCategory]);
+    }
+    // *Create by NGuyễn Hoàng Nam
+    // *Date: 16/12/2017
+    // *Description: get list category
+    public function actionGetList(){
+        $valueSearch = isset($_GET['term']) ? $_GET['term']: "";
+    	$listCategory = ProductCategory::where([['IsDelete','=',false],['Name','like','%'.$valueSearch.'%']])->get();
+        $aReturn=[];
+        foreach ($listCategory as $value) {
+            $aReturn[] = array('id'=>$value->id,'value'=>$value->Name);
+        }
+        return Response::json($aReturn);
     }
     // *Create by NGuyễn Hoàng Nam
     // *Date: 14/12/2017
