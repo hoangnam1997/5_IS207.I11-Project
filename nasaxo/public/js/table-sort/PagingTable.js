@@ -310,6 +310,7 @@ $.fn.PagingTable = function(columnFormat,listDataTable,eventAfter=null){
                 isDisplay = false;
                 for (var j = 0; j < keys.length; j++) {
                     if (listRowTable[i].data[keys[j]] == null) continue;
+                    if(keys[j]=='Action') continue;
                     if (covertUnicodeToChar(listRowTable[i].data[keys[j]].toString()).toUpperCase().indexOf(covertUnicodeToChar(textChange).toUpperCase()) > -1) {
                         listRowTable[i].flag = 0;
                         isDisplay = true;

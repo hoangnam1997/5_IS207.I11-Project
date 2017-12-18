@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="_token" content="{{ csrf_token() }}">
 	<meta property="fb:app_id" content="1905424643105702" />
+	<link rel="icon" type="image/png" href="{!! url('public/images/ico-title.png') !!}">
 	<!-- font fa -->
 	<link rel="stylesheet" type="text/css" href="{!! url('public/css/font-awesome.min.css') !!}">
 	@section('link') 

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="{!! url('public/images/ico-title.png') !!}">
   <title>@section('title') Nasaxo Shop @show</title>
   @section('link')
   <meta name="_token" content="{{ csrf_token() }}">

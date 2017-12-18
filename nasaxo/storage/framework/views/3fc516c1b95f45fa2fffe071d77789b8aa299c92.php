@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="<?php echo url('public/images/ico-title.png'); ?>">
   <title><?php $__env->startSection('title'); ?> Nasaxo Shop <?php echo $__env->yieldSection(); ?></title>
   <?php $__env->startSection('link'); ?>
   <meta name="_token" content="<?php echo e(csrf_token()); ?>">

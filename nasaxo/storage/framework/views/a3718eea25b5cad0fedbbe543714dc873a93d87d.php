@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="_token" content="<?php echo e(csrf_token()); ?>">
 	<meta property="fb:app_id" content="1905424643105702" />
+	<link rel="icon" type="image/png" href="<?php echo url('public/images/ico-title.png'); ?>">
 	<!-- font fa -->
 	<link rel="stylesheet" type="text/css" href="<?php echo url('public/css/font-awesome.min.css'); ?>">
 	<?php $__env->startSection('link'); ?> 

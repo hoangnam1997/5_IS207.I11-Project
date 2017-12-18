@@ -44,7 +44,6 @@
 <!-- end modals -->
 <!-- start container -->
 <div class="container-fluid">
-
 	<!-- start row -->
 	<div class="row">
 		<div class="col-xs-12 header-content">
@@ -68,6 +67,5 @@
 	</div>
 	<!-- end row -->
 </div>
-
 <!-- script custom js -->
 <script type="text/javascript" src="{!! url('public/js/ManageProductCategory/index.js') !!}"></script>

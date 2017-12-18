@@ -103,6 +103,10 @@ Route::group(['prefix'=>'admin'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageSizeController@GetSizes');
 		Route::any('getListSize','ManageSizeController@actionGetSizes');
+		Route::any('search','ManageSizeController@actionSearch');
+		Route::post('delete','ManageSizeController@actionDelete');
+		Route::post('add','ManageSizeController@actionAdd');
+
 	});
 	// group customer
 	Route::group(['prefix'=>'customer'],function(){
