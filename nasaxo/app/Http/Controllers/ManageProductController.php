@@ -130,9 +130,10 @@ class ManageProductController extends Controller
 		$itemResult['category'] = $newProduct->ProductCategory()->get()[0]->Name;
 		$itemResult['price'] = $newProduct->Prices()->whereNull('EndDate')->get()[0]->Price;
 		//  giá
-		$priceOle = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$newProduct->id],['EndDate','=',null]])->get();
-		if(isset($priceOle[0])){
-			$priceOle[0]->EndDate = date('Y-m-d');
+		$priceOle = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$newProduct->id]])->whereNull('EndDate')->get();
+		foreach ($priceOle as $key => $value) {
+			$value->EndDate = date('Y-m-d');
+			$value->save();
 		}
 		$priceProduct  = new ProductPrice;
 		$priceProduct->Price = $intPrice;

@@ -55,7 +55,11 @@ class ManageAddressController extends Controller
     }
 	// trả lại view City
     public function GetCityView(){
-    	return 'Citys';
+        return view('ManageAddress.city.index');
+    } 
+    public function actionSearchCity(){
+        
+    	return view('ManageAddress.city.index');
     } 
 	// trả lại view Wards
     public function GetWardView(){

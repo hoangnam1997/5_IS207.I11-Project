@@ -86,17 +86,26 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::post('city','ManageAddressController@GetCityView');
 		// lấy view thành phó
 		Route::post('ward','ManageAddressController@GetWardView');
+		Route::post('search/city','ManageAddressController@actionSearchCity');
 	});
 	// group khuyến mãi
 	Route::group(['prefix'=>'promotion'],function(){
 		// lấy view khuyến mãi
 		Route::post('/','ManagePromotionController@GetPromotion');
+		Route::any('search','ManagePromotionController@actionSearch');
+		Route::any('delete','ManagePromotionController@actionDelete');
+		Route::post('add','ManagePromotionController@actionAdd');
+		
 	});
 	// group color
 	Route::group(['prefix'=>'color'],function(){
 		// lấy view màu sắt
 		Route::post('/','ManageColorController@GetColors');
 		Route::any('getListColor','ManageColorController@actionGetColors');
+		Route::any('search','ManageColorController@actionSearch');
+		Route::any('delete','ManageColorController@actionDelete');
+		Route::post('add','ManageColorController@actionAdd');
+
 	});
 	// group size
 	Route::group(['prefix'=>'size'],function(){
