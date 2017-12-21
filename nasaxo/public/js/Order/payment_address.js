@@ -42,7 +42,7 @@ $(document).ready(function(){
 	$('#city').autocomplete({
 		minLenght:3,
 		autoFocus:true,
-		source: url+'/admin/address/getallcity?id=1',
+		source: url+'/admin/address/getallcity',
 		select: function(event,ui){
 			$('#cityControl').val(ui.item.id);
 			districtsAutocomplete(ui.item.id);

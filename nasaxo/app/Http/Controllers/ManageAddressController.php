@@ -51,7 +51,7 @@ class ManageAddressController extends Controller
     }
 	// trả lại view Districts
     public function GetDistrictView(){
-    	return 'Districts';
+        return view('ManageAddress.district.index');
     }
 	// trả lại view City
     public function GetCityView(){
@@ -63,10 +63,36 @@ class ManageAddressController extends Controller
         $listCity = City::where([['IsDelete','=',false],['Name','like','%'. $valueSearch .'%']])->get();
         return view('ManageAddress.city._search',['listCity'=>$listCity]);
     } 
+    public function actionSearchDistrict(){
+        $aParameter = array_merge($_POST,$_GET);
+        $valueSearch =isset($aParameter['valueSearch'])? $aParameter['valueSearch'] : "";
+        $listDistrict = District::where([['IsDelete','=',false],['Name','like','%'. $valueSearch .'%']])->get();
+        $listRes = [];
+        foreach ($listDistrict as $key => $value) {
+            $listRes[$key]['id'] = $value->id;
+            $listRes[$key]['Name'] = $value->Name;
+            $listRes[$key]['Description'] = $value->Description;
+            $city = City::find($value->ID_City);
+            $listRes[$key]['idCity'] = $value->ID_City;
+            $listRes[$key]['nameCity'] = isset($city)  ? $city->Name :"";
+        }
+        return view('ManageAddress.district._search',['listDistrict'=>$listRes]);
+    } 
     public function actionDeleteCity(){
         $aParameter = array_merge($_POST,$_GET);
         $idDelete =isset($aParameter['idSend'])? $aParameter['idSend'] : "";
         $item = City::find($idDelete);
+        if(isset($item)){
+            $item->IsDelete = true;
+            if($item->save())
+                return '1';
+        }
+        return '0';
+    } 
+    public function actionDeleteDistrict(){
+        $aParameter = array_merge($_POST,$_GET);
+        $idDelete =isset($aParameter['idSend'])? $aParameter['idSend'] : "";
+        $item = District::find($idDelete);
         if(isset($item)){
             $item->IsDelete = true;
             if($item->save())
@@ -89,8 +115,32 @@ class ManageAddressController extends Controller
         }
         return '0';
     } 
+    public function actionAddDistrict(){
+        $aParameter = array_merge($_POST,$_GET);
+        if(isset($aParameter['valueName'])){
+            $valueName = $aParameter['valueName'];
+            $valueDescription = isset($aParameter['valueDescription'])? $aParameter['valueDescription']:"";
+            $valueIdCity = isset($aParameter['idCity'])? $aParameter['idCity']:1;
+            $newItem = isset($aParameter['idSend']) ? District::find($aParameter['idSend']) : new District;
+            $newItem->Name = $valueName;
+            $newItem->ID_City = $valueIdCity;
+            $newItem->Description= $valueDescription;
+            $newItem->IsDelete = false;
+            $valueRes = [];
+            if($newItem->save()){
+                $valueRes['id'] = $newItem->id;
+                $valueRes['Name'] = $newItem->Name;
+                $valueRes['Description'] = $newItem->Description;
+                $city = City::find($newItem->ID_City);
+                $valueRes['idCity'] = $newItem->ID_City;
+                $valueRes['nameCity'] = isset($city)  ? $city->Name :"";
+                return $valueRes;
+            }
+        }
+        return '0';
+    } 
 	// trả lại view Wards
     public function GetWardView(){
-     return 'Wards';
- }
+       return 'Wards';
+   }
 }
