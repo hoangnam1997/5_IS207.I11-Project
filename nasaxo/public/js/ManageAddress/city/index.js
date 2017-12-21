@@ -68,9 +68,9 @@ $('#btnSubmitModel').off('click').on('click',function(){
 
 							inat.UpdateItemInListRowTable('id',$idItem,{
 								'data':{'id':$re['id'],
-								'Name':$re['Sizes'],
+								'Name':$re['Name'],
 								'Description':$re['Description'],
-								"Action":"<i data-edit='"+$re['id']+"' class='editSize fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i data-delete='"+$re['id']+"' class='deleteItem fa fa-trash-o fa-2x' aria-hidden='true'></i>",
+								"Action":"<i data-edit='"+$re['id']+"' class='editItem fa fa-pencil-square-o fa-2x' aria-hidden='true'></i><i data-delete='"+$re['id']+"' class='deleteItem fa fa-trash-o fa-2x' aria-hidden='true'></i>",
 								'STT':inat.getItem('id',$idItem)['data']['STT'],
 							},
 							'flag':0

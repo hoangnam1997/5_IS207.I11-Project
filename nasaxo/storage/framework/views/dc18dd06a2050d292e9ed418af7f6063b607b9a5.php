@@ -67,5 +67,5 @@
     	];
     </script>
     <!-- table sort -->
-    <script type="text/javascript" src="{!! url('public/js/table-sort/PagingTable.js') !!}"></script>
-    <script type="text/javascript" src="{!! url('public/js/ManageAddress/city/_search.js') !!}"></script>
+    <script type="text/javascript" src="<?php echo url('public/js/table-sort/PagingTable.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo url('public/js/ManageAddress/city/_search.js'); ?>"></script>

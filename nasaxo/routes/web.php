@@ -87,6 +87,8 @@ Route::group(['prefix'=>'admin'],function(){
 		// lấy view thành phó
 		Route::post('ward','ManageAddressController@GetWardView');
 		Route::post('search/city','ManageAddressController@actionSearchCity');
+		Route::post('delete/city','ManageAddressController@actionDeleteCity');
+		Route::post('add/city','ManageAddressController@actionAddCity');
 	});
 	// group khuyến mãi
 	Route::group(['prefix'=>'promotion'],function(){

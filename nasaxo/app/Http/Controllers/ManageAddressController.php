@@ -58,11 +58,39 @@ class ManageAddressController extends Controller
         return view('ManageAddress.city.index');
     } 
     public function actionSearchCity(){
-        
-    	return view('ManageAddress.city.index');
+        $aParameter = array_merge($_POST,$_GET);
+        $valueSearch =isset($aParameter['valueSearch'])? $aParameter['valueSearch'] : "";
+        $listCity = City::where([['IsDelete','=',false],['Name','like','%'. $valueSearch .'%']])->get();
+        return view('ManageAddress.city._search',['listCity'=>$listCity]);
+    } 
+    public function actionDeleteCity(){
+        $aParameter = array_merge($_POST,$_GET);
+        $idDelete =isset($aParameter['idSend'])? $aParameter['idSend'] : "";
+        $item = City::find($idDelete);
+        if(isset($item)){
+            $item->IsDelete = true;
+            if($item->save())
+                return '1';
+        }
+        return '0';
+    } 
+    public function actionAddCity(){
+        $aParameter = array_merge($_POST,$_GET);
+        if(isset($aParameter['valueName'])){
+            $valueName = $aParameter['valueName'];
+            $valueDescription = isset($aParameter['valueDescription'])? $aParameter['valueDescription']:"";
+            $newItem = isset($aParameter['idSend']) ? City::find($aParameter['idSend']) : new City;
+            $newItem->Name = $valueName;
+            $newItem->Description= $valueDescription;
+            $newItem->IsDelete = false;
+            if($newItem->save()){
+                return $newItem;
+            }
+        }
+        return '0';
     } 
 	// trả lại view Wards
     public function GetWardView(){
-    	return 'Wards';
-    }
+     return 'Wards';
+ }
 }
