@@ -106,13 +106,13 @@ $('#btnSubmitModel').off('click').on('click',function(){
 			// thêm
 			default:
 			// tạo ra đường dẫn route
-			urlNew = url + '/admin/color/add';
+			urlNew = url + '/admin/promotion/add';
 			// thực hiện lấy view về
 			$.ajax({
 				type:"POST",
 				url: urlNew,
 				cache:false,
-				data:{'_token':_token,'valueName':$valueName,'valueDescription':$valueDescription},
+				data:{'_token':_token,'valueDescription':$valueDescription,'promotionDiscount':$promotionDiscount,'basePureChase':$basePureChase,'promotionName':$promotionName,'endDate':$endDate,'imgPromotion':$imgPromotion,'startDate':$startDate},
 				success:function($re){
 					if($re=='0'){
 

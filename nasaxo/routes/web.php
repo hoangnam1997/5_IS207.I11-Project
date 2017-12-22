@@ -88,10 +88,13 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::post('ward','ManageAddressController@GetWardView');
 		Route::post('search/city','ManageAddressController@actionSearchCity');
 		Route::post('search/district','ManageAddressController@actionSearchDistrict');
+		Route::any('search/ward','ManageAddressController@actionSearchWard');
 		Route::post('delete/city','ManageAddressController@actionDeleteCity');
+		Route::post('delete/ward','ManageAddressController@actionDeleteWard');
 		Route::post('delete/district','ManageAddressController@actionDeleteDistrict');
 		Route::post('add/city','ManageAddressController@actionAddCity');
 		Route::post('add/district','ManageAddressController@actionAddDistrict');
+		Route::post('add/ward','ManageAddressController@actionAddWard');
 	});
 	// group khuyến mãi
 	Route::group(['prefix'=>'promotion'],function(){

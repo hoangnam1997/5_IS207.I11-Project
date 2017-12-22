@@ -78,10 +78,40 @@ class ManageAddressController extends Controller
         }
         return view('ManageAddress.district._search',['listDistrict'=>$listRes]);
     } 
+    public function actionSearchWard(){
+        $aParameter = array_merge($_POST,$_GET);
+        $valueSearch =isset($aParameter['valueSearch'])? $aParameter['valueSearch'] : "";
+        $listWard = Ward::where([['IsDelete','=',false],['Name','like','%'. $valueSearch .'%']])->get();
+        $listRes = [];
+        foreach ($listWard as $key => $value) {
+            $listRes[$key]['id'] = $value->id;
+            $listRes[$key]['Name'] = $value->Name;
+            $listRes[$key]['Description'] = $value->Description;
+            $District = District::find($value->ID_District);
+            $listRes[$key]['idDistrict'] = $value->ID_District;
+            $listRes[$key]['nameDistrict'] = isset($District)  ? $District->Name :'';
+            $idCity  = isset($District) ? $District->ID_City : '';
+            $listRes[$key]['idCity'] = $idCity;
+            $city = City::find($idCity);
+            $listRes[$key]['nameCity'] = isset($city)  ? $city->Name :'';
+        }
+        return view('ManageAddress.ward._search',['listWard'=>$listRes]);
+    } 
     public function actionDeleteCity(){
         $aParameter = array_merge($_POST,$_GET);
         $idDelete =isset($aParameter['idSend'])? $aParameter['idSend'] : "";
         $item = City::find($idDelete);
+        if(isset($item)){
+            $item->IsDelete = true;
+            if($item->save())
+                return '1';
+        }
+        return '0';
+    } 
+    public function actionDeleteWard(){
+        $aParameter = array_merge($_POST,$_GET);
+        $idDelete =isset($aParameter['idSend'])? $aParameter['idSend'] : "";
+        $item = Ward::find($idDelete);
         if(isset($item)){
             $item->IsDelete = true;
             if($item->save())
@@ -139,8 +169,36 @@ class ManageAddressController extends Controller
         }
         return '0';
     } 
+    public function actionAddWard(){
+        $aParameter = array_merge($_POST,$_GET);
+        if(isset($aParameter['valueName'])){
+            $valueName = $aParameter['valueName'];
+            $valueDescription = isset($aParameter['valueDescription'])? $aParameter['valueDescription']:"";
+            $valueIdCity = isset($aParameter['idCity'])? $aParameter['idCity']:1;
+            $newItem = isset($aParameter['idSend']) ? Ward::find($aParameter['idSend']) : new Ward;
+            $newItem->Name = $valueName;
+            $newItem->ID_District = $valueIdCity;
+            $newItem->Description= $valueDescription;
+            $newItem->IsDelete = false;
+            $valueRes = [];
+            if($newItem->save()){
+                $valueRes['id'] = $newItem->id;
+                $valueRes['Name'] = $newItem->Name;
+                $valueRes['Description'] = $newItem->Description;
+                $District = District::find($newItem->ID_District);
+                $valueRes['idDistrict'] = $newItem->ID_District;
+                $valueRes['nameDistrict'] = isset($District)  ? $District->Name :'';
+                $idCity  = isset($District) ? $District->ID_City : '';
+                $valueRes['idCity'] = $idCity;
+                $city = City::find($idCity);
+                $valueRes['nameCity'] = isset($city)  ? $city->Name :'';
+                return $valueRes;
+            }
+        }
+        return '0';
+    } 
 	// trả lại view Wards
     public function GetWardView(){
-       return 'Wards';
-   }
+     return view('ManageAddress.ward.index');
+ }
 }
