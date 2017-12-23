@@ -173,7 +173,7 @@ class ManageProductController extends Controller
 		$savePicture = true;
 		$itemResult['picture'] = '';
 		// delete user picture
-		ProductPicture::where([['ID_Product','=',$newProduct->id]])->delete();
+		$listDelete = ProductPicture::where([['ID_Product','=',$newProduct->id]])->get();
 		foreach ($listPicture as $key => $value) {
 			// insert picture
 			$extention = $this->getTypeImage($value);
@@ -198,7 +198,9 @@ class ManageProductController extends Controller
 			$itemResult['picture'] .= '<img class="img-product" src="'.url("public/images/").'/'. $picture->Url .'">';
 		}
 		if($saveProduct && $savePrce && $saveColor && $saveSize && $savePicture){
-
+			foreach ($listDelete as $valueDelete) {
+				$this->deleteImage($valueDelete->ID_Picture,$valueDelete);
+			}
 			return $itemResult;
 		}
 		return '0';

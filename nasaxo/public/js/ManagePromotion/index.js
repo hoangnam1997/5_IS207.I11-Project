@@ -99,6 +99,8 @@ $('#btnSubmitModel').off('click').on('click',function(){
 							'flag':0
 						});
 						}
+						$('#imgPromotion').attr('src',url+'/public/images/'+$re['Picture']);
+						
 					}
 				}
 			});
@@ -134,6 +136,8 @@ $('#btnSubmitModel').off('click').on('click',function(){
 							'flag':0
 						});
 						}
+						$('#imgPromotion').attr('src',url+'/public/images/'+$re['Picture']);
+
 					}
 				}
 			});

@@ -100,6 +100,7 @@ $('#btnUpdate').off('click').on('click',function(){
 			.done(function($re) {
 				if($re =='1'){
 					alert('Cập nhật thành công!');
+					$('#h4Infomation').click();
 				}else{
 					alert('Xảy ra lỗi!');
 				}

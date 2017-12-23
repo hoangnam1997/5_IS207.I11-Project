@@ -183,14 +183,20 @@ class AccountController extends Controller
 				$userPicture->IsDelete = false;
 
 				// delete user picture
-				UsersPicture::where([['ID_Users','=',$user[0]->id]])->delete();
+				$listDelete = UsersPicture::where([['ID_Users','=',$user[0]->id]])->get();
+				
 				file_put_contents($url,file_get_contents($aParameter['image']));
 				if($user[0]->save() && $picture->save() && $userPicture->save())
+					foreach ($listDelete as $pictureDelete){
+						$this->deleteImage($pictureDelete->ID_Picture,$pictureDelete);
+					}
+					$cookieValue= array('id' =>$user[0]->id,'image'=>$picture->Url,'username'=>$user[0]->Username,'description'=>$user[0]->Description);
+					Cookie::queue('accountHome',json_encode($cookieValue));
 					return '1';
+				}
 			}
+			return '0';
 		}
-		return '0';
+
+
 	}
-
-
-}

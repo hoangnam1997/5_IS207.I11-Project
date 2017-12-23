@@ -62,8 +62,8 @@ class ManagePromotionController extends Controller
 		$newItem->EndDate= trim($endDate)=='' ? date('Y-m-d') : $endDate;
 		$newItem->IsDelete = false;
 		$newItem->save();
-		// delete user picture
-		PromotionPicture::where([['ID_Promotion','=',$newItem->id]])->delete();
+		// delete picture
+		$listDelete = PromotionPicture::where([['ID_Promotion','=',$newItem->id]])->get();
 		// insert picture
 		$extention = $this->getTypeImage($imgPromotion);
 		$idMaxImage = Picture::max('id');
@@ -88,6 +88,9 @@ class ManagePromotionController extends Controller
 			$aRes['Discount'] = $newItem->Discount;
 			$aRes['BasePurchase'] = $newItem->BasePurchase;
 			$aRes['Picture'] = $picture->Url;
+			foreach ($listDelete as $valueDelete) {
+				$this->deleteImage($valueDelete->ID_Picture,$valueDelete);
+			}
 			return $aRes;
 		}
 		return '0';

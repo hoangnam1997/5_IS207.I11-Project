@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Users as Users;
+use App\Picture as Picture;
+
 use Cookie;
 class Controller extends BaseController{
   use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -91,5 +93,14 @@ public function getTypeImage($src){
   }
   return $typeString;
 }
-
+public function deleteImage($idPicture,$itemDelete){
+   $picture =  Picture::find($idPicture);
+   if(isset($picture)){
+    if(file_exists(public_path('images/'.$picture->Url))){
+       unlink(public_path('images/'.$picture->Url));
+    }
+    $itemDelete->delete();
+    $picture->delete();
+   }
+}
 }
