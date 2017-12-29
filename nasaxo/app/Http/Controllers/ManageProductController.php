@@ -128,7 +128,6 @@ class ManageProductController extends Controller
 		$itemResult['Name'] = $newProduct->Name;
 		$itemResult['Description'] = $newProduct->Description;
 		$itemResult['category'] = $newProduct->ProductCategory()->get()[0]->Name;
-		$itemResult['price'] = $newProduct->Prices()->whereNull('EndDate')->get()[0]->Price;
 		//  giá
 		$priceOle = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$newProduct->id]])->whereNull('EndDate')->get();
 		foreach ($priceOle as $key => $value) {
@@ -143,6 +142,7 @@ class ManageProductController extends Controller
 		$priceProduct->ID_Product =	$newProduct->id;
 		$priceProduct->Discount =	$intDiscount;
 		$savePrce=$priceProduct->save();
+		$itemResult['price'] = $newProduct->Prices()->whereNull('EndDate')->get()[0]->Price;
 		// detail màu sắt
 		// delete
 		ProductColor::where([['ID_Product','=',$newProduct->id]])->delete();
