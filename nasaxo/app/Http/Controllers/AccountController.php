@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\ProductCategory as ProductCategory;
+use DB;
 use Mail;
 use Cookie;
 use App\Users as Users;
@@ -146,12 +147,11 @@ class AccountController extends Controller
 		}
 		return '0';
 	}
+	// Procedure
 	// thay đổi thông tin
 	public function ChangeInfo(){
 		if($this->isLogin([1,2])){
 			$aParameter = array_merge($_GET,$_POST);
-			
-
 			$idUser =  $this->getIdLogin();
 			$user = null;
 			if(isset($aParameter['PasswordOld']) && isset($aParameter['Password'])){
@@ -166,37 +166,36 @@ class AccountController extends Controller
 				}else {
 					$user[0]->Description = $aParameter['Description'];
 				}
-
 				// insert picture
-				$extention = $this->getTypeImage($aParameter['image']);
+			    $extention = $this->getTypeImage($aParameter['image']);
 				$idMaxImage = Picture::max('id');
 				$imageName = ++$idMaxImage. '.' . $extention;
 				$url =  'public/images/accounts'.'/'. $imageName;
 				$picture = new Picture;
 				$picture->Url = 'accounts/'.$imageName;
-				$picture->IsDelete = false;
+
 
 				// thêm userpicture
 				$userPicture = new UsersPicture;
 				$userPicture->ID_Users = $user[0]->id;
 				$userPicture->ID_Picture = $idMaxImage;
 				$userPicture->IsDelete = false;
-
+				file_put_contents($url,file_get_contents($aParameter['image']));
 				// delete user picture
 				$listDelete = UsersPicture::where([['ID_Users','=',$user[0]->id]])->get();
-				
-				file_put_contents($url,file_get_contents($aParameter['image']));
-				if($user[0]->save() && $picture->save() && $userPicture->save())
-					foreach ($listDelete as $pictureDelete){
-						$this->deleteImage($pictureDelete->ID_Picture,$pictureDelete);
-					}
-					$cookieValue= array('id' =>$user[0]->id,'image'=>$picture->Url,'username'=>$user[0]->Username,'description'=>$user[0]->Description);
-					Cookie::queue('accountHome',json_encode($cookieValue));
-					return '1';
+				foreach ($listDelete as $pictureDelete){
+					$this->deleteImage($pictureDelete->ID_Picture,$pictureDelete);
 				}
+				// Thực hiện proc thêm
+				// if($user[0]->save() && $picture->save() && $userPicture->save())
+				DB::statement('CALL sp_change_info(?,?,?,?)',[$user[0]->id,$user[0]->Password,$user[0]->Description,$picture->Url]);
+
+				$cookieValue= array('id' =>$user[0]->id,'image'=>$picture->Url,'username'=>$user[0]->Username,'description'=>$user[0]->Description);
+				Cookie::queue('accountHome',json_encode($cookieValue));
+				return '1';
 			}
-			return '0';
 		}
-
-
+		return '0';
 	}
+
+}

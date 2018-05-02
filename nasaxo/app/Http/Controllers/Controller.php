@@ -93,7 +93,7 @@ public function getTypeImage($src){
   }
   return $typeString;
 }
-public function deleteImage($idPicture,$itemDelete){
+public function deleteImage($idPicture,$itemDelete,$url =''){
    $picture =  Picture::find($idPicture);
    if(isset($picture)){
     if(file_exists(public_path('images/'.$picture->Url))){

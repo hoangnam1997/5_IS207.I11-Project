@@ -95,14 +95,14 @@ $('#btnUpdate').off('click').on('click',function(){
 			$.ajax({
 				type : 'POST',
 				url: url + '/account/changeinfo',
-				data: {'_token':_token ,'Description' : $('#txtDescription').val(),'PasswordOld' : $('#txtOldPass').val(),'Password' : $('#txtPass').val()},
+				data: {'_token':_token ,'image': $itemIage.attr('src'),'Description' : $('#txtDescription').val(),'PasswordOld' : $('#txtOldPass').val(),'Password' : $('#txtPass').val()},
 			})
 			.done(function($re) {
 				if($re =='1'){
 					alert('Cập nhật thành công!');
 					$('#h4Infomation').click();
 				}else{
-					alert('Xảy ra lỗi!');
+					alert($re);
 				}
 			})
 			.fail(function() {
