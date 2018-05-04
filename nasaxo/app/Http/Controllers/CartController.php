@@ -10,6 +10,7 @@ use App\Product as Product;
 use App\DeliveryPlace as DeliveryPlace;
 use App\Order as Order;
 use App\Promotion as Promotion;
+use DB;
 use Cookie;
 use DateTime;
 class CartController extends Controller
@@ -119,6 +120,7 @@ class CartController extends Controller
             if(!(isset($deliveryplace[0]))){
                 return '0';
             }
+            // proc
             // thêm hóa đơn
             $order = new Order;
             $order->Description='';
@@ -126,21 +128,25 @@ class CartController extends Controller
                 $order->ID_Promotion = unserialize($_COOKIE['promotion']);
                 $order->ID_DeliveryPlace =  $deliveryplace[0]->id;
                 $order->ID_User = $idUser;
-                $order->CreateDate = date('Y-m-d');
+                // $order->CreateDate = date('Y-m-d');
                 $order->ConfirmDate = null;
                 $order->IsPaied = 0;
                 $order->IsDelivered = 0;
                 $order->IsDelete = 0;
-                if($order->save()){
-                // danh sách giỏ hàng
-                    $listCartProduct = OrderProduct::where([['IsDelete','=',false],['ID_User','=',$idUser],['IsInCart','=',1]])->get();
-                    foreach ($listCartProduct as $valueCart) {
-                        $valueCart->IsInCart = 0;
-                        $valueCart->ID_Order =  $order->id;
-                        $valueCart->save();
-                    }
-                    return '1';
-                }
+
+                DB::statement('CALL sp_create_order(?,?,?,?,?,?,?,?)',[ $order->Description,$order->ID_Promotion,$order->ID_DeliveryPlace,$order->ID_User,$order->ConfirmDate,$order->IsPaied,$order->IsDelivered,$order->IsDelete]);
+                return '1';
+
+                // if($order->save()){
+                // // danh sách giỏ hàng
+                //     $listCartProduct = OrderProduct::where([['IsDelete','=',false],['ID_User','=',$idUser],['IsInCart','=',1]])->get();
+                //     foreach ($listCartProduct as $valueCart) {
+                //         $valueCart->IsInCart = 0;
+                //         $valueCart->ID_Order =  $order->id;
+                //         $valueCart->save();
+                //     }
+                //     return '1';
+                // }
             }
         }
         return redirect('0');
