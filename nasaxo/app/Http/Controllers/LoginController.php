@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Users as Users;
 use App\Picture as Picture;
+use DB;
 use App\UsersPicture as UsersPicture;
 use App\User_Role as User_Role;
-
-
 use Cookie;
 class LoginController extends Controller
 {
+	public const imageDefault = 'default.jpg';
 	public function index(){
 		return view('Account.Login');
 	}
@@ -28,7 +28,7 @@ class LoginController extends Controller
 		// get user
 		$user=Users::where([['Email','=',$email],['Password','=',md5($password)]])->orWhere([['Username','=',$email],['Password','=',md5($password)]])->get();
 		if(count($user)>0){
-			$imgUrl=LoginController::$imageDefault;
+			$imgUrl=LoginController::imageDefault;
 			$picture =  $user[0]->Picture()->get();
 			if(count($picture)>0){
 				$imgUrl=$picture[0]->Url;
@@ -67,6 +67,7 @@ class LoginController extends Controller
 		return '0';
 	}
 	// thực hiện tạo tài khoản
+	// proc
 	public function Rigis(){
 		$aParameter = array_merge($_GET,$_POST);
 		if(isset($aParameter['user'])){
@@ -82,36 +83,42 @@ class LoginController extends Controller
 				return '0';
 			}
 			// save account
-			$imgUrl=LoginController::$imageDefault;
+			$imgUrl=LoginController::imageDefault;
 			$newUs = new Users;
 			$newUs->Username = $usserNew['username'];
 			$newUs->Password = md5($usserNew['password']);
 			$newUs->Email = $usserNew['email'];
 			$newUs->Description ='';
 			$newUs->IsDelete =false;
-			if(!$newUs->save()){
-				return '0';
-			}
-			// save picture
-			$picture = new Picture;
-			$picture->Url = $imgUrl;
-			$picture->IsDelete = false;
-			if(!$picture->save()){
-				return '0';
-			}
-			// save detail img
-			$pictureUser = new UsersPicture;
-			$pictureUser->ID_Users = $newUs->id;
-			$pictureUser->ID_Picture = $picture->id;
-			$pictureUser->IsDelete = false;
-			if(!$pictureUser->save()){
-				return '0';
-			}
-			$roleDetail = new User_Role;
-			$roleDetail->ID_Users =  $newUs->id;
-			$roleDetail->ID_Role = 2;
-			$roleDetail->IsDelete = false;
-			if(!$roleDetail->save()){
+			// if(!$newUs->save()){
+			// 	return '0';
+			// }
+			// // save picture
+			// $picture = new Picture;
+			// $picture->Url = $imgUrl;
+			// $picture->IsDelete = false;
+			// if(!$picture->save()){
+			// 	return '0';
+			// }
+			// // save detail img
+			// $pictureUser = new UsersPicture;
+			// $pictureUser->ID_Users = $newUs->id;
+			// $pictureUser->ID_Picture = $picture->id;
+			// $pictureUser->IsDelete = false;
+			// if(!$pictureUser->save()){
+			// 	return '0';
+			// }
+			// $roleDetail = new User_Role;
+			// $roleDetail->ID_Users =  $newUs->id;
+			// $roleDetail->ID_Role = 2;
+			// $roleDetail->IsDelete = false;
+			// if(!$roleDetail->save()){
+			// 	return '0';
+			// }
+			$idRole = 2;
+			$excute = DB::select('CALL sp_create_users(?,?,?,?,?,?,?)',[$newUs->Username,$newUs->Password,$newUs->Email,$newUs->Description,$newUs->IsDelete,$idRole,$imgUrl]);
+			$newUs->id = isset($excute[0]) ? $excute[0]->id : -1;
+			if($newUs->id == -1) {
 				return '0';
 			}
 			// set cookie

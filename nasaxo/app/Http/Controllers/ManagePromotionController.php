@@ -42,7 +42,8 @@ class ManagePromotionController extends Controller
 				return '1';
 		}
 		return '0';
-	}	
+	}
+	//proc	
 	public function actionAdd(){
 		$aParameter = array_merge($_POST,$_GET);
 		$imgPromotion = isset($aParameter['imgPromotion'])? $aParameter['imgPromotion']:"";

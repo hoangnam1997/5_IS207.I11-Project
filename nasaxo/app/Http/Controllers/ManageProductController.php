@@ -10,6 +10,7 @@ use App\ProductColor as ProductColor;
 use App\ProductSize as ProductSize;
 use App\Picture as Picture;
 use App\ProductPicture as ProductPicture;
+use DB;
 class ManageProductController extends Controller
 {
 	// get view product
@@ -96,7 +97,13 @@ class ManageProductController extends Controller
 		}
 		return '0';
 	}
+	
+	//proc
 	public function actionadd(){
+
+		$vListColor=[];
+		$vListSize=[];
+		$vListPicture=[];
 		$itemResult = [];
 		$aParameter = array_merge($_POST,$_GET);
 		$idCategory = isset($aParameter['idCategory']) ? $aParameter['idCategory'] : 1;
@@ -118,13 +125,14 @@ class ManageProductController extends Controller
 		}else{
 			$newProduct  = new Product;
 		}
+
 		$newProduct->ID_ProductCategory = $idCategory;
 		$newProduct->Name = $nameProduct;
 		$newProduct->Description = $Description;
 		$newProduct->IsDelete = 0;
-		$saveProduct = $newProduct->save();
+		// $saveProduct = $newProduct->save();
 
-		$itemResult['id'] = $newProduct->id;
+		// $itemResult['id'] = $newProduct->id;
 		$itemResult['Name'] = $newProduct->Name;
 		$itemResult['Description'] = $newProduct->Description;
 		$itemResult['category'] = $newProduct->ProductCategory()->get()[0]->Name;
@@ -134,6 +142,7 @@ class ManageProductController extends Controller
 			$value->EndDate = date('Y-m-d');
 			$value->save();
 		}
+
 		$priceProduct  = new ProductPrice;
 		$priceProduct->Price = $intPrice;
 		$priceProduct->StartDate = date('Y-m-d');
@@ -141,22 +150,24 @@ class ManageProductController extends Controller
 		$priceProduct->IsDelete = 0;
 		$priceProduct->ID_Product =	$newProduct->id;
 		$priceProduct->Discount =	$intDiscount;
-		$savePrce=$priceProduct->save();
-		$itemResult['price'] = $newProduct->Prices()->whereNull('EndDate')->get()[0]->Price;
+		// $savePrce=$priceProduct->save();
+		// $itemResult['price'] = $newProduct->Prices()->whereNull('EndDate')->get()[0]->Price;
 		// detail màu sắt
 		// delete
 		ProductColor::where([['ID_Product','=',$newProduct->id]])->delete();
-		$saveColor = true;
+		// $saveColor = true;
 		foreach ($listColor as $key => $value) {
 			$colorDetail = new ProductColor;
 			$colorDetail->ID_Product = $newProduct->id;
 			$colorDetail->ID_Color = $value;
 			$colorDetail->IsDelete = false;
-			if(!$colorDetail->save()){
-				$saveColor = false;
-			}
+			$vListColor[] = $value;
+			// if(!$colorDetail->save()){
+			// 	$saveColor = false;
+			// }
 		}
-		$saveSize= true;
+
+		// $saveSize= true;
 		// delete
 		ProductSize::where([['ID_Product','=',$newProduct->id]])->delete();
 		// thêm danh sách size
@@ -165,9 +176,10 @@ class ManageProductController extends Controller
 			$sizeDetail->ID_Product =  $newProduct->id;
 			$sizeDetail->ID_Size = 	$value;
 			$sizeDetail->IsDelete = false;
-			if(!$sizeDetail->save()){
-				$saveSize = false;
-			}
+			$vListSize[] = $value;
+			// if(!$sizeDetail->save()){
+			// 	$saveSize = false;
+			// }
 		}
 		// Thêm danh sách hình ảnh
 		$savePicture = true;
@@ -183,26 +195,35 @@ class ManageProductController extends Controller
 			$picture = new Picture;
 			$picture->Url = 'products/'.$imageName;
 			$picture->IsDelete = false;
-			if(!$picture->save()){
-				$savePicture = false;
-			}
+			$vListPicture[] = $url;
+			// if(!$picture->save()){
+			// 	$savePicture = false;
+			// }
 			// thêm product picture
-			$ProductPicture = new ProductPicture;
-			$ProductPicture->ID_Product = $newProduct->id;
-			$ProductPicture->ID_Picture = $idMaxImage;
-			$ProductPicture->IsDelete = false;
-			if(!$ProductPicture->save()){
-				$savePicture = false;
-			}
+			// $ProductPicture = new ProductPicture;
+			// $ProductPicture->ID_Product = $newProduct->id;
+			// $ProductPicture->ID_Picture = $idMaxImage;
+			// $ProductPicture->IsDelete = false;
+			// if(!$ProductPicture->save()){
+			// 	$savePicture = false;
+			// }
 			file_put_contents($url,file_get_contents($value));
 			$itemResult['picture'] .= '<img class="img-product" src="'.url("public/images/").'/'. $picture->Url .'">';
 		}
-		if($saveProduct && $savePrce && $saveColor && $saveSize && $savePicture){
+
+		$element = DB::select('Call sp_create_product(?,?,?,?,?,?,?,?,?,?)',[$newProduct->id,$newProduct->ID_ProductCategory,$newProduct->Name,$newProduct->Description,$newProduct->IsDelete,$priceProduct->Price,$priceProduct->Discount,implode(',',$vListColor),implode(',',$vListSize),implode(',',$vListPicture)]);
+
+		$itemResult['id'] = isset($element[0]) ? $element[0]->id:-1;
+		// if($saveProduct && $savePrce && $saveColor && $saveSize && $savePicture){
 			foreach ($listDelete as $valueDelete) {
 				$this->deleteImage($valueDelete->ID_Picture,$valueDelete);
 			}
-			return $itemResult;
-		}
+
+			if($itemResult['id']>= 0){
+				$itemResult['price'] = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$itemResult['id']]])->whereNull('EndDate')->get()[0]->Price;
+				return $itemResult;
+			}
+		// }
 		return '0';
 	}
 }
