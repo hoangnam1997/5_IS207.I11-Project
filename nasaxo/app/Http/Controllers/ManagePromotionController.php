@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Promotion as Promotion;
 use App\PromotionPicture as PromotionPicture;
 use App\Picture as Picture;
+use DB;
 class ManagePromotionController extends Controller
 {
 	// lấy view promotion
@@ -61,26 +62,32 @@ class ManagePromotionController extends Controller
 		$newItem->BasePurchase= $basePureChase;
 		$newItem->StartDate= trim($startDate)=='' ? date('Y-m-d') : $startDate;
 		$newItem->EndDate= trim($endDate)=='' ? date('Y-m-d') : $endDate;
-		$newItem->IsDelete = false;
-		$newItem->save();
+		$newItem->IsDelete = 0;
+
+		// $newItem->save();
 		// delete picture
 		$listDelete = PromotionPicture::where([['ID_Promotion','=',$newItem->id]])->get();
 		// insert picture
-		$extention = $this->getTypeImage($imgPromotion);
+		$extention = $imgPromotion != ''  ? $this->getTypeImage($imgPromotion): 'png';
 		$idMaxImage = Picture::max('id');
 		$imageName = ++$idMaxImage. '.' . $extention;
 		$url =  'public/images/promotions'.'/'. $imageName;
 		$picture = new Picture;
 		$picture->Url = 'promotions/'.$imageName;
-		$picture->IsDelete = false;
+		$picture->IsDelete = 0;
 		// thêm userpicture
 		$promotionPicture = new PromotionPicture;
 		$promotionPicture->ID_Promotion = $newItem->id;
 		$promotionPicture->ID_Picture = $idMaxImage;
-		$promotionPicture->IsDelete = false;
-		file_put_contents($url,file_get_contents($imgPromotion));
+		$promotionPicture->IsDelete = 0;
+		if($imgPromotion != ''){
+			file_put_contents($url,file_get_contents($imgPromotion));
+		}
 		$aRes = [];
-		if($picture->save() && $promotionPicture->save()){
+		// if($picture->save() && $promotionPicture->save()){
+		$element = DB::select('Call sp_create_promotion(?,?,?,?,?,?,?,?,?)',[$newItem->id,$newItem->Description,$newItem->Name,$newItem->Discount,$newItem->BasePurchase,$newItem->StartDate,$newItem->EndDate,$newItem->IsDelete,$picture->Url]);
+		$newItem->id = isset($element[0]->id) ? $element[0]->id : -1;
+		if($newItem->id >= 0 ){
 			$aRes['id'] = $newItem->id;
 			$aRes['EndDate'] = $newItem->EndDate;
 			$aRes['Description'] = $newItem->Description;

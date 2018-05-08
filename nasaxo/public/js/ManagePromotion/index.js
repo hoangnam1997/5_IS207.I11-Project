@@ -79,7 +79,6 @@ $('#btnSubmitModel').off('click').on('click',function(){
 				cache:false,
 				data:{'_token':_token,'idSend':$idItem,'valueDescription':$valueDescription,'promotionDiscount':$promotionDiscount,'basePureChase':$basePureChase,'promotionName':$promotionName,'endDate':$endDate,'imgPromotion':$imgPromotion,'startDate':$startDate},
 				success:function($re){
-					console.log($re);
 					if($re=='0'){
 					}else{
 						$('#PromotionModal').find('.modal-footer').before('<span class="messModel" style="background:#D9EDC8;text-align:center;display:block;color:#0AA598;">Cập nhật thành công</span>');

@@ -5,14 +5,14 @@ function MyJS_paintStatistics(styleChart, canvas, lablesStatistics, dataSales, c
     var data = {
     	labels: lablesStatistics,
     	datasets: [{
-    		label: 'Tổng tiền',
+    		label: 'Số hóa đơn',
     		borderColor: "#3e95cd",
     		backgroundColor: '#3e95cd',
     		fill: false,
     		data: dataSales,
     		yAxisID: 'Sales'
     	}, {
-    		label: 'Số hóa đơn',
+    		label: 'Tổng tiền',
     		borderColor: 'red',
     		backgroundColor: 'red',
     		fill: false,

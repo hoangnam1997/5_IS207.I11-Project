@@ -76,7 +76,7 @@
 						</div>
 						<?php
 						$discount = 0;
-						$promotionID = -1;
+						$promotionID = null;
 						if(isset($lisPromotion) && $lisPromotion!=null && count($lisPromotion)>0){
 							$promotions = [];
 							foreach ($lisPromotion as $valuePromotion) {

@@ -215,11 +215,12 @@ class ManageProductController extends Controller
 
 		$itemResult['id'] = isset($element[0]) ? $element[0]->id:-1;
 		// if($saveProduct && $savePrce && $saveColor && $saveSize && $savePicture){
-			foreach ($listDelete as $valueDelete) {
-				$this->deleteImage($valueDelete->ID_Picture,$valueDelete);
-			}
+			
 
 			if($itemResult['id']>= 0){
+				foreach ($listDelete as $valueDelete) {
+					$this->deleteImage($valueDelete->ID_Picture,$valueDelete);
+				}
 				$itemResult['price'] = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$itemResult['id']]])->whereNull('EndDate')->get()[0]->Price;
 				return $itemResult;
 			}

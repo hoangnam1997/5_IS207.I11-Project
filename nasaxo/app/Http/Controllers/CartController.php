@@ -133,7 +133,6 @@ class CartController extends Controller
                 $order->IsPaied = 0;
                 $order->IsDelivered = 0;
                 $order->IsDelete = 0;
-
                 DB::statement('CALL sp_create_order(?,?,?,?,?,?,?,?)',[$order->Description,$order->ID_Promotion,$order->ID_DeliveryPlace,$order->ID_User,$order->ConfirmDate,$order->IsPaied,$order->IsDelivered,$order->IsDelete]);
                 return '1';
 

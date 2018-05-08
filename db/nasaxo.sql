@@ -1,30 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
---
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 22, 2017 lúc 05:38 PM
--- Phiên bản máy phục vụ: 10.1.26-MariaDB
--- Phiên bản PHP: 7.1.8
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Cơ sở dữ liệu: `nasaxo`
---
-
--- --------------------------------------------------------
-
---
+﻿--
 -- Cấu trúc bảng cho bảng `city`
 --
 
@@ -215,7 +189,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `order` (
   `id` int(10) UNSIGNED NOT NULL,
   `Description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ID_Promotion` int(10) UNSIGNED NOT NULL,
+  `ID_Promotion` int(10) UNSIGNED NULL,
   `ID_DeliveryPlace` int(10) UNSIGNED NOT NULL,
   `ID_User` int(10) UNSIGNED NOT NULL,
   `CreateDate` date NOT NULL,
@@ -1349,7 +1323,3 @@ ALTER TABLE `user_role`
 ALTER TABLE `ward`
   ADD CONSTRAINT `ward_id_district_foreign` FOREIGN KEY (`ID_District`) REFERENCES `district` (`id`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

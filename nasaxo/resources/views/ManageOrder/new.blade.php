@@ -109,8 +109,10 @@ var listDataTable = [
 
 				"totalOrder":"<?php echo $sumprice;?>",
 
-				<?php $promotion = $value->OrderPromotion()->get()[0]; ?>
-				"Discount":"<?php echo ($sumprice*$promotion->Discount/100); ?>",
+				<?php 
+				$promotionm = $value->OrderPromotion()->get();
+				$promotion = isset($promotionm[0]->Discount ) ? $promotionm[0]->Discount : 0 ; ?>
+				"Discount":"<?php echo ($sumprice*$promotion/100); ?>",
 
 				"Action":"<i style='cursor:pointer;' class='confirmOrder fa fa-truck fa-2x' aria-hidden='true' title='Xác nhận' data-confirm='<?php echo $value->id; ?>'></i><br><i style='cursor:pointer;color:#D74242;' class='deleteOrder fa fa-trash-o fa-2x' aria-hidden='true' title='Hủy đơn hàng' data-delete='<?php echo $value->id; ?>'></i> "
 			},
