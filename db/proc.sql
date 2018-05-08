@@ -5,6 +5,8 @@ DROP PROCEDURE IF EXISTS `sp_create_product`;
 DROP PROCEDURE IF EXISTS `sp_create_promotion`;
 DROP PROCEDURE IF EXISTS `sp_statistic_revenue`;
 DROP PROCEDURE IF EXISTS `sp_statistic_bestsell`;
+DROP PROCEDURE IF EXISTS `sp_statistic_bestuser`;
+
 
 DELIMITER $$
 
@@ -166,6 +168,22 @@ BEGIN
 	WHERE  `vStartDate` <= o.CreateDate AND o.CreateDate <= `vEndDate` AND o.IsPaied = 1
 	GROUP BY o.CreateDate,p.id,p.Name
 	ORDER BY o.CreateDate ASC;
+END$$
+
+/*Thống kê theo khách hàng theo khoản thời gian*/
+CREATE PROCEDURE `sp_statistic_bestuser` (
+	IN `vStartDate` DATE,
+	IN `vEndDate` DATE
+)  
+BEGIN
+	SELECT u.Username,count(DISTINCT o.id) as `count`,IF(m.BasePurchase IS NOT NULL AND m.BasePurchase <= SUM(op.Count*(pr.Price * (100- pr.Discount) / 100)),SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))*(100-m.Discount)/100,SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))) Price FROM `order` o JOIN `orderproduct` as op ON o.id = op.ID_Order
+	JOIN `product` p ON op.ID_Product = p.id
+	JOIN `productprice` pr ON p.id = pr.ID_Product AND ((pr.StartDate <= o.CreateDate AND pr.EndDate > o.CreateDate) || (pr.StartDate <= o.CreateDate AND pr.EndDate IS NULL))
+	LEFT JOIN `promotion` m ON o.ID_Promotion = m.id
+	JOIN `users` u ON  o.ID_User = u.id
+	WHERE  `vStartDate` <= o.CreateDate AND o.CreateDate <= `vEndDate` AND o.IsPaied = 1
+	GROUP BY u.Username
+	ORDER BY u.Username ASC;
 END$$
 
 DELIMITER ;

@@ -155,10 +155,10 @@ class ManageStatictisController extends Controller
 		foreach ($aStatistic as $key => $value) {
 			if(isset($listOrderGroupByProduct[$value->CreateDate])){
 				$listOrderGroupByProduct[$value->CreateDate]['totalPrice'] += $value->Price;
-				$listOrderGroupByProduct[$value->CreateDate]['countOrder'] += 1;
+				$listOrderGroupByProduct[$value->CreateDate]['countOrder'] += $value->count;
 			}else{
 				$listOrderGroupByProduct[$value->CreateDate]['totalPrice'] = $value->Price;
-				$listOrderGroupByProduct[$value->CreateDate]['countOrder'] = 1;
+				$listOrderGroupByProduct[$value->CreateDate]['countOrder'] = $value->count;
 				$arrStr = explode(' ',$value->Name);
 				$valueStr = implode(' ',array_slice($arrStr, 0, 3));
 				$listOrderGroupByProduct[$value->CreateDate]['nameProduct'] = $value->id. '-' .$valueStr. '..';
@@ -187,42 +187,55 @@ class ManageStatictisController extends Controller
 		}
 		$startDay = $aParameter['startDay'];
 		$endDay = $aParameter['endDay'];
-		$listOrder = Order::where([['CreateDate','>=',$startDay],['CreateDate','<=',$endDay],['IsPaied','=',true]])->get();
-		// group by with array
-		foreach ($listOrder as $value) {
-			// tính tiền hóa đơn
-			$sumprice = 0;
-			$listOrderProduct = $value->OrderProduct()->get();
-			foreach ($listOrderProduct as $valueOrderDetail) {
-				$product = $valueOrderDetail->Product()->get()[0];
-				// lấy tiền
-				$price=	$product->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','<',$value->CreateDate]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null]])->get(); 
-				$pricefinal=0;
-				// tính toán tiền
-				if(count($price)>0){
-					$pricefinal  =$price[0]['Price'] -( $price[0]['Price'] * ($price[0]['Discount'] /100));
-				}
-				$sumprice +=$pricefinal*$valueOrderDetail->Count;
-			}
-			$mpromotion = $value->OrderPromotion()->get();
-			$promotion = isset($mpromotion[0]->Discount) ? $mpromotion[0]->Discount: 0;
-			// tính tiền với khuyến mãi trên hóa đơn
-			$sumprice=$sumprice - ($sumprice*$promotion/100);
-			// id khách hàng
-			$key = $value->ID_User;
-			$userOrder = Users::find($key);
-			// thêm vào list return nếu chưa tồn tại... có thì không thêm mà cộng thêm
-			if (!array_key_exists($key, $listOrderGroupByDate)) {
-				$listOrderGroupByDate[$key] = array(
-					'customer' =>$key. '-' .substr($userOrder->Username,0,10).'..',
-					'countOrder' => '1',
-					'totalPrice' => $sumprice,
-				);
-			} else {
-				$listOrderGroupByDate[$key]['countOrder'] = $listOrderGroupByDate[$key]['countOrder'] + 1;
-				$listOrderGroupByDate[$key]['totalPrice'] = $listOrderGroupByDate[$key]['totalPrice'] + $sumprice;
-			}
+		// $listOrder = Order::where([['CreateDate','>=',$startDay],['CreateDate','<=',$endDay],['IsPaied','=',true]])->get();
+		// // group by with array
+		// foreach ($listOrder as $value) {
+		// 	// tính tiền hóa đơn
+		// 	$sumprice = 0;
+		// 	$listOrderProduct = $value->OrderProduct()->get();
+		// 	foreach ($listOrderProduct as $valueOrderDetail) {
+		// 		$product = $valueOrderDetail->Product()->get()[0];
+		// 		// lấy tiền
+		// 		$price=	$product->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','<',$value->CreateDate]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null]])->get(); 
+		// 		$pricefinal=0;
+		// 		// tính toán tiền
+		// 		if(count($price)>0){
+		// 			$pricefinal  =$price[0]['Price'] -( $price[0]['Price'] * ($price[0]['Discount'] /100));
+		// 		}
+		// 		$sumprice +=$pricefinal*$valueOrderDetail->Count;
+		// 	}
+		// 	$mpromotion = $value->OrderPromotion()->get();
+		// 	$promotion = isset($mpromotion[0]->Discount) ? $mpromotion[0]->Discount: 0;
+		// 	// tính tiền với khuyến mãi trên hóa đơn
+		// 	$sumprice=$sumprice - ($sumprice*$promotion/100);
+		// 	// id khách hàng
+		// 	$key = $value->ID_User;
+		// 	$userOrder = Users::find($key);
+		// 	// thêm vào list return nếu chưa tồn tại... có thì không thêm mà cộng thêm
+		// 	if (!array_key_exists($key, $listOrderGroupByDate)) {
+		// 		$listOrderGroupByDate[$key] = array(
+		// 			'customer' =>$key. '-' .substr($userOrder->Username,0,10).'..',
+		// 			'countOrder' => '1',
+		// 			'totalPrice' => $sumprice,
+		// 		);
+		// 	} else {
+		// 		$listOrderGroupByDate[$key]['countOrder'] = $listOrderGroupByDate[$key]['countOrder'] + 1;
+		// 		$listOrderGroupByDate[$key]['totalPrice'] = $listOrderGroupByDate[$key]['totalPrice'] + $sumprice;
+		// 	}
+		// }
+		
+		$aStatistic = DB::select('call sp_statistic_bestuser(?,?)',[$startDay,$endDay]);
+		foreach ($aStatistic as $key => $value) {
+			if(isset($listOrderGroupByDate[$value->Username])){
+				$listOrderGroupByDate[$value->Username]['totalPrice'] += $value->Price;
+				$listOrderGroupByDate[$value->Username]['countOrder'] += $value->count;
+			}else{
+				$listOrderGroupByDate[$value->Username]['totalPrice'] = $value->Price;
+				$listOrderGroupByDate[$value->Username]['countOrder'] = $value->count;
+				$listOrderGroupByDate[$value->Username]['customer'] = $value->Username;
+			} 	
 		}
+
 		// sắp xếp
 		ksort($listOrderGroupByDate);
 		// chuyển đổi để vẽ biểu đồ
