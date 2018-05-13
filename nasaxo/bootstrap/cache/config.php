@@ -169,7 +169,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\storage\\framework/cache/data',
+        'path' => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -274,12 +274,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\storage\\app',
+        'root' => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\storage\\app/public',
+        'root' => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -321,7 +321,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\resources\\views/vendor/mail',
+        0 => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -401,7 +401,7 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\storage\\framework/sessions',
+    'files' => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -421,9 +421,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\resources\\views',
+      0 => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\resources\\views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\project_web\\nasaxo\\storage\\framework\\views',
+    'compiled' => 'C:\\xampp\\htdocs\\nasaxo\\nasaxo\\storage\\framework\\views',
   ),
   'trustedproxy' => 
   array (
