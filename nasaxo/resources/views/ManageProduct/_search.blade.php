@@ -133,10 +133,12 @@ var listDataTable = [
 			'Name':"<?php echo $value->Name; ?>",
 
 			<?php $Catrgory = $value->ProductCategory()->get(); ?>
-			'ProductCategory':"<?php echo $Catrgory[0]->Name; ?>",
+			'ProductCategory':"<?php echo isset($Catrgory[0]->Name) ? $Catrgory[0]->Name : ''; ?>",
 
-			<?php $price = $value->Prices()->whereNull('EndDate')->get()[0]; ?>
-			'Price':"<?php echo $price->Price; ?>",
+			<?php $price = $value->Prices()->whereNull('EndDate')->get();
+				$price = isset($price[0]) ? $price[0] : null;
+			 ?>
+			'Price':"<?php echo isset($price->Price) ? $price->Price : ''; ?>",
 
 			'Description':"<?php echo $value->Description; ?>",
 

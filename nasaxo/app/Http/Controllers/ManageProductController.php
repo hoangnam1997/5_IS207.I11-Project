@@ -65,7 +65,8 @@ class ManageProductController extends Controller
 		$aResult=[];
 		if(isset($item)){
 			$aResult['idCategory'] = $item->ID_ProductCategory;
-			$aResult['nameCategory'] = $item->ProductCategory()->get()[0]->Name;
+			$category = $item->ProductCategory()->get();
+			$aResult['nameCategory'] = isset($category[0])? $category[0]->Name:'';
 			$aResult['nameProduct'] = $item->Name;
 			$stringColors = '';
 			$stringSizes = '';
@@ -75,6 +76,7 @@ class ManageProductController extends Controller
 			foreach ($listColor as $key => $value) {
 				$stringColors .= '<div class="itemDivDetail"><span data-color="'. $value->id .'" style="background-color:#'. $value->Color .';" class="itemDetail" > </span><span style="top: -32px;" title="Bỏ màu" class="removeItem"><i class="fa fa-window-close-o" aria-hidden="true"></i></span></div>';
 			}
+
 			$aResult['listColor'] = $stringColors;
 			// thêm danh sách size
 			$listSize = $item->Sizes([['IsDelete','=',false]])->get();
@@ -82,9 +84,9 @@ class ManageProductController extends Controller
 				$stringSizes .= '<div class="itemDivDetail"><span data-size="'. $value->id .'" class="itemDetail" >'.$value->Sizes .'</span><span title="Bỏ kích thước" class="removeItem"><i class="fa fa-window-close-o" aria-hidden="true"></i></span></div>';
 			}
 			$aResult['listSize'] = $stringSizes;
-			$valuePrice = $item->Prices()->whereNull('EndDate')->get()[0];
-			$aResult['price'] = $valuePrice->Price;
-			$aResult['discount'] = $valuePrice->Discount;
+			$valuePrice = $item->Prices()->whereNull('EndDate')->get();
+			$aResult['price'] = isset($valuePrice[0]->Price) ? $valuePrice[0]->Price : '';
+			$aResult['discount'] = isset($valuePrice[0]->Discount) ? $valuePrice[0]->Discount : '';
 			// thêm danh sách hình ảnh
 			$listPicture = $item->Pictures([['IsDelete','=',false]])->get();
 			foreach ($listPicture as $key => $value) {
@@ -93,6 +95,7 @@ class ManageProductController extends Controller
 			$aResult['pictures'] = $stringPictures;
 			// hình mô tả
 			$aResult['Description'] = $item->Description;
+
 			return $aResult;
 		}
 		return '0';
@@ -135,7 +138,8 @@ class ManageProductController extends Controller
 		// $itemResult['id'] = $newProduct->id;
 		$itemResult['Name'] = $newProduct->Name;
 		$itemResult['Description'] = $newProduct->Description;
-		$itemResult['category'] = $newProduct->ProductCategory()->get()[0]->Name;
+		$itemResult['category'] = $newProduct->ProductCategory()->get();
+		$itemResult['category'] = isset($itemResult['category'][0]) ? $itemResult['category'][0]->Name: '';
 		//  giá
 		$priceOle = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$newProduct->id]])->whereNull('EndDate')->get();
 		foreach ($priceOle as $key => $value) {
@@ -195,7 +199,7 @@ class ManageProductController extends Controller
 			$picture = new Picture;
 			$picture->Url = 'products/'.$imageName;
 			$picture->IsDelete = false;
-			$vListPicture[] = $url;
+			$vListPicture[] = $picture->Url;
 			// if(!$picture->save()){
 			// 	$savePicture = false;
 			// }
@@ -207,21 +211,23 @@ class ManageProductController extends Controller
 			// if(!$ProductPicture->save()){
 			// 	$savePicture = false;
 			// }
+			
 			file_put_contents($url,file_get_contents($value));
 			$itemResult['picture'] .= '<img class="img-product" src="'.url("public/images/").'/'. $picture->Url .'">';
 		}
-
-		$element = DB::select('Call sp_create_product(?,?,?,?,?,?,?,?,?,?)',[$newProduct->id,$newProduct->ID_ProductCategory,$newProduct->Name,$newProduct->Description,$newProduct->IsDelete,$priceProduct->Price,$priceProduct->Discount,implode(',',$vListColor),implode(',',$vListSize),implode(',',$vListPicture)]);
-
+		$listPictureIn = count($vListPicture) > 0 ? implode(',',$vListPicture).',' : '';
+		$listSizeIn = count($vListSize) > 0 ? implode(',',$vListSize).',' :'';
+		$listColorIn = count($vListColor) > 0 ? implode(',',$vListColor).',':'';
+		$element = DB::select('Call sp_create_product(?,?,?,?,?,?,?,?,?,?)',[$newProduct->id,$newProduct->ID_ProductCategory,$newProduct->Name,$newProduct->Description,$newProduct->IsDelete,$priceProduct->Price,$priceProduct->Discount,$listColorIn,$listSizeIn,$listPictureIn]);
 		$itemResult['id'] = isset($element[0]) ? $element[0]->id:-1;
 		// if($saveProduct && $savePrce && $saveColor && $saveSize && $savePicture){
-			
-
 			if($itemResult['id']>= 0){
 				foreach ($listDelete as $valueDelete) {
 					$this->deleteImage($valueDelete->ID_Picture,$valueDelete);
 				}
-				$itemResult['price'] = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$itemResult['id']]])->whereNull('EndDate')->get()[0]->Price;
+				$itemResult['price'] = ProductPrice::where([['IsDelete','=',false],['ID_Product','=',$itemResult['id']]])->whereNull('EndDate')->get();
+				$itemResult['price'] = isset($itemResult['price'][0]) ? $itemResult['price'][0]->Price : '';
+
 				return $itemResult;
 			}
 		// }

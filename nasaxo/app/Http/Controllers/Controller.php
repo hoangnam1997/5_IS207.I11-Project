@@ -97,7 +97,7 @@ public function deleteImage($idPicture,$itemDelete,$url =''){
    $picture =  Picture::find($idPicture);
    if(isset($picture)){
     if(file_exists(public_path('images/'.$picture->Url)) && $picture->Url != LoginController::imageDefault){
-       unlink(public_path('images/'.$picture->Url));
+         unlink(public_path('images/'.$picture->Url));
     }
     $itemDelete->delete();
     $picture->delete();

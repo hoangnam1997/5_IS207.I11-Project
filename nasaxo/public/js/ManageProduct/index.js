@@ -171,6 +171,7 @@ $('#btnSubmitModel').off('click').on('click',function(){
 			cache:false,
 			data:{'_token':_token,'idProduct':$idUpdate,'idCategory':$idCategory,'nameProduct':$nameProduct,'listColor':$listColor,'listSize':$listSize,'price':$intPrice,'discount':$intDiscount,'pictures':$listPicture,'Description':$Description},
 			success:function($re){
+				console.log($re);
 				if($re !=='0'){
 					$('#ProductModal').find('.modal-footer').before('<span class="messModel" style="background:#D9EDC8;text-align:center;display:block;color:#0AA598;">Cập nhật thành công</span>');
 					if(typeof inat !== 'undefined'){
@@ -194,7 +195,7 @@ $('#btnSubmitModel').off('click').on('click',function(){
 						type:"POST",
 						url: urlNew,
 						cache:false,
-						data:{'_token':_token,'idSend':$idEdit},
+						data:{'_token':_token,'idSend':$idUpdate},
 						success:function($re){
 						// tên nhóm sp
 						$('#txtCategory').val($re['nameCategory']);
@@ -238,6 +239,7 @@ $('#btnSubmitModel').off('click').on('click',function(){
 			cache:false,
 			data:{'_token':_token,'idCategory':$idCategory,'nameProduct':$nameProduct,'listColor':$listColor,'listSize':$listSize,'price':$intPrice,'discount':$intDiscount,'pictures':$listPicture,'Description':$Description},
 			success:function($re){
+				console.log($re);
 				if($re !=='0'){
 					$('#ProductModal').find('.modal-footer').before('<span class="messModel" style="background:#D9EDC8;text-align:center;display:block;color:#0AA598;">Thêm thành công</span>');
 					if(typeof inat !== 'undefined'){

@@ -89,27 +89,27 @@ BEGIN
 	END IF;
 	INSERT INTO `productprice`(`Price`, `StartDate`, `EndDate`, `IsDelete`, `ID_Product`, `Discount`, `created_at`) VALUES (`vPrice`, CURRENT_TIMESTAMP, NULL, 0, @MAXID, vDiscount, CURRENT_TIMESTAMP);
 	set @valueColor :=`vListColor`; 
-	WHILE (LOCATE(',', @valueColor) > 0) 
+	WHILE (LOCATE(',', @valueColor) > 0 AND @valueColor <> '') 
 		DO
 		SET @V_DESIGNATION = SUBSTRING(@valueColor,1, LOCATE(',',@valueColor)-1); 
 		SET @valueColor = SUBSTRING(@valueColor, LOCATE(',',@valueColor) + 1); 
 		INSERT INTO `productcolor`(`ID_Product`, `ID_Color`, `IsDelete`) VALUES (@MAXID, @V_DESIGNATION, 0);
 	END WHILE;
 	set @valueSize :=`vListSize`; 
-	WHILE (LOCATE(',', @valueSize) > 0) 
+	WHILE (LOCATE(',', @valueSize) > 0 AND @valueSize <> '') 
 		DO
 		SET @V_DESIGNATION = SUBSTRING(@valueSize,1, LOCATE(',',@valueSize)-1); 
 		SET @valueSize = SUBSTRING(@valueSize, LOCATE(',',@valueSize) + 1); 
-		INSERT INTO `productcolor`(`ID_Product`,`ID_Size`, `IsDelete`) VALUES (@MAXID, @V_DESIGNATION, 0);
+		INSERT INTO `productsize`(`ID_Product`,`ID_Size`, `IsDelete`) VALUES (@MAXID, @V_DESIGNATION, 0);
 	END WHILE;
 	set @valuePicture :=`vListPicture`; 
-	WHILE (LOCATE(',', @valuePicture) > 0) 
+	WHILE (LOCATE(',', @valuePicture) > 0 AND @valuePicture <> '') 
 		DO
 		SET @V_DESIGNATION = SUBSTRING(@valuePicture,1, LOCATE(',',@valuePicture)-1); 
 		SET @valuePicture = SUBSTRING(@valuePicture, LOCATE(',',@valuePicture) + 1); 
 		INSERT INTO picture(Url,IsDelete,created_at) VALUES(@V_DESIGNATION,0,CURRENT_TIMESTAMP);
 		SET @PICTUREID := (SELECT MAX(id) FROM picture);
-		INSERT INTO `productprice`(`ID_Product`,`ID_Picture`,`IsDelete`) VALUES(@MAXID,@PICTUREID,0,CURRENT_TIMESTAMP);
+		INSERT INTO `productpicture`(`ID_Product`,`ID_Picture`,`IsDelete`) VALUES(@MAXID,@PICTUREID,0);
 	END WHILE;
 	select @MAXID as id;
 END$$
