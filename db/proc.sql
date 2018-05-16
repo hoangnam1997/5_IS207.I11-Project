@@ -20,13 +20,15 @@ sp_change_info:BEGIN
 	IF NOT EXISTS(SELECT * FROM users WHERE users.id = `user_id`) THEN
 		LEAVE sp_change_info;
 	END IF;
-	Update users SET users.Password = `user_password`, users.Description =  `user_description` WHERE users.id = `user_id`;
-    	SET @PICTUREID := (SELECT ID_Picture FROM userspicture WHERE ID_Users = `user_id`);
-	DELETE FROM userspicture WHERE ID_Users = `user_id`;
-	DELETE FROM picture WHERE id = @PICTUREID;
-	INSERT INTO picture(Url,IsDelete,created_at) VALUES(`picture_url`,0,CURRENT_TIMESTAMP);
-	SET @PICTUREID := (SELECT MAX(id) FROM picture);
-	INSERT INTO userspicture(ID_Users,ID_Picture,IsDelete,created_at) VALUES(`user_id`,@PICTUREID,0,CURRENT_TIMESTAMP);
+	START TRANSACTION;
+		Update users SET users.Password = `user_password`, users.Description =  `user_description` WHERE users.id = `user_id`;
+    		SET @PICTUREID := (SELECT ID_Picture FROM userspicture WHERE ID_Users = `user_id`);
+		DELETE FROM userspicture WHERE ID_Users = `user_id`;
+		DELETE FROM picture WHERE id = @PICTUREID;
+		INSERT INTO picture(Url,IsDelete,created_at) VALUES(`picture_url`,0,CURRENT_TIMESTAMP);
+		SET @PICTUREID := (SELECT MAX(id) FROM picture);
+		INSERT INTO userspicture(ID_Users,ID_Picture,IsDelete,created_at) VALUES(`user_id`,@PICTUREID,0,CURRENT_TIMESTAMP);
+	COMMIT;
 END$$
 
 /*Tạo hóa đơn, tự động cập nhật danh sách còn trong cart trong OrderProduct của user*/
@@ -41,9 +43,11 @@ CREATE PROCEDURE `sp_create_order` (
 	IN `vIsDelete` tinyint(1)
 )  
 BEGIN
-	INSERT INTO `order`(Description,ID_Promotion,ID_DeliveryPlace,ID_User,ConfirmDate,IsPaied,IsDelivered,IsDelete,CreateDate) VALUES(`vDescription`,`vID_Promotion`,`vID_DeliveryPlace`,`vID_User`,`vConfirmDate`,`vIsPaied`,`vIsDelivered`,`vIsDelete`,CURRENT_TIMESTAMP);
-	SET @OrID := (SELECT MAX(id) FROM `order`);
-	UPDATE `orderproduct` SET IsInCart = 0, ID_Order = @OrID WHERE IsDelete = 0 AND ID_User = `vID_User` AND `IsInCart` = 1;
+	START TRANSACTION;
+		INSERT INTO `order`(Description,ID_Promotion,ID_DeliveryPlace,ID_User,ConfirmDate,IsPaied,IsDelivered,IsDelete,CreateDate) VALUES(`vDescription`,`vID_Promotion`,`vID_DeliveryPlace`,`vID_User`,`vConfirmDate`,`vIsPaied`,`vIsDelivered`,`vIsDelete`,CURRENT_TIMESTAMP);
+		SET @OrID := (SELECT MAX(id) FROM `order`);
+		UPDATE `orderproduct` SET IsInCart = 0, ID_Order = @OrID WHERE IsDelete = 0 AND ID_User = `vID_User` AND `IsInCart` = 1;
+	COMMIT;
 END$$
 
 /*Tạo user, tự động tạo picture and role of users*/
@@ -57,13 +61,15 @@ CREATE PROCEDURE `sp_create_users` (
 	IN `picture_url` varchar(191)
 )  
 BEGIN
-	INSERT INTO `users`(Username,Password,Email,Description,IsDelete) VALUES(`vUsername`,`vPassword`,`vEmail`,`vDescription`,`vIsDelete`);
-	SET @MAXID := (SELECT MAX(id) FROM `users`);
-	INSERT INTO picture(Url,IsDelete,created_at) VALUES(`picture_url`,0,CURRENT_TIMESTAMP);
-	SET @PICTUREID := (SELECT MAX(id) FROM picture);
-	INSERT INTO userspicture(ID_Users,ID_Picture,IsDelete,created_at) VALUES(@MAXID,@PICTUREID,0,CURRENT_TIMESTAMP);
-	INSERT INTO `user_role`(`ID_Users`, `ID_Role`, `IsDelete`) VALUES (@MAXID, `vID_Role`, 0);
-	SELECT @MAXID as id;
+	START TRANSACTION;
+		INSERT INTO `users`(Username,Password,Email,Description,IsDelete) VALUES(`vUsername`,`vPassword`,`vEmail`,`vDescription`,`vIsDelete`);
+		SET @MAXID := (SELECT MAX(id) FROM `users`);
+		INSERT INTO picture(Url,IsDelete,created_at) VALUES(`picture_url`,0,CURRENT_TIMESTAMP);
+		SET @PICTUREID := (SELECT MAX(id) FROM picture);
+		INSERT INTO userspicture(ID_Users,ID_Picture,IsDelete,created_at) VALUES(@MAXID,@PICTUREID,0,CURRENT_TIMESTAMP);
+		INSERT INTO `user_role`(`ID_Users`, `ID_Role`, `IsDelete`) VALUES (@MAXID, `vID_Role`, 0);
+		SELECT @MAXID as id;
+	COMMIT;
 END$$
 
 /*Tạo create product, khởi tạo product nếu không tồn tại Id and tạo picture, size, color by list array*/
@@ -80,6 +86,7 @@ CREATE PROCEDURE `sp_create_product` (
 	IN `vListPicture` varchar(191)
 )  
 BEGIN
+	START TRANSACTION;
 	IF EXISTS (SELECT * FROM `product` WHERE id = `vId`) THEN
 		UPDATE `product` SET ID_ProductCategory = `vID_ProductCategory`, Name = `vName`, Description=`vDescription`, IsDelete =`vIsDelete` WHERE id = `vId`;
 		SET @MAXID := `vId`;
@@ -112,6 +119,7 @@ BEGIN
 		INSERT INTO `productpicture`(`ID_Product`,`ID_Picture`,`IsDelete`) VALUES(@MAXID,@PICTUREID,0);
 	END WHILE;
 	select @MAXID as id;
+	COMMIT;
 END$$
 
 /*Tạo khuyễn mãi với picture*/
@@ -127,6 +135,7 @@ CREATE PROCEDURE `sp_create_promotion` (
 	IN `vPicture` varchar(191)
 )  
 BEGIN
+	START TRANSACTION;
 	IF EXISTS (SELECT * FROM `promotion` WHERE id = `vId`) THEN
 		UPDATE `promotion` SET Description = `vDescription`, Name = `vName`, Discount=`vDiscount`, BasePurchase =`vBasePurchase`, StartDate =`vStartDate`, EndDate = `vEndDate`, IsDelete = `vIsDelete` WHERE id = `vId`;
 		SET @MAXID := `vId`;
@@ -138,6 +147,7 @@ BEGIN
 	SET @PICTUREID := (SELECT MAX(id) FROM picture);
 	INSERT INTO `promotionpicture`(`ID_Promotion`,`ID_Picture`,`IsDelete`) VALUES(@MAXID,@PICTUREID,0);
 	select @MAXID as id;
+	COMMIT;
 END$$
 
 /*Thống kê doanh thu theo khoản thời gian*/
