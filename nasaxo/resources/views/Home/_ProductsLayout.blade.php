@@ -38,7 +38,9 @@
 }
 if(isset($seeMore) && $seeMore){
 	?>
-	<div class='col-md-12 seeMoreProduct' onclick="SeeMore()" id='seeMoreProduct'>Xem thêm</div>
+	<div class='col-md-12 seeMoreProduct' onclick="SeeMore()" id='seeMoreProduct'>
+		<button class="btn" style="background: transparent; border:1px solid #e74c3c;">Xem thêm</button>
+	</div>
 	<script type="text/javascript">
 		if(document.getElementById('seeMoreProduct')!=null){
 			document.getElementById('seeMoreProduct').style.display = 'block';

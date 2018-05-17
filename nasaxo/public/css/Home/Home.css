@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
 *{
  margin:0;
  padding:0;}
@@ -7,7 +8,7 @@
   padding-bottom: 30px;
 }
 .seeMoreProduct{
-  background: rgba(157, 152, 152, 0.3);
+  background: transparent;
   text-align: center;
   height: 30px;
   font-size: 20px;
@@ -24,7 +25,6 @@ a{
 }
 footer.container.footer {
   margin-bottom: 3px;
-  /* display: inline-block; */
 }
 
 .navbar-default .navbar-brand {
@@ -41,9 +41,6 @@ a.navbar-brand {
   background-color: #172a3a;
   opacity: 0.8;
   padding: 5px;
-}
-figure.product {
-  color: rgb(255, 255, 255);
 }
 .dropdown-menu li a{
   color: #fff;
@@ -93,9 +90,7 @@ h3.padding20 {
   padding-bottom: 38px;
 }
 
-figure.product {
-  background-color: rgb(23, 42, 58);
-}
+
 
 img.img.img-responsive {
   /* border-radius: 10px 10px; */
@@ -123,7 +118,7 @@ span.name {
 }
 
 .content-product {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   min-width: 100%;
 }
 
@@ -136,7 +131,11 @@ span.name {
   background-color: #222;
 }
 
-
+figure.product {
+  border: 1px solid #e74c3c;
+  color: #000000;
+  background-color: #FFFFFF;
+}
 
 .navbar {
   position: relative;
@@ -223,7 +222,7 @@ a.KhoiVuongNho .layer2:hover{
 a.KhoiVuongNho:hover .layer3{
   bottom:5px;
 }
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
 .product {
   font-family: 'Lato', sans-serif;
   position: relative;
@@ -330,7 +329,9 @@ a.KhoiVuongNho:hover .layer3{
   font-size: 0.85em;
   font-weight: 500;
 }
+
 .product .price {
+  color: red;
   font-size: 1.3em;
   opacity: 0.5;
   font-weight: 700;
@@ -350,17 +351,17 @@ a.KhoiVuongNho:hover .layer3{
 }
 /* Demo purposes only */
 body {
-  background-color: #172a3a;
+  background-color: #000000;
 }
 #carousel-id .img-responsive{
   max-height: 365px;
   min-height: 365px;
 }
 .footer{
-  background-color: #172a3a;
+  background-color: #000000;
   border-radius: 5px 5px 0 0;
   padding:20px;
-  color: #fbfbfb;
+  color: #FFFFFF;
   opacity: 0.8;
 }
 .address span{
@@ -394,7 +395,7 @@ body{
   cursor: pointer;
   width: 50px;
   height: 50px;
-  background-color: #3498db;
+  background-color: #FF1738;
   text-indent: -9999px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -417,6 +418,7 @@ body{
   filter:"alpha(opacity=100)";
   -ms-filter:"alpha(opacity=100)";
 }
+
 @media(min-width: 769px){
   .dropdown #dropdownMenu{
     width: 750px;
