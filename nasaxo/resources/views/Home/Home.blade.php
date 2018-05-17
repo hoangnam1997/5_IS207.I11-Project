@@ -16,10 +16,6 @@ if(isset($_home) && $_home){?>
 	@show
 	<!--  product -->
 	@section('product')
-	<div class="content text-center">
-		<h1><b>Welcome</b> to Nasaxo Shop</h1>
-		<p>BEST PRODUCTS YOU EVER SEEN!</p>
-	</div>
 	<div class="container">
 		<!-- nội dung -->
 		<div id='productList' class="row product-List">
