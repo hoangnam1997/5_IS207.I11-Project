@@ -312,7 +312,8 @@ a.KhoiVuongNho:hover .layer3{
 }
 .product h3,
 .product p {
-  height: 66px;
+  height: 55px;
+  line-height: 1.2;
   margin: 0;
   text-align: left;
 }
