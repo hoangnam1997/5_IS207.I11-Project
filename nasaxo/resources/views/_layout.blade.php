@@ -93,9 +93,9 @@
 							</span>
 						</div>
 					</li>
-					<li id="btnBestSeller"><a href="#">Best seller</a></li>
+					<li id="btnBestSeller"><a href="#">Bán chạy</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Danh mục<b class="caret"></b></a>
 						<ul id="dropdownMenu" class="dropdown-menu">
 							<?php if(isset($categorys)){
 								foreach ($categorys as $value) {
@@ -117,14 +117,14 @@
 						?>
 						<a class="dropdown-toggle" data-toggle="dropdown"><img src="{!! url('/public/images') !!}/<?php echo $savedAccount['image']; ?>" class="user-image-home" alt="User Image"><b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li id="btnProfile" data-account="<?php echo $savedAccount['id'] ?>"><a>Profile</a></li>
-							<li id="btnLogout"><a>Logout</a></li>
+							<li id="btnProfile" data-account="<?php echo $savedAccount['id'] ?>"><a>Tài khoản</a></li>
+							<li id="btnLogout"><a>Đăng xuất</a></li>
 						</ul>
 						<?php
 						?>
 						<!-- chưa -->
 						@else
-						<a id="btnLogin" data-toggle="modal" data-target="#homeModal">Sign in</a>
+						<a id="btnLogin" data-toggle="modal" data-target="#homeModal">Đăng nhập</a>
 						@endif
 					</li>
 				</ul>

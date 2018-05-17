@@ -16,7 +16,7 @@ if(isset($_home) && $_home){?>
 	@show
 	<!--  product -->
 	@section('product')
-	<div class="container">
+	<div class="container" style = 'margin-top:20px;'>
 		<!-- nội dung -->
 		<div id='productList' class="row product-List">
 			<!-- danh sach product -->

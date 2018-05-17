@@ -154,16 +154,17 @@ span.name {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,.btnSearch:hover {
-  color: white;
+  color: #928787;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #928787;
+  color: white;
+  font-weight: bold;
 }
 
 .navbar-default {
   border-color: #e7e7e7; 
-  background-color: #172a3a;
+  background-color: #000000;
   border-bottom: #111 1px solid;
   box-shadow: #111 0 0 8px;
   position: sticky;
