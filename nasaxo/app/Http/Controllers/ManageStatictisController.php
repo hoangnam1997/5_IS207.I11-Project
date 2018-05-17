@@ -159,9 +159,9 @@ class ManageStatictisController extends Controller
 			}else{
 				$listOrderGroupByProduct[$value->CreateDate]['totalPrice'] = $value->Price;
 				$listOrderGroupByProduct[$value->CreateDate]['countOrder'] = $value->count;
-				$arrStr = explode(' ',$value->Name);
-				$valueStr = implode(' ',array_slice($arrStr, 0, 3));
-				$listOrderGroupByProduct[$value->CreateDate]['nameProduct'] = $value->id. '-' .$valueStr. '..';
+				// $arrStr = explode(' ',$value->Name);
+				// $valueStr = implode(' ',array_slice($arrStr, 0, 3));
+				$listOrderGroupByProduct[$value->CreateDate]['nameProduct'] = $value->id. '-' .$value->Name;
 			} 	
 		}
 		// sắp xếp
