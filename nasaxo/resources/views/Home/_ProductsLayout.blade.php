@@ -13,7 +13,7 @@
 					<img src="{!! url('public/images/') !!}<?php echo  '/'.$img?>" class="clickDetail" onclick="detailProduct(<?php echo $value->id; ?>)">
 					<?php 
 				}  ?>
-				<a data-id='<?php echo $value->id; ?>' data-name="<?php echo $value->Name; ?>" class="add-to-cart">Add to Cart</a>
+				<a data-id='<?php echo $value->id; ?>' data-name="<?php echo $value->Name; ?>" class="add-to-cart">Mua hàng</a>
 			</div>
 			<!-- Name and price -->
 			<figcaption class="clickDetail" onclick="detailProduct(<?php echo $value->id; ?>)">

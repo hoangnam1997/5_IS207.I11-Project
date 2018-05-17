@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="{!! url('/public/css/Account/Order.css') !!}">
-<?php 
+<?php
 if(isset($user)){
 	$listOrder = $user->Orders()->orderBy('CreateDate','desc')->get();
 	?>
@@ -12,7 +12,7 @@ if(isset($user)){
 			<th>Giảm giá</th>
 			<th>Trạng thái</th>
 		</tr>
-		<?php
+		<?php 
 		foreach ($listOrder as $key => $value) {?>
 		<tr>
 			<td><?php echo $key+1; ?></td>
@@ -21,32 +21,37 @@ if(isset($user)){
 			$viewProduct = '';
 			$products = [];
 			$sumprice =0;
+
 			foreach ($listOrderProduct as $valueOrderDetail) {
+
 				$result = [];
 				$result[] = $valueOrderDetail->Count;
-				$product = $valueOrderDetail->Product()->get()[0];
-				$result[] = $product->Name;
-							// tính toán tiền
-				$price=	$product->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','<',$value->CreateDate]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null]])->get(); 
-				$pricefinal=0;
-							// tính toán tiền
-				if(count($price)>0){
-					$pricefinal  =$price[0]['Price'] -( $price[0]['Price'] * ($price[0]['Discount'] /100));
-				}
-				$sumprice +=$pricefinal*$valueOrderDetail->Count;
-				$result[] = $pricefinal . ' VNĐ';
-				$products[] =implode('__',$result);
-			}
-			$viewProduct = implode('<br><br>',$products);
-			?>
+				$product = $valueOrderDetail->Product()->get();
+				if(isset($product[0])){
 
+					$result[] = $product[0]->Name;
+							// tính toán tiền
+					$price=	$product[0]->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','<',$value->CreateDate]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null]])->get(); 
+					$pricefinal=0;
+								// tính toán tiền
+					if(count($price)>0){
+						$pricefinal  =$price[0]['Price'] -( $price[0]['Price'] * ($price[0]['Discount'] /100));
+					}
+					$sumprice +=$pricefinal*$valueOrderDetail->Count;
+					$result[] = $pricefinal . ' VNĐ';
+					$products[] =implode('__',$result);
+				}
+			}
+			$viewProduct = implode('<br><br>',$products); ?>
 			<td><?php echo $viewProduct; ?></td>
 			<td><?php echo $sumprice . ' VNĐ'; ?></td>
-			<?php $promotion = $value->OrderPromotion()->get()[0]; ?>
-			<td><?php echo ($sumprice*$promotion->Discount/100) . ' VNĐ'; ?></td>
+			<?php $promotion = $value->OrderPromotion()->get(); 
+				$promotionFinal = isset($promotion[0]) ? $promotion[0]->Discount : 0;
+			?>
+			<td><?php echo ($sumprice*$promotionFinal/100) . ' VNĐ'; ?></td>
 
 			<td>
-				<?php 
+				<?php  
 				if($value->IsDelivered){
 					echo 'Đã giao';
 				}elseif($value->IsDelete){

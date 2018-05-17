@@ -46,7 +46,7 @@
 						<input type="text" class="form-control" id="DiaChi" name="deveryPlace" value="<?php echo isset($deliveryPlace[0]->DeliveryPlaces) ? $deliveryPlace[0]->DeliveryPlaces : ""; ?>" placeholder="Nhập địa chỉ
 						" required>
 					</div>   
-					<button id="btnSubmitAddress" type="submit" class="btn btn-info pull-right">Tiếp tục</button>
+					<button id="btnSubmitAddress" type="submit" class="btn btn-danger pull-right">Tiếp tục</button>
 				</form>
 			</div>
 		</div>
