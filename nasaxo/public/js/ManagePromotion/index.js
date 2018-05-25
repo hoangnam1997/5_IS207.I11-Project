@@ -1,4 +1,7 @@
 // function onclick change image
+$(document).ready(function() {
+	$('#btnSearch').click();
+});
 $('.input-Img').on('click',function(){
 	$(this).parent().find('input[type=file]').click();
 });

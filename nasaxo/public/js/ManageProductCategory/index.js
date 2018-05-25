@@ -1,4 +1,7 @@
 // function ajax get view for admin
+$(document).ready(function() {
+	$('#btnSearch').click();
+});
 $('#btnSearch').on('click',function(){
 	var _token = $('meta[name="_token"]').attr('content');
 	$valueSearch = $('#inputSearch').val();

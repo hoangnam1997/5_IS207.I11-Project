@@ -1,3 +1,6 @@
+$(document).ready(function() {
+	$('#btnSearch').click();
+});
 function cls(){
 	$('#txtCategory').val('');
 	$('#txtIdCategory').val('');

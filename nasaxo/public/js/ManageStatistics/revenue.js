@@ -39,3 +39,6 @@ function getStatistic($url) {
         }
     });
 }
+$(document).ready(function() {
+    $('#btnStatistics').click();
+});
