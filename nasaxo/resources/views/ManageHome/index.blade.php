@@ -160,6 +160,7 @@
             </a>
             <ul class="treeview-menu">
               <li class="getView" data-view="statictis/revenue"><a><i class="fa fa-circle-o"></i>Doanh thu</a></li>
+              <li class="getView" data-view="statictis/nonrevenue"><a><i class="fa fa-circle-o"></i>Không phải doanh thu</a></li>
               <li class="getView" data-view="statictis/bestsell"><a><i class="fa fa-circle-o"></i>Sản phẩm</a></li>
               <li class="getView" data-view="statictis/customer"><a><i class="fa fa-circle-o"></i>Khách hàng mua nhiều</a></li>
             </ul>

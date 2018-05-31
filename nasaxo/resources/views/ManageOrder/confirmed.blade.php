@@ -93,7 +93,7 @@ var listDataTable = [
 					$product = $valueOrderDetail->Product()->get()[0];
 					$result[] = $product->Name;
 							// tính toán tiền
-					$price=	$product->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','<',$value->CreateDate]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null]])->get(); 
+					$price=	$product->Prices()->Where([['StartDate','<=',$value->CreateDate],['EndDate','>',$value->CreateDate],['ID_Product','=',$product->id]])->orWhere([['StartDate','<=',$value->CreateDate],['EndDate','=',null],['ID_Product','=',$product->id]])->get(); 
 					$pricefinal=0;
 							// tính toán tiền
 					if(count($price)>0){

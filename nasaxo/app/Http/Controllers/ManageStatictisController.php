@@ -246,4 +246,41 @@ class ManageStatictisController extends Controller
 		}
 		return view('ManageStatistics._partialStatistics',['labels'=>$listLabel,'countOrder'=>$listCountOrder,'totalPrice'=>$listTotalPrice]);
 	}
+
+	public function NonRevenue(){
+		return view('ManageStatistics.nonrevenue');
+	}
+
+	public function NonRevenuePartialStatistics(){
+		$listLabel=[];
+		$listCountOrder=[];
+		$listTotalPrice=[];
+		$listOrderGroupByDate=array();
+		$aParameter = array_merge($_POST,$_GET);
+		if(!isset($aParameter['startDay']) || !isset($aParameter['endDay'])){
+			return 'Không tìm thấy dử liệu';
+		}
+		$startDay = $aParameter['startDay'];
+		$endDay = $aParameter['endDay'];
+		$aStatistic = DB::select('call sp_statistic_nonrevenue(?,?)',[$startDay,$endDay]);
+		foreach ($aStatistic as $key => $value) {
+			if(isset($listOrderGroupByDate[$value->CreateDate])){
+				$listOrderGroupByDate[$value->CreateDate]['totalPrice'] += $value->Price;
+				$listOrderGroupByDate[$value->CreateDate]['countOrder'] += 1;
+			}else{
+				$listOrderGroupByDate[$value->CreateDate]['totalPrice'] = $value->Price;
+				$listOrderGroupByDate[$value->CreateDate]['countOrder'] = 1;
+			} 	
+		}
+		// sắp xếp
+		ksort($listOrderGroupByDate);
+		// chuyển đổi để vẽ biểu đồ
+		foreach ($listOrderGroupByDate as $key => $value) {
+			$listLabel[] = $key;
+			$listTotalPrice[]=$value['totalPrice'];
+			$listCountOrder[]=$value['countOrder'];
+		}
+		return view('ManageStatistics._partialStatistics',['labels'=>$listLabel,'countOrder'=>$listCountOrder,'totalPrice'=>$listTotalPrice]);
+	}
+
 }

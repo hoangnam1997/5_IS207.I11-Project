@@ -62,7 +62,7 @@ class CartController extends Controller
             $idUser= $this->getIdLogin();
             // get user
             $user=Users::find($idUser);
-            if(count($user)>0){
+            if(!empty($user)){
                 $deliveryplace = $user->DeliveryPlace()->get();
                 // check ton tai dia chi
                 if(count($deliveryplace)>0){
