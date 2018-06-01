@@ -44,10 +44,12 @@ CREATE PROCEDURE `sp_create_order` (
 	IN `vIsDelete` tinyint(1)
 )  
 BEGIN
-	START TRANSACTION;
+	START TRANSACTION;	
 		INSERT INTO `order`(Description,ID_Promotion,ID_DeliveryPlace,ID_User,ConfirmDate,IsPaied,IsDelivered,IsDelete,CreateDate) VALUES(`vDescription`,`vID_Promotion`,`vID_DeliveryPlace`,`vID_User`,`vConfirmDate`,`vIsPaied`,`vIsDelivered`,`vIsDelete`,CURRENT_TIMESTAMP);
+		/*do sleep(10);*/
 		SET @OrID := (SELECT MAX(id) FROM `order`);
 		UPDATE `orderproduct` SET IsInCart = 0, ID_Order = @OrID WHERE IsDelete = 0 AND ID_User = `vID_User` AND `IsInCart` = 1;
+	/*rollback;*/
 	COMMIT;
 END$$
 
@@ -172,13 +174,18 @@ CREATE PROCEDURE `sp_statistic_nonrevenue` (
 	IN `vEndDate` DATE
 )  
 BEGIN
-	SELECT o.id,o.CreateDate,IF(m.BasePurchase IS NOT NULL AND m.BasePurchase <= SUM(op.Count*(pr.Price * (100- pr.Discount) / 100)),SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))*(100-m.Discount)/100,SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))) Price FROM `order` o JOIN `orderproduct` as op ON o.id = op.ID_Order
-	JOIN `product` p ON op.ID_Product = p.id
-	JOIN `productprice` pr ON p.id = pr.ID_Product AND ((pr.StartDate <= o.CreateDate AND pr.EndDate > o.CreateDate) || (pr.StartDate <= o.CreateDate AND pr.EndDate IS NULL))
-	LEFT JOIN `promotion` m ON o.ID_Promotion = m.id
-	WHERE  `vStartDate` <= o.CreateDate AND o.CreateDate <= `vEndDate` AND o.IsPaied <> 1
-	GROUP BY o.CreateDate,o.id
-	ORDER BY o.CreateDate ASC;
+	/*SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED ;*/
+	START TRANSACTION;
+		SELECT o.id,o.CreateDate,IF(m.BasePurchase IS NOT NULL AND m.BasePurchase <= SUM(op.Count*(pr.Price * (100- pr.Discount) / 100)),SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))*(100-m.Discount)/100,SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))) Price FROM `order` o 
+		LEFT JOIN `orderproduct` as op ON o.id = op.ID_Order
+		LEFT JOIN `product` p ON op.ID_Product = p.id
+		LEFT JOIN `productprice` pr ON p.id = pr.ID_Product AND ((pr.StartDate <= o.CreateDate AND pr.EndDate > o.CreateDate) || (pr.StartDate <= o.CreateDate AND pr.EndDate IS NULL))
+		LEFT JOIN `promotion` m ON o.ID_Promotion = m.id
+		WHERE  `vStartDate` <= o.CreateDate AND o.CreateDate <= `vEndDate` AND o.IsPaied <> 1
+		GROUP BY o.CreateDate,o.id
+		ORDER BY o.CreateDate ASC;
+	COMMIT;
+
 END$$
 
 /*Thống kê theo sản phẩm theo khoản thời gian*/
