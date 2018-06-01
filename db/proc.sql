@@ -175,6 +175,7 @@ CREATE PROCEDURE `sp_statistic_nonrevenue` (
 )  
 BEGIN
 	/*SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED ;*/
+	SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED ;
 	START TRANSACTION;
 		SELECT o.id,o.CreateDate,IF(m.BasePurchase IS NOT NULL AND m.BasePurchase <= SUM(op.Count*(pr.Price * (100- pr.Discount) / 100)),SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))*(100-m.Discount)/100,SUM(op.Count*(pr.Price * (100- pr.Discount) / 100))) Price FROM `order` o 
 		LEFT JOIN `orderproduct` as op ON o.id = op.ID_Order
