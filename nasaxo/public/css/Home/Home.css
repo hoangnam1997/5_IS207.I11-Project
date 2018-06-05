@@ -7,6 +7,18 @@
   margin-bottom: 20px;
   padding-bottom: 30px;
 }
+.product:hover img,
+.product.hover img {
+  opacity: 0.8;
+}
+.product:hover .icons,
+.product.hover .icons,
+.product:hover .add-to-cart,
+.product.hover .add-to-cart {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
 .seeMoreProduct{
   background: transparent;
   text-align: center;
@@ -342,18 +354,7 @@ a.KhoiVuongNho:hover .layer3{
   font-weight: 700;
   text-align: right;
 }
-.product:hover img,
-.product.hover img {
-  opacity: 0.8;
-}
-.product:hover .icons,
-.product.hover .icons,
-.product:hover .add-to-cart,
-.product.hover .add-to-cart {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
+
 /* Demo purposes only */
 body {
   background-color: #000000;
