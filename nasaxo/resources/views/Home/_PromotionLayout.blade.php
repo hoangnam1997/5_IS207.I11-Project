@@ -15,12 +15,12 @@
 			<?php
 		} ?>
 	</ol>
-	<div class="carousel-inner">
+	<div class="carousel-inner" style="">
 		<?php foreach ($promotions as $value) {
 			if($liItem==0){$liItem++;
 				?>
 				<div class="item active">
-					<img  src="{!! url('public/images') !!}<?php
+					<img style="margin: auto;"  src="{!! url('public/images') !!}<?php
 					$picture = $value->Pictures()->get()->toArray();
 					if(isset($picture[0])){
 						echo '/'.$picture[0]['Url'];
@@ -31,7 +31,7 @@
 			}else{
 				?>
 				<div class="item">
-					<img  src="{!! url('public/images') !!}<?php
+					<img style="margin: auto;" src="{!! url('public/images') !!}<?php
 					$picture = $value->Pictures()->get()->toArray();
 					if(isset($picture[0])){
 						echo '/'.$picture[0]['Url'];
